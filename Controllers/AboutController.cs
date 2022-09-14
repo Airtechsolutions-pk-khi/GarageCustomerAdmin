@@ -16,7 +16,6 @@ namespace GarageCustomerAdmin.Controllers
         public AboutController()
         {
             _service = new aboutService();
-           
         }
         [HttpGet("brand/{brandid}")]
         public AboutBLL Get( int brandid)
