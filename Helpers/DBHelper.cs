@@ -11,9 +11,8 @@ namespace WebAPICode.Helpers
     public class DBHelper
     {
 
-
-        //private static readonly string connectionString = "data source=192.185.11.97;initial catalog=theluant_DbUAT;persist security info=True;user id=theluant_dbadmin;password=Tech@123;";
-        private static readonly string connectionString = "data source=85.25.214.10;initial catalog=GarageCustomer_UAT;persist security info=True;user id=garage;password=garage;";
+        //private static readonly string connectionString = "data source=85.25.214.10;initial catalog=GarageCustomer_UAT;persist security info=True;user id=garage;password=garage;";
+        private static readonly string connectionString = "data source=85.25.214.10;initial catalog=GarageCustomer_Live;persist security info=True;user id=garage;password=garage;";
         public DataTable GetTableFromSP(string sp, Dictionary<string, object> parametersCollection)
         {
 

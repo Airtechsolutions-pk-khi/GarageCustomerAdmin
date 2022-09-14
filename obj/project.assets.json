@@ -5636,19 +5636,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ammad Raza\\.nuget\\packages\\": {}
+    "C:\\Users\\RAFI SIRAJUDDIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\GarageCustomerAdmin_GIT\\GarageCustomerAdmin.csproj",
+      "projectUniqueName": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj",
       "projectName": "GarageCustomerAdmin",
-      "projectPath": "D:\\Project\\GarageCustomerAdmin_GIT\\GarageCustomerAdmin.csproj",
-      "packagesPath": "C:\\Users\\Ammad Raza\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\GarageCustomerAdmin_GIT\\obj\\",
+      "projectPath": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj",
+      "packagesPath": "C:\\Users\\RAFI SIRAJUDDIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ammad Raza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RAFI SIRAJUDDIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5709,12 +5709,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.13, 3.1.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -5723,7 +5717,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
