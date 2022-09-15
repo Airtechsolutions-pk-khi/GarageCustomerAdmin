@@ -84,7 +84,7 @@ namespace GarageCustomerAdmin.BLL._Services
 
                     imBLL.Add(new LocationimagesBLL
                     {
-                        Image = UploadImage(img, "Location", _env),
+                        ImageURL = UploadImage(img, "Location", _env),
                         //UpdatedDate = DateTime.Now.ToString()
                     });
 

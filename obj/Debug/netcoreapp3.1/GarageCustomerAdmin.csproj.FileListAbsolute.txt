@@ -79,6 +79,17 @@ D:\Project\GarageCustomerAdmin\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\Garag
 D:\Project\GarageCustomerAdmin\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.dll
 D:\Project\GarageCustomerAdmin\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.pdb
 D:\Project\GarageCustomerAdmin\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.genruntimeconfig.cache
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.csproj.AssemblyReference.cache
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.AssemblyInfoInputs.cache
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.AssemblyInfo.cs
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.csproj.CoreCompileInputs.cache
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.MvcApplicationPartsAssemblyInfo.cs
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.MvcApplicationPartsAssemblyInfo.cache
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.RazorAssemblyInfo.cache
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.RazorAssemblyInfo.cs
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.dll
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.pdb
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\bin\Debug\netcoreapp3.1\GarageCustomerAdmin.StaticWebAssets.xml
@@ -138,15 +149,6 @@ C:\Office\Projects\MARN Garage\GarageCustomerAdmin\bin\Debug\netcoreapp3.1\runti
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.csproj.AssemblyReference.cache
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.GeneratedMSBuildEditorConfig.editorconfig
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.AssemblyInfoInputs.cache
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.AssemblyInfo.cs
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.csproj.CoreCompileInputs.cache
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.MvcApplicationPartsAssemblyInfo.cs
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.MvcApplicationPartsAssemblyInfo.cache
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.RazorAssemblyInfo.cache
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.RazorAssemblyInfo.cs
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\staticwebassets\GarageCustomerAdmin.StaticWebAssets.Manifest.cache
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.TagHelpers.input.cache
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.TagHelpers.output.cache
@@ -157,6 +159,4 @@ C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\Garag
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.RazorTargetAssemblyInfo.cs
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.Views.pdb
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.csproj.CopyComplete
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.dll
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.pdb
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.genruntimeconfig.cache

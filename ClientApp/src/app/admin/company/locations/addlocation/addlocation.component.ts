@@ -64,7 +64,7 @@ export class AddlocationComponent implements OnInit {
       imageURL: [''],
       lastUpdatedBy:[''],                 
       lastUpdatedDate:[''],
-      isFeatured:0,
+      isFeatured:false,
       file: [''],
       imagesSource: [''],
       locationImages: [],
@@ -78,14 +78,15 @@ export class AddlocationComponent implements OnInit {
     });
   }
   onFileChange(event) {
+    this.Images=this.Images??[];
     if (event.target.files && event.target.files[0]) {
       var filesAmount = event.target.files.length;
       for (let i = 0; i < filesAmount; i++) {
         var reader = new FileReader();
-        debugger;
         var fileSize = event.target.files[i].size / 100000;
         if (fileSize > 5) { alert("Filesize exceed 500 KB"); }
         else {
+         debugger
           reader.onload = (event: any) => {
             console.log(event.target.result);
             this.Images.push(event.target.result);
@@ -189,7 +190,7 @@ export class AddlocationComponent implements OnInit {
     this.f.service.setValue(this.selectedServiceID == undefined ? "" : this.selectedServiceID.toString());
     //this.f.landmark.setValue(this.selectedLandmarkID == undefined ? "" : this.selectedLandmarkID.toString());
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    this.f.isFeatured.setValue(this.f.isFeatured.value === true ? 1 : 2);
+    // this.f.isFeatured.setValue(this.f.isFeatured.value === true ? 1 : 0);
 
    
     if (parseInt(this.f.locationID.value) === 0) {

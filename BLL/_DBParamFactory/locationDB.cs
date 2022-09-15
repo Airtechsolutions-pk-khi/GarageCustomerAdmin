@@ -72,7 +72,7 @@ namespace BAL.Repositories
 
                         for (int i = 0; i < _obj.LocationImages.Count; i++)
                         {
-                            ImagesSource.Add(_obj.LocationImages[i].Image);
+                            ImagesSource.Add(_obj.LocationImages[i].ImageURL);
                         }
                     }
                 }
@@ -207,10 +207,10 @@ namespace BAL.Repositories
 
                 try
                 {
-                    var imgStr = String.Join(",", data.LocationImages.Select(p => p.Image));
+                    var imgStr = String.Join(",", data.LocationImages.Select(p => p.ImageURL));
                     SqlParameter[] p3 = new SqlParameter[3];
                     p3[0] = new SqlParameter("@Images", imgStr);
-                    p3[1] = new SqlParameter("@LocationID", rtn);
+                    p3[1] = new SqlParameter("@LocationID", data.LocationID);
                     p3[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
                     (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertLocationImages_CAdmin", p3);
                 }

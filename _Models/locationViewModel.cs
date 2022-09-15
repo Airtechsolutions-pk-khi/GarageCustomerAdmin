@@ -43,7 +43,7 @@ namespace GarageCustomerAdmin._Models
         public double? MinOrderAmount { get; set; }
         public string Longitude { get; set; }
         public string Latitude { get; set; }         
-        public int LandmarkID { get; set; }
+        public int? LandmarkID { get; set; }
         public string LastUpdatedBy { get; set; }
         public string LastUpdatedDate { get; set; }
         public int StatusID { get; set; }
@@ -53,7 +53,7 @@ namespace GarageCustomerAdmin._Models
         public string Amenities { get; set; }
         public string Service { get; set; }
          
-        public int? IsFeatured { get; set; }
+        public bool? IsFeatured { get; set; }
 
         public List<LocationimagesBLL> LocationImages = new List<LocationimagesBLL>();
         public List<string> ImagesSource { get; set; }
@@ -63,7 +63,7 @@ namespace GarageCustomerAdmin._Models
     {
         public int LocationImageID { get; set; }
 
-        public string Image { get; set; }
+        public string ImageURL { get; set; }
 
         public int? LocationID { get; set; }
 

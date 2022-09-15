@@ -57,6 +57,7 @@ C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\Pub
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\GarageCustomerAdmin.Views.dll
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\GarageCustomerAdmin.Views.pdb
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\3rdpartylicenses.txt
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\3rdpartylicenses.zip
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-grid.css
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-grid.css.map
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-reboot.css
@@ -1935,8 +1936,8 @@ C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\Pub
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.min.map
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\crossphone.cb94c6e65f9711aecd39.png
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\index.html
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\main-es2015.6992afa5eb012c600aaa.js
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\main-es5.6992afa5eb012c600aaa.js
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\main-es2015.d279779a93de3d8ed2ae.js
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\main-es5.d279779a93de3d8ed2ae.js
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\manifest.webmanifest
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\ngsw-worker.js
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\ngsw.json
