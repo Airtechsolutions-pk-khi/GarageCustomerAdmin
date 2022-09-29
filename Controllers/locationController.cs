@@ -44,7 +44,7 @@ namespace GarageCustomerAdmin.Controllers
         [Route("update")]
         public int PostUpdate([FromBody]LocationBLL obj)
         {
-            return _service.Update(obj);
+            return _service.Update(obj, _env);
         }
 
 
