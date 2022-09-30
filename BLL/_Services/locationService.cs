@@ -67,7 +67,7 @@ namespace GarageCustomerAdmin.BLL._Services
             }
         }
 
-        public int Update(LocationBLL data)
+        public int Update(LocationBLL data, IWebHostEnvironment _env)
         {
             List<LocationimagesBLL> imBLL = new List<LocationimagesBLL>();
             try

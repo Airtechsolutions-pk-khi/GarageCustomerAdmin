@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj": {}
+    "D:\\Project\\GarageCustomerAdmin_GIT\\GarageCustomerAdmin.csproj": {}
   },
   "projects": {
-    "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj": {
+    "D:\\Project\\GarageCustomerAdmin_GIT\\GarageCustomerAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj",
+        "projectUniqueName": "D:\\Project\\GarageCustomerAdmin_GIT\\GarageCustomerAdmin.csproj",
         "projectName": "GarageCustomerAdmin",
-        "projectPath": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj",
-        "packagesPath": "C:\\Users\\RAFI SIRAJUDDIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\obj\\",
+        "projectPath": "D:\\Project\\GarageCustomerAdmin_GIT\\GarageCustomerAdmin.csproj",
+        "packagesPath": "C:\\Users\\Ammad Raza\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\GarageCustomerAdmin_GIT\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\RAFI SIRAJUDDIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ammad Raza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,6 +75,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.13, 3.1.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -83,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }
