@@ -65,6 +65,10 @@ import { SettingComponent } from './admin/settings/setting/setting.component';
 import { AddsettingComponent } from './admin/settings/setting/addsetting/addsetting.component';
 import { ConfirmComponent } from './admin/settings/confirm/confirm.component';
 import { ConfirmationDialogService } from './admin/settings/confirm/confirmation-dialog.service';
+import { CarselllistComponent } from './admin/carsell/carselllist/carselllist.component';
+import { AddcarsellComponent } from './admin/carsell/carselllist/addcarsell/addcarsell.component';
+
+
 
 
 
@@ -103,7 +107,7 @@ import { ConfirmationDialogService } from './admin/settings/confirm/confirmation
     SalescustomerwiseComponent,
     SalesitemwiseComponent,
     SalesuserwiseComponent,
-    OrdersComponent,
+    OrdersComponent,    
     OrderdetailsComponent,
     ItemsettingsComponent,
     DeliveryComponent,
@@ -121,7 +125,9 @@ import { ConfirmationDialogService } from './admin/settings/confirm/confirmation
     ServiceComponent,
     SettingComponent,
     AddsettingComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    CarselllistComponent,
+    AddcarsellComponent
     
   ],
   imports: [
@@ -209,6 +215,10 @@ import { ConfirmationDialogService } from './admin/settings/confirm/confirmation
           { path: 'setting', component: SettingComponent },
           { path: 'setting/add', component: AddsettingComponent },
           { path: 'setting/edit/:id', component: AddsettingComponent },
+
+          { path: 'carsell', component: CarselllistComponent },
+          { path: 'carsell/add', component: AddcarsellComponent },
+          { path: 'carselllist/edit/:id', component: AddcarsellComponent }
            
         ]
       }

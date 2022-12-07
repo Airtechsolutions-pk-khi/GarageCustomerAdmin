@@ -16,12 +16,20 @@
                                     <div *ngIf="f.title.errors.required">
                                         Title is required.
                                     </div>
-                                </div>                            
+                                </div>    
+                                
+                                <label class="small mb-1" for="inputUsername">Arabic Title</label>
+                                <input type="text" class="form-control" id=arabicTitle placeholder="" formControlName="arabicTitle">
+                                  
                              
 
                             <div class="form-group ">
                                 <label class="small mb-1" for="inputUsername">Description</label>
                                 <input type="text" class="form-control" id="description" placeholder="" formControlName="description">
+                            </div>
+                            <div class="form-group ">
+                                <label class="small mb-1" for="inputUsername">Arabic Description</label>
+                                <input type="text" class="form-control" id="arabicDescription" placeholder="" formControlName="arabicDescription">
                             </div>
                             <div class="form-group  ">
                                 <label class="small mb-1" for="inputUsername">Type</label>

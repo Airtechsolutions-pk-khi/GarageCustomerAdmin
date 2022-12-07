@@ -83,7 +83,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[7];
+                SqlParameter[] p = new SqlParameter[9];
 
                 p[0] = new SqlParameter("@Title", data.Title);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -92,7 +92,9 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@Image", data.Image);
                 p[5] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
                 p[6] = new SqlParameter("@StatusID", data.StatusID);
-             
+                p[7] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[8] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertSetting", p);
               
                 return rtn;
@@ -108,7 +110,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[8];
+                SqlParameter[] p = new SqlParameter[10];
 
                 p[0] = new SqlParameter("@Title", data.Title);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -118,6 +120,8 @@ namespace BAL.Repositories
                 p[5] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
                 p[6] = new SqlParameter("@StatusID", data.StatusID);
                 p[7] = new SqlParameter("@ID", data.ID);
+                p[8] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[9] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateSetting_Admin", p);
                 return rtn;

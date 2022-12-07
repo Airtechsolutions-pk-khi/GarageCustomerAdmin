@@ -47,7 +47,9 @@ export class AddsettingComponent implements OnInit {
     this.settingForm = this.formBuilder.group({
       id: 0,
       title: ['', Validators.required],
-      description: [''],             
+      description: [''],  
+      arabicTitle: [''],
+      arabicDescription: [''],            
       displayOrder: [0],    
       pageName: [''],      
       type: [''],  
@@ -57,10 +59,12 @@ export class AddsettingComponent implements OnInit {
   }
 
   private editForm(obj) {
-    this.f.title.setValue(obj.title);     
+    this.f.title.setValue(obj.title);   
+    this.f.arabicTitle.setValue(obj.arabicTitle);     
     this.f.id.setValue(obj.id);
     this.f.image.setValue(obj.image);
-    this.f.description.setValue(obj.description);   
+    this.f.description.setValue(obj.description); 
+    this.f.arabicDescription.setValue(obj.arabicDescription);   
     this.f.displayOrder.setValue(obj.displayOrder);
     this.f.pageName.setValue(obj.pageName);
     this.f.type.setValue(obj.type);

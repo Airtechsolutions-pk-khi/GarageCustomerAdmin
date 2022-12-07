@@ -14,34 +14,34 @@ using WebAPICode.Helpers;
 namespace BAL.Repositories
 {
 
-    public class landmarkDB : baseDB
+    public class featureDB : baseDB
     {
-        public static LandmarkBLL repo;
+        public static FeatureBLL repo;
         public static DataTable _dt;
         public static DataSet _ds;
-        public landmarkDB()
+        public featureDB()
            : base()
         {
-            repo = new LandmarkBLL();
+            repo = new FeatureBLL();
             _dt = new DataTable();
             _ds = new DataSet();
         }
 
-        public List<LandmarkBLL> GetAll()
+        public List<FeatureBLL> GetAll()
         {
             try
             {
-                var lst = new List<LandmarkBLL>();
+                var lst = new List<FeatureBLL>();
                 //SqlParameter[] p = new SqlParameter[1];
                
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetLandmark");
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetFeatures");
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        //lst = _dt.DataTableToList<LandmarkBLL>();
-                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<LandmarkBLL>>();
+                        //lst = _dt.DataTableToList<FeatureBLL>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<FeatureBLL>>();
                     }
                 }
                 return lst;
@@ -52,22 +52,22 @@ namespace BAL.Repositories
             }
         }
 
-        public LandmarkBLL Get(int id)
+        public AmenitiesBLL Get(int id)
         {
             try
             {
-                var _obj = new LandmarkBLL();
+                var _obj = new AmenitiesBLL();
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@id", id);
                 //p[1] = new SqlParameter("@brandid", brandID);
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetLandmarkByID", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetAmenitiesByID", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        //_obj = _dt.DataTableToList<LandmarkBLL>().FirstOrDefault();
-                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<LandmarkBLL>>().FirstOrDefault();
+                        //_obj = _dt.DataTableToList<AmenitiesBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<AmenitiesBLL>>().FirstOrDefault();
                     }
                 }
                 return _obj;
@@ -78,19 +78,18 @@ namespace BAL.Repositories
             }
         }
        
-        public int Insert(LandmarkBLL data)
+        public int Insert(AmenitiesBLL data)
         {
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[4];
+                SqlParameter[] p = new SqlParameter[3];
 
                 p[0] = new SqlParameter("@Name", data.Name);                
                 p[1] = new SqlParameter("@Image", data.Image);
                 p[2] = new SqlParameter("@StatusID", data.StatusID);
-                p[3] = new SqlParameter("@ArabicName", data.ArabicName);
-
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertLandmark", p);
+             
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertAmenities", p);
               
                 return rtn;
             }
@@ -100,20 +99,19 @@ namespace BAL.Repositories
             }
         }
 
-        public int Update(LandmarkBLL data)
+        public int Update(AmenitiesBLL data)
         {
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[5];
+                SqlParameter[] p = new SqlParameter[4];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Image", data.Image);
                 p[2] = new SqlParameter("@StatusID", data.StatusID);
-                p[3] = new SqlParameter("@LandmarkID", data.LandmarkID);
-                p[4] = new SqlParameter("@ArabicName", data.ArabicName);
+                p[3] = new SqlParameter("@AmenitiesID", data.AmenitiesID);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateLandmark_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateAmenities_Admin", p);
                 return rtn;
             }
             catch (Exception ex)
@@ -122,16 +120,16 @@ namespace BAL.Repositories
             }
         }
 
-        public int Delete(LandmarkBLL data)
+        public int Delete(AmenitiesBLL data)
         {
             try
             {
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@id", data.LandmarkID);
+                p[0] = new SqlParameter("@id", data.AmenitiesID);
                 //p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
-                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteLandmark", p);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteAmenities", p);
 
                 return _obj;
             }

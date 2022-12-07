@@ -1,7 +1,9 @@
 export class setting {
   id: number;
   title: string;
-  description: string;  
+  description: string; 
+  arabicTitle: string;
+  arabicDescription: string;  
   pageName: string;  
   type:string;
   displayOrder: number;

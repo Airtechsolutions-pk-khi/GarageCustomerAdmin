@@ -12,7 +12,8 @@ namespace GarageCustomerAdmin._Models
     public class AmenitiesBLL
     {
         public int AmenitiesID { get; set; }
-        public string Name { get; set; }        
+        public string Name { get; set; }
+        public string ArabicName { get; set; }
         public string Image { get; set; }
         public int StatusID { get; set; }
         

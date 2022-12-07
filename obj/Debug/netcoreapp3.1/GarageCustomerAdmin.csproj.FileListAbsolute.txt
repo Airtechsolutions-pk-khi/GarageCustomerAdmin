@@ -160,14 +160,6 @@ C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\Garag
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.Views.pdb
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.csproj.CopyComplete
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.genruntimeconfig.cache
-D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.csprojAssemblyReference.cache
-D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.AssemblyInfoInputs.cache
-D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.AssemblyInfo.cs
-D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.csproj.CoreCompileInputs.cache
-D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.MvcApplicationPartsAssemblyInfo.cs
-D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.MvcApplicationPartsAssemblyInfo.cache
-D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.RazorAssemblyInfo.cache
-D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.RazorAssemblyInfo.cs
 D:\Project\GarageCustomerAdmin_GIT\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Project\GarageCustomerAdmin_GIT\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Project\GarageCustomerAdmin_GIT\bin\Debug\netcoreapp3.1\GarageCustomerAdmin.exe
@@ -226,6 +218,13 @@ D:\Project\GarageCustomerAdmin_GIT\bin\Debug\netcoreapp3.1\runtimes\win\lib\netc
 D:\Project\GarageCustomerAdmin_GIT\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Project\GarageCustomerAdmin_GIT\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Project\GarageCustomerAdmin_GIT\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.AssemblyInfoInputs.cache
+D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.AssemblyInfo.cs
+D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.csproj.CoreCompileInputs.cache
+D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.MvcApplicationPartsAssemblyInfo.cs
+D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.MvcApplicationPartsAssemblyInfo.cache
+D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.RazorAssemblyInfo.cache
+D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.RazorAssemblyInfo.cs
 D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\staticwebassets\GarageCustomerAdmin.StaticWebAssets.Manifest.cache
 D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\staticwebassets\GarageCustomerAdmin.StaticWebAssets.xml
 D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\scopedcss\bundle\GarageCustomerAdmin.styles.css
@@ -241,3 +240,4 @@ D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.c
 D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.dll
 D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.pdb
 D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.genruntimeconfig.cache
+D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.csprojAssemblyReference.cache

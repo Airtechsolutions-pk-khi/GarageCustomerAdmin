@@ -47,7 +47,9 @@ export class AddservicesComponent implements OnInit {
     this.serviceForm = this.formBuilder.group({
       serviceID: 0,
       serviceTitle: ['', Validators.required],
-      serviceDescription: [''],      
+      serviceDescription: [''],    
+      arabicServiceTitle: [''],
+      arabicServiceDescription: [''],  
       displayOrder: [0],      
       statusID: [true],      
       image: [''],   
@@ -56,11 +58,13 @@ export class AddservicesComponent implements OnInit {
   }
 
   private editForm(obj) {
+    debugger
     this.f.serviceTitle.setValue(obj.serviceTitle);
-     
+    this.f.arabicServiceTitle.setValue(obj.arabicServiceTitle);
     this.f.serviceID.setValue(obj.serviceID);
     this.f.image.setValue(obj.image);
     this.f.serviceDescription.setValue(obj.serviceDescription);
+    this.f.arabicServiceDescription.setValue(obj.arabicServiceDescription);
     this.f.displayOrder.setValue(obj.displayOrder);
     this.f.type.setValue(obj.type);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);

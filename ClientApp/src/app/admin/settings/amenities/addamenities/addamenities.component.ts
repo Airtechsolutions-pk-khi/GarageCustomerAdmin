@@ -45,7 +45,8 @@ export class AddamenitiesComponent implements OnInit {
   private createForm() {
     this.amenitiesForm = this.formBuilder.group({
       amenitiesID: 0,
-      name: ['', Validators.required],      
+      name: ['', Validators.required],   
+      arabicName:[''],   
       statusID: [true],      
       image: [''],            
     });
@@ -53,7 +54,7 @@ export class AddamenitiesComponent implements OnInit {
 
   private editForm(obj) {
     this.f.name.setValue(obj.name);
-     
+    this.f.arabicName.setValue(obj.arabicName);
     this.f.amenitiesID.setValue(obj.amenitiesID);
     this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);

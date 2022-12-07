@@ -23,8 +23,10 @@
                 <thead>
                     <tr class="table-header">
                         <th width="10%">IMAGE</th>
-                        <th width="15%" sortable="serviceTitle" (sort)="onSort($event)"> Title </th>                        
-                        <th width="15%" sortable="serviceDescription" (sort)="onSort($event)"> Description </th>                        
+                        <th width="15%" sortable="serviceTitle" (sort)="onSort($event)"> Title </th> 
+                        <th width="15%" sortable="arabicServiceTitle" (sort)="onSort($event)"> Arr Title </th>                        
+                        <th width="15%" sortable="serviceDescription" (sort)="onSort($event)"> Description </th>  
+                        <th width="15%" sortable="arabicServiceDescription" (sort)="onSort($event)">Arr Description </th>                        
                         <th width="15%" sortable="displayOrder" (sort)="onSort($event)">Display Order </th>
                         <th width="15%" sortable="type" (sort)="onSort($event)">Type </th>
                         <th width="15%" sortable="statusID" (sort)="onSort($event)">Status </th>                        
@@ -38,7 +40,9 @@
                             <div *ngIf="item.image === ''" class="image-replace"></div>
                         </td>
                         <td> {{item.serviceTitle}} </td>
+                        <td> {{item.arabicServiceTitle}} </td>
                         <td> {{item.serviceDescription}} </td>
+                        <td> {{item.arabicServiceDescription}} </td>
                         <td> {{item.displayOrder}} </td>
                         <td> {{item.type}} </td>
                         <td>

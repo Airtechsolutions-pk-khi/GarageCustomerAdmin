@@ -83,7 +83,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[6];
+                SqlParameter[] p = new SqlParameter[8];
 
                 p[0] = new SqlParameter("@ServiceTitle", data.ServiceTitle);
                 p[1] = new SqlParameter("@ServiceDescription", data.ServiceDescription);
@@ -91,6 +91,8 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@Image", data.Image);
                 p[4] = new SqlParameter("@StatusID", data.StatusID);
                 p[5] = new SqlParameter("@Type", data.Type);
+                p[6] = new SqlParameter("@ArabicServiceTitle", data.ArabicServiceTitle);
+                p[7] = new SqlParameter("@ArabicServiceDescription", data.ArabicServiceDescription);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertService", p);
               
@@ -107,7 +109,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[7];
+                SqlParameter[] p = new SqlParameter[9];
 
                 p[0] = new SqlParameter("@ServiceTitle", data.ServiceTitle);
                 p[1] = new SqlParameter("@ServiceDescription", data.ServiceDescription);
@@ -116,6 +118,8 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@StatusID", data.StatusID);
                 p[5] = new SqlParameter("@ServiceID", data.ServiceID);
                 p[6] = new SqlParameter("@Type", data.Type);
+                p[7] = new SqlParameter("@ArabicServiceTitle", data.ArabicServiceTitle);
+                p[8] = new SqlParameter("@ArabicServiceDescription", data.ArabicServiceDescription);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateService_Admin", p);
                 return rtn;

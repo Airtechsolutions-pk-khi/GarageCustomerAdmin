@@ -46,7 +46,8 @@ export class AddlandmarkComponent implements OnInit {
   private createForm() {
     this.landmarkForm = this.formBuilder.group({
       landmarkID: 0,
-      name: ['', Validators.required],      
+      name: ['', Validators.required],    
+      arabicName:[''],  
       statusID: [true],      
       image: [''],            
     });
@@ -54,7 +55,7 @@ export class AddlandmarkComponent implements OnInit {
 
   private editForm(obj) {
     this.f.name.setValue(obj.name);
-     
+     this.f.arabicName.setValue(obj.arabicName);
     this.f.landmarkID.setValue(obj.landmarkID);
     this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
