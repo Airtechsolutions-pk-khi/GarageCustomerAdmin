@@ -157,7 +157,7 @@ namespace BAL.Repositories
             try
             {                
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[14];
+                SqlParameter[] p = new SqlParameter[15];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Descripiton", data.Descripiton);
@@ -173,6 +173,7 @@ namespace BAL.Repositories
                 p[11] = new SqlParameter("@IsFeatured", data.IsFeatured);                               
                 p[12] = new SqlParameter("@LocationID", data.LocationID);
                 p[13] = new SqlParameter("@GMapLink", data.Gmaplink);
+                p[14] = new SqlParameter("@ArabicName", data.ArabicName);
                 rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_UpdateLocation_CADMIN", p);
 
                 if (data.Amenities != "")

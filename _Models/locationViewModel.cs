@@ -9,33 +9,12 @@ namespace GarageCustomerAdmin._Models
     {
     }
 
-    //public class LocationBLL1
-    //{
-    //    public int LocationID { get; set; }
-    //    public string Name { get; set; }
-    //    public string Description { get; set; }
-    //    public string Address { get; set; }
-    //    public string ContactNo { get; set; }
-    //    public string Email { get; set; }
-    //    public double? MinOrderAmount { get; set; }
-
-    //    public string Longitude { get; set; }
-    //    public string Latitude { get; set; }
-    //    public int LandmarkID { get; set; }
-
-    //    public string LastUpdatedBy { get; set; }
-    //    public string LastUpdatedDate { get; set; }
-
-    //    public int StatusID { get; set; }
-    //    public string ImageURL { get; set; }
-
-    //    public string GMapLink { get; set; }
-    //    public bool IsFeatured { get; set; }
-    //}
+   
     public class LocationBLL
     {  
         public int LocationID { get; set; }                                
         public string Name { get; set; }
+        public string ArabicName { get; set; }
         public string Descripiton { get; set; }
         public string Address { get; set; }
         public string ContactNo { get; set; }

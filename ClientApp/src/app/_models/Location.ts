@@ -3,6 +3,7 @@ export class Location {
   amenitiesID:number;
   serviceID:number;  
   name: string;
+  arabicName: string;
   descripiton: string;
   address: string;
   contactNo: string;
