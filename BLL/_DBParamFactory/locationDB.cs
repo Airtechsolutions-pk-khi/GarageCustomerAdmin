@@ -174,6 +174,7 @@ namespace BAL.Repositories
                 p[12] = new SqlParameter("@LocationID", data.LocationID);
                 p[13] = new SqlParameter("@GMapLink", data.Gmaplink);
                 p[14] = new SqlParameter("@ArabicName", data.ArabicName);
+
                 rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_UpdateLocation_CADMIN", p);
 
                 if (data.Amenities != "")

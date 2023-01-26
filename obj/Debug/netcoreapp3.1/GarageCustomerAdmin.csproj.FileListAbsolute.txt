@@ -240,4 +240,3 @@ D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.c
 D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.dll
 D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.pdb
 D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.genruntimeconfig.cache
-D:\Project\GarageCustomerAdmin_GIT\obj\Debug\netcoreapp3.1\GarageCustomerAdmin.csprojAssemblyReference.cache
