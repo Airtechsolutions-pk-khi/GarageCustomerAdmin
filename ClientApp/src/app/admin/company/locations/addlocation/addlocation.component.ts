@@ -53,7 +53,9 @@ export class AddlocationComponent implements OnInit {
       name: ['', Validators.required],
       descripiton: [''],
       address: [''],
-      contactNo: [''],      
+      contactNo: [''],  
+      arabicName:[''],
+      arabicDescription:[''],    
       email: [''],                  
       minOrderAmount: [0],  
       latitude: [''],
@@ -114,6 +116,8 @@ export class AddlocationComponent implements OnInit {
     this.f.gmaplink.setValue(obj.gmaplink);
     this.f.landmarkID.setValue(obj.landmarkID);    
     this.f.imageURL.setValue(obj.imageURL);
+    this.f.arabicName.setValue(obj.arabicName);
+    this.f.arabicDescription.setValue(obj.arabicDescription);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.isFeatured.setValue(obj.isFeatured  === 1 ? true : false);    
 

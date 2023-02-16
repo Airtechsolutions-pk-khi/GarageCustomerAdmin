@@ -15,6 +15,7 @@ namespace GarageCustomerAdmin._Models
         public int LocationID { get; set; }                                
         public string Name { get; set; }
         public string ArabicName { get; set; }
+        public string ArabicDescription { get; set; }
         public string Descripiton { get; set; }
         public string Address { get; set; }
         public string ContactNo { get; set; }

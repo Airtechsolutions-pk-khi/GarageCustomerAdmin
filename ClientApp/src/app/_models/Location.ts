@@ -4,6 +4,7 @@ export class Location {
   serviceID:number;  
   name: string;
   arabicName: string;
+  arabicDescription:string;
   descripiton: string;
   address: string;
   contactNo: string;
