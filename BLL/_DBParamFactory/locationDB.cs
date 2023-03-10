@@ -118,8 +118,11 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[24];
 
                 p[0] = new SqlParameter("@Name", data.Name);
+                p[0] = new SqlParameter("@ArabicName", data.ArabicName);
                 p[1] = new SqlParameter("@Description", data.Descripiton);
+                p[1] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
                 p[2] = new SqlParameter("@Address", data.Address);
+                p[2] = new SqlParameter("@ArabicAddress", data.ArabicAddress);
                 p[3] = new SqlParameter("@ContactNo", data.ContactNo);
                 p[4] = new SqlParameter("@Email", data.Email);
                 //p[5] = new SqlParameter("@TimeZoneID", data.TimeZoneID);
@@ -157,7 +160,7 @@ namespace BAL.Repositories
             try
             {                
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[16];
+                SqlParameter[] p = new SqlParameter[17];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Descripiton", data.Descripiton);
@@ -175,6 +178,7 @@ namespace BAL.Repositories
                 p[13] = new SqlParameter("@GMapLink", data.Gmaplink);
                 p[14] = new SqlParameter("@ArabicName", data.ArabicName);
                 p[15] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+                p[16] = new SqlParameter("@ArabicAddress", data.ArabicAddress);
 
                 rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_UpdateLocation_CADMIN", p);
 

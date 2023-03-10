@@ -9,4 +9,5 @@ export class setting {
   displayOrder: number;
   statusID: number;
   image: string;    
+  alternateImage: string;    
 }

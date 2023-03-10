@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component';
+import { alternateimageComponent } from 'src/app/imageupload/alternateimage.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ToastService } from 'src/app/_services/toastservice';
@@ -24,6 +25,7 @@ export class AddsettingComponent implements OnInit {
   selectedgroupModifierIds: string[];
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
+  @ViewChild(alternateimageComponent, { static: true }) altimg;
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -55,6 +57,7 @@ export class AddsettingComponent implements OnInit {
       type: [''],  
       statusID: [true],      
       image: [''],            
+      alternateImage: [''],            
     });
   }
 
@@ -63,6 +66,7 @@ export class AddsettingComponent implements OnInit {
     this.f.arabicTitle.setValue(obj.arabicTitle);     
     this.f.id.setValue(obj.id);
     this.f.image.setValue(obj.image);
+    this.f.alternateImage.setValue(obj.alternateImage);
     this.f.description.setValue(obj.description); 
     this.f.arabicDescription.setValue(obj.arabicDescription);   
     this.f.displayOrder.setValue(obj.displayOrder);
@@ -70,6 +74,7 @@ export class AddsettingComponent implements OnInit {
     this.f.type.setValue(obj.type);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.imgComp.imageUrl = obj.image;
+    this.altimg.alternateimageUrl = obj.alternateImage;
   }
 
   setSelectedCustomer() {
@@ -96,6 +101,7 @@ export class AddsettingComponent implements OnInit {
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.image.setValue(this.imgComp.imageUrl);
+    this.f.alternateImage.setValue(this.altimg.alternateimageUrl);
     
 
     if (parseInt(this.f.id.value) === 0) {

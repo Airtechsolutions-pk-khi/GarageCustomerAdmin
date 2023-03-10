@@ -7,6 +7,7 @@ export class Location {
   arabicDescription:string;
   descripiton: string;
   address: string;
+  Arabicaddress: string;
   contactNo: string;
   email: string;   
   minOrderAmount: number;

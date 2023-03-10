@@ -18,6 +18,7 @@ namespace GarageCustomerAdmin._Models
         public string ArabicDescription { get; set; }
         public string Descripiton { get; set; }
         public string Address { get; set; }
+        public string ArabicAddress { get; set; }
         public string ContactNo { get; set; }
         public string Email { get; set; }        
         public double? MinOrderAmount { get; set; }

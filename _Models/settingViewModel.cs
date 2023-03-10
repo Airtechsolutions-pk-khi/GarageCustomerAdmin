@@ -18,6 +18,7 @@ namespace GarageCustomerAdmin._Models
         public string ArabicDescription { get; set; }
         public string PageName { get; set; }
         public string Image { get; set; }
+        public string AlternateImage { get; set; }
         public string Type { get; set; }
 
         public int? DisplayOrder { get; set; }
