@@ -3,120 +3,134 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" [routerLink]="['dashboard']">
-                <div class="sidebar-brand-icon">
-                    <img src="../../assets/img/logo-garage.svg" style="width: 40%;" />
-                </div>
-            </a>
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" [routerLink]="['dashboard']">
+          <div class="sidebar-brand-icon">
+            <img src="../../assets/img/logo-garage.svg" style="width: 40%;" />
+          </div>
+        </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['dashboard']">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['dashboard']">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+        <!-- Divider -->
+        <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Modules
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Modules
+        </div>
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Settings</span>
+          </a>
+          <div id="collapseSettings" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+
+              <a class="collapse-item" [routerLink]="['/admin/services']">Services</a>
+              <a class="collapse-item" [routerLink]="['/admin/amenities']">Amenities</a>
+              <a class="collapse-item" [routerLink]="['/admin/location']">Locations</a>
+              <a class="collapse-item" [routerLink]="['/admin/landmarks']">Landmarks</a>
+              <a class="collapse-item" [routerLink]="['/admin/setting']">Setting</a>
             </div>
+          </div>
+        </li>
+        <hr class="sidebar-divider d-none d-md-block">
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCarSell" aria-expanded="true" aria-controls="collapseCarSell">
+            <i class="fas fa-fw fa-bars"></i>
+            <span>Car Sell</span>
+          </a>
+          <div id="collapseCarSell" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Settings</span>
-                </a>
-                <div id="collapseSettings" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">                       
-                        
-                        <a class="collapse-item" [routerLink]="['/admin/services']">Services</a>
-                        <a class="collapse-item" [routerLink]="['/admin/amenities']">Amenities</a>
-                        <a class="collapse-item" [routerLink]="['/admin/location']">Locations</a>
-                        <a class="collapse-item" [routerLink]="['/admin/landmarks']">Landmarks</a>
-                        <a class="collapse-item" [routerLink]="['/admin/setting']">Setting</a>
-                    </div>
-                </div>
-            </li> 
-            <hr class="sidebar-divider d-none d-md-block">
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCarSell" aria-expanded="true" aria-controls="collapseCarSell">
-                    <i class="fas fa-fw fa-bars"></i>
-                    <span>Car Sell</span>
-                </a>
-                <div id="collapseCarSell" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">                       
-                        
-                        <a class="collapse-item" [routerLink]="['/admin/carsell']">Car List</a>
-                       
-                    </div>
-                </div>
-            </li> 
-            <!-- <hr class="sidebar-divider"> -->
-            <!-- Nav Item - Pages Collapse Menu -->
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="true" aria-controls="collapseCustomer">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Customer</span>
-                </a>
-                <div id="collapseCustomer" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" [routerLink]="['/admin/customer']">All Customers</a>
-                    </div>
-                </div>
-            </li> -->
-            <!-- <hr class="sidebar-divider"> -->
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany" aria-expanded="true" aria-controls="collapseCompany">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Company</span>
-                </a>
-                <div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" [routerLink]="['/admin/brand']">Brands</a>
-                        <a class="collapse-item" [routerLink]="['/admin/location']">Branch Settings</a>
-                    </div>
-                </div>
-            </li>
-           
-            <hr class="sidebar-divider"> -->
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports" aria-expanded="true" aria-controls="collapseReports">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Reports</span>
-                </a>
-                <div id="collapseReports" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" [routerLink]="['/admin/report/summary']">Sales Summary </a>
-                        <a class="collapse-item" [routerLink]="['/admin/report/salesdetail']"> Sales details</a>
-                        <a class="collapse-item" [routerLink]="['/admin/report/salesitemwise']">Item Sales </a>
-                        <a class="collapse-item" [routerLink]="['/admin/report/salescustomerwise']">Customer Sales </a>
-                        <a class="collapse-item" [routerLink]="['/admin/report/salescategorywise']">Category Sales </a>
-                        
-                    </div>
-                </div>
-            </li>
-            -->
+              <a class="collapse-item" [routerLink]="['/admin/carsell']">Car List</a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
+          </div>
+        </li>
+        <hr class="sidebar-divider d-none d-md-block">
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReviews" aria-expanded="true" aria-controls="collapseReviews">
+            <i class="fas fa-fw fa-bars"></i>
+            <span>Customer Reviews</span>
+          </a>
+          <div id="collapseReviews" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
 
-        </ul>
+              <a class="collapse-item" [routerLink]="['/admin/reviews']">Reviews List</a>
+
+            </div>
+          </div>
+        </li>
+        <!-- <hr class="sidebar-divider"> -->
+        <!-- Nav Item - Pages Collapse Menu -->
+        <!-- <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="true" aria-controls="collapseCustomer">
+          <i class="fas fa-fw fa-user"></i>
+          <span>Customer</span>
+      </a>
+      <div id="collapseCustomer" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" [routerLink]="['/admin/customer']">All Customers</a>
+          </div>
+      </div>
+  </li> -->
+        <!-- <hr class="sidebar-divider"> -->
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <!-- <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany" aria-expanded="true" aria-controls="collapseCompany">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Company</span>
+      </a>
+      <div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" [routerLink]="['/admin/brand']">Brands</a>
+              <a class="collapse-item" [routerLink]="['/admin/location']">Branch Settings</a>
+          </div>
+      </div>
+  </li>
+
+  <hr class="sidebar-divider"> -->
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <!-- <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports" aria-expanded="true" aria-controls="collapseReports">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Reports</span>
+      </a>
+      <div id="collapseReports" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" [routerLink]="['/admin/report/summary']">Sales Summary </a>
+              <a class="collapse-item" [routerLink]="['/admin/report/salesdetail']"> Sales details</a>
+              <a class="collapse-item" [routerLink]="['/admin/report/salesitemwise']">Item Sales </a>
+              <a class="collapse-item" [routerLink]="['/admin/report/salescustomerwise']">Customer Sales </a>
+              <a class="collapse-item" [routerLink]="['/admin/report/salescategorywise']">Category Sales </a>
+
+          </div>
+      </div>
+  </li>
+  -->
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+      </ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->

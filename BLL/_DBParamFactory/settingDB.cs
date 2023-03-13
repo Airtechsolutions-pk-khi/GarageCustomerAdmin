@@ -97,7 +97,15 @@ namespace BAL.Repositories
                 p[9] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertSetting", p);
-              
+                //if (data.Locations != "")
+                //{
+                //    SqlParameter[] p1 = new SqlParameter[3];
+
+                //    p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
+                //    p1[1] = new SqlParameter("@SettingID", data.ID);
+                //    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
+                //    (new DBHelper().ExecuteNonQueryReturn)("sp_insertLocationJunc_CAdmin", p1);
+                //}
                 return rtn;
             }
             catch (Exception ex)
@@ -125,7 +133,16 @@ namespace BAL.Repositories
                 p[9] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
                 p[10] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateSetting_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateSetting_Admin", p);
+                if (data.Locations != "")
+                {
+                    SqlParameter[] p1 = new SqlParameter[3];
+
+                    p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
+                    p1[1] = new SqlParameter("@SettingID", data.ID);
+                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
+                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertLocationJunc_CAdmin", p1);
+                }
                 return rtn;
             }
             catch (Exception ex)

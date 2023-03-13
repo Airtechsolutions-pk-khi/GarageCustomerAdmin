@@ -20,10 +20,10 @@ namespace GarageCustomerAdmin._Models
         public string Image { get; set; }
         public string AlternateImage { get; set; }
         public string Type { get; set; }
-
+        public string Locations { get; set; }
         public int? DisplayOrder { get; set; }
         public int StatusID { get; set; }
-        
+
     }
 
 }
