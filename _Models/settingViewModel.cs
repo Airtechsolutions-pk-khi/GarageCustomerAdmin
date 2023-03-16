@@ -11,7 +11,7 @@ namespace GarageCustomerAdmin._Models
 
     public class SettingBLL
     {
-        public int ID { get; set; }
+        public int? ID { get; set; }
         public string Title { get; set; }        
         public string Description { get; set; }
         public string ArabicTitle { get; set; }
