@@ -56,8 +56,9 @@ C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\Pub
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\GarageCustomerAdmin.Views.dll
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\GarageCustomerAdmin.Views.pdb
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\000.zip
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\3rdpartylicenses.txt
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\3rdpartylicenses.zip
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\assets.zip
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-grid.css
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-grid.css.map
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-reboot.css
