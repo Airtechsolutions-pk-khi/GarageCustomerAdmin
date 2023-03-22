@@ -18,6 +18,7 @@ import { NgbModule, NgbTimepicker } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryComponent } from './admin/menu/category/category.component';
 import { AddcategoryComponent } from './admin/menu/category/addcategory/addcategory.component';
 import { ImageuploadComponent } from './imageupload/imageupload.component';
+import { alternateimageComponent } from './imageupload/alternateimage.component';
 import { ItemsComponent } from './admin/menu/items/items.component';
 import { AdditemsComponent } from './admin/menu/items/additem/additem.component';
 import { ModifiersComponent } from './admin/menu/modifiers/modifiers.component';
@@ -26,7 +27,7 @@ import { CustomersComponent } from './admin/customer/customers/customers.compone
 import { AddcustomerComponent } from './admin/customer/customers/addcustomers/addcustomer.component';
 import { LocationsComponent } from './admin/company/locations/locations.component';
 import { AddlocationComponent } from './admin/company/locations/addlocation/addlocation.component';
-import { NgSelectModule} from '@ng-select/ng-select';
+import { NgSelectModule } from '@ng-select/ng-select';
 import { AddbrandComponent } from './admin/company/brands/addbrand/addbrand.component';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
@@ -65,10 +66,14 @@ import { SettingComponent } from './admin/settings/setting/setting.component';
 import { AddsettingComponent } from './admin/settings/setting/addsetting/addsetting.component';
 import { ConfirmComponent } from './admin/settings/confirm/confirm.component';
 import { ConfirmationDialogService } from './admin/settings/confirm/confirmation-dialog.service';
+import { CarselllistComponent } from './admin/carsell/carselllist/carselllist.component';
+import { AddcarsellComponent } from './admin/carsell/carselllist/addcarsell/addcarsell.component';
+import { ReviewsComponent } from './admin/reviews/reviews.component';
 
 
 
- 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,8 +97,9 @@ import { ConfirmationDialogService } from './admin/settings/confirm/confirmation
     LocationsComponent,
     AddlocationComponent,
     ImageuploadComponent,
+    alternateimageComponent,
     SummaryComponent,
-    NgbdDatepickerRangePopup,    
+    NgbdDatepickerRangePopup,
     BannerComponent,
     AddbannerComponent,
     OffersComponent,
@@ -116,13 +122,16 @@ import { ConfirmationDialogService } from './admin/settings/confirm/confirmation
     AmenitiesComponent,
     AddamenitiesComponent,
     LandmarkComponent,
-    AddlandmarkComponent,    
+    AddlandmarkComponent,
     AddservicesComponent,
     ServiceComponent,
     SettingComponent,
     AddsettingComponent,
-    ConfirmComponent
-    
+    ConfirmComponent,
+    CarselllistComponent,
+    AddcarsellComponent,
+    ReviewsComponent
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -133,7 +142,7 @@ import { ConfirmationDialogService } from './admin/settings/confirm/confirmation
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     NgApexchartsModule,
-     
+
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
       {
@@ -184,9 +193,9 @@ import { ConfirmationDialogService } from './admin/settings/confirm/confirmation
           { path: 'report/salescategorywise', component: SalescategorywiseComponent },
           { path: 'report/salesitemwise', component: SalesitemwiseComponent },
 
-            { path: 'delivery', component: DeliveryComponent },
-            { path: 'delivery/add', component: AdddeliveryComponent },
-            { path: 'delivery/edit/:id', component: AdddeliveryComponent },
+          { path: 'delivery', component: DeliveryComponent },
+          { path: 'delivery/add', component: AdddeliveryComponent },
+          { path: 'delivery/edit/:id', component: AdddeliveryComponent },
 
           { path: 'appsettings', component: AppsettingsComponent },
 
@@ -209,7 +218,12 @@ import { ConfirmationDialogService } from './admin/settings/confirm/confirmation
           { path: 'setting', component: SettingComponent },
           { path: 'setting/add', component: AddsettingComponent },
           { path: 'setting/edit/:id', component: AddsettingComponent },
-           
+
+          { path: 'carsell', component: CarselllistComponent },
+          { path: 'carsell/add', component: AddcarsellComponent },
+
+          { path: 'reviews', component: ReviewsComponent },
+
         ]
       }
     ]),
@@ -217,7 +231,7 @@ import { ConfirmationDialogService } from './admin/settings/confirm/confirmation
     NgbModule
   ],
   providers: [ConfirmationDialogService],
-  exports: [NgbdDatepickerRangePopup,NgbTimepicker],
-  bootstrap: [AppComponent,NgbdDatepickerRangePopup,NgbTimepicker]
+  exports: [NgbdDatepickerRangePopup, NgbTimepicker],
+  bootstrap: [AppComponent, NgbdDatepickerRangePopup, NgbTimepicker]
 })
 export class AppModule { }

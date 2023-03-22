@@ -83,18 +83,29 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[7];
+                SqlParameter[] p = new SqlParameter[10];
 
                 p[0] = new SqlParameter("@Title", data.Title);
                 p[1] = new SqlParameter("@Description", data.Description);
                 p[2] = new SqlParameter("@PageName", data.PageName);
                 p[3] = new SqlParameter("@Type", data.Type);
                 p[4] = new SqlParameter("@Image", data.Image);
-                p[5] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[6] = new SqlParameter("@StatusID", data.StatusID);
-             
+                p[5] = new SqlParameter("@AlternateImage", data.AlternateImage);
+                p[6] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[7] = new SqlParameter("@StatusID", data.StatusID);
+                p[8] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[9] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertSetting", p);
-              
+                if (data.Locations == "")
+                {
+                    SqlParameter[] p1 = new SqlParameter[3];
+
+                    p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
+                    p1[1] = new SqlParameter("@SettingID", data.ID);
+                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
+                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertLocationJunc_CAdmin", p1);
+                }
                 return rtn;
             }
             catch (Exception ex)
@@ -108,18 +119,30 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[8];
+                SqlParameter[] p = new SqlParameter[11];
 
                 p[0] = new SqlParameter("@Title", data.Title);
                 p[1] = new SqlParameter("@Description", data.Description);
                 p[2] = new SqlParameter("@PageName", data.PageName);
                 p[3] = new SqlParameter("@Type", data.Type);
                 p[4] = new SqlParameter("@Image", data.Image);
-                p[5] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[6] = new SqlParameter("@StatusID", data.StatusID);
-                p[7] = new SqlParameter("@ID", data.ID);
+                p[5] = new SqlParameter("@AlternateImage", data.AlternateImage);
+                p[6] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[7] = new SqlParameter("@StatusID", data.StatusID);
+                p[8] = new SqlParameter("@ID", data.ID);
+                p[9] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[10] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateSetting_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateSetting_Admin", p);
+                if (data.Locations != "")
+                {
+                    SqlParameter[] p1 = new SqlParameter[3];
+
+                    p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
+                    p1[1] = new SqlParameter("@SettingID", data.ID);
+                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
+                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertLocationJunc_CAdmin", p1);
+                }
                 return rtn;
             }
             catch (Exception ex)

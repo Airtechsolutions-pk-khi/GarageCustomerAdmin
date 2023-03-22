@@ -83,12 +83,13 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[3];
+                SqlParameter[] p = new SqlParameter[4];
 
                 p[0] = new SqlParameter("@Name", data.Name);                
                 p[1] = new SqlParameter("@Image", data.Image);
                 p[2] = new SqlParameter("@StatusID", data.StatusID);
-             
+                p[3] = new SqlParameter("@ArabicName", data.ArabicName);
+
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertLandmark", p);
               
                 return rtn;
@@ -104,12 +105,13 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[4];
+                SqlParameter[] p = new SqlParameter[5];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Image", data.Image);
                 p[2] = new SqlParameter("@StatusID", data.StatusID);
                 p[3] = new SqlParameter("@LandmarkID", data.LandmarkID);
+                p[4] = new SqlParameter("@ArabicName", data.ArabicName);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateLandmark_Admin", p);
                 return rtn;

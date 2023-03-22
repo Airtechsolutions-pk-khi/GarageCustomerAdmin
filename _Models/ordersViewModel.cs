@@ -54,6 +54,7 @@ namespace GarageCustomerAdmin._Models
         public string CustomerAddress { get; set; }
         public string LocationName { get; set; }
     }
+     
     public partial class OrderDetailBLL
     {
 

@@ -52,9 +52,11 @@ export class AddlocationComponent implements OnInit {
       locationID: 0,       
       name: ['', Validators.required],
       descripiton: [''],
-      address: [''],
-      contactNo: [''],      
-      email: [''],                  
+      address: ['', Validators.required],
+      contactNo: ['', Validators.required],  
+      arabicName:[''],
+      arabicDescription:[''],    
+      email: ['', Validators.required],                  
       minOrderAmount: [0],  
       latitude: [''],
       longitude: [''],  
@@ -114,6 +116,8 @@ export class AddlocationComponent implements OnInit {
     this.f.gmaplink.setValue(obj.gmaplink);
     this.f.landmarkID.setValue(obj.landmarkID);    
     this.f.imageURL.setValue(obj.imageURL);
+    this.f.arabicName.setValue(obj.arabicName);
+    this.f.arabicDescription.setValue(obj.arabicDescription);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.isFeatured.setValue(obj.isFeatured  === 1 ? true : false);    
 
@@ -180,7 +184,7 @@ export class AddlocationComponent implements OnInit {
   }
 
   onSubmit() {  
-   
+   debugger
     this.locationForm.markAllAsTouched();
     this.submitted = true;
      
