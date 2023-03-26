@@ -15,9 +15,6 @@
         </button>
       </div>-->
     </div>
-
-
-
   </div>
   <div class="card-body">
     <div class="tile-body p-0 table-responsive ">
@@ -25,12 +22,12 @@
         <thead>
           <tr class="table-header">
             <th width="15%" sortable="name" (sort)="onSort($event)"> Name </th>
-            <th width="15%" sortable="descripiton" (sort)="onSort($event)">Message </th>
+            <th width="35%" sortable="descripiton" (sort)="onSort($event)">Message </th>
             <th width="15%" sortable="rate" (sort)="onSort($event)">Rate </th>
             <th width="15%" sortable="location" (sort)="onSort($event)">Location </th>
-            <th width="10%" sortable="date" (sort)="onSort($event)">Date</th>
+            <th width="15%" sortable="date" (sort)="onSort($event)">Date</th>
             <th width="10%" sortable="statusID">Status</th>
-            <th width="10%">Actions</th>
+            <!--<th width="10%">Actions</th>-->
           </tr>
         </thead>
         <tbody>
@@ -39,7 +36,7 @@
             <td> {{item.message}} </td>
             <td> {{item.rate}} </td>
             <td> {{item.location}} </td>
-            <td> {{item.date}} </td>
+            <td> {{item.date | date}} </td>
             <td>
               <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
               </ngb-highlight>
@@ -47,7 +44,7 @@
             <td>
               <!--<a (click)="Edit(item.bannerID)"><i class="fas fa-fw fa-edit"></i> </a>-->
 
-              <a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+             <!-- <a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>-->
             </td>
           </tr>
         </tbody>

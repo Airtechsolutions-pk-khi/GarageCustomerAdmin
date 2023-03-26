@@ -21,7 +21,11 @@
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputUsername">Arabic Name</label>
               <input type="text" class="form-control" id=arabicName placeholder="" formControlName="arabicName">
-
+              <div *ngIf="f.arabicName.invalid && (f.arabicName.dirty || f.arabicName.touched)" class="alert alert-danger">
+                <div *ngIf="f.arabicName.errors.required">
+                  Arabic name is required.
+                </div>
+              </div>
             </div>
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Address</label>
@@ -30,11 +34,17 @@
                 <div *ngIf="f.address.errors.required">
                   Address is required.
                 </div>
+               
               </div>
             </div>
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Arabic Address</label>
               <input type="text" class="form-control" id=address placeholder="" formControlName="arabicAddress">
+              <div *ngIf="f.arabicAddress.invalid && (f.arabicAddress.dirty || f.arabicAddress.touched)" class="alert alert-danger">
+                <div *ngIf="f.arabicAddress.errors.required">
+                 Arabic Address is required.
+                </div>
+              </div>
             </div>
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Contact No</label>
@@ -58,30 +68,43 @@
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">Description</label>
               <textarea class="form-control" id=descripiton formControlName="descripiton" height="100px"></textarea>
+              <div *ngIf="f.descripiton.invalid && (f.descripiton.dirty || f.descripiton.touched)" class="alert alert-danger">
+                <div *ngIf="f.descripiton.errors.required">
+                  Descripiton is required.
+                </div>
+              </div>
             </div>
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">Arabic Description</label>
-              <textarea class="form-control" id=descripiton formControlName="arabicDescripiton" height="100px"></textarea>
+              <textarea class="form-control" id=descripiton formControlName="arabicDescription" height="100px"></textarea>
+              <div *ngIf="f.arabicDescription.invalid && (f.arabicDescription.dirty || f.arabicDescription.touched)" class="alert alert-danger">
+                <div *ngIf="f.arabicDescription.errors.required">
+                  Arabic Descripiton is required.
+                </div>
+              </div>
             </div>
-
-
           </div>
-
           <div class="form-row">
-
-            <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Longitude</label>
-              <input type="text" class="form-control" id=longitude placeholder="" formControlName="longitude">
-            </div>
-
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Latitude</label>
               <input type="text" class="form-control" id=latitude placeholder="" formControlName="latitude">
+              <div *ngIf="f.latitude.invalid && (f.latitude.dirty || f.latitude.touched)" class="alert alert-danger">
+                <div *ngIf="f.latitude.errors.required">
+                  Latitude Descripiton is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputFirstName">Longitude</label>
+              <input type="text" class="form-control" id=longitude placeholder="" formControlName="longitude">
+              <div *ngIf="f.longitude.invalid && (f.longitude.dirty || f.longitude.touched)" class="alert alert-danger">
+                <div *ngIf="f.longitude.errors.required">
+                  Longitude is required.
+                </div>
+              </div>
             </div>
 
-
           </div>
-
           <div class="form-row">
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">Attach Amenities</label>

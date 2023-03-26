@@ -51,18 +51,19 @@ export class AddlocationComponent implements OnInit {
     this.locationForm = this.formBuilder.group({
       locationID: 0,       
       name: ['', Validators.required],
-      descripiton: [''],
+      descripiton: ['', Validators.required],
       address: ['', Validators.required],
+      arabicAddress: ['', Validators.required],
       contactNo: ['', Validators.required],  
-      arabicName:[''],
-      arabicDescription:[''],    
+      arabicName: ['', Validators.required],
+      arabicDescription: ['', Validators.required],    
       email: ['', Validators.required],                  
       minOrderAmount: [0],  
-      latitude: [''],
-      longitude: [''],  
+      latitude: ['', Validators.required],
+      longitude: ['', Validators.required],  
       statusID: [1],
       landmarkID:[],      
-      gmaplink: [''],     
+      gmaplink: ['', Validators.required],     
       imageURL: [''],
       lastUpdatedBy:[''],                 
       lastUpdatedDate:[''],
@@ -88,7 +89,7 @@ export class AddlocationComponent implements OnInit {
         var fileSize = event.target.files[i].size / 100000;
         if (fileSize > 5) { alert("Filesize exceed 500 KB"); }
         else {
-         debugger
+         
           reader.onload = (event: any) => {
             console.log(event.target.result);
             this.Images.push(event.target.result);
@@ -103,11 +104,14 @@ export class AddlocationComponent implements OnInit {
   }
 
   private editForm(obj) {
-    debugger
+    
     this.f.name.setValue(obj.name);
+    this.f.arabicName.setValue(obj.arabicName);
     this.f.email.setValue(obj.email);
     this.f.address.setValue(obj.address);
+    this.f.arabicAddress.setValue(obj.arabicAddress);
     this.f.descripiton.setValue(obj.descripiton);
+    this.f.arabicDescription.setValue(obj.arabicDescription);
     this.f.contactNo.setValue(obj.contactNo);
     this.f.minOrderAmount.setValue(obj.minOrderAmount);   
     this.f.latitude.setValue(obj.latitude);
@@ -116,8 +120,6 @@ export class AddlocationComponent implements OnInit {
     this.f.gmaplink.setValue(obj.gmaplink);
     this.f.landmarkID.setValue(obj.landmarkID);    
     this.f.imageURL.setValue(obj.imageURL);
-    this.f.arabicName.setValue(obj.arabicName);
-    this.f.arabicDescription.setValue(obj.arabicDescription);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.isFeatured.setValue(obj.isFeatured  === 1 ? true : false);    
 
@@ -140,7 +142,7 @@ export class AddlocationComponent implements OnInit {
     // }
   }
   private loadItemImages(id) {
-    debugger
+    
     this.locationService.loadLocationImages(id).subscribe((res: any) => {
       this.Images = res;
       this.f.imagesSource.setValue(this.Images);
@@ -184,7 +186,7 @@ export class AddlocationComponent implements OnInit {
   }
 
   onSubmit() {  
-   debugger
+   
     this.locationForm.markAllAsTouched();
     this.submitted = true;
      
@@ -199,23 +201,22 @@ export class AddlocationComponent implements OnInit {
    
     if (parseInt(this.f.locationID.value) === 0) {
       //Insert location
-       
       console.log(JSON.stringify(this.locationForm.value));
-      this.locationService.insert(this.locationForm.value).subscribe(data => {
-        this.loading = false;
-        if (data != 0) {
-          this.ts.showSuccess("Success", "Record added successfully.")
-          this.router.navigate(['/admin/location']);
-        }
+      //this.locationService.insert(this.locationForm.value).subscribe(data => {
+      //  this.loading = false;
+      //  if (data != 0) {
+      //    this.ts.showSuccess("Success", "Record added successfully.")
+      //    this.router.navigate(['/admin/location']);
+      //  }
         
-      }, error => {
-        this.ts.showError("Error", "Failed to insert record.")
-        this.loading = false;
-      });
+      //}, error => {
+      //  this.ts.showError("Error", "Failed to insert record.")
+      //  this.loading = false;
+      //});
 
     } else {
       //Update location
-      debugger
+      
       this.locationService.update(this.locationForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {
@@ -228,7 +229,4 @@ export class AddlocationComponent implements OnInit {
       });
     }
   }
-
-
-
 }

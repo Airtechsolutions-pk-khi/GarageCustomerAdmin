@@ -241,3 +241,8 @@ D:\Project\GarageCustomerAdmin_GIT\obj\Release\netcoreapp3.1\GarageCustomerAdmin
 D:\Project\GarageCustomerAdmin_GIT\obj\Release\netcoreapp3.1\GarageCustomerAdmin.dll
 D:\Project\GarageCustomerAdmin_GIT\obj\Release\netcoreapp3.1\GarageCustomerAdmin.pdb
 D:\Project\GarageCustomerAdmin_GIT\obj\Release\netcoreapp3.1\GarageCustomerAdmin.genruntimeconfig.cache
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\staticwebassets\GarageCustomerAdmin.StaticWebAssets.Pack.cache
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\staticwebassets\msbuild.GarageCustomerAdmin.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\staticwebassets\msbuild.build.GarageCustomerAdmin.props
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.GarageCustomerAdmin.props
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.GarageCustomerAdmin.props
