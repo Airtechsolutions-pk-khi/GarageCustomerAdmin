@@ -27,7 +27,8 @@ namespace GarageCustomerAdmin.BLL._Services
                 var chkImage = IsBase64Encoded(image
                     .Replace("data:image/png;base64,", "")
                     .Replace("data:image/jpg;base64,", "")
-                    .Replace("data:image/jpeg;base64,", ""));
+                    .Replace("data:image/jpeg;base64,", "")
+                    .Replace("data:image/svg+xml;base64,", ""));
 
                 if (chkImage)
                 {

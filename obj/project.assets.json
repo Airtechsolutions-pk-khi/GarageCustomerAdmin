@@ -5888,19 +5888,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RAFI SIRAJUDDIN\\.nuget\\packages\\": {}
+    "C:\\Users\\ammad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj",
+      "projectUniqueName": "D:\\Projects\\GarageCustomer_Admin\\GarageCustomerAdmin.csproj",
       "projectName": "GarageCustomerAdmin",
-      "projectPath": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj",
-      "packagesPath": "C:\\Users\\RAFI SIRAJUDDIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\obj\\",
+      "projectPath": "D:\\Projects\\GarageCustomer_Admin\\GarageCustomerAdmin.csproj",
+      "packagesPath": "C:\\Users\\ammad\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\GarageCustomer_Admin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\RAFI SIRAJUDDIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ammad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5970,7 +5970,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
