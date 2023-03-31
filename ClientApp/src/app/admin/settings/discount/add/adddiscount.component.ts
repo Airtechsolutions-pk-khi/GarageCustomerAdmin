@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
 import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component';
 import { alternateimageComponent } from 'src/app/imageupload/alternateimage.component';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -26,6 +25,10 @@ export class AdddiscountComponent implements OnInit {
   selectedgroupModifierIds: string[];
   LocationList = [];
   selectedLocationID = [];
+  fromTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
+  toTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
+
+
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   //@ViewChild(ImageuploadComponent, { static: true }) arbimg;
@@ -82,6 +85,8 @@ export class AdddiscountComponent implements OnInit {
     this.imgComp.imageUrl = obj.image;
     this.arbimg.alternateimageUrl = obj.arabicImage;
     //this.arbimg.alternateimageUrl = obj.arabicImage;
+    this.fromTime = { hour: new Date("1/1/1900 " + obj.fromTime).getHours(), minute: new Date("1/1/1900 " + obj.fromTime).getMinutes() };
+    this.toTime = { hour: new Date("1/1/1900 " + obj.toTime).getHours(), minute: new Date("1/1/1900 " + obj.toTime).getMinutes() };
 
     if (obj.locations != "") {
       debugger
@@ -118,6 +123,8 @@ export class AdddiscountComponent implements OnInit {
     debugger
     this.discountForm.markAllAsTouched();
     this.submitted = true;
+    this.f.fromTime.setValue(this.fromTime.hour + ":" + this.fromTime.minute);
+    this.f.toTime.setValue(this.toTime.hour + ":" + this.toTime.minute);
     if (this.discountForm.invalid) { return; }
     this.loading = true;
     //this.f.locations.setValue(this.selectedLocationID == undefined ? "" : this.selectedLocationID.toString());
