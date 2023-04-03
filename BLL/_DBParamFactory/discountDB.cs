@@ -77,7 +77,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[11];
+                SqlParameter[] p = new SqlParameter[9];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -88,19 +88,17 @@ namespace BAL.Repositories
                 p[6] = new SqlParameter("@FromTime", data.FromTime);
                 p[7] = new SqlParameter("@ToTime", data.ToTime);
                 p[8] = new SqlParameter("@StatusID", data.StatusID);
-                p[9] = new SqlParameter("@LocationID", data.LocationID);
-                p[10] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
                 rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_InsertDiscount", p);
-                //if (data.Locations == "")
-                //{
-                //    SqlParameter[] p1 = new SqlParameter[3];
+                if (data.Locations == "")
+                {
+                    SqlParameter[] p1 = new SqlParameter[3];
 
-                //    p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
-                //    p1[1] = new SqlParameter("@SettingID", data.ID);
-                //    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
-                //    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertLocationJunc_CAdmin", p1);
-                //}
+                    p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
+                    p1[1] = new SqlParameter("@DiscountID", data.DiscountID);
+                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
+                    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertDiscLocationJunc_CAdmin", p1);
+                }
                 return rtn;
             }
             catch (Exception ex)
@@ -114,7 +112,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[12];
+                SqlParameter[] p = new SqlParameter[10];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -125,21 +123,18 @@ namespace BAL.Repositories
                 p[6] = new SqlParameter("@FromTime", data.FromTime);
                 p[7] = new SqlParameter("@ToTime", data.ToTime);
                 p[8] = new SqlParameter("@StatusID", data.StatusID);
-                p[9] = new SqlParameter("@LocationID", data.LocationID);
-                p[10] = new SqlParameter("@DiscountID", data.DiscountID);
-                p[11] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[9] = new SqlParameter("@DiscountID", data.DiscountID);
 
 
                 rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_updateDiscount_Admin", p);
-                //if (data.Locations != "")
-                //{
-                //    SqlParameter[] p1 = new SqlParameter[3];
-
-                //    p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
-                //    p1[1] = new SqlParameter("@SettingID", data.ID);
-                //    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
-                //    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertLocationJunc_CAdmin", p1);
-                //}
+                if (data.Locations != "")
+                {
+                    SqlParameter[] p1 = new SqlParameter[3];
+                    p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
+                    p1[1] = new SqlParameter("@DiscountID", data.DiscountID);
+                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
+                    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertDiscLocationJunc_CAdmin", p1);
+                }
                 return rtn;
             }
             catch (Exception ex)

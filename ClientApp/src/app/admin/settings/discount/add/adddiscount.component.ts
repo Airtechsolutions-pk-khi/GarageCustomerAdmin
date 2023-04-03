@@ -22,7 +22,6 @@ export class AdddiscountComponent implements OnInit {
   ButtonText = "Save";
   selectedSubCategoriesIds: string[];
   selectedLocationIds: string[];
-  selectedgroupModifierIds: string[];
   LocationList = [];
   selectedLocationID = [];
   fromTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
@@ -66,7 +65,8 @@ export class AdddiscountComponent implements OnInit {
       statusID: [true],
       image: [''],
       arabicImage: [''],
-      locationID: 0,
+      locationID: [null],
+      locations: [],
     });
   }
 
@@ -127,7 +127,7 @@ export class AdddiscountComponent implements OnInit {
     this.f.toTime.setValue(this.toTime.hour + ":" + this.toTime.minute);
     if (this.discountForm.invalid) { return; }
     this.loading = true;
-    //this.f.locations.setValue(this.selectedLocationID == undefined ? "" : this.selectedLocationID.toString());
+    this.f.locations.setValue(this.selectedLocationID == undefined ? "" : this.selectedLocationID.toString());
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.image.setValue(this.imgComp.imageUrl);
     this.f.arabicImage.setValue(this.arbimg.alternateimageUrl);

@@ -27,15 +27,7 @@
                 <label class="small mb-1" for="inputUsername">Arabic Description</label>
                 <input type="text" class="form-control" id="arabicDescription" placeholder="" formControlName="arabicDescription">
               </div>
-              <div class="form-group col-md-6">
-                <label class="small mb-1" for="inputFirstName">From Time</label>
-                <ngb-timepicker [(ngModel)]="fromTime" [ngModelOptions]="{standalone: true}" [meridian]="true"></ngb-timepicker>
-              </div>
-              <div class="form-group col-md-6">
-                <label class="small mb-1" for="inputFirstName">To Time</label>
-                <ngb-timepicker [(ngModel)]="toTime" [ngModelOptions]="{standalone: true}" [meridian]="true"></ngb-timepicker>
-              </div>
-              <!--<div class="form-row">
+              <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputLocation">Attach Location</label>
                   <ng-select [items]="LocationList" bindLabel="name" bindValue="locationID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedLocationID">
@@ -47,7 +39,18 @@
                     </ng-template>
                   </ng-select>
                 </div>
-              </div>-->
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label class="small mb-1" for="inputFirstName">From Time</label>
+                  <ngb-timepicker [(ngModel)]="fromTime" [ngModelOptions]="{standalone: true}" [meridian]="true"></ngb-timepicker>
+                </div>
+                <div class="form-group col-md-4">
+                  <label class="small mb-1" for="inputFirstName">To Time</label>
+                  <ngb-timepicker [(ngModel)]="toTime" [ngModelOptions]="{standalone: true}" [meridian]="true"></ngb-timepicker>
+                </div>
+              </div>
+
 
             </div>
             <div class="form-group col-md-4 text-center">

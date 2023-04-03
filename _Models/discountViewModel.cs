@@ -11,8 +11,7 @@ namespace GarageCustomerAdmin._Models
 
     public class DiscountBLL
     {
-        public int DiscountID { get; set; }
-        public int? LocationID { get; set; }
+        public int DiscountID { get; set; } 
         public string Name { get; set; }
         public string ArabicName { get; set; }
         public string Description { get; set; }
@@ -23,8 +22,7 @@ namespace GarageCustomerAdmin._Models
         public string ArabicImage { get; set; }
         public int StatusID { get; set; }
         public DateTime? LastUpdatedDate { get; set; }
-        public string LastUpdatedBy { get; set; }
-
+        public string Locations { get; set; }
     }
 
 }

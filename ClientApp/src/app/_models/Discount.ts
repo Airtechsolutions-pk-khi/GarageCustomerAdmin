@@ -11,3 +11,8 @@ export class Discount {
   image: string;    
   arabicImage: string;    
 }
+export class disclocationjunc {
+  id: number;
+  locationID: number;
+  discountID: number;
+}
