@@ -37,7 +37,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@fromdate", FromDate.Date);
                 p[1] = new SqlParameter("@todate", ToDate.Date);
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetCarSell_CADMIN", p);
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetCarSell_CADMIN", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -61,7 +61,7 @@ namespace BAL.Repositories
                 //SqlParameter[] p = new SqlParameter[1];
 
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetMakes");
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetMakes");
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -85,7 +85,7 @@ namespace BAL.Repositories
                 //SqlParameter[] p = new SqlParameter[1];
 
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetModels");
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetModels");
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -109,7 +109,7 @@ namespace BAL.Repositories
                 //SqlParameter[] p = new SqlParameter[1];
 
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetCountries");
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetCountries");
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -133,7 +133,7 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[1];
 
                 p[0] = new SqlParameter("@Code", code);
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetCities", p);
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetCities", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -158,7 +158,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@id", id);
                 
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetCarSellById_CADMIN", p);
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetCarSellById_CADMIN", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -182,7 +182,7 @@ namespace BAL.Repositories
                 _dt = new DataTable();
                 SqlParameter[] p1 = new SqlParameter[1];
                 p1[0] = new SqlParameter("@id", id);
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetCarSellImages_CAdmin", p1);
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetCarSellImages_CAdmin", p1);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -241,7 +241,7 @@ namespace BAL.Repositories
                     SqlParameter[] p1 = new SqlParameter[2];
                     p1[0] = new SqlParameter("@CarsellID", rtn);
                     p1[1] = new SqlParameter("@Features", data.Features);
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertICarsellFeatures_Admin", p1);
+                    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertICarsellFeatures_Admin", p1);
                 }
                 try
                 {
@@ -249,7 +249,7 @@ namespace BAL.Repositories
                     SqlParameter[] p2 = new SqlParameter[2];
                     p2[0] = new SqlParameter("@Images", imgStr);
                     p2[1] = new SqlParameter("@CarsellID", rtn);
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertCarsellImages_CAdmin", p2);
+                    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertCarsellImages_CAdmin", p2);
                 }
                 catch (Exception ex)
                 { return 0; }
@@ -271,7 +271,7 @@ namespace BAL.Repositories
                 //p[0] = new SqlParameter("@date", data.LastUpdatedDate);
                 p[0] = new SqlParameter("@StatusID", data.StatusID);
                 p[1] = new SqlParameter("@CarSellID", data.CarSellID);
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_UpdateOrderStatus_Admin", p);
+                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_UpdateOrderStatus_Admin", p);
 
                 return rtn;
             }
@@ -310,14 +310,14 @@ namespace BAL.Repositories
                 p[20] = new SqlParameter("@CreatedDate", DateTime.Now);
                 p[21] = new SqlParameter("@CreatedBy", 1);
                                 
-                rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_InsertCarSell", p).Rows[0]["CarSellID"].ToString());
+                rtn = int.Parse(new DBHelperGarageUAT().GetTableFromSP("dbo.sp_InsertCarSell", p).Rows[0]["CarSellID"].ToString());
 
                 if (data.Features != "" && data.Features != null)
                 {
                     SqlParameter[] p1 = new SqlParameter[2];
                     p1[0] = new SqlParameter("@CarsellID", rtn);
                     p1[1] = new SqlParameter("@Features", data.Features);
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertICarsellFeatures_Admin", p1);
+                    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertICarsellFeatures_Admin", p1);
                 }
                 try
                 {
@@ -325,7 +325,7 @@ namespace BAL.Repositories
                     SqlParameter[] p2 = new SqlParameter[2];
                     p2[0] = new SqlParameter("@Images", imgStr);
                     p2[1] = new SqlParameter("@CarsellID", rtn);                    
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertCarsellImages_CAdmin", p2);
+                    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertCarsellImages_CAdmin", p2);
                 }
                 catch(Exception ex)
                 { return 0; }
@@ -347,7 +347,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@id", data.OrderID);
                 p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
-                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteOrders", p);
+                _obj = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_DeleteOrders", p);
 
                 return _obj;
             }
