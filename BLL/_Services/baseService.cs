@@ -73,8 +73,8 @@ namespace GarageCustomerAdmin.BLL._Services
 
                     string webRootPath = _webHostEnvironment.WebRootPath;
                     string contentRootPath = _webHostEnvironment.ContentRootPath;
-
-                    string path = "/ClientApp/dist/assets/Upload/" + foldername + "/" + Path.GetFileName(Guid.NewGuid() + ".jpg");
+                    string extension = _bytes.Contains("data:image/svg+xml;base64") ? ".svg" : ".jpg";
+                    string path = "/ClientApp/dist/assets/Upload/" + foldername + "/" + Path.GetFileName(Guid.NewGuid() + extension);
                     string filePath = contentRootPath + path;
 
                     System.IO.File.WriteAllBytes(filePath, bytes);
