@@ -60,32 +60,32 @@ export class AddcarsellComponent implements OnInit {
       carSellID: 0,
       customerID: [1],       
       name: ['', Validators.required],
-      description: [''],    
-      address: [''],      
+      description: ['', Validators.required],    
+      address: ['', Validators.required],      
       statusID: [1],      
       createdBy:[],
       updatedBy:[],                 
       // createdDate:[''],
       isInspected:[false],      
-       imagesSource: [''],
+      imagesSource: ['', Validators.required],
       carSellImages: [],
-      features:[''],             
-      registrationNo:[''],
-      bodyType:[''],
-      fuelType:[''],
-      engineType:[''],
-      kilometer:[''],
-      year:[''],
-      makeID:[0],
-      modelID:[0],
-      transmition:[''],
-      price:[0],
-      cityID:[0],
-      countryCode:[''],
+      features: ['', Validators.required],             
+      registrationNo: ['', Validators.required],
+      bodyType: ['', Validators.required],
+      fuelType: ['', Validators.required],
+      engineType: ['', Validators.required],
+      kilometer: ['', Validators.required],
+      year: ['', Validators.required],
+      makeID: [0, Validators.required],
+      modelID: [0, Validators.required],
+      transmition: ['', Validators.required],
+      price: [0, Validators.required],
+      cityID: [0, Validators.required],
+      countryCode: ['', Validators.required],
       carSellAddID:[0],
-      bodyColor:[''],
-      assembly:[''],
-      file: [''],
+      bodyColor: ['', Validators.required],
+      assembly: ['', Validators.required],
+      file: ['', Validators.required],
  
     });
   }
@@ -114,9 +114,9 @@ export class AddcarsellComponent implements OnInit {
 
   private editForm(obj) {
    
-    this.f.name.setValue(obj.name);    
-    this.f.address.setValue(obj.address);
-    this.f.description.setValue(obj.description);
+   this.f.name.setValue(obj.name);    
+   this.f.address.setValue(obj.address);
+   this.f.description.setValue(obj.description);
    this.f.assembly.setValue(obj.assembly);
    this.f.cityID.setValue(obj.cityID);
    this.f.bodyColor.setValue(obj.bodyColor);
@@ -131,8 +131,8 @@ export class AddcarsellComponent implements OnInit {
    this.f.engineType.setValue(obj.engineType);
    this.f.bodyType.setValue(obj.bodyType);
    this.f.registrationNo.setValue(obj.registrationNo);    
-    this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    this.f.isInspected.setValue(obj.isFeatured  === 1 ? true : false);    
+   this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+   this.f.isInspected.setValue(obj.isFeatured  === 1 ? true : false);    
 
     this.loadCarSellImages(this.f.carSellID.value);
 

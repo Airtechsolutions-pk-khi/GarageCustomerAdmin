@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\dist\assets\Upload\Location\" />
+    <Folder Include="ClientApp\src\app\admin\carsell\carselldetails\" />
     <Folder Include="Upload\Offers\" />
   </ItemGroup>
 

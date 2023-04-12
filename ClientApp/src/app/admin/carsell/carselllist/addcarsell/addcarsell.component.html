@@ -22,14 +22,29 @@
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Address</label>
               <input type="text" class="form-control" id=address placeholder="" formControlName="address">
+              <div *ngIf="f.address.invalid && (f.address.dirty || f.address.touched)" class="alert alert-danger">
+                <div *ngIf="f.address.errors.required">
+                  Address is required.
+                </div>
+              </div>
             </div>
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Description</label>
               <input type="text" class="form-control" id=description placeholder="" formControlName="description">
+              <div *ngIf="f.description.invalid && (f.description.dirty || f.description.touched)" class="alert alert-danger">
+                <div *ngIf="f.description.errors.required">
+                  Description is required.
+                </div>
+              </div>
             </div>
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Registration No</label>
               <input type="text" class="form-control" id=registrationNo placeholder="" formControlName="registrationNo">
+              <div *ngIf="f.registrationNo.invalid && (f.registrationNo.dirty || f.registrationNo.touched)" class="alert alert-danger">
+                <div *ngIf="f.registrationNo.errors.required">
+                  Registration No. is required.
+                </div>
+              </div>
             </div>
            
             <!-- <div class="form-group col-md-6">
@@ -127,6 +142,11 @@
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Kilometer</label>
               <input type="text" class="form-control" id=kilometer placeholder="" formControlName="kilometer">
+              <div *ngIf="f.kilometer.invalid && (f.kilometer.dirty || f.kilometer.touched)" class="alert alert-danger">
+                <div *ngIf="f.kilometer.errors.required">
+                  Mileage is required.
+                </div>
+              </div>
             </div>                       
           
 
@@ -149,6 +169,11 @@
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Price</label>
               <input type="text" class="form-control" id=price placeholder="" formControlName="price">
+              <div *ngIf="f.price.invalid && (f.price.dirty || f.price.touched)" class="alert alert-danger">
+                <div *ngIf="f.price.errors.required">
+                  Price is required.
+                </div>
+              </div>
             </div>                       
           
 
@@ -156,6 +181,11 @@
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Body Color</label>
               <input type="text" class="form-control" id=bodyColor placeholder="" formControlName="bodyColor">
+              <div *ngIf="f.bodyColor.invalid && (f.bodyColor.dirty || f.bodyColor.touched)" class="alert alert-danger">
+                <div *ngIf="f.bodyColor.errors.required">
+                  Color is required.
+                </div>
+              </div>
             </div>
 
             <!-- <div class="form-group col-md-6">
@@ -194,15 +224,25 @@
           </div>
         
                         
-        <div class="form-group col-md-6">
-          <label class="small mb-1" for="inputFirstName">kilometer</label>
-          <input type="text" class="form-control" id=kilometer placeholder="" formControlName="kilometer">
-        </div>
+          <div class="form-group col-md-6">
+            <label class="small mb-1" for="inputFirstName">kilometer</label>
+            <input type="text" class="form-control" id=kilometer placeholder="" formControlName="kilometer">
+            <div *ngIf="f.kilometer.invalid && (f.kilometer.dirty || f.kilometer.touched)" class="alert alert-danger">
+              <div *ngIf="f.kilometer.errors.required">
+                Mileage is required.
+              </div>
+            </div>
+          </div>
         
-      <div class="form-group col-md-6">
-        <label class="small mb-1" for="inputFirstName">Year</label>
-        <input type="text" class="form-control" id=year placeholder="" formControlName="year">
-      </div>
+          <div class="form-group col-md-6">
+            <label class="small mb-1" for="inputFirstName">Year</label>
+            <input type="text" class="form-control" id=year placeholder="" formControlName="year">
+            <div *ngIf="f.year.invalid && (f.year.dirty || f.year.touched)" class="alert alert-danger">
+              <div *ngIf="f.year.errors.required">
+                Year is required.
+              </div>
+            </div>
+          </div>
 
 
       </div>
