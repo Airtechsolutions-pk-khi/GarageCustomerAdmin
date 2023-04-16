@@ -12,8 +12,13 @@ namespace WebAPICode.Helpers
     {
 
 
+<<<<<<< HEAD
         //private static readonly string connectionString = "data source=85.25.214.10;initial catalog=Garage_UAT;persist security info=True;user id=garage;password=garage;";
         private static readonly string connectionString = "data source=85.25.214.10;initial catalog=GarageCustomer_UAT;persist security info=True;user id=garage;password=garage;";
+=======
+        private static readonly string connectionString = "data source=85.25.214.10;initial catalog=Garage_UAT;persist security info=True;user id=garage;password=garage;";
+        //private static readonly string connectionString = "data source=85.25.214.10;initial catalog=Garage_Live;persist security info=True;user id=garage;password=garage;";
+>>>>>>> 230e1d071fcb6e073423b324962e4ff827a05968
         public DataTable GetTableFromSP(string sp, Dictionary<string, object> parametersCollection)
         {
 

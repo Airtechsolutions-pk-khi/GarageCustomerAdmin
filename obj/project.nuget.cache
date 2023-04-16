@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "grAWeneP5+Fy9XVpObLuPUjtet9J0ZvT9Dqh25MF6TCY1Rsff/JCMbYoCzRLeU7APYAf3hxhYozSjfgdCLKf/A==",
+=======
+  "dgSpecHash": "W6cwD2LHdXHd5ySkN1IIXH3sME8v5ABih8YbUu0jhs9QhMjZwxfK5pFxY5bxZ1GDlIvhQn2vxm3iJaZRmzN2vg==",
+>>>>>>> 230e1d071fcb6e073423b324962e4ff827a05968
   "success": true,
   "projectFilePath": "D:\\Projects\\GarageCustomer_Admin\\GarageCustomerAdmin.csproj",
   "expectedPackageFiles": [
