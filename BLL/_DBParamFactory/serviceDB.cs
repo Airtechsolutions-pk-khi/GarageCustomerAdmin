@@ -35,7 +35,7 @@ namespace BAL.Repositories
                 //SqlParameter[] p = new SqlParameter[1];
                
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetService");
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetService");
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -61,7 +61,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@id", id);
                 //p[1] = new SqlParameter("@brandid", brandID);
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetServiceByID", p);
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetServiceByID", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -94,7 +94,7 @@ namespace BAL.Repositories
                 p[6] = new SqlParameter("@ArabicServiceTitle", data.ArabicServiceTitle);
                 p[7] = new SqlParameter("@ArabicServiceDescription", data.ArabicServiceDescription);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertService", p);
+                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_InsertService", p);
               
                 return rtn;
             }
@@ -121,7 +121,7 @@ namespace BAL.Repositories
                 p[7] = new SqlParameter("@ArabicServiceTitle", data.ArabicServiceTitle);
                 p[8] = new SqlParameter("@ArabicServiceDescription", data.ArabicServiceDescription);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateService_Admin", p);
+                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_updateService_Admin", p);
                 return rtn;
             }
             catch (Exception ex)
@@ -139,7 +139,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@id", data.ServiceID);
                 //p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
-                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteService", p);
+                _obj = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_DeleteService", p);
 
                 return _obj;
             }

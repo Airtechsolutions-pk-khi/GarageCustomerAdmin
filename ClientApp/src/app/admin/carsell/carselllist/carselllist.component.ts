@@ -51,9 +51,9 @@ export class CarselllistComponent implements OnInit {
   }
   Edit(CarSellID) {
      
-    this.router.navigate(["admin/carselllist/edit", CarSellID]);
+    this.router.navigate(["admin/carsell/edit", CarSellID]);
   }
- 
+
   updateOrder(order, status) {
     debugger
     order.statusID = status;
@@ -69,20 +69,20 @@ export class CarselllistComponent implements OnInit {
     });
   }
 
-  UpdateOrderStatus(item, status) {
-    debugger
-    item.statusID = status;
-    //Update customer
-    this.service.updateOstatus(item).subscribe(data => {
+  //UpdateStatus(item, status) {
+  //  debugger
+  //  item.statusID = status;
+  //  //Update customer
+  //  this.service.updatestatus(item).subscribe(data => {
 
-      if (data != 0) {
-        this.ts.showSuccess("Success", "Record updated successfully.")
-        this.router.navigate(['/admin/carsell']);
-      }
-    }, error => {
-      this.ts.showError("Error", "Failed to update record.")
-    });
-  }
+  //    if (data != 0) {
+  //      this.ts.showSuccess("Success", "Record updated successfully.")
+  //      this.router.navigate(['/admin/carsell']);
+  //    }
+  //  }, error => {
+  //    this.ts.showError("Error", "Failed to update record.")
+  //  });
+  //}
   
 
   getData() {
@@ -104,8 +104,8 @@ export class CarselllistComponent implements OnInit {
     this.service.sortDirection = direction;
   }
 
-  View(orders) {
-    this.router.navigate(["admin/orders/view", orders]);
+  View(carsell) {
+    this.router.navigate(["admin/carselldetails/view", carsell]);
   }
   Print(sid) {
     this.service.printorder(sid).subscribe((res: any) => {

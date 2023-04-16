@@ -15,6 +15,8 @@ namespace GarageCustomerAdmin._Models
         public string Name { get; set; }
         public string ArabicName { get; set; }
         public string Description { get; set; }
+        public string FromDate { get; set; }
+        public string ToDate { get; set; }
         public string FromTime { get; set; }
         public string ToTime { get; set; }
         public string ArabicDescription { get; set; }

@@ -5,6 +5,8 @@ export class Discount {
   arabicName: string;
   description: string; 
   arabicDescription: string;
+  fromDate: string;
+  toDate: string;
   fromTime: string;
   ToTime: string;
   statusID: number;

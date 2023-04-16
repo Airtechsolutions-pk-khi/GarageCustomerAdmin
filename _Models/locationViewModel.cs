@@ -28,6 +28,7 @@ namespace GarageCustomerAdmin._Models
         public string LastUpdatedBy { get; set; }
         public string LastUpdatedDate { get; set; }
         public int StatusID { get; set; }
+        public int? CustomerStatusID { get; set; }
         public string ImageURL { get; set; }    
         public string Gmaplink { get; set; }
 

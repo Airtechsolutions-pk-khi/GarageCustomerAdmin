@@ -22,6 +22,7 @@ export class CarSells {
   carSellAddID:number;
   bodyColor:string;
   assembly:string;
+  reason:string;
   statusID:number;
   createdBy:number;
   createdDate:string;
@@ -33,5 +34,17 @@ export class CarSellImages {
   image: string;
   statusID: number;
 
+}
+export class Customers {
+  customerID: number;
+  fullName: string;
+  email: string;
+  mobile: string;
+  city: string;
+  password: string;
+  image: string;
+  locationID: number;
+  brandID: number;
+  statusID: number;
 }
 

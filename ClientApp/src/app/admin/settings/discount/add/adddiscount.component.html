@@ -42,6 +42,26 @@
               </div>
               <div class="form-row">
                 <div class="form-group col-md-4">
+                  <label class="small mb-1" for="inputFirstName">From Date</label>
+                  <input type="date" class="form-control" id="fromDate" placeholder="" formControlName="fromDate" required>
+                  <div *ngIf="f.fromDate.invalid && (f.fromDate.dirty || f.fromDate.touched)" class="alert alert-danger">
+                    <div *ngIf="f.fromDate.errors.required">
+                      From Date is required.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-4">
+                  <label class="small mb-1" for="inputFirstName">To Date</label>
+                  <input type="date" class="form-control" id="toDate" placeholder="" formControlName="toDate" required>
+                  <div *ngIf="f.toDate.invalid && (f.toDate.dirty || f.toDate.touched)" class="alert alert-danger">
+                    <div *ngIf="f.toDate.errors.required">
+                      To Date is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
                   <label class="small mb-1" for="inputFirstName">From Time</label>
                   <ngb-timepicker [(ngModel)]="fromTime" [ngModelOptions]="{standalone: true}" [meridian]="true"></ngb-timepicker>
                 </div>

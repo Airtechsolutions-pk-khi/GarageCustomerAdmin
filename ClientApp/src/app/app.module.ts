@@ -67,6 +67,7 @@ import { AddsettingComponent } from './admin/settings/setting/addsetting/addsett
 import { ConfirmComponent } from './admin/settings/confirm/confirm.component';
 import { ConfirmationDialogService } from './admin/settings/confirm/confirmation-dialog.service';
 import { CarselllistComponent } from './admin/carsell/carselllist/carselllist.component';
+import { CarSelldetailsComponent } from './admin/carsell/carselldetails/carselldetails.component';
 import { AddcarsellComponent } from './admin/carsell/carselllist/addcarsell/addcarsell.component';
 import { ReviewsComponent } from './admin/reviews/reviews.component';
 import { DiscountComponent } from './admin/settings/discount/discount.component';
@@ -134,7 +135,8 @@ import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.
     AddcarsellComponent,
     ReviewsComponent,
     DiscountComponent,
-    AdddiscountComponent
+    AdddiscountComponent,
+    CarSelldetailsComponent
 
   ],
   imports: [
@@ -224,7 +226,10 @@ import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.
           { path: 'setting/edit/:id', component: AddsettingComponent },
 
           { path: 'carsell', component: CarselllistComponent },
+          { path: 'carselldetails', component: CarSelldetailsComponent },
+          { path: 'carselldetails/view/:id', component: CarSelldetailsComponent },
           { path: 'carsell/add', component: AddcarsellComponent },
+          { path: 'carsell/edit/:id', component: AddcarsellComponent },
 
           { path: 'reviews', component: ReviewsComponent },
 

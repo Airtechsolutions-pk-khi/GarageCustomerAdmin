@@ -47,10 +47,15 @@ namespace GarageCustomerAdmin.Controllers
         {
             return _service.GetAllCity(code);
         }
-        [HttpGet("{id}")]
+        [HttpGet("carsellid/{id}")]
         public CarSellBLL Get(int id)
         {
             return _service.Get(id);
+        }
+        [HttpGet("{id}")]
+        public RspCarSellDetail GetStatus(int id)
+        {
+            return _service.GetStatus(id);
         }
         [HttpGet("images/{id}")]
         public List<string> GetImages(int id)
@@ -74,7 +79,7 @@ namespace GarageCustomerAdmin.Controllers
             return _service.Update(obj, _env);
         }
         [HttpPost]
-        [Route("updateorderstatus")]
+        [Route("updatestatus")]
         public int PostUpdateStatus([FromBody] CarSellBLL obj)
         {
             return _service.UpdateStatus(obj, _env);
