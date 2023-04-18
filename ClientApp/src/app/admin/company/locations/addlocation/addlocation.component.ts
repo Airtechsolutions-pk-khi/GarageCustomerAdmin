@@ -62,6 +62,7 @@ export class AddlocationComponent implements OnInit {
       latitude: ['', Validators.required],
       longitude: ['', Validators.required],  
       statusID: [1],
+      customerStatusID: [1],
       landmarkID:[],      
       gmaplink: ['', Validators.required],     
       imageURL: [''],
@@ -121,6 +122,7 @@ export class AddlocationComponent implements OnInit {
     this.f.landmarkID.setValue(obj.landmarkID);    
     this.f.imageURL.setValue(obj.imageURL);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    this.f.customerStatusID.setValue(obj.customerStatusID === 1 ? true : false);
     this.f.isFeatured.setValue(obj.isFeatured  === 1 ? true : false);    
 
     this.loadItemImages(this.f.locationID.value);
@@ -196,6 +198,7 @@ export class AddlocationComponent implements OnInit {
     this.f.service.setValue(this.selectedServiceID == undefined ? "" : this.selectedServiceID.toString());
     //this.f.landmark.setValue(this.selectedLandmarkID == undefined ? "" : this.selectedLandmarkID.toString());
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+    this.f.customerStatusID.setValue(this.f.customerStatusID.value === true ? 1 : 2);
     // this.f.isFeatured.setValue(this.f.isFeatured.value === true ? 1 : 0);
 
    

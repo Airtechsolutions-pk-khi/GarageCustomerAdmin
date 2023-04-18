@@ -89,6 +89,53 @@ namespace GarageCustomerAdmin.BLL._Services
                 return null;
             }
         }
+        public RspCarSellDetail GetStatus(int id)
+        {
+            try
+            {
+                RspCarSellDetail rsp = new RspCarSellDetail();
+                var customer = new CarSellCustomerBLL();
+                var bll = new List<CarSellBLL>();
+                var ds = _service.GetStatus(id);
+                var _dsCarSell = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<CarSellBLL>>();
+                var _dsCustomerData = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[1])).ToObject<List<CarSellCustomerBLL>>();
+
+                foreach (var i in _dsCarSell)
+                {
+                    bll.Add(new CarSellBLL
+                    {
+                        CarSellID = i.CarSellID,
+                        CustomerID = i.CustomerID,
+                        Name = i.Name,
+                        Description = i.Description,
+                        RegistrationNo = i.RegistrationNo,
+                        BodyType = i.BodyType,
+                        FuelType = i.FuelType,
+                        EngineType = i.EngineType,
+                        Kilometer = i.Kilometer,
+                        Year = i.Year,
+                        Transmition = i.Transmition,
+                        Price = i.Price,
+                        CountryCode = i.CountryCode,
+                        Address = i.Address,
+                        CarSellAddID = i.CarSellAddID,
+                        Assembly = i.Assembly,
+                        StatusID = i.StatusID,
+                        Reason = i.Reason
+                        ////    BodyColor = i.BodyColor
+                    });
+
+                    rsp.Carsell = bll.FirstOrDefault();
+                    rsp.Customer = _dsCustomerData.Where(x => x.CustomerID == i.CustomerID).FirstOrDefault();
+                }
+
+                return rsp;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         public List<string> GetItemImages(int id)
         {
             try
@@ -125,7 +172,7 @@ namespace GarageCustomerAdmin.BLL._Services
                 }
                 data.CarSellImages = imBLL;
                 var result = _service.Insert(data);
-                
+
                 return result;
             }
             catch (Exception ex)
@@ -172,8 +219,8 @@ namespace GarageCustomerAdmin.BLL._Services
         {
             try
             {
-               
-                var result = _service.UpdateOrderStatus(data);
+
+                var result = _service.UpdateStatus(data);
 
                 return result;
             }

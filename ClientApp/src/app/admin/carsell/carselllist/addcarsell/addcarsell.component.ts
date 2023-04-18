@@ -192,13 +192,13 @@ export class AddcarsellComponent implements OnInit {
         });            
   }
   setSelectedCarSell() {
-     
+     debugger
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
         this.loading = true;
         this.f.carSellID.setValue(sid);
-        this.carsellService.getById(sid).subscribe(res => {
+        this.carsellService.getcarId(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
           this.loading = false;

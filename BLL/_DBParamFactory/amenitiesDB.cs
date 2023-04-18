@@ -35,7 +35,7 @@ namespace BAL.Repositories
                 //SqlParameter[] p = new SqlParameter[1];
                
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetAmenities");
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetAmenities");
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -61,7 +61,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@id", id);
                 //p[1] = new SqlParameter("@brandid", brandID);
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetAmenitiesByID", p);
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetAmenitiesByID", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -89,7 +89,7 @@ namespace BAL.Repositories
                 p[1] = new SqlParameter("@Image", data.Image);
                 p[2] = new SqlParameter("@StatusID", data.StatusID);
                 p[3] = new SqlParameter("@ArabicName", data.ArabicName);
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertAmenities", p);
+                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_InsertAmenities", p);
               
                 return rtn;
             }
@@ -111,7 +111,7 @@ namespace BAL.Repositories
                 p[2] = new SqlParameter("@StatusID", data.StatusID);
                 p[3] = new SqlParameter("@AmenitiesID", data.AmenitiesID);
                 p[4] = new SqlParameter("@ArabicName", data.ArabicName);
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateAmenities_Admin", p);
+                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_updateAmenities_Admin", p);
                 return rtn;
             }
             catch (Exception ex)
@@ -129,7 +129,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@id", data.AmenitiesID);
                 //p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
-                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteAmenities", p);
+                _obj = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_DeleteAmenities", p);
 
                 return _obj;
             }

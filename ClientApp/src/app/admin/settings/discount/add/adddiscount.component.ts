@@ -60,7 +60,9 @@ export class AdddiscountComponent implements OnInit {
       description: [''],
       arabicName: [''],
       arabicDescription: [''],
+      toDate: ['', Validators.required],
       toTime: [''],
+      fromDate: ['', Validators.required],
       fromTime: [''],
       statusID: [true],
       image: [''],
@@ -81,6 +83,8 @@ export class AdddiscountComponent implements OnInit {
     this.f.arabicDescription.setValue(obj.arabicDescription);
     this.f.toTime.setValue(obj.toTime);
     this.f.fromTime.setValue(obj.fromTime);
+    this.f.fromDate.setValue(obj.fromDate);
+    this.f.toDate.setValue(obj.toDate);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.imgComp.imageUrl = obj.image;
     this.arbimg.alternateimageUrl = obj.arabicImage;

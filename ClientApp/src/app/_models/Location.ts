@@ -14,6 +14,7 @@ export class Location {
   longitude: string;
   latitude: string;   
   statusID: number;
+  customerStatusID: number;
   landmarkID: number;   
   gmaplink: string;  
   imageURL: string;  

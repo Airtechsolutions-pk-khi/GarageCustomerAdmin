@@ -8,7 +8,11 @@ namespace GarageCustomerAdmin._Models
     public class carsellViewModel
     {
     }
-   
+    public class RspCarSellDetail
+    {
+        public CarSellCustomerBLL Customer { get; set; }
+        public CarSellBLL Carsell { get; set; }
+    }
     public class Feature
     {
         public int FeatureID { get; set; }
@@ -52,6 +56,7 @@ namespace GarageCustomerAdmin._Models
         public int? CarSellAddID { get; set; }
         public string BodyColor { get; set; }
         public string Assembly { get; set; }
+        public string Reason { get; set; }
         public int? StatusID { get; set; }
         public int? CreatedBy { get; set; }
         //public DateTime? CreatedDate { get; set; }
@@ -89,6 +94,7 @@ namespace GarageCustomerAdmin._Models
         public string Assembly { get; set; }
         public string Image { get; set; }
         public int? StatusID { get; set; }
+        public string Reason { get; set; }
         public int? CreatedBy { get; set; }
         //public DateTime? CreatedDate { get; set; }
         public int? UpdatedBy { get; set; }
@@ -119,5 +125,20 @@ namespace GarageCustomerAdmin._Models
         public string Name { get; set; }
 
         public string CountryCode { get; set; }
+    }
+    public class CarSellCustomerBLL
+    {
+        public int CustomerID { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string Mobile { get; set; }
+        public string Image { get; set; }
+        public string City { get; set; }
+        public int StatusID { get; set; }
+        public string LastUpdatedBy { get; set; }
+        public Nullable<System.DateTime> LastUpdatedDate { get; set; }
+        public Nullable<int> LocationID { get; set; }
+        public Nullable<int> BrandID { get; set; }
+        public string Password { get; set; }
     }
 }

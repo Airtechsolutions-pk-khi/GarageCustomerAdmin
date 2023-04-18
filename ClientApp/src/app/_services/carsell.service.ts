@@ -78,6 +78,10 @@ export class CarSellService {
     debugger
     return this.http.get<any[]>(`api/carsell/${id}`);
   }
+  getcarId(id) {
+    debugger
+    return this.http.get<any[]>(`api/carsell/carsellid/${id}`);
+  }
   printorder(id) {
     return this.http.get<CarSells[]>(`api/orders/print/${id}`);
   }
@@ -174,8 +178,9 @@ export class CarSellService {
         return res;
       }));
   }   
-  updateOstatus(item) {
-    return this.http.post(`api/carsell/updateorderstatus`, item)
+  updatestatus(carsell) {
+    debugger
+    return this.http.post(`api/carsell/updatestatus`, carsell)
       .pipe(map(res => {
         console.log(res);
         return res;

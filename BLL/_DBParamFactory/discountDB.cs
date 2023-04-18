@@ -77,7 +77,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[9];
+                SqlParameter[] p = new SqlParameter[11];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -85,9 +85,11 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
                 p[4] = new SqlParameter("@Image", data.Image);
                 p[5] = new SqlParameter("@ArabicImage", data.ArabicImage);
-                p[6] = new SqlParameter("@FromTime", data.FromTime);
-                p[7] = new SqlParameter("@ToTime", data.ToTime);
-                p[8] = new SqlParameter("@StatusID", data.StatusID);
+                p[6] = new SqlParameter("@FromDate", data.FromDate);
+                p[7] = new SqlParameter("@ToDate", data.ToDate);
+                p[8] = new SqlParameter("@FromTime", data.FromTime);
+                p[9] = new SqlParameter("@ToTime", data.ToTime);
+                p[10] = new SqlParameter("@StatusID", data.StatusID);
 
                 rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_InsertDiscount", p);
                 if (data.Locations == "")
@@ -112,7 +114,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[10];
+                SqlParameter[] p = new SqlParameter[12];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -120,10 +122,12 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
                 p[4] = new SqlParameter("@Image", data.Image);
                 p[5] = new SqlParameter("@ArabicImage", data.ArabicImage);
-                p[6] = new SqlParameter("@FromTime", data.FromTime);
-                p[7] = new SqlParameter("@ToTime", data.ToTime);
-                p[8] = new SqlParameter("@StatusID", data.StatusID);
-                p[9] = new SqlParameter("@DiscountID", data.DiscountID);
+                p[6] = new SqlParameter("@FromDate", data.FromDate);
+                p[7] = new SqlParameter("@ToDate", data.ToDate);
+                p[8] = new SqlParameter("@FromTime", data.FromTime);
+                p[9] = new SqlParameter("@ToTime", data.ToTime);
+                p[10] = new SqlParameter("@StatusID", data.StatusID);
+                p[11] = new SqlParameter("@DiscountID", data.DiscountID);
 
 
                 rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_updateDiscount_Admin", p);
@@ -132,7 +136,7 @@ namespace BAL.Repositories
                     SqlParameter[] p1 = new SqlParameter[3];
                     p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
                     p1[1] = new SqlParameter("@DiscountID", data.DiscountID);
-                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
+                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
                     (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertDiscLocationJunc_CAdmin", p1);
                 }
                 return rtn;

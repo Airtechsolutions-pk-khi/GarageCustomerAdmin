@@ -15,6 +15,7 @@ namespace GarageCustomerAdmin._Models
         public List<OrderDetailBLL> OrderDetails { get; set; }
         public OrdersBLL Order { get; set; }
     }
+
     public class RspPrintReceipt
     {
         public int Status { get; set; }

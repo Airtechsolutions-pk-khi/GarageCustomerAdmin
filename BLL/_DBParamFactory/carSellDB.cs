@@ -173,6 +173,24 @@ namespace BAL.Repositories
                 return null;
             }
         }
+
+        public DataSet GetStatus(int id)
+        {
+            try
+            {
+                var _obj = new CarSellBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", id);
+
+                _ds = (new DBHelperGarageUAT().GetDatasetFromSP)("sp_GetCarsellbyID2_Admin", p);
+
+                return _ds;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         public List<string> GetItemImages(int id)
         {
             try
@@ -261,17 +279,16 @@ namespace BAL.Repositories
                 return 0;
             }
         }
-        public int UpdateOrderStatus(CarSellBLL data)
+        public int UpdateStatus(CarSellBLL data)
         {
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[2];
-
-                //p[0] = new SqlParameter("@date", data.LastUpdatedDate);
+                SqlParameter[] p = new SqlParameter[3];
                 p[0] = new SqlParameter("@StatusID", data.StatusID);
+                p[2] = new SqlParameter("@Reason", data.Reason);
                 p[1] = new SqlParameter("@CarSellID", data.CarSellID);
-                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_UpdateOrderStatus_Admin", p);
+                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_UpdateCarSellStatus_Admin", p);
 
                 return rtn;
             }
