@@ -91,14 +91,17 @@ namespace BAL.Repositories
                 p[9] = new SqlParameter("@ToTime", data.ToTime);
                 p[10] = new SqlParameter("@StatusID", data.StatusID);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertDiscount", p);
-                if (data.Locations == "")
+                //rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertDiscount", p);
+                rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_InsertDiscount", p).Rows[0]["ID"].ToString());
+                //rtn = DiscountID;
+
+                if (data.Locations != "")
                 {
                     SqlParameter[] p1 = new SqlParameter[3];
 
                     p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
-                    p1[1] = new SqlParameter("@DiscountID", data.DiscountID);
-                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
+                    p1[1] = new SqlParameter("@DiscountID", rtn);
+                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertDiscLocationJunc_CAdmin", p1);
                 }
                 return rtn;
