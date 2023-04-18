@@ -32,7 +32,7 @@ namespace BAL.Repositories
             try
             {
                 var lst = new List<DiscountBLL>();
-               _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetDiscount");
+               _dt = (new DBHelper().GetTableFromSP)("sp_GetDiscount");
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -56,7 +56,7 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@id", id);
 
-                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetDiscountByID", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetDiscountByID", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -91,7 +91,7 @@ namespace BAL.Repositories
                 p[9] = new SqlParameter("@ToTime", data.ToTime);
                 p[10] = new SqlParameter("@StatusID", data.StatusID);
 
-                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_InsertDiscount", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertDiscount", p);
                 if (data.Locations == "")
                 {
                     SqlParameter[] p1 = new SqlParameter[3];
@@ -99,7 +99,7 @@ namespace BAL.Repositories
                     p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
                     p1[1] = new SqlParameter("@DiscountID", data.DiscountID);
                     p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
-                    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertDiscLocationJunc_CAdmin", p1);
+                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertDiscLocationJunc_CAdmin", p1);
                 }
                 return rtn;
             }
@@ -130,14 +130,14 @@ namespace BAL.Repositories
                 p[11] = new SqlParameter("@DiscountID", data.DiscountID);
 
 
-                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_updateDiscount_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateDiscount_Admin", p);
                 if (data.Locations != "")
                 {
                     SqlParameter[] p1 = new SqlParameter[3];
                     p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
                     p1[1] = new SqlParameter("@DiscountID", data.DiscountID);
                     p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
-                    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertDiscLocationJunc_CAdmin", p1);
+                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertDiscLocationJunc_CAdmin", p1);
                 }
                 return rtn;
             }
@@ -154,7 +154,7 @@ namespace BAL.Repositories
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@id", data.DiscountID);
-                _obj = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_DeleteDiscount", p);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteDiscount", p);
 
                 return _obj;
             }

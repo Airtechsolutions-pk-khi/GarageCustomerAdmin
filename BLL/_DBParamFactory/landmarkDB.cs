@@ -35,7 +35,7 @@ namespace BAL.Repositories
                 //SqlParameter[] p = new SqlParameter[1];
                
 
-                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetLandmark");
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetLandmark");
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -61,7 +61,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@id", id);
                 //p[1] = new SqlParameter("@brandid", brandID);
 
-                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetLandmarkByID", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetLandmarkByID", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -90,7 +90,7 @@ namespace BAL.Repositories
                 p[2] = new SqlParameter("@StatusID", data.StatusID);
                 p[3] = new SqlParameter("@ArabicName", data.ArabicName);
 
-                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_InsertLandmark", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertLandmark", p);
               
                 return rtn;
             }
@@ -113,7 +113,7 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@LandmarkID", data.LandmarkID);
                 p[4] = new SqlParameter("@ArabicName", data.ArabicName);
 
-                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_updateLandmark_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateLandmark_Admin", p);
                 return rtn;
             }
             catch (Exception ex)
@@ -131,7 +131,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@id", data.LandmarkID);
                 //p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
-                _obj = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_DeleteLandmark", p);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteLandmark", p);
 
                 return _obj;
             }

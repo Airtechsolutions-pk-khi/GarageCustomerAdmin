@@ -5888,19 +5888,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ammad\\.nuget\\packages\\": {}
+    "C:\\Users\\RAFI SIRAJUDDIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\GarageCustomer_Admin\\GarageCustomerAdmin.csproj",
+      "projectUniqueName": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj",
       "projectName": "GarageCustomerAdmin",
-      "projectPath": "D:\\Projects\\GarageCustomer_Admin\\GarageCustomerAdmin.csproj",
-      "packagesPath": "C:\\Users\\ammad\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\GarageCustomer_Admin\\obj\\",
+      "projectPath": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj",
+      "packagesPath": "C:\\Users\\RAFI SIRAJUDDIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ammad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RAFI SIRAJUDDIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5973,5 +5973,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
