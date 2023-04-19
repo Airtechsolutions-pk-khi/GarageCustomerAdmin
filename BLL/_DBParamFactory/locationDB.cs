@@ -181,7 +181,7 @@ namespace BAL.Repositories
                 p[16] = new SqlParameter("@ArabicAddress", data.ArabicAddress);
                 p[17] = new SqlParameter("@CustomerStatusID", data.CustomerStatusID);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_UpdateLocation_CADMIN", p);
+                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_UpdateLocation_CADMIN", p);
 
                 if (data.Amenities != "")
                 {
@@ -189,8 +189,8 @@ namespace BAL.Repositories
 
                     p1[0] = new SqlParameter("@Amenities", data.Amenities == "" ? null : data.Amenities);
                     p1[1] = new SqlParameter("@LocationID", data.LocationID);
-                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertLocationAmenities_CAdmin", p1);
+                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
+                    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertLocationAmenities_CAdmin", p1);
                 }
                 if (data.Service != "")
                 {
@@ -198,8 +198,8 @@ namespace BAL.Repositories
 
                     p1[0] = new SqlParameter("@Service", data.Service == "" ? null : data.Service);
                     p1[1] = new SqlParameter("@LocationID", data.LocationID);
-                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertLocationServices_CAdmin", p1);
+                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
+                    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertLocationServices_CAdmin", p1);
                 }
                 //if (data.Landmark != null)
                 //{
@@ -219,8 +219,8 @@ namespace BAL.Repositories
                     SqlParameter[] p3 = new SqlParameter[3];
                     p3[0] = new SqlParameter("@Images", imgStr);
                     p3[1] = new SqlParameter("@LocationID", data.LocationID);
-                    p3[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.ToString());
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertLocationImages_CAdmin", p3);
+                    p3[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
+                    (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_insertLocationImages_CAdmin", p3);
                 }
                 catch { }
 
