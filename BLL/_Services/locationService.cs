@@ -89,6 +89,7 @@ namespace GarageCustomerAdmin.BLL._Services
                     });
 
                 }
+                data.StatusID = 1;
                 data.LocationImages = imBLL;
                 var result = _service.Update(data );
 
