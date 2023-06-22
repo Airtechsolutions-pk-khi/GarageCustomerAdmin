@@ -3,6 +3,7 @@ export class Features {
   name:string;
   arabicName:string;
   image:string;  
+  displayOrder:number;  
   statusID:number;  
 }
 

@@ -32,15 +32,11 @@ namespace BAL.Repositories
             try
             {
                 var lst = new List<FeatureBLL>();
-                //SqlParameter[] p = new SqlParameter[1];
-               
-
-                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetFeatures");
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetFeatures");
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        //lst = _dt.DataTableToList<FeatureBLL>();
                         lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<FeatureBLL>>();
                     }
                 }
@@ -52,22 +48,20 @@ namespace BAL.Repositories
             }
         }
 
-        public AmenitiesBLL Get(int id)
+        public FeatureBLL Get(int id)
         {
             try
             {
-                var _obj = new AmenitiesBLL();
+                var _obj = new FeatureBLL();
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@id", id);
-                //p[1] = new SqlParameter("@brandid", brandID);
 
-                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetAmenitiesByID", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetFeatureByID_CAdmin", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        //_obj = _dt.DataTableToList<AmenitiesBLL>().FirstOrDefault();
-                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<AmenitiesBLL>>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<FeatureBLL>>().FirstOrDefault();
                     }
                 }
                 return _obj;
@@ -78,18 +72,20 @@ namespace BAL.Repositories
             }
         }
        
-        public int Insert(AmenitiesBLL data)
+        public int Insert(FeatureBLL data)
         {
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[3];
+                SqlParameter[] p = new SqlParameter[5];
 
                 p[0] = new SqlParameter("@Name", data.Name);                
-                p[1] = new SqlParameter("@Image", data.Image);
-                p[2] = new SqlParameter("@StatusID", data.StatusID);
+                p[1] = new SqlParameter("@ArabicName", data.ArabicName);                
+                p[2] = new SqlParameter("@Image", data.Image);
+                p[3] = new SqlParameter("@StatusID", data.StatusID);
+                p[4] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
              
-                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_InsertAmenities", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertFeatures_CAdmin", p);
               
                 return rtn;
             }
@@ -99,19 +95,21 @@ namespace BAL.Repositories
             }
         }
 
-        public int Update(AmenitiesBLL data)
+        public int Update(FeatureBLL data)
         {
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[4];
+                SqlParameter[] p = new SqlParameter[6];
 
                 p[0] = new SqlParameter("@Name", data.Name);
-                p[1] = new SqlParameter("@Image", data.Image);
-                p[2] = new SqlParameter("@StatusID", data.StatusID);
-                p[3] = new SqlParameter("@AmenitiesID", data.AmenitiesID);
+                p[1] = new SqlParameter("@ArabicName", data.ArabicName);
+                p[2] = new SqlParameter("@Image", data.Image);
+                p[3] = new SqlParameter("@StatusID", data.StatusID);
+                p[4] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[5] = new SqlParameter("@FeatureID", data.FeatureID);
 
-                rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_updateAmenities_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateFeature_CAdmin", p);
                 return rtn;
             }
             catch (Exception ex)
@@ -120,16 +118,15 @@ namespace BAL.Repositories
             }
         }
 
-        public int Delete(AmenitiesBLL data)
+        public int Delete(FeatureBLL data)
         {
             try
             {
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@id", data.AmenitiesID);
-                //p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-
-                _obj = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_DeleteAmenities", p);
+                p[0] = new SqlParameter("@id", data.FeatureID);
+                p[1] = new SqlParameter("@StatusID", data.StatusID);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_deleteFeature_CAdmin", p);
 
                 return _obj;
             }

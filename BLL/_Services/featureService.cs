@@ -29,7 +29,7 @@ namespace GarageCustomerAdmin.BLL._Services
             }
         }
         
-        public AmenitiesBLL Get(int id)
+        public FeatureBLL Get(int id)
         {
             try
             {
@@ -40,11 +40,11 @@ namespace GarageCustomerAdmin.BLL._Services
                 return null;
             }
         }
-        public int Insert(AmenitiesBLL data, IWebHostEnvironment _env)
+        public int Insert(FeatureBLL data, IWebHostEnvironment _env)
         {
             try
             {
-                data.Image = UploadImage(data.Image, "Amenities", _env);
+                data.Image = UploadImage(data.Image, "Features", _env);
                 //data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -56,14 +56,13 @@ namespace GarageCustomerAdmin.BLL._Services
             }
         }
 
-        public int Update(AmenitiesBLL data, IWebHostEnvironment _env)
+        public int Update(FeatureBLL data, IWebHostEnvironment _env)
         {
             try
             {
-                data.Image = UploadImage(data.Image, "Amenities", _env);
+                data.Image = UploadImage(data.Image, "Features", _env);
                 //data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
-
                 return result;
             }
             catch (Exception ex)
@@ -72,11 +71,12 @@ namespace GarageCustomerAdmin.BLL._Services
             }
         }
 
-        public int Delete(AmenitiesBLL data)
+        public int Delete(FeatureBLL data)
         {
             try
             {
                 //data.LastUpdatedDate = _UTCDateTime_SA();
+                data.StatusID = 3;
                 var result = _service.Delete(data);
 
                 return result;

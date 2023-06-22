@@ -23,7 +23,7 @@ namespace GarageCustomerAdmin.Controllers
 
 
         [HttpGet("all/{fromDate}/{toDate}")]
-        public List<CarSellBLL> GetAll(string fromDate, string toDate)
+        public List<CarSellBLL2> GetAll(string fromDate, string toDate)
         {
             return _service.GetAll(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
         }
@@ -32,10 +32,10 @@ namespace GarageCustomerAdmin.Controllers
         {
             return _service.GetAllMake();
         }
-        [HttpGet("allModel")]
-        public List<ModelBLL> GetAllModels()
+        [HttpGet("allModel/{MakeID}")]
+        public List<ModelBLL> GetAllModels(int MakeID)
         {
-            return _service.GetAllModel();
+            return _service.GetAllModel(MakeID);
         }
         [HttpGet("allCountry")]
         public List<CountryBLL> GetAllCountries()
@@ -67,9 +67,7 @@ namespace GarageCustomerAdmin.Controllers
         [Route("insert")]   
         public int Post([FromBody]CarSellBLL obj)
         {
-
-            return _service.Insert(obj, _env);
-            
+           return _service.Insert(obj, _env);        
         }
 
         [HttpPost]
@@ -80,7 +78,7 @@ namespace GarageCustomerAdmin.Controllers
         }
         [HttpPost]
         [Route("updatestatus")]
-        public int PostUpdateStatus([FromBody] CarSellBLL obj)
+        public int PostUpdateStatus([FromBody] CarSellBLL2 obj)
         {
             return _service.UpdateStatus(obj, _env);
         }

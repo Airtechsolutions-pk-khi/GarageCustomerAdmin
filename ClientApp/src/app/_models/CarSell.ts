@@ -3,8 +3,11 @@ export class CarSells {
   customerID:number;
   name:string;
   description:string;
-  registrationNo:string;
+  registrationNo: string;
+  bodyTypeID: number;
   bodyType:string;
+  bodyName:string;
+  features:string;
   fuelType:string;
   engineType:string;
   kilometer:string;
@@ -17,7 +20,7 @@ export class CarSells {
   price:number;
   isInspected:boolean;
   cityID:number;
-  CountryCode:string;
+  countryCode:string;
   address:string;
   carSellAddID:number;
   bodyColor:string;

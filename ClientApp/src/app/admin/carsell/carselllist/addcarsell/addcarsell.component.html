@@ -47,29 +47,22 @@
               </div>
             </div>
 
-            <!-- <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputLocation">Body Type</label>
-              <input type="text" class="form-control" id=bodyType placeholder="" formControlName="bodyType">
-            </div> -->
-
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Body Type</label>
-              <select type="time" class="form-control" id=bodyType placeholder="" formControlName="bodyType">
-                <option selected disabled> -- Please Select -- </option>
-                <option>HatchBack</option>
-                <option>Sedan</option>
-                <option>SUV</option>
-                <option>MUV</option>
-                <option>Coupe</option>
-                <option>Convertible</option>
-                <option>Jeep 4x4</option>
-                <option>Other</option>
+              <label class="small mb-1" for="inputLocation">Body Type</label>
+              <select class="custom-select" id="bodyTypeID" formControlName="bodyTypeID"> 
+                <option [ngValue]="option.bodyTypeID" selected="option.bodyTypeID == bodyTypeID" *ngFor="let option of BodyTypeList"> {{option.name}} </option>
               </select>
+              <div *ngIf="f.bodyTypeID.invalid && (f.bodyTypeID.dirty || f.bodyTypeID.touched)" class="alert alert-danger">
+                <div *ngIf="f.bodyTypeID.errors.required">
+                  Body Type is required.
+                </div>
+              </div>
             </div>
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">Attach Features</label>
-              <ng-select [items]="FeaturesList" bindLabel="name" bindValue="featureID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedFeatureID">
+
+              <ng-select [items]="FeaturesList" bindLabel="name" bindValue="featureID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedFeatureID" required="required">
                 <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
                   <div class="ng-value" *ngFor="let item of items">
                     <span class="ng-value-label">{{item.name}}</span>
@@ -77,15 +70,38 @@
                   </div>
                 </ng-template>
               </ng-select>
+              <div *ngIf="f.features.invalid && (f.features.dirty || f.features.touched)" class="alert alert-danger">
+                <div *ngIf="f.features.errors.required">
+                  Features is required.
+                </div>
+              </div>
             </div>
 
-
-
-
-            <!-- <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">fuel Type</label>
-              <input type="text" class="form-control" id=fuelType placeholder="" formControlName="fuelType">
-            </div> -->
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputLocation">Country</label>
+              <select class="custom-select" id=countryCode formControlName="countryCode" (change)="onSelect($event)" [(ngModel)]="countryCode">
+                <option [ngValue]="option.code" selected="option.code == code" *ngFor="let option of CountryList"> {{option.name}} </option>
+              </select>
+              <div *ngIf="f.countryCode.invalid && (f.countryCode.dirty || f.countryCode.touched)" class="alert alert-danger">
+                <div *ngIf="f.countryCode.errors.required">
+                  Country is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputLocation">City</label>
+              <select class="custom-select" id=cityID formControlName="cityID" required>
+                <option [ngValue]="option.id" selected="option.id == id"
+                        *ngFor="let option of CityList">
+                  {{option.name}}
+                </option>
+              </select>
+              <div *ngIf="f.cityID.invalid && (f.cityID.dirty || f.cityID.touched)" class="alert alert-danger">
+                <div *ngIf="f.cityID.errors.required">
+                  City is required.
+                </div>
+              </div>
+            </div>
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Fuel Type</label>
@@ -96,31 +112,12 @@
                 <option>Electric</option>
                 <option>Other</option>
               </select>
+              <div *ngIf="f.fuelType.invalid && (f.fuelType.dirty || f.fuelType.touched)" class="alert alert-danger">
+                <div *ngIf="f.fuelType.errors.required">
+                  Fuel Type is required.
+                </div>
+              </div>
             </div>
-
-            <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputLocation">Country</label>
-              <select class="custom-select" id=countryCode formControlName="inputFirstName" (change)="onSelect($event)">
-                <option [ngValue]="option.code" selected="option.code == code" *ngFor="let option of CountryList"> {{option.code}} </option>
-              </select>
-            </div>
-            <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputLocation">City</label>
-              <select class="custom-select" id=cityID formControlName="inputFirstName">
-                <option [ngValue]="option.id" selected="option.id == id"
-                        *ngFor="let option of CityList">
-                  {{option.name}}
-                </option>
-              </select>
-
-            </div>
-
-
-
-            <!-- <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Engine Type</label>
-              <input type="text" class="form-control" id=engineType placeholder="" formControlName="engineType">
-            </div> -->
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Engine Type</label>
@@ -137,24 +134,22 @@
                 <option>Eight Cylinders and Above</option>
                 <option>Other</option>
               </select>
+              <div *ngIf="f.engineType.invalid && (f.fuelType.dirty || f.engineType.touched)" class="alert alert-danger">
+                <div *ngIf="f.engineType.errors.required">
+                  Engine Type Type is required.
+                </div>
+              </div>
             </div>
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Kilometer</label>
-              <input type="text" class="form-control" id=kilometer placeholder="" formControlName="kilometer">
+              <input type="number" class="form-control" id=kilometer placeholder="" formControlName="kilometer">
               <div *ngIf="f.kilometer.invalid && (f.kilometer.dirty || f.kilometer.touched)" class="alert alert-danger">
                 <div *ngIf="f.kilometer.errors.required">
                   Mileage is required.
                 </div>
               </div>
             </div>
-
-
-
-            <!-- <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Transmition</label>
-              <input type="text" class="form-control" id=transmition placeholder="" formControlName="transmition">
-            </div> -->
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Transmition</label>
@@ -164,19 +159,22 @@
                 <option>Manual</option>
                 <option>Other</option>
               </select>
+              <div *ngIf="f.transmition.invalid && (f.transmition.dirty || f.transmition.touched)" class="alert alert-danger">
+                <div *ngIf="f.transmition.errors.required">
+                  Transmition is required.
+                </div>
+              </div>
             </div>
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Price</label>
-              <input type="text" class="form-control" id=price placeholder="" formControlName="price">
+              <input type="number" class="form-control" id=price placeholder="" formControlName="price">
               <div *ngIf="f.price.invalid && (f.price.dirty || f.price.touched)" class="alert alert-danger">
                 <div *ngIf="f.price.errors.required">
                   Price is required.
                 </div>
               </div>
             </div>
-
-
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Body Color</label>
@@ -188,21 +186,18 @@
               </div>
             </div>
 
-            <!-- <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Assembly</label>
-              <input type="text" class="form-control" id=assembly placeholder="" formControlName="assembly">
-            </div>   -->
 
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Assembly</label>
-              <select type="time" class="form-control" id=assembly placeholder="" formControlName="assembly">
-                <option selected disabled> -- Please Select -- </option>
-                <option>Local</option>
-                <option>Imported</option>
-                <option>Other</option>
+              <label class="small mb-1" for="inputLocation">Make</label>
+              <select class="custom-select" id=makeID formControlName="makeID" (change)="onChange($event)">
+                <option [ngValue]="option.makeID" selected="option.makeID == makeID" *ngFor="let option of MakeList"> {{option.name}} </option>
               </select>
+              <div *ngIf="f.makeID.invalid && (f.makeID.dirty || f.makeID.touched)" class="alert alert-danger">
+                <div *ngIf="f.makeID.errors.required">
+                  Make is required.
+                </div>
+              </div>
             </div>
-
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">Model</label>
@@ -212,52 +207,41 @@
                   {{option.name}}
                 </option>
               </select>
-            </div>
-            <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputLocation">Make</label>
-              <select class="custom-select" formControlName="makeID">
-                <option [ngValue]="option.makeID" selected="option.makeID == makeID"
-                        *ngFor="let option of MakeList">
-                  {{option.name}}
-                </option>
-              </select>
-            </div>
-
-
-            <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">kilometer</label>
-              <input type="text" class="form-control" id=kilometer placeholder="" formControlName="kilometer">
-              <div *ngIf="f.kilometer.invalid && (f.kilometer.dirty || f.kilometer.touched)" class="alert alert-danger">
-                <div *ngIf="f.kilometer.errors.required">
-                  Mileage is required.
+              <div *ngIf="f.modelID.invalid && (f.modelID.dirty || f.modelID.touched)" class="alert alert-danger">
+                <div *ngIf="f.modelID.errors.required">
+                  Model is required.
                 </div>
               </div>
             </div>
 
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Year</label>
-              <input type="text" class="form-control" id=year placeholder="" formControlName="year">
+              <label class="small mb-1" for="inputFirstName">Assembly</label>
+              <select type="time" class="form-control" id=assembly placeholder="" formControlName="assembly">
+                <option selected disabled> -- Please Select -- </option>
+                <option>Local</option>
+                <option>Imported</option>
+                <option>Other</option>
+              </select>
+              <div *ngIf="f.assembly.invalid && (f.assembly.dirty || f.assembly.touched)" class="alert alert-danger">
+                <div *ngIf="f.assembly.errors.required">
+                  Assembly is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputLocation">Year</label>
+              <select name="year" id="year" formControlName="year" class="form-control" [ngModelOptions]="{standalone: true}">
+                <option *ngFor="let option of YearList" [value]="option">{{option}}</option>
+              </select>
               <div *ngIf="f.year.invalid && (f.year.dirty || f.year.touched)" class="alert alert-danger">
                 <div *ngIf="f.year.errors.required">
                   Year is required.
                 </div>
               </div>
             </div>
-
-
           </div>
-
-
           <div class="form-row">
-            <!--<div class="form-group col-lg-6">
-              <label for="Item Status">Status</label>
-              <div class="custom-control custom-switch custom-switch-md">
-                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
-                <label class="custom-control-label" for="statusID"></label>
-              </div>
-            </div>-->
-
-
             <div class="form-group col-lg-6">
               <label for="Item Status">Is Inspected</label>
               <div class="custom-control custom-switch custom-switch-md">

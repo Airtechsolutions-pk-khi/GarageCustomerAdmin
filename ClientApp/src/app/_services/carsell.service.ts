@@ -7,6 +7,7 @@ import { State } from '../_models/State';
 import { CarSellImages, CarSells } from '../_models/CarSell';
 import { Features } from '../_models/Feature';
 import { City } from '../_models/City';
+import { BodyType } from '../_models/BodyType';
 
 
 interface SearchCarSellResult {
@@ -158,11 +159,14 @@ export class CarSellService {
   loadFeature() {
     return this.http.get<Features[]>( `api/feature/all`);
   }
+  loadBodyType() {
+    return this.http.get<BodyType[]>(`api/bodytype/all`);
+  }
   loadMake() {
     return this.http.get<Features[]>( `api/carsell/allMake`);
   }
-  loadModel() {
-    return this.http.get<Features[]>( `api/carsell/allModel`);
+  loadModel(event) {
+    return this.http.get<Features[]>( `api/carsell/allModel/${event}`);
   }
   loadCountry() {
     return this.http.get<Features[]>( `api/carsell/allCountry`);

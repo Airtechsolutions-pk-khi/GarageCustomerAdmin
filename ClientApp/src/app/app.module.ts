@@ -72,8 +72,11 @@ import { AddcarsellComponent } from './admin/carsell/carselllist/addcarsell/addc
 import { ReviewsComponent } from './admin/reviews/reviews.component';
 import { DiscountComponent } from './admin/settings/discount/discount.component';
 import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.component';
+import { FeaturelistComponent } from './admin/features/featurelist.component';
+import { AddfeatureComponent } from './admin/features/add/addfeature.component';
 
-
+import { BodyTypeComponent } from './admin/bodytype/bodytype.component';
+import { AddbodyTypeComponent } from './admin/bodytype/add/addbodyType.component';
 
 
 
@@ -136,7 +139,11 @@ import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.
     ReviewsComponent,
     DiscountComponent,
     AdddiscountComponent,
-    CarSelldetailsComponent
+    CarSelldetailsComponent,
+    FeaturelistComponent,
+    AddfeatureComponent,
+    BodyTypeComponent,
+    AddbodyTypeComponent
 
   ],
   imports: [
@@ -236,6 +243,14 @@ import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.
           { path: 'discount', component: DiscountComponent },
           { path: 'discount/add', component: AdddiscountComponent },
           { path: 'discount/edit/:id', component: AdddiscountComponent },
+
+          { path: 'features', component: FeaturelistComponent },
+          { path: 'features/add', component: AddfeatureComponent },
+          { path: 'features/edit/:id', component: AddfeatureComponent },
+
+          { path: 'bodytype', component: BodyTypeComponent },
+          { path: 'bodytype/add', component: AddbodyTypeComponent },
+          { path: 'bodytype/edit/:id', component: AddbodyTypeComponent },
         ]
       }
     ]),

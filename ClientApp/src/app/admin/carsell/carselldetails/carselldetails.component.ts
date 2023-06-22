@@ -6,6 +6,7 @@ import { CarSells, CarSellImages, Customers } from 'src/app/_models/CarSell';
 import { ToastService } from 'src/app/_services/toastservice';
 import { Location } from 'src/app/_models/Location';
 import { CarSellService } from 'src/app/_services/carsell.service';
+import { Validators } from '@angular/forms';
 @Component({
   selector: 'app-carselldetails',
   templateUrl: './carselldetails.component.html',
@@ -18,7 +19,7 @@ export class CarSelldetailsComponent implements OnInit {
   Locations: Location[] = [];
   selectedLocations = [];
   locationID = 0;
-  reason = "";
+  reason = [""];
   public customerInfo = new Customers();
 
   locationSubscription: Subscription;
@@ -53,6 +54,7 @@ export class CarSelldetailsComponent implements OnInit {
     debugger
     carsell.statusID = status;
     carsell.reason = this.reason;
+
     //Update customer
     this.service.updatestatus(carsell).subscribe(data => {
 

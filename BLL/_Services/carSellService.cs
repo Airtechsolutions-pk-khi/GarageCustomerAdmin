@@ -23,7 +23,7 @@ namespace GarageCustomerAdmin.BLL._Services
             _serviceLocation = new locationDB();
         }
 
-        public List<CarSellBLL> GetAll(DateTime FromDate, DateTime ToDate)
+        public List<CarSellBLL2> GetAll(DateTime FromDate, DateTime ToDate)
         {
             try
             {
@@ -31,7 +31,7 @@ namespace GarageCustomerAdmin.BLL._Services
             }
             catch (Exception ex)
             {
-                return new List<CarSellBLL>();
+                return new List<CarSellBLL2>();
             }
         }
         public List<MakeBLL> GetAllMake()
@@ -45,11 +45,11 @@ namespace GarageCustomerAdmin.BLL._Services
                 return new List<MakeBLL>();
             }
         }
-        public List<ModelBLL> GetAllModel()
+        public List<ModelBLL> GetAllModel(int MakeID)
         {
             try
             {
-                return _service.GetAllModel();
+                return _service.GetAllModel(MakeID);
             }
             catch (Exception ex)
             {
@@ -109,10 +109,10 @@ namespace GarageCustomerAdmin.BLL._Services
                         Name = i.Name,
                         Description = i.Description,
                         RegistrationNo = i.RegistrationNo,
-                        BodyType = i.BodyType,
+                        //b = i.BodyType,
                         FuelType = i.FuelType,
                         EngineType = i.EngineType,
-                        Kilometer = i.Kilometer,
+                        //Kilometer = i.Kilometer,
                         Year = i.Year,
                         Transmition = i.Transmition,
                         Price = i.Price,
@@ -120,8 +120,8 @@ namespace GarageCustomerAdmin.BLL._Services
                         Address = i.Address,
                         CarSellAddID = i.CarSellAddID,
                         Assembly = i.Assembly,
-                        StatusID = i.StatusID,
-                        Reason = i.Reason
+                        //StatusID = i.StatusID,
+                        //Reason = i.Reason
                         ////    BodyColor = i.BodyColor
                     });
 
@@ -185,6 +185,7 @@ namespace GarageCustomerAdmin.BLL._Services
         {
             try
             {
+
                 //data.LastUpdatedDate = _UTCDateTime_SA();
                 List<CarSellImageBLL> imBLL = new List<CarSellImageBLL>();
                 //data.Image = UploadImage(data.Image, "Orders", _env);
@@ -215,7 +216,7 @@ namespace GarageCustomerAdmin.BLL._Services
                 return 0;
             }
         }
-        public int UpdateStatus(CarSellBLL data, IWebHostEnvironment _env)
+        public int UpdateStatus(CarSellBLL2 data, IWebHostEnvironment _env)
         {
             try
             {

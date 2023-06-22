@@ -27,21 +27,21 @@ namespace GarageCustomerAdmin.Controllers
 
 
         [HttpGet("{id}")]
-        public AmenitiesBLL Get(int id )
+        public FeatureBLL Get(int id )
         {
             return _service.Get(id );
         }
 
         [HttpPost]
         [Route("insert")]
-        public int Post([FromBody] AmenitiesBLL obj)
+        public int Post([FromBody] FeatureBLL obj)
         {
             return _service.Insert(obj, _env);
         }
 
         [HttpPost]
         [Route("update")]
-        public int PostUpdate([FromBody] AmenitiesBLL obj)
+        public int PostUpdate([FromBody] FeatureBLL obj)
         {
             return _service.Update(obj, _env);
         }
@@ -49,7 +49,7 @@ namespace GarageCustomerAdmin.Controllers
 
         [HttpPost]
         [Route("delete")]
-        public int PostDelete([FromBody] AmenitiesBLL obj)
+        public int PostDelete([FromBody] FeatureBLL obj)
         {
             return _service.Delete(obj);
         }
