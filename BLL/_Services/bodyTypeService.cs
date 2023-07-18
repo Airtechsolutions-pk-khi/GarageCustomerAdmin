@@ -44,7 +44,7 @@ namespace GarageCustomerAdmin.BLL._Services
         {
             try
             {
-                data.Image = UploadImage(data.Image, "BodyType", _env);
+                data.Image = UploadImage(data.Image, "Bodytype", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -60,7 +60,7 @@ namespace GarageCustomerAdmin.BLL._Services
         {
             try
             {
-                data.Image = UploadImage(data.Image, "BodyType", _env);
+                data.Image = UploadImage(data.Image, "Bodytype", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 

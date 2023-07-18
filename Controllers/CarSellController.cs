@@ -72,9 +72,9 @@ namespace GarageCustomerAdmin.Controllers
 
         [HttpPost]
         [Route("update")]
-        public int PostUpdate([FromBody] CarSellBLL obj)
+        public int PostUpdate([FromBody] CarSellBLL3 obj)
         {
-            return _service.Update(obj, _env);
+           return _service.Update(obj, _env);
         }
         [HttpPost]
         [Route("updatestatus")]

@@ -96,9 +96,21 @@ namespace GarageCustomerAdmin.BLL._Services
                 RspCarSellDetail rsp = new RspCarSellDetail();
                 var customer = new CarSellCustomerBLL();
                 var bll = new List<CarSellBLL>();
+                var make = new List<MakeBLL>();
+                var model = new List<ModelBLL>();
+                var country = new List<CountryBLL>();
+                var city = new List<CityBLL>();
+                var feature = new List<FeatureBLL>();
+                var image = new List<CarSellImageBLL>();
                 var ds = _service.GetStatus(id);
                 var _dsCarSell = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<CarSellBLL>>();
                 var _dsCustomerData = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[1])).ToObject<List<CarSellCustomerBLL>>();
+                var _dsMakeData = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[2])).ToObject<List<MakeBLL>>();
+                var _dsModelData = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[3])).ToObject<List<ModelBLL>>();
+                var _dsCountryData = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[4])).ToObject<List<CountryBLL>>();
+                var _dsCityData = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[5])).ToObject<List<CityBLL>>();
+                var _dsFeatureData = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[6])).ToObject<List<FeatureBLL>>();
+                var _dsImageData = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[7])).ToObject<List<CarSellImageBLL>>();
 
                 foreach (var i in _dsCarSell)
                 {
@@ -112,7 +124,7 @@ namespace GarageCustomerAdmin.BLL._Services
                         //b = i.BodyType,
                         FuelType = i.FuelType,
                         EngineType = i.EngineType,
-                        //Kilometer = i.Kilometer,
+                        Kilometer = i.Kilometer,
                         Year = i.Year,
                         Transmition = i.Transmition,
                         Price = i.Price,
@@ -120,13 +132,20 @@ namespace GarageCustomerAdmin.BLL._Services
                         Address = i.Address,
                         CarSellAddID = i.CarSellAddID,
                         Assembly = i.Assembly,
-                        //StatusID = i.StatusID,
-                        //Reason = i.Reason
-                        ////    BodyColor = i.BodyColor
+                        StatusID = i.StatusID,
+                        //Reason = i.Reason,
+                        BodyColor = i.BodyColor,
+                        CarFeature = i.CarFeature
                     });
 
                     rsp.Carsell = bll.FirstOrDefault();
                     rsp.Customer = _dsCustomerData.Where(x => x.CustomerID == i.CustomerID).FirstOrDefault();
+                    rsp.Make = _dsMakeData.Where(x => x.MakeID == i.MakeID).FirstOrDefault();
+                    rsp.Model = _dsModelData.Where(x => x.ModelID == i.ModelID).FirstOrDefault();
+                    rsp.Country = _dsCountryData.Where(x => x.Code == i.CountryCode).FirstOrDefault();
+                    rsp.City = _dsCityData.Where(x => x.ID == i.CityID).FirstOrDefault();
+                    rsp.Feature = _dsFeatureData.ToList();
+                    rsp.Image = _dsImageData.ToList();
                 }
 
                 return rsp;
@@ -170,6 +189,7 @@ namespace GarageCustomerAdmin.BLL._Services
                     });
 
                 }
+                data.StatusID = 1;
                 data.CarSellImages = imBLL;
                 var result = _service.Insert(data);
 
@@ -181,7 +201,7 @@ namespace GarageCustomerAdmin.BLL._Services
             }
         }
 
-        public int Update(CarSellBLL data, IWebHostEnvironment _env)
+        public int Update(CarSellBLL3 data, IWebHostEnvironment _env)
         {
             try
             {

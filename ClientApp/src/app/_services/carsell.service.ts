@@ -8,6 +8,7 @@ import { CarSellImages, CarSells } from '../_models/CarSell';
 import { Features } from '../_models/Feature';
 import { City } from '../_models/City';
 import { BodyType } from '../_models/BodyType';
+import { Customers, Make, Models } from '../_models/Carsell';
 
 
 interface SearchCarSellResult {
@@ -163,13 +164,16 @@ export class CarSellService {
     return this.http.get<BodyType[]>(`api/bodytype/all`);
   }
   loadMake() {
-    return this.http.get<Features[]>( `api/carsell/allMake`);
+    return this.http.get<Make[]>( `api/carsell/allMake`);
   }
   loadModel(event) {
-    return this.http.get<Features[]>( `api/carsell/allModel/${event}`);
+    return this.http.get<Models[]>( `api/carsell/allModel/${event}`);
   }
   loadCountry() {
     return this.http.get<Features[]>( `api/carsell/allCountry`);
+  }
+  loadCustomer() {
+    return this.http.get<Customers[]>(`api/customer/all`);
   }
   loadCity(event) {
     debugger

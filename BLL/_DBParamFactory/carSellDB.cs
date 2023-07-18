@@ -155,8 +155,6 @@ namespace BAL.Repositories
                 var _obj = new CarSellBLL();
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@id", id);
-
-
                 _dt = (new DBHelper().GetTableFromSP)("sp_GetCarSellById_CADMIN", p);
                 if (_dt != null)
                 {
@@ -164,6 +162,15 @@ namespace BAL.Repositories
                     {
                         _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CarSellBLL>>().FirstOrDefault();
                     }
+                    var data = new CustomerBLL();
+                    SqlParameter[] a = new SqlParameter[1];
+                    a[0] = new SqlParameter("@CustomerID", _obj.CustomerID);
+                    _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomerPhone_CADMIN", a);
+                    if (_dt.Rows.Count > 0)
+                    {
+                        data = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerBLL>>().FirstOrDefault();
+                    }
+                    _obj.CustomerPhone = data.Mobile;
                 }
                 return _obj;
             }
@@ -182,7 +189,6 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@id", id);
 
                 _ds = (new DBHelper().GetDatasetFromSP)("sp_GetCarsellbyID2_Admin", p);
-
                 return _ds;
             }
             catch (Exception ex)
@@ -220,10 +226,24 @@ namespace BAL.Repositories
                 return null;
             }
         }
-        public int Update(CarSellBLL data)
+        public int Update(CarSellBLL3 data)
         {
             try
             {
+                var _obj = new CustomerBLL();
+                SqlParameter[] a = new SqlParameter[1];
+                a[0] = new SqlParameter("@Mobile", data.CustomerPhone);
+
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomerByPhone_CADMIN", a);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerBLL>>().FirstOrDefault();
+                    }
+                }
+
                 int rtn = 0;
                 SqlParameter[] p = new SqlParameter[23];
 
@@ -234,7 +254,7 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@FuelType", data.FuelType);
                 p[5] = new SqlParameter("@EngineType", data.EngineType);
                 p[6] = new SqlParameter("@Year", data.Year);
-                p[7] = new SqlParameter("@CustomerID", data.CustomerID);
+                p[7] = new SqlParameter("@CustomerID", _obj.CustomerID);
                 p[8] = new SqlParameter("@MakeID", data.MakeID);
                 p[9] = new SqlParameter("@ModelID", data.ModelID);
                 p[10] = new SqlParameter("@Transmition", data.Transmition);
@@ -264,9 +284,11 @@ namespace BAL.Repositories
                 try
                 {
                     var imgStr = String.Join(",", data.CarSellImages.Select(p => p.Image));
-                    SqlParameter[] p2 = new SqlParameter[2];
+                    SqlParameter[] p2 = new SqlParameter[4];
                     p2[0] = new SqlParameter("@Images", imgStr);
                     p2[1] = new SqlParameter("@CarsellID", data.CarSellID);
+                    p2[2] = new SqlParameter("@CreatedOn", DateTime.UtcNow);
+                    p2[3] = new SqlParameter("@UpdatedOn", DateTime.UtcNow);
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertCarsellImages_CAdmin", p2);
                 }
                 catch (Exception ex)
@@ -301,8 +323,22 @@ namespace BAL.Repositories
         {
             try
             {
+                var _obj = new CustomerBLL();
+                SqlParameter[] a = new SqlParameter[1];
+                a[0] = new SqlParameter("@Mobile", data.CustomerPhone);
+
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomerByPhone_CADMIN", a);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerBLL>>().FirstOrDefault();
+                    }
+                }
+
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[23];
+                SqlParameter[] p = new SqlParameter[24];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -312,7 +348,7 @@ namespace BAL.Repositories
                 p[5] = new SqlParameter("@FuelType", data.FuelType);
                 p[6] = new SqlParameter("@EngineType", data.EngineType);
                 p[7] = new SqlParameter("@Year", data.Year);
-                p[8] = new SqlParameter("@CustomerID", data.CustomerID);
+                p[8] = new SqlParameter("@CustomerID", _obj.CustomerID);
                 p[9] = new SqlParameter("@MakeID", data.MakeID);
                 p[10] = new SqlParameter("@ModelID", data.ModelID);
                 p[11] = new SqlParameter("@Transmition", data.Transmition);
@@ -327,6 +363,7 @@ namespace BAL.Repositories
                 p[20] = new SqlParameter("@Assembly", data.Assembly);
                 p[21] = new SqlParameter("@CreatedDate", DateTime.Now);
                 p[22] = new SqlParameter("@CreatedBy", 1);
+                p[23] = new SqlParameter("@StatusID", data.StatusID);
 
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_InsertCarSell", p).Rows[0]["CarSellID"].ToString());
 
@@ -340,9 +377,11 @@ namespace BAL.Repositories
                 try
                 {
                     var imgStr = String.Join(",", data.CarSellImages.Select(p => p.Image));
-                    SqlParameter[] p2 = new SqlParameter[2];
+                    SqlParameter[] p2 = new SqlParameter[4];
                     p2[0] = new SqlParameter("@Images", imgStr);
                     p2[1] = new SqlParameter("@CarsellID", rtn);
+                    p2[2] = new SqlParameter("@CreatedOn", DateTime.UtcNow);
+                    p2[3] = new SqlParameter("@UpdatedOn", DateTime.UtcNow);
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertCarsellImages_CAdmin", p2);
                 }
                 catch (Exception ex)

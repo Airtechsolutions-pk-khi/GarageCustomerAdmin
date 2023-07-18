@@ -15,7 +15,17 @@ namespace GarageCustomerAdmin.BLL._Services
         {
             _service = new customerDB();
         }
-
+        public List<CustomerBLL> GetCustomer()
+        {
+            try
+            {
+                return _service.Getcustomer();
+            }
+            catch (Exception ex)
+            {
+                return new List<CustomerBLL>();
+            }
+        }
         public List<CustomerBLL> GetAll(int brandID)
         {
             try

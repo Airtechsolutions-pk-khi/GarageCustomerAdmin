@@ -26,7 +26,29 @@ namespace BAL.Repositories
             _dt = new DataTable();
             _ds = new DataSet();
         }
+        public List<CustomerBLL> Getcustomer()
+        {
+            try
+            {
+                var lst = new List<CustomerBLL>();
+                SqlParameter[] p = new SqlParameter[0];
+                //p[0] = new SqlParameter("@brandid", brandID);
 
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomer");
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         public List<CustomerBLL> GetAll(int brandID)
         {
             try

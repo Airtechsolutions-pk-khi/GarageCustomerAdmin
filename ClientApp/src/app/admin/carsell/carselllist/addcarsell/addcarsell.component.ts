@@ -16,17 +16,15 @@ export class AddcarsellComponent implements OnInit {
   submitted = false;
   carSellForm: FormGroup;
   loading = false;
-
   Images = [];
   FeaturesList = [];
   BodyTypeList = [];
   ModelList = [];
+  CustomerList = [];
   MakeList = [];
   CountryList = [];
-
   CityList = [];
-
-  selectedFeatureID : string[];
+  selectedFeatureID: [];
   selectedBodyTypeID = [];
   selectedModelID = [];
   selectedMakeID = [];
@@ -46,10 +44,9 @@ export class AddcarsellComponent implements OnInit {
     this.createForm();
     this.loadCarSellFeature();
     this.loadBodyType();
-    //this.loadModel();
     this.loadMake();
+    //this.loadCustomer();
     this.loadCountry();
-    //this.loadCity();
   }
 
   ngOnInit() {
@@ -59,10 +56,10 @@ export class AddcarsellComponent implements OnInit {
   get f() { return this.carSellForm.controls; }
 
   private createForm() {
-
     this.carSellForm = this.formBuilder.group({
       carSellID: 0,
-      customerID: [1],
+      customerID: [0],
+      customerPhone: ['', Validators.required],
       name: ['', Validators.required],
       description: ['', Validators.required],
       address: ['', Validators.required],
@@ -71,7 +68,10 @@ export class AddcarsellComponent implements OnInit {
       updatedBy: [],
       isInspected: [false],
       imagesSource: ['', Validators.required],
-      features: ['', Validators.required],
+      imageUrl: [''],
+      carsellImages: [],
+      featureID: [null],
+      features: [],
       registrationNo: ['', Validators.required],
       bodyTypeID: ['', Validators.required],
       bodyType: [''],
@@ -101,7 +101,6 @@ export class AddcarsellComponent implements OnInit {
         var fileSize = event.target.files[i].size / 100000;
         if (fileSize > 5) { alert("Filesize exceed 500 KB"); }
         else {
-
           reader.onload = (event: any) => {
             console.log(event.target.result);
             this.Images.push(event.target.result);
@@ -114,10 +113,9 @@ export class AddcarsellComponent implements OnInit {
       }
     }
   }
-
   private editForm(obj) {
-    debugger
     this.f.name.setValue(obj.name);
+    this.f.customerPhone.setValue(obj.customerPhone);
     this.f.address.setValue(obj.address);
     this.f.description.setValue(obj.description);
     this.f.assembly.setValue(obj.assembly);
@@ -133,20 +131,19 @@ export class AddcarsellComponent implements OnInit {
     this.f.fuelType.setValue(obj.fuelType);
     this.f.engineType.setValue(obj.engineType);
     this.f.bodyTypeID.setValue(obj.bodyTypeID);
+    this.f.bodyType.setValue(obj.bodyType);
     this.f.registrationNo.setValue(obj.registrationNo);
-    this.f.statusID.setValue(obj.statusID == 1 ? true : false);
-    //this.f.features.setValue(obj.features);
-
+    this.f.carSellID.setValue(obj.carSellID);
+    this.f.customerID.setValue(obj.customerID);
+    this.f.statusID.setValue(obj.statusID === 1);
     this.loadCarSellImages(this.f.carSellID.value);
-
     if (obj.features != "") {
       debugger
       var stringToConvert = obj.features;
       this.selectedFeatureID = stringToConvert.split(',').map(Number);
       this.f.features.setValue(obj.features);
     }
-    if (obj.countryCode != "")
-    {
+    if (obj.countryCode != "") {
       this.carsellService.loadCity(obj.countryCode).subscribe((res: any) => {
         this.CityList = res;
       });
@@ -158,7 +155,7 @@ export class AddcarsellComponent implements OnInit {
     }
   }
   private loadCarSellImages(id) {
-
+    debugger
     this.carsellService.loadCarSellImages(id).subscribe((res: any) => {
       this.Images = res;
       this.f.imagesSource.setValue(this.Images);
@@ -176,7 +173,6 @@ export class AddcarsellComponent implements OnInit {
     });
   }
   private loadBodyType() {
-    debugger
     this.carsellService.loadBodyType().subscribe((res: any) => {
       this.BodyTypeList = res;
     });
@@ -192,9 +188,14 @@ export class AddcarsellComponent implements OnInit {
       this.CountryList = res;
     });
   }
+  //private loadCustomer() {
+  //  debugger
+  //  this.carsellService.loadCustomer().subscribe((res: any) => {
+  //    this.CustomerList = res;
+  //  });
+  //}
 
   onSelect(event) {
-    debugger;
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
     console.log(index);
@@ -206,7 +207,6 @@ export class AddcarsellComponent implements OnInit {
   }
 
   onChange(event) {
-    debugger;
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
     console.log(index);
@@ -217,20 +217,19 @@ export class AddcarsellComponent implements OnInit {
     });
   }
   setSelectedCarSell() {
-      debugger
-      this.route.paramMap.subscribe(param => {
-        const sid = +param.get('id');
-        if (sid) {
-          this.loading = true;
-          this.f.carSellID.setValue(sid);
-          this.carsellService.getcarId(sid).subscribe(res => {
-            //Set Forms
-            this.editForm(res);
-            this.loading = false;
-          });
-        }
-      })
-    }
+    this.route.paramMap.subscribe(param => {
+      const sid = +param.get('id');
+      if (sid) {
+        this.loading = true;
+        this.f.carSellID.setValue(sid);
+        this.carsellService.getcarId(sid).subscribe(res => {
+          //Set Forms
+          this.editForm(res);
+          this.loading = false;
+        });
+      }
+    })
+  }
 
   onSubmit() {
     debugger
@@ -238,6 +237,7 @@ export class AddcarsellComponent implements OnInit {
     this.submitted = true;
     if (this.carSellForm.invalid) { return; }
     this.loading = true;
+    //this.f.statusID.setValue(this.f.statusID.value === 1 ? true : false);
     this.f.features.setValue(this.selectedFeatureID == undefined ? "" : this.selectedFeatureID.toString());
     if (parseInt(this.f.carSellID.value) === 0) {
       //Insert location

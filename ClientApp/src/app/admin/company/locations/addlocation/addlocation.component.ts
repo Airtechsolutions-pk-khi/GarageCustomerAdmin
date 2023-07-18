@@ -123,7 +123,7 @@ export class AddlocationComponent implements OnInit {
     this.f.imageURL.setValue(obj.imageURL);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.customerStatusID.setValue(obj.customerStatusID === 1 ? true : false);
-    this.f.isFeatured.setValue(obj.isFeatured  === 1 ? true : false);    
+    this.f.isFeatured.setValue(obj.isFeatured  === true ? 1 : false);    
 
     this.loadItemImages(this.f.locationID.value);
 
