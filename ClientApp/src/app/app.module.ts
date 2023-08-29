@@ -30,7 +30,7 @@ import { AddlocationComponent } from './admin/company/locations/addlocation/addl
 import { NgSelectModule } from '@ng-select/ng-select';
 import { AddbrandComponent } from './admin/company/brands/addbrand/addbrand.component';
 
-import { NgApexchartsModule } from 'ng-apexcharts';
+//import { NgApexchartsModule } from 'ng-apexcharts';
 import { ToastrModule } from 'ngx-toastr';
 import { BrandComponent } from './admin/company/brands/brands.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -50,7 +50,7 @@ import { OrderdetailsComponent } from './admin/sales/orderdetails/orderdetails.c
 import { ItemsettingsComponent } from './admin/menu/items/itemsettings/itemsettings.component';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { DeliveryComponent } from './admin/settings/delivery/delivery.component';
-import { AdddeliveryComponent } from './admin/settings/Delivery/adddelivery/adddelivery.component';
+//import { AdddeliveryComponent } from './admin/settings/Delivery/adddelivery/adddelivery.component';
 import { AppsettingsComponent } from './admin/settings/appsettings/appsettings.component';
 import { AddonsComponent } from './admin/menu/addons/addons.component';
 import { AddaddonsComponent } from './admin/menu/addons/addaddons/addaddons.component';
@@ -78,7 +78,8 @@ import { AddfeatureComponent } from './admin/features/add/addfeature.component';
 import { BodyTypeComponent } from './admin/bodytype/bodytype.component';
 import { AddbodyTypeComponent } from './admin/bodytype/add/addbodyType.component';
 
-
+import { BloglistComponent } from './admin/blogs/blog.component';
+import { AddBlogComponent } from './admin/blogs/add/addblog.component';
 
 @NgModule({
   declarations: [
@@ -119,7 +120,7 @@ import { AddbodyTypeComponent } from './admin/bodytype/add/addbodyType.component
     OrderdetailsComponent,
     ItemsettingsComponent,
     DeliveryComponent,
-    AdddeliveryComponent,
+    //AdddeliveryComponent,
     AppsettingsComponent,
     AddonsComponent,
     AddaddonsComponent,
@@ -143,7 +144,9 @@ import { AddbodyTypeComponent } from './admin/bodytype/add/addbodyType.component
     FeaturelistComponent,
     AddfeatureComponent,
     BodyTypeComponent,
-    AddbodyTypeComponent
+    AddbodyTypeComponent,
+    BloglistComponent,
+    AddBlogComponent
 
   ],
   imports: [
@@ -154,7 +157,7 @@ import { AddbodyTypeComponent } from './admin/bodytype/add/addbodyType.component
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    NgApexchartsModule,
+    //NgApexchartsModule,
 
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
@@ -206,9 +209,9 @@ import { AddbodyTypeComponent } from './admin/bodytype/add/addbodyType.component
           { path: 'report/salescategorywise', component: SalescategorywiseComponent },
           { path: 'report/salesitemwise', component: SalesitemwiseComponent },
 
-          { path: 'delivery', component: DeliveryComponent },
-          { path: 'delivery/add', component: AdddeliveryComponent },
-          { path: 'delivery/edit/:id', component: AdddeliveryComponent },
+          // { path: 'delivery', component: DeliveryComponent },
+          // { path: 'delivery/add', component: AdddeliveryComponent },
+          // { path: 'delivery/edit/:id', component: AdddeliveryComponent },
 
           { path: 'appsettings', component: AppsettingsComponent },
 
@@ -251,6 +254,10 @@ import { AddbodyTypeComponent } from './admin/bodytype/add/addbodyType.component
           { path: 'bodytype', component: BodyTypeComponent },
           { path: 'bodytype/add', component: AddbodyTypeComponent },
           { path: 'bodytype/edit/:id', component: AddbodyTypeComponent },
+
+          { path: 'blog', component: BloglistComponent },
+          { path: 'blog/add', component: AddBlogComponent },
+          { path: 'blog/edit/:id', component: AddBlogComponent },
         ]
       }
     ]),

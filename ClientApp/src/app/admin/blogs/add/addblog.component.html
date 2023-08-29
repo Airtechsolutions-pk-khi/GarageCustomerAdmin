@@ -1,0 +1,136 @@
+<h1 class="h3 mb-2 text-gray-800">Add Blog</h1>
+<p class="mb-4"></p>
+
+<form [formGroup]="blogForm" class="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Blog Details</div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputUsername">Title</label>
+              <input type="text" class="form-control" id=title placeholder="" formControlName="title">
+              <div *ngIf="f.title.invalid && (f.title.dirty || f.title.touched)" class="alert alert-danger">
+                <div *ngIf="f.title.errors.required">
+                  Title is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputUsername">Arabic Title</label>
+              <input type="text" class="form-control" id=arabicTitle placeholder="" formControlName="arabicTitle">
+            </div>
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputLocation">Country</label>
+              <select class="custom-select" id=country formControlName="country" (change)="onSelect($event)" [(ngModel)]="country">
+                <option [ngValue]="option.code" selected="option.code == code" *ngFor="let option of CountryList"> {{option.name}} </option>
+              </select>
+              <div *ngIf="f.country.invalid && (f.country.dirty || f.country.touched)" class="alert alert-danger">
+                <div *ngIf="f.country.errors.required">
+                  Country is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputLocation">City</label>
+              <select class="custom-select" id="city" formControlName="city" required>
+                <option [ngValue]="option.id" selected="option.id == id"
+                        *ngFor="let option of CityList">
+                  {{option.name}}
+                </option>
+              </select>
+              <div *ngIf="f.city.invalid && (f.city.dirty || f.city.touched)" class="alert alert-danger">
+                <div *ngIf="f.city.errors.required">
+                  City is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="startDate">Start Date</label>
+              <input type="date" class="form-control" id="startDate" formControlName="startDate">
+              <div *ngIf="f.startDate.invalid && (f.startDate.dirty || f.startDate.touched)" class="alert alert-danger">
+                <div *ngIf="f.startDate.errors?.required">
+                  Start Date is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="endDate">End Date</label>
+              <input type="date" class="form-control" id="endDate" formControlName="endDate">
+              <div *ngIf="f.endDate.invalid && (f.endDate.dirty || f.endDate.touched)" class="alert alert-danger">
+                <div *ngIf="f.endDate.errors?.required">
+                  End Date is required.
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputFirstName">Type</label>
+              <select class="form-control" id=type placeholder="" formControlName="type">
+                <option selected disabled>-- Please Select --</option>
+                <option>Blog's</option>
+                <option>New's Alert</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputFirstName">Description</label>
+              <textarea type="text" class="form-control" id="description" placeholder="" formControlName="description" rows="5"></textarea>
+              <div *ngIf="f.description.invalid && (f.description.dirty || f.description.touched)" class="alert alert-danger">
+                <div *ngIf="f.description.errors.required">
+                  Description is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputFirstName">Arabic Description</label>
+              <textarea type="text" class="form-control" id="arabicDescription" placeholder="" formControlName="arabicDescription" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-lg-6">
+              <label for="Item Status">Is Featured</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="isFeatured" formControlName="isFeatured">
+                <label class="custom-control-label" for="isFeatured"></label>
+              </div>
+            </div>
+            <div class="form-group col-lg-6">
+              <label for="Item Status">Status</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                <label class="custom-control-label" for="statusID"></label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-12 form-group">
+              <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>
+              <br>
+              <label for="file">Select Images </label>
+              <input formControlName="file" id="file" type="file" class="form-control" multiple="" (change)="onFileChange($event)">
+              <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+                <div *ngIf="f.file.errors.required">File is required.</div>
+              </div>
+            </div>
+            <div *ngFor='let url of Images' class="col-md-2">
+              <i class="fa fa-times" (click)="removeImage(url)" style="    background: #E91E63;
+                    padding: 5px 8px;
+                    border-radius: 18px;
+                    color: white;
+                    position: absolute;
+                    left: 0;"></i>
+              <img [src]="url" style="padding: 7px; max-width: 200px;  width: auto;height: 180px;"> <br />
+            </div>
+          </div>
+          <!-- Save changes button-->
+          <button class="btn btn-primary" type="submit">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
