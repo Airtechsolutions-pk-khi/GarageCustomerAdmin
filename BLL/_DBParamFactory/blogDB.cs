@@ -243,16 +243,16 @@ namespace BAL.Repositories
 				return 0;
 			}
 		}
-		public int Delete(OrdersBLL data)
+		public int Delete(BlogBLL data)
 		{
 			try
 			{
 				int _obj = 0;
 				SqlParameter[] p = new SqlParameter[2];
-				p[0] = new SqlParameter("@id", data.OrderID);
+				p[0] = new SqlParameter("@id", data.BlogID);
 				p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
-				_obj = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_DeleteOrders", p);
+				_obj = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("sp_DeleteBlog_CADMIN", p);
 
 				return _obj;
 			}

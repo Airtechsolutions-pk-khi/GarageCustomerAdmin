@@ -11,6 +11,7 @@ import { BlogService } from 'src/app/_services/blog.service';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { ExcelService } from 'src/ExportExcel/excel.service';
+import { ConfirmationDialogService } from '../settings/confirm/confirmation-dialog.service';
 
 const now = new Date();
 @Component({
@@ -38,8 +39,8 @@ export class BloglistComponent implements OnInit {
     public ls: LocalStorageService,
     public excelService: ExcelService,
     public ts: ToastService,
-    
-    public router: Router) {
+    public router: Router,
+    private confirmationDialogService: ConfirmationDialogService) {
     this.loading$ = service.loading$;
     this.submit = false;
   }
@@ -86,14 +87,43 @@ export class BloglistComponent implements OnInit {
     this.service.sortDirection = direction;
   }
 
-  //View(carsell) {
-  //  this.router.navigate(["admin/carselldetails/view", carsell]);
-  //}
+  public async openConfirmationDialog(item) {
+    debugger
+
+    if (await this.confirmationDialogService.confirm('Please confirm..', 'Do you really want to delete ... ?') === true) {
+      this.service.delete(item).subscribe((res: any) => {
+        if (res != 0) {
+          this.ts.showSuccess("Success", "Record deleted successfully.")
+          this.getData();
+        }
+        else
+          this.ts.showError("Error", "Failed to delete record.")
+
+      }, error => {
+        this.ts.showError("Error", "Failed to delete record.")
+      });
+    }
+    else { }
+  }
+
   parseDate(obj) {
     return obj.year + "-" + obj.month + "-" + obj.day;;
   }
   Filter() {
     
     this.getData();
+  }
+  Delete(obj) {
+    this.service.delete(obj).subscribe((res: any) => {
+      if (res != 0) {
+        this.ts.showSuccess("Success", "Record deleted successfully.")
+        this.getData();
+      }
+      else
+        this.ts.showError("Error", "Failed to delete record.")
+
+    }, error => {
+      this.ts.showError("Error", "Failed to delete record.")
+    });
   }
 }

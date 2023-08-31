@@ -156,8 +156,8 @@ namespace BAL.Repositories
             {
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@id", data.DiscountID);
-                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteDiscount", p);
+                p[0] = new SqlParameter("@DiscountID", data.DiscountID);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteDiscount_CAdmin", p);
 
                 return _obj;
             }

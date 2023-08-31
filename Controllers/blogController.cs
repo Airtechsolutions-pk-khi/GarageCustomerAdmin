@@ -61,7 +61,7 @@ namespace GarageCustomerAdmin.Controllers
 
         [HttpPost]
         [Route("delete")]
-        public int PostDelete([FromBody]OrdersBLL obj)
+        public int PostDelete([FromBody]BlogBLL obj)
         {
             return _service.Delete(obj);
         }

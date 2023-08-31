@@ -81,6 +81,9 @@ import { AddbodyTypeComponent } from './admin/bodytype/add/addbodyType.component
 import { BloglistComponent } from './admin/blogs/blog.component';
 import { AddBlogComponent } from './admin/blogs/add/addblog.component';
 
+import { CarslistComponent } from './admin/cars/carslist.component';
+import { AddcarsComponent } from './admin/cars/addcars/addcars.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -146,7 +149,9 @@ import { AddBlogComponent } from './admin/blogs/add/addblog.component';
     BodyTypeComponent,
     AddbodyTypeComponent,
     BloglistComponent,
-    AddBlogComponent
+    AddBlogComponent,
+    CarslistComponent,
+    AddcarsComponent
 
   ],
   imports: [
@@ -258,6 +263,10 @@ import { AddBlogComponent } from './admin/blogs/add/addblog.component';
           { path: 'blog', component: BloglistComponent },
           { path: 'blog/add', component: AddBlogComponent },
           { path: 'blog/edit/:id', component: AddBlogComponent },
+
+          { path: 'cars', component: CarslistComponent },
+          { path: 'cars/add', component: AddcarsComponent },
+          { path: 'cars/edit/:id', component: AddcarsComponent },
         ]
       }
     ]),

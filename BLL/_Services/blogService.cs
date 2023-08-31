@@ -191,7 +191,7 @@ namespace GarageCustomerAdmin.BLL._Services
             }
         }
 
-        public int Delete(OrdersBLL data)
+        public int Delete(BlogBLL data)
         {
             try
             {

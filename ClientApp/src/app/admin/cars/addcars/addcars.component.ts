@@ -1,0 +1,214 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CarsService } from 'src/app/_services/cars.service';
+import { LocalStorageService } from 'src/app/_services/local-storage.service';
+import { LocationsService } from 'src/app/_services/locations.service';
+import { ToastService } from 'src/app/_services/toastservice';
+//import { BodyTypeService } from '../../../../_services/bodyType.service';
+
+@Component({
+  selector: 'app-addcars',
+  templateUrl: './addcars.component.html',
+  styleUrls: ['./addcars.component.css']
+})
+export class AddcarsComponent implements OnInit {
+  submitted = false;
+  carsForm: FormGroup;
+  loading = false;
+  Images = [];
+  ModelList = [];
+  CustomerList = [];
+  MakeList = [];
+  selectedBodyTypeID = [];
+  selectedModelID = [];
+  selectedMakeID = [];
+  YearList = ['2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004', '2003', '2002', '2001', '2000', '1999', '1998', '1997', '1996', '1995', '1994', '1993', '1992', '1991', '1990'];
+  ButtonText = "Save";
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private route: ActivatedRoute,
+    private ls: LocalStorageService,
+    public ts: ToastService,
+    private carsService: CarsService
+
+  ) {
+    this.createForm();
+    //this.loadCarSellFeature();
+    //this.loadBodyType();
+    this.loadMake();
+    //this.loadCustomer();
+    //this.loadCountry();
+  }
+
+  ngOnInit() {
+    this.setSelectedCarSell();
+  }
+
+  get f() { return this.carsForm.controls; }
+
+  private createForm() {
+    this.carsForm = this.formBuilder.group({
+      carID: 0,
+      rowID: [0],
+      customerID: [0],
+      customerPhone: ['', Validators.required],
+      name: ['', Validators.required],
+      description: ['', Validators.required],
+      vinNo: ['', Validators.required],
+      makeID: [, Validators.required],
+      modelID: [, Validators.required],
+      year: [, Validators.required],
+      color: ['', Validators.required],
+      registrationNo: ['', Validators.required],
+      checkLitre: [],
+      engineType: ['', Validators.required],
+      recommendedAmount: [''],
+      statusID: [1],
+      binaryImage: [''],
+      locationID: [, Validators.required],
+      userID: [, Validators.required],
+      gender: [''],
+      carType: ['', Validators.required],
+      imagesSource: ['', Validators.required],
+      imageUrl: [''],
+      carsImages: [],
+    });
+  }
+  onFileChange(event) {
+    this.Images = this.Images ?? [];
+    if (event.target.files && event.target.files[0]) {
+      var filesAmount = event.target.files.length;
+      for (let i = 0; i < filesAmount; i++) {
+        var reader = new FileReader();
+        var fileSize = event.target.files[i].size / 100000;
+        if (fileSize > 5) { alert("Filesize exceed 500 KB"); }
+        else {
+          reader.onload = (event: any) => {
+            console.log(event.target.result);
+            this.Images.push(event.target.result);
+            this.carsForm.patchValue({
+              imagesSource: this.Images
+            });
+          }
+          reader.readAsDataURL(event.target.files[i]);
+        }
+      }
+    }
+  }
+  private editForm(obj) {
+    this.f.name.setValue(obj.name);
+    this.f.customerPhone.setValue(obj.customerPhone);
+    this.f.address.setValue(obj.address);
+    this.f.description.setValue(obj.description);
+    this.f.assembly.setValue(obj.assembly);
+    this.f.cityID.setValue(obj.cityID);
+    this.f.bodyColor.setValue(obj.bodyColor);
+    this.f.countryCode.setValue(obj.countryCode);
+    this.f.price.setValue(obj.price);
+    this.f.transmition.setValue(obj.transmition);
+    this.f.modelID.setValue(obj.modelID);
+    this.f.makeID.setValue(obj.makeID);
+    this.f.year.setValue(obj.year);
+    this.f.kilometer.setValue(obj.kilometer);
+    this.f.fuelType.setValue(obj.fuelType);
+    this.f.engineType.setValue(obj.engineType);
+    this.f.bodyTypeID.setValue(obj.bodyTypeID);
+    this.f.bodyType.setValue(obj.bodyType);
+    this.f.registrationNo.setValue(obj.registrationNo);
+    this.f.carSellID.setValue(obj.carSellID);
+    this.f.customerID.setValue(obj.customerID);
+    this.f.statusID.setValue(obj.statusID === 1);
+    this.loadCarsImages(this.f.carsID.value);
+
+    if (obj.makeID != "") {
+      this.carsService.loadModel(obj.makeID).subscribe((res: any) => {
+        this.ModelList = res;
+      });
+    }
+  }
+
+  removeImage(obj) {
+    const index = this.Images.indexOf(obj);
+    this.Images.splice(index, 1);
+
+    this.f.imagesSource.setValue(this.Images);
+  }
+
+  private loadMake() {
+    this.carsService.loadMake().subscribe((res: any) => {
+      this.MakeList = res;
+    });
+  }
+
+  onChange(event) {
+    let selectElementValue = event.target.value;
+    let [index, value] = selectElementValue.split(':').map(item => item.trim());
+    console.log(index);
+    console.log(value);
+
+    this.carsService.loadModel(value).subscribe((res: any) => {
+      this.ModelList = res;
+    });
+  }
+  setSelectedCarSell() {
+    this.route.paramMap.subscribe(param => {
+      const sid = +param.get('id');
+      if (sid) {
+        this.loading = true;
+        this.f.carSellID.setValue(sid);
+        this.carsService.getcarId(sid).subscribe(res => {
+          //Set Forms
+          this.editForm(res);
+          this.loading = false;
+        });
+      }
+    })
+  }
+  private loadCarsImages(id) {
+    debugger
+    this.carsService.loadCarsImages(id).subscribe((res: any) => {
+      this.Images = res;
+      this.f.imagesSource.setValue(this.Images);
+    });
+  }
+  onSubmit() {
+    debugger
+    this.carsForm.markAllAsTouched();
+    this.submitted = true;
+    if (this.carsForm.invalid) { return; }
+    this.loading = true;
+    //this.f.statusID.setValue(this.f.statusID.value === 1 ? true : false);
+    //this.f.features.setValue(this.selectedFeatureID == undefined ? "" : this.selectedFeatureID.toString());
+    if (parseInt(this.f.carSellID.value) === 0) {
+      //Insert location
+      this.carsService.insert(this.carsForm.value).subscribe(data => {
+        this.loading = false;
+        if (data != 0) {
+          this.ts.showSuccess("Success", "Record added successfully.")
+          this.router.navigate(['/admin/carsell']);
+        }
+
+      }, error => {
+        this.ts.showError("Error", "Failed to insert record.")
+        this.loading = false;
+      });
+
+    }
+    else {
+      //Update location
+      this.carsService.update(this.carsForm.value).subscribe(data => {
+        this.loading = false;
+        if (data != 0) {
+          this.ts.showSuccess("Success", "Record updated successfully.")
+          this.router.navigate(['/admin/carsell']);
+        }
+      }, error => {
+        this.ts.showError("Error", "Failed to update record.")
+        this.loading = false;
+      });
+    }
+  }
+}

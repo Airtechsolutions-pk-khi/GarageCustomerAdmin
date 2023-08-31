@@ -170,5 +170,8 @@ export class BlogService {
         console.log(res);
         return res;
       }));
-  } 
+  }
+  delete(updateData) {
+    return this.http.post(`api/blog/delete`, updateData);
+  }
 }
