@@ -8,7 +8,7 @@ import { CarSellImages, CarSells } from '../_models/CarSell';
 import { Features } from '../_models/Feature';
 import { City } from '../_models/City';
 import { BodyType } from '../_models/BodyType';
-import { Customers, Make, Models } from '../_models/Carsell';
+import { Customers, Make, Models } from '../_models/CarSell';
 
 
 interface SearchCarSellResult {
@@ -87,9 +87,11 @@ export class CarSellService {
   printorder(id) {
     return this.http.get<CarSells[]>(`api/orders/print/${id}`);
   }
-  getAllData(fromDate,toDate) {
+  //getAllData(fromDate,toDate) {
+  getAllData() {
 
-    const url = `api/carsell/all/${fromDate}/${toDate}`;
+    //const url = `api/carsell/all/${fromDate}/${toDate}`;
+    const url = `api/carsell/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<CarSells[]>(url).subscribe(res => {

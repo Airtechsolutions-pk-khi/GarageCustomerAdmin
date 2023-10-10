@@ -166,7 +166,7 @@ namespace GarageCustomerAdmin._Models
         public string FuelType { get; set; }
         public string BodyType { get; set; }
         public string EngineType { get; set; }
-        public string Kilometer { get; set; }
+        public int? Kilometer { get; set; }
         public string Year { get; set; }
         public int? MakeID { get; set; }
         public int? ModelID { get; set; }

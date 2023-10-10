@@ -59,7 +59,7 @@ export class AddcarsellComponent implements OnInit {
     this.carSellForm = this.formBuilder.group({
       carSellID: 0,
       customerID: [0],
-      customerPhone: ['', Validators.required],
+      customerPhone: [''],
       name: ['', Validators.required],
       description: ['', Validators.required],
       address: ['', Validators.required],
@@ -77,8 +77,8 @@ export class AddcarsellComponent implements OnInit {
       bodyType: [''],
       fuelType: ['', Validators.required],
       engineType: ['', Validators.required],
-      kilometer: ['', Validators.required],
-      year: ['', Validators.required],
+      kilometer: [0, Validators.required],
+      year: ['2023', Validators.required],
       makeID: [, Validators.required],
       modelID: [, Validators.required],
       transmition: ['', Validators.required],
@@ -119,7 +119,7 @@ export class AddcarsellComponent implements OnInit {
     this.f.address.setValue(obj.address);
     this.f.description.setValue(obj.description);
     this.f.assembly.setValue(obj.assembly);
-    this.f.cityID.setValue(obj.cityID);
+
     this.f.bodyColor.setValue(obj.bodyColor);
     this.f.countryCode.setValue(obj.countryCode);
     this.f.price.setValue(obj.price);
@@ -144,9 +144,11 @@ export class AddcarsellComponent implements OnInit {
       this.f.features.setValue(obj.features);
     }
     if (obj.countryCode != "") {
-      this.carsellService.loadCity(obj.countryCode).subscribe((res: any) => {
-        this.CityList = res;
-      });
+      //this.carsellService.loadCity(obj.countryCode).subscribe((res: any) => {
+      //  this.CityList = res;
+      //  this.f.cityID.setValue(obj.cityID);
+      //});
+      this.loadCity(obj.countryCode, 1);
     }
     if (obj.makeID != "") {
       this.carsellService.loadModel(obj.makeID).subscribe((res: any) => {
@@ -184,28 +186,31 @@ export class AddcarsellComponent implements OnInit {
     });
   }
   private loadCountry() {
+    debugger
     this.carsellService.loadCountry().subscribe((res: any) => {
       this.CountryList = res;
+      if (!this.CountryList || this.CountryList.length === 0) {
+        this.CountryList = [{ name: 'Saudia Arabia', code: 'SA' }];
+      }
+      this.f.countryCode.setValue('SA');
+      this.loadCity(this.f.countryCode.value, 0);
     });
   }
-  //private loadCustomer() {
-  //  debugger
-  //  this.carsellService.loadCustomer().subscribe((res: any) => {
-  //    this.CustomerList = res;
-  //  });
-  //}
 
   onSelect(event) {
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
     console.log(index);
     console.log(value);
-
-    this.carsellService.loadCity(value).subscribe((res: any) => {
+  }
+  loadCity(obj, type) {
+    this.carsellService.loadCity(obj).subscribe((res: any) => {
       this.CityList = res;
+      if (type == 0)
+        this.f.cityID.setValue(res[0].id);
+
     });
   }
-
   onChange(event) {
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
@@ -230,7 +235,6 @@ export class AddcarsellComponent implements OnInit {
       }
     })
   }
-
   onSubmit() {
     debugger
     this.carSellForm.markAllAsTouched();

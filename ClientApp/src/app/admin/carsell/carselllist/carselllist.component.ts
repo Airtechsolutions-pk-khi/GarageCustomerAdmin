@@ -48,8 +48,8 @@ export class CarselllistComponent implements OnInit {
     //this.loadLocations();
   }
   ngOnInit() {
-    const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);
-    this._datepicker.fromDate = date;
+    //const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);
+    //this._datepicker.fromDate = date;
     this.getData();
   }
   Edit(CarSellID) {
@@ -90,7 +90,7 @@ export class CarselllistComponent implements OnInit {
 
   getData() {
      debugger
-    this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
+    this.service.getAllData();//(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
     this.loading$ = this.service.loading$;

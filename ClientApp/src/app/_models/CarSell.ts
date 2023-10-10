@@ -10,7 +10,7 @@ export class CarSells {
   features:string;
   fuelType:string;
   engineType:string;
-  kilometer:string;
+  kilometer:number;
   year:string;
   makeID:number;
   modelID:number;

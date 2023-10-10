@@ -27,17 +27,18 @@ namespace BAL.Repositories
             _ds = new DataSet();
         }
 
-        public List<CarSellBLL2> GetAll(DateTime FromDate, DateTime ToDate)
+        //public List<CarSellBLL2> GetAll(DateTime FromDate, DateTime ToDate)
+        public List<CarSellBLL2> GetAll()
         {
             try
             {
                 var lst = new List<CarSellBLL2>();
-                SqlParameter[] p = new SqlParameter[2];
+                //SqlParameter[] p = new SqlParameter[2];
 
-                p[0] = new SqlParameter("@fromdate", FromDate.Date);
-                p[1] = new SqlParameter("@todate", ToDate.Date);
+                //p[0] = new SqlParameter("@fromdate", FromDate.Date);
+                //p[1] = new SqlParameter("@todate", ToDate.Date);
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetCarSell_CADMIN", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetCarSell_CADMIN");
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)

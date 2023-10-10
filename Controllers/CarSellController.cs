@@ -22,10 +22,13 @@ namespace GarageCustomerAdmin.Controllers
         }
 
 
-        [HttpGet("all/{fromDate}/{toDate}")]
-        public List<CarSellBLL2> GetAll(string fromDate, string toDate)
+        //[HttpGet("all/{fromDate}/{toDate}")]
+        [HttpGet("all")]
+        //public List<CarSellBLL2> GetAll(string fromDate, string toDate)
+        public List<CarSellBLL2> GetAll()
         {
-            return _service.GetAll(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+            //return _service.GetAll(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+            return _service.GetAll();
         }
         [HttpGet("allMake")]
         public List<MakeBLL> GetAllMakes()

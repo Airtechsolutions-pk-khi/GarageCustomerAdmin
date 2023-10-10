@@ -23,11 +23,13 @@ namespace GarageCustomerAdmin.BLL._Services
             _serviceLocation = new locationDB();
         }
 
-        public List<CarSellBLL2> GetAll(DateTime FromDate, DateTime ToDate)
+        //public List<CarSellBLL2> GetAll(DateTime FromDate, DateTime ToDate)
+        public List<CarSellBLL2> GetAll()
         {
             try
             {
-                return _service.GetAll(FromDate, ToDate);
+                //return _service.GetAll(FromDate, ToDate);
+                return _service.GetAll();
             }
             catch (Exception ex)
             {

@@ -1918,6 +1918,7 @@ F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\as
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.js
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.min.js
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.min.map
+F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\bbb.zip
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\crossphone.png
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\index.html
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es2015.js
