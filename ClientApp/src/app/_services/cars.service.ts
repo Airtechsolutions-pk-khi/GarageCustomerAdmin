@@ -159,10 +159,11 @@ export class CarsService {
     return this.http.get<BodyType[]>(`api/bodytype/all`);
   }
   loadMake() {
-    return this.http.get<Make[]>( `api/cars/allMake`);
+    debugger
+    return this.http.get<Make[]>(`api/carsell/allMake`);
   }
   loadModel(event) {
-    return this.http.get<Models[]>( `api/cars/allModel/${event}`);
+    return this.http.get<Models[]>( `api/carsell/allModel/${event}`);
   }
   loadCustomer() {
     return this.http.get<Customers[]>(`api/customer/all`);

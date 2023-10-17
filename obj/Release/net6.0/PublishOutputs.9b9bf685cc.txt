@@ -107,9 +107,12 @@ F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\as
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\43aba78f-8217-455e-b8c8-4f4005eecd33.jpg
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\5df0175d-58d0-4b0c-a758-276c01c7a7c9.jpg
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\68e5532f-7dcb-4503-96f3-4c33bf0a04ef.jpg
+F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\a479b5ef-de26-4aa9-add9-098d583b27ed.jpg
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\b8642f71-685a-4ff3-9045-abcbc5cd01ea.jpg
+F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\cb9996cb-a84d-4fad-9442-c875cae050c6.jpg
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\d8ef7280-04fc-465f-b2c6-29e2ad05779f.jpg
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\d9f38256-ebde-4939-99b6-42fe76f42c26.jpg
+F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\dfe05595-9e6b-40c6-8703-0e4c92c42a66.jpg
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\f5c67c68-b5c6-44ba-a9e3-e7b2f2c82f76.jpg
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\f5e777cf-25ce-4815-b3e3-a412d6f986d8.jpg
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\bootstrap\js\bootstrap.bundle.js

@@ -361,7 +361,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Location</h1>\r\n\r\n<form [formGroup]=\"locationForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">\r\n          Location Details\r\n          <button class=\"btn btn-primary\" type=\"submit\" style=\"float: right;\">Save changes</button>\r\n        </div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n              <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.name.errors.required\">\r\n                  Name is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Arabic Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=arabicName placeholder=\"\" formControlName=\"arabicName\">\r\n              <div *ngIf=\"f.arabicName.invalid && (f.arabicName.dirty || f.arabicName.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.arabicName.errors.required\">\r\n                  Arabic name is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Address</label>\r\n              <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\">\r\n              <div *ngIf=\"f.address.invalid && (f.address.dirty || f.address.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.address.errors.required\">\r\n                  Address is required.\r\n                </div>\r\n\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Arabic Address</label>\r\n              <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"arabicAddress\">\r\n              <div *ngIf=\"f.arabicAddress.invalid && (f.arabicAddress.dirty || f.arabicAddress.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.arabicAddress.errors.required\">\r\n                  Arabic Address is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Contact No</label>\r\n              <input type=\"text\" class=\"form-control\" id=contactNo placeholder=\"\" formControlName=\"contactNo\">\r\n              <div *ngIf=\"f.contactNo.invalid && (f.contactNo.dirty || f.contactNo.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.contactNo.errors.required\">\r\n                  Contact No is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Email</label>\r\n              <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n              <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.email.errors.required\">\r\n                  Email is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n              <textarea class=\"form-control\" id=descripiton formControlName=\"descripiton\" height=\"100px\"></textarea>\r\n              <div *ngIf=\"f.descripiton.invalid && (f.descripiton.dirty || f.descripiton.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.descripiton.errors.required\">\r\n                  Descripiton is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Arabic Description</label>\r\n              <textarea class=\"form-control\" id=descripiton formControlName=\"arabicDescription\" height=\"100px\"></textarea>\r\n              <div *ngIf=\"f.arabicDescription.invalid && (f.arabicDescription.dirty || f.arabicDescription.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.arabicDescription.errors.required\">\r\n                  Arabic Descripiton is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Latitude</label>\r\n              <input type=\"text\" class=\"form-control\" id=latitude placeholder=\"\" formControlName=\"latitude\">\r\n              <div *ngIf=\"f.latitude.invalid && (f.latitude.dirty || f.latitude.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.latitude.errors.required\">\r\n                  Latitude Descripiton is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Longitude</label>\r\n              <input type=\"text\" class=\"form-control\" id=longitude placeholder=\"\" formControlName=\"longitude\">\r\n              <div *ngIf=\"f.longitude.invalid && (f.longitude.dirty || f.longitude.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.longitude.errors.required\">\r\n                  Longitude is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Amenities</label>\r\n              <ng-select [items]=\"AmenitiesList\" bindLabel=\"name\" bindValue=\"amenitiesID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedAmenitiesID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Services</label>\r\n              <ng-select [items]=\"ServiceList\" bindLabel=\"serviceTitle\" bindValue=\"serviceID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedServiceID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.serviceTitle}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Select Landmark</label>\r\n              <select class=\"custom-select\" formControlName=\"landmarkID\">\r\n                <option [ngValue]=\"option.landmarkID\" selected=\"option.landmarkID == landmarkID\"\r\n                        *ngFor=\"let option of Items\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">GMap Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=gmaplink placeholder=\"\" formControlName=\"gmaplink\">\r\n            </div>\r\n          </div>\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-6\">\r\n              <label for=\"Item Status\">Customer Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"customerStatusID\" formControlName=\"customerStatusID\">\r\n                <label class=\"custom-control-label\" for=\"customerStatusID\"></label>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-lg-6\">\r\n              <label for=\"Item Status\">IsFeatured</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"isFeatured\" formControlName=\"isFeatured\">\r\n                <label class=\"custom-control-label\" for=\"isFeatured\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-12 form-group\">\r\n\r\n              <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>\r\n              <br>\r\n              <label for=\"file\">Select Images </label>\r\n              <input formControlName=\"file\" id=\"file\" type=\"file\" class=\"form-control\" multiple=\"\" (change)=\"onFileChange($event)\">\r\n              <div *ngIf=\"f.file.touched && f.file.invalid\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.file.errors.required\">File is required.</div>\r\n              </div>\r\n            </div>\r\n            <div *ngFor='let url of Images' class=\"col-md-2\">\r\n              <i class=\"fa fa-times\" (click)=\"removeImage(url)\" style=\"    background: #E91E63;\r\n                    padding: 5px 8px;\r\n                    border-radius: 18px;\r\n                    color: white;\r\n                    position: absolute;\r\n                    left: 0;\"></i>\r\n              <img [src]=\"url\" style=\"padding: 7px; max-width: 200px;  width: auto;height: 180px;\"> <br />\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <h5>Location Timing's</h5>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n              <div class=\"row\" *ngFor=\"let timings of locationTimings\">\r\n                <div class=\"col-md-5 form-group\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">{{ timings.day }}</label>\r\n                </div>\r\n                <div class=\"col-md-7\">\r\n                  <input type=\"text\" class=\"form-control\" placeholder=\"\" id=\"timings{{ timings }}\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"timings.time\">\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Location</h1>\r\n\r\n<form [formGroup]=\"locationForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">\r\n          Location Details\r\n          <button class=\"btn btn-primary\" type=\"submit\" style=\"float: right;\">Save changes</button>\r\n        </div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n              <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.name.errors.required\">\r\n                  Name is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Arabic Name</label>\r\n              <input type=\"text\" class=\"form-control\" id=arabicName placeholder=\"\" formControlName=\"arabicName\">\r\n              <!--<div *ngIf=\"f.arabicName.invalid && (f.arabicName.dirty || f.arabicName.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.arabicName.errors.required\">\r\n                  Arabic name is required.\r\n                </div>\r\n              </div>-->\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Address</label>\r\n              <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\">\r\n              <div *ngIf=\"f.address.invalid && (f.address.dirty || f.address.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.address.errors.required\">\r\n                  Address is required.\r\n                </div>\r\n\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Arabic Address</label>\r\n              <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"arabicAddress\">\r\n              <!--<div *ngIf=\"f.arabicAddress.invalid && (f.arabicAddress.dirty || f.arabicAddress.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.arabicAddress.errors.required\">\r\n                  Arabic Address is required.\r\n                </div>\r\n              </div>-->\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Contact No</label>\r\n              <input type=\"text\" class=\"form-control\" id=contactNo placeholder=\"\" formControlName=\"contactNo\">\r\n              <div *ngIf=\"f.contactNo.invalid && (f.contactNo.dirty || f.contactNo.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.contactNo.errors.required\">\r\n                  Contact No is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Email</label>\r\n              <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n              <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.email.errors.required\">\r\n                  Email is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n              <textarea class=\"form-control\" id=descripiton formControlName=\"descripiton\" height=\"100px\"></textarea>\r\n              <div *ngIf=\"f.descripiton.invalid && (f.descripiton.dirty || f.descripiton.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.descripiton.errors.required\">\r\n                  Descripiton is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Arabic Description</label>\r\n              <textarea class=\"form-control\" id=descripiton formControlName=\"arabicDescription\" height=\"100px\"></textarea>\r\n              <!--<div *ngIf=\"f.arabicDescription.invalid && (f.arabicDescription.dirty || f.arabicDescription.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.arabicDescription.errors.required\">\r\n                  Arabic Descripiton is required.\r\n                </div>\r\n              </div>-->\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Latitude</label>\r\n              <input type=\"text\" class=\"form-control\" id=latitude placeholder=\"\" formControlName=\"latitude\">\r\n              <!--<div *ngIf=\"f.latitude.invalid && (f.latitude.dirty || f.latitude.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.latitude.errors.required\">\r\n                  Latitude Descripiton is required.\r\n                </div>\r\n              </div>-->\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">Longitude</label>\r\n              <input type=\"text\" class=\"form-control\" id=longitude placeholder=\"\" formControlName=\"longitude\">\r\n              <!--<div *ngIf=\"f.longitude.invalid && (f.longitude.dirty || f.longitude.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.longitude.errors.required\">\r\n                  Longitude is required.\r\n                </div>\r\n              </div>-->\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Amenities</label>\r\n              <ng-select [items]=\"AmenitiesList\" bindLabel=\"name\" bindValue=\"amenitiesID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedAmenitiesID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Services</label>\r\n              <ng-select [items]=\"ServiceList\" bindLabel=\"serviceTitle\" bindValue=\"serviceID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedServiceID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.serviceTitle}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Country</label>\r\n              <select class=\"custom-select\" id=countryCode formControlName=\"countryCode\" (change)=\"onSelect($event)\" [(ngModel)]=\"countryCode\">\r\n                <option [ngValue]=\"option.code\" selected=\"option.code == code\" *ngFor=\"let option of CountryList\"> {{option.name}} </option>\r\n              </select>\r\n              <div *ngIf=\"f.countryCode.invalid && (f.countryCode.dirty || f.countryCode.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.countryCode.errors.required\">\r\n                  Country is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">City</label>\r\n              <select class=\"custom-select\" id=cityID formControlName=\"cityID\" required>\r\n                <option [ngValue]=\"option.id\" selected=\"option.id == id\"\r\n                        *ngFor=\"let option of CityList\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n              <div *ngIf=\"f.cityID.invalid && (f.cityID.dirty || f.cityID.touched)\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.cityID.errors.required\">\r\n                  City is required.\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Select Landmark</label>\r\n              <select class=\"custom-select\" formControlName=\"landmarkID\">\r\n                <option [ngValue]=\"option.landmarkID\" selected=\"option.landmarkID == landmarkID\"\r\n                        *ngFor=\"let option of Items\">\r\n                  {{option.name}}\r\n                </option>\r\n              </select>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputFirstName\">GMap Link</label>\r\n              <input type=\"text\" class=\"form-control\" id=gmaplink placeholder=\"\" formControlName=\"gmaplink\">\r\n            </div>\r\n          </div>\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-6\">\r\n              <label for=\"Item Status\">Customer Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"customerStatusID\" formControlName=\"customerStatusID\">\r\n                <label class=\"custom-control-label\" for=\"customerStatusID\"></label>\r\n              </div>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-lg-6\">\r\n              <label for=\"Item Status\">IsFeatured</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"isFeatured\" formControlName=\"isFeatured\">\r\n                <label class=\"custom-control-label\" for=\"isFeatured\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"col-md-12 form-group\">\r\n\r\n              <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>\r\n              <br>\r\n              <label for=\"file\">Select Images </label>\r\n              <input formControlName=\"file\" id=\"file\" type=\"file\" class=\"form-control\" multiple=\"\" (change)=\"onFileChange($event)\">\r\n              <div *ngIf=\"f.file.touched && f.file.invalid\" class=\"alert alert-danger\">\r\n                <div *ngIf=\"f.file.errors.required\">File is required.</div>\r\n              </div>\r\n            </div>\r\n            <div *ngFor='let url of Images' class=\"col-md-2\">\r\n              <i class=\"fa fa-times\" (click)=\"removeImage(url)\" style=\"    background: #E91E63;\r\n                    padding: 5px 8px;\r\n                    border-radius: 18px;\r\n                    color: white;\r\n                    position: absolute;\r\n                    left: 0;\"></i>\r\n              <img [src]=\"url\" style=\"padding: 7px; max-width: 200px;  width: auto;height: 180px;\"> <br />\r\n            </div>\r\n\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <h5>Location Timing's</h5>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <h5>Brand Thumbnail Image</h5>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n              <div class=\"row\" *ngFor=\"let timings of locationTimings\">\r\n                <div class=\"col-md-5 form-group\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">{{ timings.name }}</label>\r\n                </div>\r\n                <div class=\"col-md-7\">\r\n                  <input type=\"text\" class=\"form-control\" placeholder=\"\" id=\"timings{{ timings }}\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"timings.time\">\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n              <div class=\"form-group col-md-4\">\r\n                <app-imageupload></app-imageupload>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -4149,6 +4149,9 @@ let LocationsService = class LocationsService {
     loadLocationImages(id) {
         return this.http.get(`api/location/images/${id}`);
     }
+    loadTimings(id) {
+        return this.http.get(`api/location/loadTimings/${id}`);
+    }
     loadAmenities() {
         return this.http.get(`api/amenities/all`);
     }
@@ -7448,6 +7451,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
 /* harmony import */ var src_app_services_locations_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/locations.service */ "./src/app/_services/locations.service.ts");
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_app_services_carsell_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/carsell.service */ "./src/app/_services/carsell.service.ts");
+/* harmony import */ var _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7466,19 +7471,25 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
 let AddlocationComponent = class AddlocationComponent {
-    constructor(formBuilder, router, route, ls, ts, locationService) {
+    constructor(formBuilder, router, route, ls, ts, locationService, service) {
         this.formBuilder = formBuilder;
         this.router = router;
         this.route = route;
         this.ls = ls;
         this.ts = ts;
         this.locationService = locationService;
+        this.service = service;
         this.submitted = false;
         this.loading = false;
         this.loadingLocations = false;
         this.Images = [];
+        this.Image = [];
         this.AmenitiesList = [];
+        this.CountryList = [];
+        this.CityList = [];
         this.ServiceList = [];
         this.LandmarkList = [];
         this.Items = [];
@@ -7488,18 +7499,19 @@ let AddlocationComponent = class AddlocationComponent {
         this.ButtonText = "Save";
         this.timings = [];
         this.locationTimings = [
-            { day: 'Sunday', time: '' },
-            { day: 'Monday', time: '' },
-            { day: 'Tuesday', time: '' },
-            { day: 'Wednesday', time: '' },
-            { day: 'Thursday', time: '' },
-            { day: 'Friday', time: '' },
-            { day: 'Saturday', time: '' }
+            { name: 'Sunday', time: '' },
+            { name: 'Monday', time: '' },
+            { name: 'Tuesday', time: '' },
+            { name: 'Wednesday', time: '' },
+            { name: 'Thursday', time: '' },
+            { name: 'Friday', time: '' },
+            { name: 'Saturday', time: '' }
         ];
         this.createForm();
         this.loadAmenities();
         this.loadService();
         this.loadLandmark();
+        this.loadCountry();
     }
     ngOnInit() {
         this.setSelectedLocations();
@@ -7508,12 +7520,13 @@ let AddlocationComponent = class AddlocationComponent {
     createForm() {
         this.locationForm = this.formBuilder.group({
             locationID: 0,
+            userID: 0,
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             descripiton: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             address: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             arabicAddress: [''],
             contactNo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            arabicName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            arabicName: [''],
             arabicDescription: [''],
             email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             minOrderAmount: [0],
@@ -7522,8 +7535,7 @@ let AddlocationComponent = class AddlocationComponent {
             statusID: [1],
             customerStatusID: [1],
             landmarkID: [],
-            gmaplink: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            imageURL: [''],
+            gmaplink: [''],
             lastUpdatedBy: [''],
             lastUpdatedDate: [''],
             isFeatured: false,
@@ -7532,10 +7544,12 @@ let AddlocationComponent = class AddlocationComponent {
             locationImages: [],
             amenities: [],
             service: [],
-            //landmark:[],
             amenitiesID: [null],
             serviceID: [null],
-            locationTimings: []
+            locationTimings: [],
+            cityID: [],
+            countryCode: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            brandThumbnailImage: [''],
         });
     }
     onFileChange(event) {
@@ -7576,14 +7590,18 @@ let AddlocationComponent = class AddlocationComponent {
         this.f.latitude.setValue(obj.latitude);
         this.f.longitude.setValue(obj.longitude);
         this.f.locationID.setValue(obj.locationID);
+        this.f.userID.setValue(obj.userID);
         this.f.gmaplink.setValue(obj.gmaplink);
         this.f.landmarkID.setValue(obj.landmarkID);
-        this.f.imageURL.setValue(obj.imageURL);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
         this.f.customerStatusID.setValue(obj.customerStatusID === 1 ? true : false);
         this.f.isFeatured.setValue(obj.isFeatured === 1 ? true : false);
-        this.f.locationTimings.setValue(this.locationTimings);
+        this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
+        this.imgComp.imageUrl = obj.brandThumbnailImage;
         this.loadItemImages(this.f.locationID.value);
+        this.f.locationTimings.setValue(obj.locationTimings);
+        this.locationTimings = obj.locationTimings;
+        this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
         if (obj.amenities != "") {
             var stringToConvert = obj.amenities;
             this.selectedAmenitiesID = stringToConvert.split(',').map(Number);
@@ -7594,6 +7612,36 @@ let AddlocationComponent = class AddlocationComponent {
             this.selectedServiceID = stringToConvert.split(',').map(Number);
             this.f.service.setValue(obj.service);
         }
+        if (obj.countryCode != "") {
+            this.loadCity(obj.countryCode, 1);
+        }
+        this.f.cityID.setValue(obj.cityID);
+    }
+    loadCountry() {
+        this.service.loadCountry().subscribe((res) => {
+            this.CountryList = res;
+            if (!this.CountryList || this.CountryList.length === 0) {
+                this.CountryList = [{ name: 'Saudia Arabia', code: 'SA' }];
+            }
+            this.f.countryCode.setValue('SA');
+            this.loadCity(this.f.countryCode.value, 0);
+        });
+    }
+    onSelect(event) {
+        let selectElementValue = event.target.value;
+        let [index, value] = selectElementValue.split(':').map(item => item.trim());
+        this.loadCity(value, 1);
+        console.log(index);
+        console.log(value);
+    }
+    loadCity(obj, type) {
+        this.service.loadCity(obj).subscribe((res) => {
+            this.CityList = res;
+            if (type == 0)
+                this.f.cityID.setValue(res[0].id);
+            //else
+            //  this.f.cityID.setValue(obj.cityID);
+        });
     }
     loadItemImages(id) {
         this.locationService.loadLocationImages(id).subscribe((res) => {
@@ -7637,18 +7685,19 @@ let AddlocationComponent = class AddlocationComponent {
     }
     onSubmit() {
         debugger;
-        //const timings = this.locationTimings;
         this.locationForm.markAllAsTouched();
         this.submitted = true;
         if (this.locationForm.invalid) {
             return;
         }
         this.loading = true;
+        this.f.locationTimings.setValue(this.locationTimings);
         this.f.amenities.setValue(this.selectedAmenitiesID == undefined ? "" : this.selectedAmenitiesID.toString());
         this.f.service.setValue(this.selectedServiceID == undefined ? "" : this.selectedServiceID.toString());
         this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
         this.f.customerStatusID.setValue(this.f.customerStatusID.value === true ? 1 : 2);
         this.f.isFeatured.setValue(this.f.isFeatured.value === 1 ? true : false);
+        this.f.brandThumbnailImage.setValue(this.imgComp.imageUrl);
         if (parseInt(this.f.locationID.value) === 0) {
             //Insert location
             console.log(JSON.stringify(this.locationForm.value));
@@ -7674,8 +7723,12 @@ AddlocationComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
     { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"] },
     { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
-    { type: src_app_services_locations_service__WEBPACK_IMPORTED_MODULE_4__["LocationsService"] }
+    { type: src_app_services_locations_service__WEBPACK_IMPORTED_MODULE_4__["LocationsService"] },
+    { type: src_app_services_carsell_service__WEBPACK_IMPORTED_MODULE_6__["CarSellService"] }
 ];
+AddlocationComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_7__["ImageuploadComponent"], { static: true },] }]
+};
 AddlocationComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-addlocation',
@@ -7687,7 +7740,8 @@ AddlocationComponent = __decorate([
         _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
         src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"],
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
-        src_app_services_locations_service__WEBPACK_IMPORTED_MODULE_4__["LocationsService"]])
+        src_app_services_locations_service__WEBPACK_IMPORTED_MODULE_4__["LocationsService"],
+        src_app_services_carsell_service__WEBPACK_IMPORTED_MODULE_6__["CarSellService"]])
 ], AddlocationComponent);
 
 

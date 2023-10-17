@@ -18,6 +18,7 @@ export class AddcarsComponent implements OnInit {
   loading = false;
   Images = [];
   ModelList = [];
+  BodyTypeList = [];
   CustomerList = [];
   MakeList = [];
   selectedBodyTypeID = [];
@@ -37,7 +38,7 @@ export class AddcarsComponent implements OnInit {
   ) {
     this.createForm();
     //this.loadCarSellFeature();
-    //this.loadBodyType();
+    this.loadBodyType();
     this.loadMake();
     //this.loadCustomer();
     //this.loadCountry();
@@ -75,6 +76,7 @@ export class AddcarsComponent implements OnInit {
       imagesSource: ['', Validators.required],
       imageUrl: [''],
       carsImages: [],
+      file: [''],
     });
   }
   onFileChange(event) {
@@ -86,6 +88,7 @@ export class AddcarsComponent implements OnInit {
         var fileSize = event.target.files[i].size / 100000;
         if (fileSize > 5) { alert("Filesize exceed 500 KB"); }
         else {
+
           reader.onload = (event: any) => {
             console.log(event.target.result);
             this.Images.push(event.target.result);
@@ -98,6 +101,7 @@ export class AddcarsComponent implements OnInit {
       }
     }
   }
+
   private editForm(obj) {
     this.f.name.setValue(obj.name);
     this.f.customerPhone.setValue(obj.customerPhone);
@@ -112,6 +116,7 @@ export class AddcarsComponent implements OnInit {
     this.f.modelID.setValue(obj.modelID);
     this.f.makeID.setValue(obj.makeID);
     this.f.year.setValue(obj.year);
+    this.f.checkLitre.setValue(obj.checkLitre);
     this.f.kilometer.setValue(obj.kilometer);
     this.f.fuelType.setValue(obj.fuelType);
     this.f.engineType.setValue(obj.engineType);
@@ -133,11 +138,11 @@ export class AddcarsComponent implements OnInit {
   removeImage(obj) {
     const index = this.Images.indexOf(obj);
     this.Images.splice(index, 1);
-
     this.f.imagesSource.setValue(this.Images);
   }
 
   private loadMake() {
+    debugger
     this.carsService.loadMake().subscribe((res: any) => {
       this.MakeList = res;
     });
@@ -210,5 +215,11 @@ export class AddcarsComponent implements OnInit {
         this.loading = false;
       });
     }
+  }
+  private loadBodyType() {
+    debugger
+    this.carsService.loadBodyType().subscribe((res: any) => {
+      this.BodyTypeList = res;
+    });
   }
 }

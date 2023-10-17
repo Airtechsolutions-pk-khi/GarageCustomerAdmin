@@ -80,7 +80,7 @@ namespace BAL.Repositories
 			{
 				return null;
 			}
-		}		
+		}
 		public List<LocationTimings> GetTimings(int id)
 		{
 
@@ -111,7 +111,7 @@ namespace BAL.Repositories
 			try
 			{
 				var _obj = new LocationBLL();
-				string[] days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+				string[] days = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
 				SqlParameter[] p = new SqlParameter[1];
 				p[0] = new SqlParameter("@id", id);
 				_dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetLocationsByID_CADMIN", p);
@@ -122,14 +122,15 @@ namespace BAL.Repositories
 						_obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<LocationBLL>>().FirstOrDefault();
 						_obj.LocationTimings = GetTimings(_obj.LocationID);
 
-						if(_obj.LocationTimings.Count == 0)
+						if (_obj.LocationTimings.Count == 0)
 						{
 							foreach (var item in days)
 							{
-								_obj.LocationTimings.Add(new  LocationTimings{
-									Name=item,
-									Time="",
-									LocationID= id
+								_obj.LocationTimings.Add(new LocationTimings
+								{
+									Name = item,
+									Time = "",
+									LocationID = id
 
 								});
 							}
@@ -251,6 +252,10 @@ namespace BAL.Repositories
 				catch { }
 				try
 				{
+					SqlParameter[] d = new SqlParameter[1];
+					d[0] = new SqlParameter("@id", data.LocationID);
+					(new DBHelper().ExecuteNonQueryReturn)("sp_deleteLocationTiming_CADMIN", d);
+ 					
 					if (data.LocationTimings[0].Time != null)
 					{
 						foreach (var timings in data.LocationTimings)
