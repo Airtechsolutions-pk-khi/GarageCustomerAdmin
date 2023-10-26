@@ -33,7 +33,7 @@ namespace GarageCustomerAdmin._Models
 		public string Amenities { get; set; }
 		public string Service { get; set; }
 		public string BrandThumbnailImage { get; set; }
-		public string CountryCode { get; set; }
+		public string CountryID { get; set; }
 		public int? CityID { get; set; }
 		public bool? IsFeatured { get; set; }
 		public List<LocationimagesBLL> LocationImages = new List<LocationimagesBLL>();

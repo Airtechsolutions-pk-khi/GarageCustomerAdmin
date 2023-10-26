@@ -216,7 +216,7 @@ namespace BAL.Repositories
 				p[16] = new SqlParameter("@ArabicAddress", data.ArabicAddress);
 				p[17] = new SqlParameter("@CustomerStatusID", data.CustomerStatusID);
 				p[18] = new SqlParameter("@BrandImage", data.BrandThumbnailImage);
-				p[19] = new SqlParameter("@CountryCode", data.CountryCode);
+				p[19] = new SqlParameter("@CountryCode", data.CountryID);
 				p[20] = new SqlParameter("@CityID", data.CityID);
 				p[21] = new SqlParameter("@UserID", data.UserID);
 

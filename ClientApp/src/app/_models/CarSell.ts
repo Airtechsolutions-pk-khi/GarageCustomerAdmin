@@ -20,7 +20,7 @@ export class CarSells {
   price:number;
   isInspected:boolean;
   cityID:number;
-  countryCode:string;
+  countryID:string;
   address:string;
   carSellAddID:number;
   bodyColor:string;

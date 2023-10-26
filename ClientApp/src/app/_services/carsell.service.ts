@@ -178,7 +178,6 @@ export class CarSellService {
     return this.http.get<Customers[]>(`api/customer/all`);
   }
   loadCity(event) {
-    debugger
     return this.http.get<any[]>( `api/carsell/allCity/${event}`);
   }
   update(updateData) {
@@ -189,7 +188,6 @@ export class CarSellService {
       }));
   }   
   updatestatus(carsell) {
-    debugger
     return this.http.post(`api/carsell/updatestatus`, carsell)
       .pipe(map(res => {
         console.log(res);

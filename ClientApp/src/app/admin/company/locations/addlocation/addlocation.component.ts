@@ -97,7 +97,7 @@ export class AddlocationComponent implements OnInit {
       serviceID: [null],
       locationTimings: [],
       cityID: [],
-      countryCode: ['', Validators.required],
+      countryID: ['', Validators.required],
       brandThumbnailImage: [''],
     });
   }
@@ -153,6 +153,7 @@ export class AddlocationComponent implements OnInit {
     this.f.locationTimings.setValue(obj.locationTimings);
     this.locationTimings = obj.locationTimings;
     this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
+    this.f.cityID.setValue(obj.cityID);
 
     if (obj.amenities != "") {
       var stringToConvert = obj.amenities;
@@ -164,10 +165,10 @@ export class AddlocationComponent implements OnInit {
       this.selectedServiceID = stringToConvert.split(',').map(Number);
       this.f.service.setValue(obj.service);
     }
-    if (obj.countryCode != "") {
-      this.loadCity(obj.countryCode, 1);
+    if (obj.countryID != "") {
+      this.loadCity(obj.countryID, 1);
     }
-    this.f.cityID.setValue(obj.cityID);
+
   }
   private loadCountry() {
     this.service.loadCountry().subscribe((res: any) => {
@@ -175,12 +176,13 @@ export class AddlocationComponent implements OnInit {
       if (!this.CountryList || this.CountryList.length === 0) {
         this.CountryList = [{ name: 'Saudia Arabia', code: 'SA' }];
       }
-      this.f.countryCode.setValue('SA');
-      this.loadCity(this.f.countryCode.value, 0);
+      this.f.countryID.setValue('SA');
+      this.loadCity(this.f.countryID.value, 0);
     });
   }
 
   onSelect(event) {
+    debugger
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
     this.loadCity(value, 1);
@@ -188,13 +190,16 @@ export class AddlocationComponent implements OnInit {
     console.log(value);
   }
   loadCity(obj, type) {
+    debugger
     this.service.loadCity(obj).subscribe((res: any) => {
       this.CityList = res;
+      debugger
       if (type == 0)
         this.f.cityID.setValue(res[0].id);
-      //else
-      //  this.f.cityID.setValue(obj.cityID);
-
+      else if (type == 1)
+        debugger
+        var cityID = this.f.cityID;
+        this.f.cityID.setValue(cityID);
     });
   }
   private loadItemImages(id) {
