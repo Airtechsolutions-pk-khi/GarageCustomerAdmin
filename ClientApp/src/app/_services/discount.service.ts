@@ -83,7 +83,7 @@ export class DiscountService {
     tap(() => this._loading$.next(true)),
       this.http.get<Discount[]>(url).subscribe(res => {
         this.Discount = res;
-         
+       
         this._data$.next(this.Discount);
         this._allData$.next(this.Discount);
 

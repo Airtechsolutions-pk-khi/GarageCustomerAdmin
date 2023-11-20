@@ -10,7 +10,7 @@ import { ToastService } from 'src/app/_services/toastservice';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { Features } from '../../_models/Feature';
 import { FeaturesService } from '../../_services/features.service';
-//import { NgbdModalContent } from '../../sales/orders/modal-content/ngbd-OrderDetail-content.component';
+import { ConfirmationDialogService } from '../settings/confirm/confirmation-dialog.service';
 
 @Component({
   selector: 'app-featurelist',
@@ -32,7 +32,8 @@ export class FeaturelistComponent implements OnInit {
     public ls: LocalStorageService,
     public excelService: ExcelService,
     public ts: ToastService,
-    public router: Router) {
+    public router: Router,
+    private confirmationDialogService: ConfirmationDialogService) {
     this.loading$ = service.loading$;
     this.submit = false;
   }
@@ -43,6 +44,36 @@ export class FeaturelistComponent implements OnInit {
 
   Edit(featureID) {
     this.router.navigate(["admin/features/edit", featureID]);
+  }
+
+  public async openConfirmationDialog(item) {
+    debugger
+    if (await this.confirmationDialogService.confirm('Please confirm..', 'Do you really want to delete ... ?') === true) {
+      this.service.delete(item).subscribe((res: any) => {
+        if (res != 0) {
+          this.ts.showSuccess("Success", "Record deleted successfully.")
+          this.getData();
+        }
+        else
+          this.ts.showError("Error", "Failed to delete record.")
+      }, error => {
+        this.ts.showError("Error", "Failed to delete record.")
+      });
+    }
+    else { }
+  }
+
+  Delete(obj) {
+    this.service.delete(obj).subscribe((res: any) => {
+      if (res != 0) {
+        this.ts.showSuccess("Success", "Record deleted successfully.")
+        this.getData();
+      }
+      else
+        this.ts.showError("Error", "Failed to delete record.");
+    }, error => {
+      this.ts.showError("Error", "Failed to delete record.")
+    });
   }
 
   updateOrder(order, status) {

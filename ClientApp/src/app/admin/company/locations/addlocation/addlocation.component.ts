@@ -96,7 +96,7 @@ export class AddlocationComponent implements OnInit {
       amenitiesID: [null],
       serviceID: [null],
       locationTimings: [],
-      cityID: [],
+      cityID: 0,
       countryID: ['', Validators.required],
       brandThumbnailImage: [''],
     });
@@ -153,7 +153,6 @@ export class AddlocationComponent implements OnInit {
     this.f.locationTimings.setValue(obj.locationTimings);
     this.locationTimings = obj.locationTimings;
     this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
-    this.f.cityID.setValue(obj.cityID);
 
     if (obj.amenities != "") {
       var stringToConvert = obj.amenities;
@@ -165,6 +164,8 @@ export class AddlocationComponent implements OnInit {
       this.selectedServiceID = stringToConvert.split(',').map(Number);
       this.f.service.setValue(obj.service);
     }
+
+    this.f.cityID.setValue(obj.cityID);
     if (obj.countryID != "") {
       this.loadCity(obj.countryID, 1);
     }
@@ -193,13 +194,13 @@ export class AddlocationComponent implements OnInit {
     debugger
     this.service.loadCity(obj).subscribe((res: any) => {
       this.CityList = res;
-      debugger
-      if (type == 0)
-        this.f.cityID.setValue(res[0].id);
-      else if (type == 1)
-        debugger
-        var cityID = this.f.cityID;
-        this.f.cityID.setValue(cityID);
+      //debugger
+      //if (type == 0)
+      //  this.f.cityID.setValue(res[0].id);
+      //else if (type == 1)
+      //  debugger
+      //  //var cityID = this.f.cityID;
+      //this.f.cityID.setValue(this.f.cityID);
     });
   }
   private loadItemImages(id) {

@@ -16,10 +16,10 @@ namespace GarageCustomerAdmin._Models
     }
     public class DashboardSummary
     {
-        public double TotalOrders { get; set; }
-        public double TotalTax { get; set; }
-        public double NetSales { get; set; }
-        public double Sales { get; set; }
+        public double TotalService { get; set; }
+        public double TotalLocation { get; set; }
+        public double TotalFeature { get; set; }
+        public double TotalCarsell { get; set; }
     }
     public class DashboardToday
     {
