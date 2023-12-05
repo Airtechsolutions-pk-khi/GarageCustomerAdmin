@@ -16,6 +16,7 @@ export class Location {
   minOrderAmount: number;
   longitude: string;
   latitude: string;   
+  businessType: string;   
   statusID: number;
   customerStatusID: number;
   landmarkID: number;   

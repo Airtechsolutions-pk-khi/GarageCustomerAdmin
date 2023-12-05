@@ -84,6 +84,7 @@ export class AddlocationComponent implements OnInit {
       statusID: [1],
       customerStatusID: [1],
       landmarkID: [],
+      businessType:[''],
       gmaplink: [''],
       lastUpdatedBy: [''],
       lastUpdatedDate: [''],
@@ -142,6 +143,7 @@ export class AddlocationComponent implements OnInit {
     this.f.userID.setValue(obj.userID);
     this.f.gmaplink.setValue(obj.gmaplink);
     this.f.landmarkID.setValue(obj.landmarkID);
+    this.f.businessType.setValue(obj.businessType);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.customerStatusID.setValue(obj.customerStatusID === 1 ? true : false);
     this.f.isFeatured.setValue(obj.isFeatured === 1 ? true : false);

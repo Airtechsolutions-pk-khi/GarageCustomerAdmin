@@ -195,7 +195,7 @@ namespace BAL.Repositories
 			try
 			{
 				int rtn = 0;
-				SqlParameter[] p = new SqlParameter[22];
+				SqlParameter[] p = new SqlParameter[23];
 
 				p[0] = new SqlParameter("@Name", data.Name);
 				p[1] = new SqlParameter("@Descripiton", data.Descripiton);
@@ -219,6 +219,7 @@ namespace BAL.Repositories
 				p[19] = new SqlParameter("@CountryCode", data.CountryID);
 				p[20] = new SqlParameter("@CityID", data.CityID);
 				p[21] = new SqlParameter("@UserID", data.UserID);
+				p[22] = new SqlParameter("@BusinessType", data.BusinessType);
 
 				rtn = (new DBHelperGarageUAT().ExecuteNonQueryReturn)("dbo.sp_UpdateLocation_CADMIN", p);
 

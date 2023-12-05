@@ -38,7 +38,7 @@
             <td> {{item.descripiton}} </td>
             <td> {{item.contactNo}} </td>
             <td>
-              <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
+              <ngb-highlight [ngClass]="{'btn-success': item.customerStatusID === 1, 'btn-danger':item.customerStatusID !== 1 }" class="btn btn-sm" [result]="item.customerStatusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
               </ngb-highlight>
             </td>
             <td>
