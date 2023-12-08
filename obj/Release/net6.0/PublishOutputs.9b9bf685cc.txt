@@ -42,6 +42,7 @@ F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\runtimes\unix\lib
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\20-11-2023.zip
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-grid.css
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-grid.css.map
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-reboot.css
@@ -1918,7 +1919,6 @@ F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\as
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.js
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.min.js
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.min.map
-F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\build 13-11-2023.zip
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\crossphone.png
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\index.html
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es2015.js
