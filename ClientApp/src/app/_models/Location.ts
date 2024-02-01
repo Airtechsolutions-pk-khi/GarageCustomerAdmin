@@ -27,6 +27,7 @@ export class Location {
   isFeatured: number;
   locationImages: LocationImages[];
   locationTiming: LocationTimings[];
+  arabicTiming: ArabicTimings[];
   imageSource:[];
   disabled: any;
   sunday: string;
@@ -54,4 +55,9 @@ export class LocationTimings {
   locationID: number;
   name: string;
   time: string;
+}
+export class ArabicTimings {
+  locationID: number;
+  arabicName: string;
+  arabicTime: string;
 }

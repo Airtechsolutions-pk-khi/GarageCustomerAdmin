@@ -18,6 +18,7 @@ import { NgbModule, NgbTimepicker } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryComponent } from './admin/menu/category/category.component';
 import { AddcategoryComponent } from './admin/menu/category/addcategory/addcategory.component';
 import { ImageuploadComponent } from './imageupload/imageupload.component';
+import { thumbnailimageComponent } from './imageupload/thumbnailimage.component';
 import { alternateimageComponent } from './imageupload/alternateimage.component';
 import { ItemsComponent } from './admin/menu/items/items.component';
 import { AdditemsComponent } from './admin/menu/items/additem/additem.component';
@@ -108,6 +109,7 @@ import { AddcarsComponent } from './admin/cars/addcars/addcars.component';
     AddlocationComponent,
     ImageuploadComponent,
     alternateimageComponent,
+    thumbnailimageComponent,
     SummaryComponent,
     NgbdDatepickerRangePopup,
     BannerComponent,

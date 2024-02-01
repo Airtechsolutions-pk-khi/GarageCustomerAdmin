@@ -8,7 +8,7 @@ import { CategoryService } from 'src/app/_services/category.service';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { Router } from '@angular/router';
 import { ToastService } from 'src/app/_services/toastservice';
-import { ToastrService } from 'ngx-toastr';
+//import { ToastrService } from 'ngx-toastr';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 
 @Component({
@@ -32,7 +32,7 @@ export class CategoryComponent implements OnInit {
     public excelService: ExcelService,
     public ls: LocalStorageService,
     public ts: ToastService,
-    public tss: ToastrService,
+    //public tss: ToastrService,
     public router: Router) {
     this.selectedBrand = this.ls.getSelectedBrand().brandID;
     this.loading$ = service.loading$;

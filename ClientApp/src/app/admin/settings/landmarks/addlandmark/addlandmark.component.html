@@ -10,15 +10,16 @@
                 <div class="card-body">
                     <div class="form-row">
                         <div class="form-group col-md-8">
-                            <div class="form-group">
-                                <label class="small mb-1" for="inputUsername">Name</label>
-                                <input type="text" class="form-control" id=name placeholder="" formControlName="name">
-                                <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
-                                    <div *ngIf="f.name.errors.required">
-                                        Name is required.
-                                    </div>
-                                </div>
+                          <div class="form-group">
+                            <label class="small mb-1" for="inputUsername">Name</label>
+                            <input type="text" class="form-control" id=name placeholder="" formControlName="name"  maxlength="30">
+                            <small>Remaining characters: {{ 30 - landmarkForm.controls['name'].value.length }}</small>
+                            <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
+                              <div *ngIf="f.name.errors.required">
+                                Name is required.
+                              </div>
                             </div>
+                          </div>
                             <div class="form-group">
                                 <label class="small mb-1" for="inputUsername">Arabic Name</label>
                                 <input type="text" class="form-control" id=arabicName placeholder="" formControlName="arabicName">

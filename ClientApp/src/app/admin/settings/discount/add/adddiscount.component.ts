@@ -7,7 +7,7 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { DiscountService } from 'src/app/_services/discount.service';
 import { LocationsService } from '../../../../_services/locations.service';
-
+import { thumbnailimageComponent } from '../../../../imageupload/thumbnailimage.component';
 
 @Component({
   selector: 'app-adddiscount',
@@ -26,11 +26,11 @@ export class AdddiscountComponent implements OnInit {
   selectedLocationID = [];
   fromTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
   toTime = { hour: new Date().getHours(), minute: new Date().getMinutes() };
-
+  Images = [];
 
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
-  //@ViewChild(ImageuploadComponent, { static: true }) arbimg;
+  @ViewChild(thumbnailimageComponent, { static: true }) thmbimg;
   @ViewChild(alternateimageComponent, { static: true }) arbimg;
   constructor(
     private formBuilder: FormBuilder,
@@ -53,7 +53,6 @@ export class AdddiscountComponent implements OnInit {
   get f() { return this.discountForm.controls; }
 
   private createForm() {
-    debugger
     this.discountForm = this.formBuilder.group({
       discountID: 0,
       name: ['', Validators.required],
@@ -66,9 +65,11 @@ export class AdddiscountComponent implements OnInit {
       fromTime: [''],
       statusID: [true],
       image: [''],
+      thumbnailImage: [''],
       arabicImage: [''],
       locationID: [null],
       locations: [],
+     // file: [''],
     });
   }
 
@@ -87,13 +88,12 @@ export class AdddiscountComponent implements OnInit {
     this.f.toDate.setValue(obj.toDate);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.imgComp.imageUrl = obj.image;
+    this.thmbimg.thumbnailimageimageUrl = obj.thumbnailImage;
     this.arbimg.alternateimageUrl = obj.arabicImage;
     //this.arbimg.alternateimageUrl = obj.arabicImage;
     this.fromTime = { hour: new Date("1/1/1900 " + obj.fromTime).getHours(), minute: new Date("1/1/1900 " + obj.fromTime).getMinutes() };
     this.toTime = { hour: new Date("1/1/1900 " + obj.toTime).getHours(), minute: new Date("1/1/1900 " + obj.toTime).getMinutes() };
-
     if (obj.locations != "") {
-      debugger
       var stringToConvert = obj.locations;
       this.selectedLocationID = stringToConvert.split(',').map(Number);
       this.f.locations.setValue(obj.locations);
@@ -101,7 +101,6 @@ export class AdddiscountComponent implements OnInit {
   }
 
   setSelectedCustomer() {
-    debugger
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
@@ -117,7 +116,6 @@ export class AdddiscountComponent implements OnInit {
   }
 
   private loadLocations() {
-    debugger
     this.locationService.getAllLocations().subscribe((res: any) => {
       this.LocationList = res;
     });
@@ -135,7 +133,7 @@ export class AdddiscountComponent implements OnInit {
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.image.setValue(this.imgComp.imageUrl);
     this.f.arabicImage.setValue(this.arbimg.alternateimageUrl);
-
+    this.f.thumbnailImage.setValue(this.thmbimg.thumbnailimageimageUrl);
 
     if (parseInt(this.f.discountID.value) === 0) {
       //Insert services
