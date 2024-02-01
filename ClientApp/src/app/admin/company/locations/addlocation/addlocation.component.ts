@@ -4,7 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { LocationsService } from 'src/app/_services/locations.service';
 import { ToastService } from 'src/app/_services/toastservice';
-import { LocationTimings } from '../../../../_models/Location';
+import { LocationTimings, ArabicTimings } from '../../../../_models/Location';
 import { CarSellService } from 'src/app/_services/carsell.service';
 import { ImageuploadComponent } from '../../../../imageupload/imageupload.component';
 
@@ -39,6 +39,16 @@ export class AddlocationComponent implements OnInit {
     { name: 'Thursday', time: '' },
     { name: 'Friday', time: '' },
     { name: 'Saturday', time: '' }
+  ];
+  time = [];
+  public arabicTimings: Array<Object> = [
+    { arabicName: 'Sunday', arabicTime: '' },
+    { arabicName: 'Monday', arabicTime: '' },
+    { arabicName: 'Tuesday', arabicTime: '' },
+    { arabicName: 'Wednesday', arabicTime: '' },
+    { arabicName: 'Thursday', arabicTime: '' },
+    { arabicName: 'Friday', arabicTime: '' },
+    { arabicName: 'Saturday', arabicTime: '' }
   ];
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -97,6 +107,7 @@ export class AddlocationComponent implements OnInit {
       amenitiesID: [null],
       serviceID: [null],
       locationTimings: [],
+      arabicTimings: [],
       cityID: 0,
       countryID: ['', Validators.required],
       brandThumbnailImage: [''],
@@ -154,6 +165,8 @@ export class AddlocationComponent implements OnInit {
     this.loadItemImages(this.f.locationID.value);
     this.f.locationTimings.setValue(obj.locationTimings);
     this.locationTimings = obj.locationTimings;
+    this.f.arabicTimings.setValue(obj.arabicTimings);
+    this.arabicTimings = obj.arabicTimings;
     this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
 
     if (obj.amenities != "") {
@@ -253,6 +266,7 @@ export class AddlocationComponent implements OnInit {
     if (this.locationForm.invalid) { return; }
     this.loading = true;
     this.f.locationTimings.setValue(this.locationTimings);
+    this.f.arabicTimings.setValue(this.arabicTimings);
     this.f.amenities.setValue(this.selectedAmenitiesID == undefined ? "" : this.selectedAmenitiesID.toString());
     this.f.service.setValue(this.selectedServiceID == undefined ? "" : this.selectedServiceID.toString());
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);

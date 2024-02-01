@@ -11,7 +11,8 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputUsername">Title</label>
-              <input type="text" class="form-control" id=title placeholder="" formControlName="title">
+              <input type="text" class="form-control" id=title placeholder="" formControlName="title" maxlength="30">
+              <small>Remaining characters: {{ 30 - blogForm.controls['title'].value.length }}</small>
               <div *ngIf="f.title.invalid && (f.title.dirty || f.title.touched)" class="alert alert-danger">
                 <div *ngIf="f.title.errors.required">
                   Title is required.

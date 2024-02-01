@@ -28,7 +28,7 @@ namespace GarageCustomerAdmin.BLL._Services
                 return new List<DiscountBLL>();
             }
         }
-        
+
         public DiscountBLL Get(int id)
         {
             try
@@ -46,6 +46,7 @@ namespace GarageCustomerAdmin.BLL._Services
             {
                 data.Image = UploadImage(data.Image, "Discount", _env);
                 data.ArabicImage = UploadImage(data.ArabicImage, "Discount", _env);
+                data.ThumbnailImage = UploadImage(data.ThumbnailImage, "Discount", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -63,6 +64,7 @@ namespace GarageCustomerAdmin.BLL._Services
             {
                 data.Image = UploadImage(data.Image, "Discount", _env);
                 data.ArabicImage = UploadImage(data.ArabicImage, "Discount", _env);
+                data.ThumbnailImage = UploadImage(data.ThumbnailImage, "Discount", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 

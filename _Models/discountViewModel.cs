@@ -21,6 +21,8 @@ namespace GarageCustomerAdmin._Models
         public string ToTime { get; set; }
         public string ArabicDescription { get; set; }
         public string Image { get; set; }
+        //public List<string> ImagesSource { get; set; }
+        public string ThumbnailImage { get; set; }
         public string ArabicImage { get; set; }
         public int StatusID { get; set; }
         public DateTime? LastUpdatedDate { get; set; }

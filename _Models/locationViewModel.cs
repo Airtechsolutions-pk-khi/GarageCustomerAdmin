@@ -40,6 +40,7 @@ namespace GarageCustomerAdmin._Models
 		public List<LocationimagesBLL> LocationImages = new List<LocationimagesBLL>();
 		public List<string> ImagesSource { get; set; }
 		public List<LocationTimings> LocationTimings { get; set; }
+		public List<LocationTimings> ArabicTimings { get; set; }
 	}
 	//public class LocationBLL1
 	//{
@@ -85,5 +86,7 @@ namespace GarageCustomerAdmin._Models
 		public int? LocationID { get; set; }
 		public string Name { get; set; }
 		public string Time { get; set; }
-	}
+        public string ArabicName { get; set; }
+        public string ArabicTime { get; set; }
+    }
 }
