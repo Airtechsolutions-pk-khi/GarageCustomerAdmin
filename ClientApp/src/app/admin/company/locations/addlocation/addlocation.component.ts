@@ -40,15 +40,15 @@ export class AddlocationComponent implements OnInit {
     { name: 'Friday', time: '' },
     { name: 'Saturday', time: '' }
   ];
-  time = [];
+  arabicTime = [];
   public arabicTimings: Array<Object> = [
-    { arabicName: 'Sunday', arabicTime: '' },
-    { arabicName: 'Monday', arabicTime: '' },
-    { arabicName: 'Tuesday', arabicTime: '' },
-    { arabicName: 'Wednesday', arabicTime: '' },
-    { arabicName: 'Thursday', arabicTime: '' },
-    { arabicName: 'Friday', arabicTime: '' },
-    { arabicName: 'Saturday', arabicTime: '' }
+    { arabicName: '(Sunday) الأحد', arabicTime: '' },
+    { arabicName: '(Monday) الاثنين', arabicTime: '' },
+    { arabicName: '(Tuesday) الثلاثاء', arabicTime: '' },
+    { arabicName: '(Wednesday) الأربعاء', arabicTime: '' },
+    { arabicName: '(Thursday) الخميس', arabicTime: '' },
+    { arabicName: '(Friday) الجمعة', arabicTime: '' },
+    { arabicName: '(Saturday) السبت', arabicTime: '' }
   ];
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -107,10 +107,11 @@ export class AddlocationComponent implements OnInit {
       amenitiesID: [null],
       serviceID: [null],
       locationTimings: [],
-      arabicTimings: [],
+      arabicTime: [],
       cityID: 0,
       countryID: ['', Validators.required],
       brandThumbnailImage: [''],
+      time: [''],
     });
   }
 
@@ -165,8 +166,8 @@ export class AddlocationComponent implements OnInit {
     this.loadItemImages(this.f.locationID.value);
     this.f.locationTimings.setValue(obj.locationTimings);
     this.locationTimings = obj.locationTimings;
-    this.f.arabicTimings.setValue(obj.arabicTimings);
-    this.arabicTimings = obj.arabicTimings;
+    this.f.arabicTime.setValue(obj.arabicTimings);
+    this.arabicTime = obj.arabicTimings;
     this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
 
     if (obj.amenities != "") {
@@ -266,7 +267,7 @@ export class AddlocationComponent implements OnInit {
     if (this.locationForm.invalid) { return; }
     this.loading = true;
     this.f.locationTimings.setValue(this.locationTimings);
-    this.f.arabicTimings.setValue(this.arabicTimings);
+    this.f.arabicTime.setValue(this.arabicTimings);
     this.f.amenities.setValue(this.selectedAmenitiesID == undefined ? "" : this.selectedAmenitiesID.toString());
     this.f.service.setValue(this.selectedServiceID == undefined ? "" : this.selectedServiceID.toString());
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);

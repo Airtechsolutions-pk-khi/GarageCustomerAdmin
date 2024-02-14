@@ -27,6 +27,7 @@ namespace GarageCustomerAdmin._Models
         public int StatusID { get; set; }
         public DateTime? LastUpdatedDate { get; set; }
         public string Locations { get; set; }
+        public string BackgroundColor { get; set; }
+        public string FontColor { get; set; }
     }
-
 }

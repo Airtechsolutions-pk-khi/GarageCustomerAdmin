@@ -267,6 +267,17 @@ namespace BAL.Repositories
 							p4[2] = new SqlParameter("@Time", timings.Time);
 							(new DBHelper().ExecuteNonQueryReturn)("sp_InsertLocationTimings_CADMIN", p4);
 						}
+						if(data.ArabicTimings != null)
+						{
+                            foreach (var timings in data.ArabicTimings)
+                            {
+                                SqlParameter[] p4 = new SqlParameter[3];
+                                p4[0] = new SqlParameter("@LocationID", data.LocationID);
+                                p4[1] = new SqlParameter("@ArabicName", timings.ArabicName);
+                                p4[2] = new SqlParameter("@ArabicTime", timings.ArabicTime);
+                                (new DBHelper().ExecuteNonQueryReturn)("sp_InsertArabicLocationTimings_CADMIN", p4);
+                            }
+                        }
 					}
 				}
 				catch { }

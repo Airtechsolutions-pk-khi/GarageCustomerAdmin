@@ -1,9 +1,11 @@
 <h1 class="h3 mb-2 text-gray-800">Add Services</h1>
 <p class="mb-4"></p>
 
+<!-- Loader Component -->
+<app-loader *ngIf="loading"></app-loader>
+
 <form [formGroup]="serviceForm" class="form" (ngSubmit)="onSubmit()">
   <div class="row">
-
     <div class="col-xl-12">
       <div class="card mb-4">
         <div class="card-header">Service Details</div>
@@ -11,7 +13,7 @@
           <div class="form-row">
             <div class="form-group col-md-8">
               <div class="form-group ">
-                <label class="small mb-1" for="inputUsername">Title</label>
+                <label class="small mb-1" for="inputUsername">Title <span style="color:red">*</span></label>
                 <input type="text" class="form-control" id="serviceTitle" placeholder="" formControlName="serviceTitle" maxlength="30" />
                 <small>Remaining characters: {{ 30 - serviceForm.controls['serviceTitle'].value.length }}</small>
                 <!--<input type="text" class="form-control" id=name placeholder="" formControlName="name" maxlength="50">-->
@@ -21,15 +23,6 @@
                   </div>
                 </div>
               </div>
-              <!--<div class="form-group">
-                  <label class="small mb-1" for="inputUsername">Title</label>
-                  <input type="text" class="form-control" id=serviceTitle placeholder="" formControlName="serviceTitle">
-                  <div *ngIf="f.serviceTitle.invalid && (f.serviceTitle.dirty || f.serviceTitle.touched)" class="alert alert-danger">
-                      <div *ngIf="f.serviceTitle.errors.required">
-                          Name is required.
-                      </div>
-                  </div>
-              </div>-->
               <div class="form-group">
                 <label class="small mb-1" for="inputUsername">Arabic Title</label>
                 <input type="text" class="form-control" id=arabicServiceTitle placeholder="" formControlName="arabicServiceTitle">
@@ -58,7 +51,6 @@
               <app-imageupload></app-imageupload>
             </div>
           </div>
-
 
           <div class="form-row">
             <div class="form-group col-lg-12">
