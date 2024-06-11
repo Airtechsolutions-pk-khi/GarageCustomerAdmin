@@ -1928,6 +1928,7 @@ E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\as
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.min.js
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.min.map
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\crossphone.png
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\crossphone.zip
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\index.html
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es2015.js
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es2015.js.map

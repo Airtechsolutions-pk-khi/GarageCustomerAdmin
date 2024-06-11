@@ -4,7 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { LocationsService } from 'src/app/_services/locations.service';
 import { ToastService } from 'src/app/_services/toastservice';
-import { LocationTimings, ArabicTimings } from '../../../../_models/Location';
+import { LocationTimings } from '../../../../_models/Location';
 import { CarSellService } from 'src/app/_services/carsell.service';
 import { ImageuploadComponent } from '../../../../imageupload/imageupload.component';
 
@@ -32,24 +32,15 @@ export class AddlocationComponent implements OnInit {
   ButtonText = "Save";
   timings = [];
   public locationTimings: Array<Object> = [
-    { name: 'Sunday', time: '' },
-    { name: 'Monday', time: '' },
-    { name: 'Tuesday', time: '' },
-    { name: 'Wednesday', time: '' },
-    { name: 'Thursday', time: '' },
-    { name: 'Friday', time: '' },
-    { name: 'Saturday', time: '' }
+    { name: 'Sunday',     time: '',   aName: 'الأحد',    aTime: '' },
+    { name: 'Monday',     time: '',   aName: 'الاثنين',  aTime: '' },
+    { name: 'Tuesday',    time: '',   aName: 'الثلاثاء', aTime: '' },
+    { name: 'Wednesday',  time: '',   aName: 'الأربعاء', aTime: '' },
+    { name: 'Thursday',   time: '',   aName: 'الخميس',  aTime: '' },
+    { name: 'Friday',     time: '',   aName: 'الجمعة',  aTime: '' },
+    { name: 'Saturday',   time: '',   aName: 'السبت',   aTime: '' }
   ];
-  arabicTime = [];
-  public arabicTimings: Array<Object> = [
-    { arabicName: '(Sunday) الأحد', arabicTime: '' },
-    { arabicName: '(Monday) الاثنين', arabicTime: '' },
-    { arabicName: '(Tuesday) الثلاثاء', arabicTime: '' },
-    { arabicName: '(Wednesday) الأربعاء', arabicTime: '' },
-    { arabicName: '(Thursday) الخميس', arabicTime: '' },
-    { arabicName: '(Friday) الجمعة', arabicTime: '' },
-    { arabicName: '(Saturday) السبت', arabicTime: '' }
-  ];
+
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
     private formBuilder: FormBuilder,
@@ -76,7 +67,6 @@ export class AddlocationComponent implements OnInit {
 
 
   private createForm() {
-
     this.locationForm = this.formBuilder.group({
       locationID: 0,
       userID: 0,
@@ -107,10 +97,10 @@ export class AddlocationComponent implements OnInit {
       amenitiesID: [null],
       serviceID: [null],
       locationTimings: [],
-      arabicTime: [],
+      aTime: [''],
       cityID: 0,
       countryID: ['', Validators.required],
-      brandThumbnailImage: [''],
+      image: [''],
       time: [''],
     });
   }
@@ -139,7 +129,6 @@ export class AddlocationComponent implements OnInit {
   }
 
   private editForm(obj) {
-    debugger
     this.f.name.setValue(obj.name);
     this.f.arabicName.setValue(obj.arabicName);
     this.f.email.setValue(obj.email);
@@ -159,17 +148,12 @@ export class AddlocationComponent implements OnInit {
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.customerStatusID.setValue(obj.customerStatusID === 1 ? true : false);
     this.f.isFeatured.setValue(obj.isFeatured === 1 ? true : false);
-
-    this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
-    this.imgComp.imageUrl = obj.brandThumbnailImage;
-
+    this.f.image.setValue(obj.image);
+    this.imgComp.imageUrl = obj.image;
     this.loadItemImages(this.f.locationID.value);
     this.f.locationTimings.setValue(obj.locationTimings);
     this.locationTimings = obj.locationTimings;
-    this.f.arabicTime.setValue(obj.arabicTimings);
-    this.arabicTime = obj.arabicTimings;
-    this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
-
+    this.f.image.setValue(obj.image);
     if (obj.amenities != "") {
       var stringToConvert = obj.amenities;
       this.selectedAmenitiesID = stringToConvert.split(',').map(Number);
@@ -180,12 +164,10 @@ export class AddlocationComponent implements OnInit {
       this.selectedServiceID = stringToConvert.split(',').map(Number);
       this.f.service.setValue(obj.service);
     }
-
     this.f.cityID.setValue(obj.cityID);
     if (obj.countryID != "") {
       this.loadCity(obj.countryID, 1);
     }
-
   }
   private loadCountry() {
     this.service.loadCountry().subscribe((res: any) => {
@@ -203,20 +185,11 @@ export class AddlocationComponent implements OnInit {
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
     this.loadCity(value, 1);
-    console.log(index);
-    console.log(value);
   }
   loadCity(obj, type) {
     debugger
     this.service.loadCity(obj).subscribe((res: any) => {
       this.CityList = res;
-      //debugger
-      //if (type == 0)
-      //  this.f.cityID.setValue(res[0].id);
-      //else if (type == 1)
-      //  debugger
-      //  //var cityID = this.f.cityID;
-      //this.f.cityID.setValue(this.f.cityID);
     });
   }
   private loadItemImages(id) {
@@ -267,16 +240,13 @@ export class AddlocationComponent implements OnInit {
     if (this.locationForm.invalid) { return; }
     this.loading = true;
     this.f.locationTimings.setValue(this.locationTimings);
-    this.f.arabicTime.setValue(this.arabicTimings);
     this.f.amenities.setValue(this.selectedAmenitiesID == undefined ? "" : this.selectedAmenitiesID.toString());
     this.f.service.setValue(this.selectedServiceID == undefined ? "" : this.selectedServiceID.toString());
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.customerStatusID.setValue(this.f.customerStatusID.value === true ? 1 : 2);
     this.f.isFeatured.setValue(this.f.isFeatured.value === 1 ? true : false);
-    this.f.brandThumbnailImage.setValue(this.imgComp.imageUrl);
+    this.f.image.setValue(this.imgComp.imageUrl);
     if (parseInt(this.f.locationID.value) === 0) {
-      //Insert location
-      console.log(JSON.stringify(this.locationForm.value));
     }
     else {
       //Update location     

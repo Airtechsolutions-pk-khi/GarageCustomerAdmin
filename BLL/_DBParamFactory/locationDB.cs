@@ -20,6 +20,7 @@ namespace BAL.Repositories
 		public static DataSet _ds;
 
 		public LocationTimings[] LocationTimings { get; private set; }
+		public ArabicTimings[] ArabicTimings { get; private set; }
 
 		public locationDB()
 		   : base()
@@ -106,13 +107,47 @@ namespace BAL.Repositories
 				return new List<LocationTimings>();
 			}
 		}
-		public LocationBLL Get(int id)
+        public List<ArabicTimings> GetArabicTimings(int id)
+        {
+
+            try
+            {
+                var _obj = new LocationBLL();
+                _dt = new DataTable();
+                SqlParameter[] p1 = new SqlParameter[1];
+                p1[0] = new SqlParameter("@id", id);
+                _dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetLocationTiming_CAdmin", p1);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        return JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<ArabicTimings>>();
+                    }
+                }
+                return new List<ArabicTimings>();
+
+            }
+            catch (Exception ex)
+            {
+                return new List<ArabicTimings>();
+            }
+        }
+        public LocationBLL Get(int id)
 		{
 			try
 			{
 				var _obj = new LocationBLL();
 				string[] days = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-				SqlParameter[] p = new SqlParameter[1];
+				string[] arabicdays = { "الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت" };
+                // Create a dictionary to store day name as key and index as value
+                Dictionary<string, string> dayDictionary = new Dictionary<string, string>();
+
+                // Populate the dictionary
+                for (int i = 0; i < days.Length; i++)
+                {
+                    dayDictionary.Add(days[i], arabicdays[i]);
+                }
+                SqlParameter[] p = new SqlParameter[1];
 				p[0] = new SqlParameter("@id", id);
 				_dt = (new DBHelperGarageUAT().GetTableFromSP)("sp_GetLocationsByID_CADMIN", p);
 				if (_dt != null)
@@ -121,20 +156,20 @@ namespace BAL.Repositories
 					{
 						_obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<LocationBLL>>().FirstOrDefault();
 						_obj.LocationTimings = GetTimings(_obj.LocationID);
-
 						if (_obj.LocationTimings.Count == 0)
 						{
-							foreach (var item in days)
+							foreach (var item in dayDictionary)
 							{
 								_obj.LocationTimings.Add(new LocationTimings
 								{
-									Name = item,
+									Name = item.Key,
 									Time = "",
+									AName = item.Value,
+									ATime = "",
 									LocationID = id
-
 								});
 							}
-						}
+                        }
 					}
 				}
 				return _obj;
@@ -261,23 +296,14 @@ namespace BAL.Repositories
 					{
 						foreach (var timings in data.LocationTimings)
 						{
-							SqlParameter[] p4 = new SqlParameter[3];
+							SqlParameter[] p4 = new SqlParameter[5];
 							p4[0] = new SqlParameter("@LocationID", data.LocationID);
 							p4[1] = new SqlParameter("@Name", timings.Name);
 							p4[2] = new SqlParameter("@Time", timings.Time);
-							(new DBHelper().ExecuteNonQueryReturn)("sp_InsertLocationTimings_CADMIN", p4);
+                            p4[3] = new SqlParameter("@ArabicName", timings.AName);
+                            p4[4] = new SqlParameter("@ArabicTime", timings.ATime);
+                            (new DBHelper().ExecuteNonQueryReturn)("sp_InsertLocationTimings_CADMIN", p4);
 						}
-						if(data.ArabicTimings != null)
-						{
-                            foreach (var timings in data.ArabicTimings)
-                            {
-                                SqlParameter[] p4 = new SqlParameter[3];
-                                p4[0] = new SqlParameter("@LocationID", data.LocationID);
-                                p4[1] = new SqlParameter("@ArabicName", timings.ArabicName);
-                                p4[2] = new SqlParameter("@ArabicTime", timings.ArabicTime);
-                                (new DBHelper().ExecuteNonQueryReturn)("sp_InsertArabicLocationTimings_CADMIN", p4);
-                            }
-                        }
 					}
 				}
 				catch { }

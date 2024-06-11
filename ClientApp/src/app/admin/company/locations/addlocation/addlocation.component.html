@@ -35,7 +35,7 @@
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Address <span style="color:red">*</span></label>
               <input type="text" class="form-control" id=address placeholder="" formControlName="address" maxlength="100" />
-              <small>Remaining characters: {{ 100 - locationForm.controls['address'].value.length }}</small>
+              <!--<small>Remaining characters: {{ 100 - locationForm.controls['address'].value.length }}</small>-->
               <div *ngIf="f.address.invalid && (f.address.dirty || f.address.touched)" class="alert alert-danger">
                 <div *ngIf="f.address.errors.required">
                   Address is required.
@@ -54,7 +54,7 @@
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Contact No <span style="color:red">*</span></label>
               <input type="text" class="form-control" id=contactNo placeholder="" formControlName="contactNo" maxlength="15">
-              <small>Remaining characters: {{ 15 - locationForm.controls['contactNo'].value.length }}</small>
+              <!--<small>Remaining characters: {{ 15 - locationForm.controls['contactNo'].value.length }}</small>-->
               <div *ngIf="f.contactNo.invalid && (f.contactNo.dirty || f.contactNo.touched)" class="alert alert-danger">
                 <div *ngIf="f.contactNo.errors.required">
                   Contact No is required.
@@ -237,56 +237,37 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-8 col-md-8">
               <div class="row" *ngFor="let timings of locationTimings; let i = index">
-                <div class="col-md-5 form-group">
-                  <label class="small mb-1" for="inputUsername">{{ timings.name }}</label>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-5 form-group">
+                      <label class="small mb-1" for="inputUsername">{{ timings.name }}</label>
+                    </div>
+                    <div class="col-md-7">
+                      <input type="text" class="form-control" placeholder="" id="timings{{ i }}" [(ngModel)]="timings.time" [formControlName]="'time'" maxlength="25">
+                      <small>Remaining characters: {{ 25 - locationForm.controls['time'].value.length }}</small>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-7">
-                  <input type="text" class="form-control" placeholder="" id="timings{{ i }}" [ngModelOptions]="{standalone: true}" [(ngModel)]="timings.time" [formControlName]="'time'" maxlength="25">
-                  <small>Remaining characters: {{ 25 - timings.time.length }}</small>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="row" *ngFor="let arabicTime of arabicTimings; let i = index">
-                <div class="col-md-5 form-group">
-                  <label class="small mb-1" for="inputUsername">{{ arabicTime.arabicName }}</label>
-                </div>
-                <div class="col-md-7">
-                  <input type="text" class="form-control" placeholder="" id="arabicTime{{ i }}" [ngModelOptions]="{standalone: true}" [(ngModel)]="arabicTime.arabicTime" [formControlName]="'arabicTime'" maxlength="25">
-                  <small>Remaining characters: {{ 25 - arabicTime.arabicTime.length }}</small>
-                </div>
-              </div>
-            </div>
-
-            <!--<div class="col-md-4">
-              <div class="row" *ngFor="let timings of locationTimings">
-                <div class="col-md-5 form-group">
-                  <label class="small mb-1" for="inputUsername">{{ timings.name }}</label>
-                </div>
-                <div class="col-md-7">
-                  <input type="text" class="form-control" placeholder="" id="timings{{ timings }}" [ngModelOptions]="{standalone: true}" [(ngModel)]="timings.time" formControlName="time" maxlength="25">
-                  <small>Remaining characters: {{ 25 - locationForm.controls['time'].value.length }}</small>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-5 form-group">
+                      <label class="small mb-1" for="inputUsername">{{ timings.aName }}</label>
+                    </div>
+                    <div class="col-md-7">
+                      <input type="text" class="form-control" placeholder="" id="timings{{ i }}" [(ngModel)]="timings.aTime" [formControlName]="'aTime'" maxlength="25">
+                      <small>Remaining characters: {{ 25 - locationForm.controls['aTime'].value.length }}</small>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="row" *ngFor="let arabicTime of arabicTimings">
-                <div class="col-md-5 form-group">
-                  <label class="small mb-1" for="inputUsername">{{ arabicTime.arabicName }}</label>
-                </div>
-                <div class="col-md-7">
-                  <input type="text" class="form-control" placeholder="" id="arabicTime{{ arabicTime }}" [ngModelOptions]="{standalone: true}" [(ngModel)]="arabicTime.arabicTime" formControlName="arabictime" maxlength="25">
-                  <small>Remaining characters: {{ 25 - locationForm.controls['arabictime'].value.length }}</small>
-
-                </div>
-              </div>
-            </div>-->
             <div class="col-md-4">
               <app-imageupload style="display:inline-block"></app-imageupload>
             </div>
           </div>
+
         </div>
       </div>
     </div>
