@@ -77,7 +77,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[12];
+                SqlParameter[] p = new SqlParameter[14];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -91,6 +91,8 @@ namespace BAL.Repositories
                 p[9] = new SqlParameter("@ToTime", data.ToTime);
                 p[10] = new SqlParameter("@StatusID", data.StatusID);
                 p[11] = new SqlParameter("@ThumbnailImage", data.ThumbnailImage);
+                p[12] = new SqlParameter("@BackgroundColor", data.BackgroundColor);
+                p[13] = new SqlParameter("@FontColor", data.FontColor);
 
                 //rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertDiscount", p);
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_InsertDiscount", p).Rows[0]["ID"].ToString());
@@ -118,7 +120,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[13];
+                SqlParameter[] p = new SqlParameter[15];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -133,6 +135,8 @@ namespace BAL.Repositories
                 p[10] = new SqlParameter("@StatusID", data.StatusID);
                 p[11] = new SqlParameter("@DiscountID", data.DiscountID);
                 p[12] = new SqlParameter("@ThumbnailImage", data.ThumbnailImage);
+                p[13] = new SqlParameter("@BackgroundColor", data.BackgroundColor);
+                p[14] = new SqlParameter("@FontColor", data.FontColor);
 
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateDiscount_Admin", p);

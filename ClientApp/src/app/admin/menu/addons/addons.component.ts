@@ -29,7 +29,7 @@ export class AddonsComponent implements OnInit {
     public excelService: ExcelService,
     public ts :ToastService,
     public router:Router) {
-     this.selectedBrand =this.ls.getSelectedBrand().brandID;
+
     this.loading$ = service.loading$;
     this.submit = false;    
   }

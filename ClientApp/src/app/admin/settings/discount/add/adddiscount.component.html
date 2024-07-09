@@ -47,6 +47,20 @@
                 </div>
               </div>
               <div class="form-row">
+                <div class="form-group col-6">
+                  <div class="form-group">
+                    <label for="inputUsername" class="small mb-1">Background Color</label>
+                    <input type="color" id="backgroundColor" formcontrolname="backgroundColor" value="#d1d3e2" class="form-control" name="backgroundColor" [(ngModel)]="backgroundColor">
+                  </div>
+                </div>
+                <div class="form-group col-6">
+                  <div class="form-group">
+                    <label for="inputUsername" class="small mb-1">Font Color</label>
+                    <input type="color" id="fontColor" formcontrolname="fontColor" value="#d1d3e2" class="form-control" name="fontColor" [(ngModel)]="fontColor">
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
                 <div class="form-group col-md-4">
                   <label class="small mb-1" for="inputFirstName">From Date</label>
                   <input type="date" class="form-control" id="fromDate" placeholder="" formControlName="fromDate" required>

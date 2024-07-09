@@ -86,7 +86,7 @@ namespace GarageCustomerAdmin._Models
 		public int? LocationID { get; set; }
 		public string Name { get; set; }
 		public string Time { get; set; }
-        public string ArabicName { get; set; }
-        public string ArabicTime { get; set; }
+        public string AName { get; set; }
+        public string ATime { get; set; }
     }
 }

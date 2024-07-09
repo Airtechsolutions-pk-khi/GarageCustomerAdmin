@@ -42,13 +42,13 @@ export class AddlocationComponent implements OnInit {
   ];
   time = [];
   public arabicTimings: Array<Object> = [
-    { arabicName: 'Sunday', arabicTime: '' },
-    { arabicName: 'Monday', arabicTime: '' },
-    { arabicName: 'Tuesday', arabicTime: '' },
-    { arabicName: 'Wednesday', arabicTime: '' },
-    { arabicName: 'Thursday', arabicTime: '' },
-    { arabicName: 'Friday', arabicTime: '' },
-    { arabicName: 'Saturday', arabicTime: '' }
+    { aName: 'الأحد', aTime: '' },
+    { aName: 'الإثنين', aTime: '' },
+    { aName: 'الثلاثاء', aTime: '' },
+    { aName: 'الأربعاء', aTime: '' },
+    { aName: 'الخميس', aTime: '' },
+    { aName: 'الجمعة', aTime: '' },
+    { aName: 'السبت', aTime: '' }
   ];
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(

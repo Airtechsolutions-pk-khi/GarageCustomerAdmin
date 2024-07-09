@@ -9,6 +9,8 @@ export class Discount {
   toDate: string;
   fromTime: string;
   ToTime: string;
+  backgroundColor: string;
+  fontColor: string;
   statusID: number;
   image: string;    
   arabicImage: string;    
