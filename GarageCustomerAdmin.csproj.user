@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-<<<<<<< HEAD
     <NameOfLastUsedPublishProfile>E:\Projects\GarageCustomerAdmin\Properties\PublishProfiles\FolderProfile12.pubxml</NameOfLastUsedPublishProfile>
-=======
     <NameOfLastUsedPublishProfile>E:\Projects\GarageCustomer_Admin\Properties\PublishProfiles\FolderProfile11.pubxml</NameOfLastUsedPublishProfile>
->>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

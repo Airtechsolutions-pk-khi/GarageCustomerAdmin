@@ -14,8 +14,7 @@ import { thumbnailimageComponent } from '../../../../imageupload/thumbnailimage.
   templateUrl: './adddiscount.component.html',
 })
 export class AdddiscountComponent implements OnInit {
-  selectedColor: string = '';
-  selectedFontColor: string;
+
   submitted = false;
   discountForm: FormGroup;
   loading = false;
@@ -72,9 +71,7 @@ export class AdddiscountComponent implements OnInit {
       arabicImage: [''],
       locationID: [null],
       locations: [],
-      backgroundColor: [''],
-      fontColor:[''],
-     // file: [''],
+      // file: [''],
     });
   }
 
@@ -90,8 +87,6 @@ export class AdddiscountComponent implements OnInit {
     this.f.toTime.setValue(obj.toTime);
     this.f.fromTime.setValue(obj.fromTime);
     this.f.fromDate.setValue(obj.fromDate);
-    this.f.fontColor.setValue(obj.fontColor);
-    this.f.backgroundColor.setValue(obj.backgroundColor);
     this.f.toDate.setValue(obj.toDate);
     this.f.backgroundColor.setValue(obj.backgroundColor);
     this.f.fontColor.setValue(obj.fontColor);
@@ -134,11 +129,6 @@ export class AdddiscountComponent implements OnInit {
     debugger
     this.discountForm.markAllAsTouched();
     this.submitted = true;
-
-    // Assign selected color values to form controls
-    this.f.backgroundColor.setValue(this.selectedColor);
-    this.f.fontColor.setValue(this.selectedFontColor);
-
     this.f.fromTime.setValue(this.fromTime.hour + ":" + this.fromTime.minute);
     this.f.toTime.setValue(this.toTime.hour + ":" + this.toTime.minute);
     if (this.discountForm.invalid) { return; }
