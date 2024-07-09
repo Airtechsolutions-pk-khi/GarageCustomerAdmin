@@ -1,6 +1,9 @@
 <h1 class="h3 mb-2 text-gray-800">Add Discount</h1>
 <p class="mb-4"></p>
 
+<!-- Loader Component -->
+<app-loader *ngIf="loading"></app-loader>
+
 <form [formGroup]="discountForm" class="form" (ngSubmit)="onSubmit()">
   <div class="row">
 
@@ -11,10 +14,9 @@
           <div class="form-row">
             <div class="form-group col-md-8">
               <div class="form-group ">
-                <label class="small mb-1" for="inputUsername">Name</label>
+                <label class="small mb-1" for="inputUsername">Name <span style="color:red">*</span></label>
                 <input type="text" class="form-control" id="name" placeholder="" formControlName="name" maxlength="50" />
                 <small>Remaining characters: {{ 50 - discountForm.controls['name'].value.length }}</small>
-                <!--<input type="text" class="form-control" id=name placeholder="" formControlName="name" maxlength="50">-->
                 <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
                   <div *ngIf="f.name.errors.required">
                     Name is required.
@@ -61,8 +63,22 @@
                 </div>
               </div>
               <div class="form-row">
+                <div class="form-group col-6">
+                  <div class="form-group ">
+                    <label class="small mb-1" for="inputUsername">Background Color</label>
+                    <input type="color" class="form-control" id="backgroundColor" formControlName="backgroundColor" value="#d1d3e2" [(ngModel)]="selectedColor" />
+                  </div>
+                </div>
+                <div class="form-group col-6">
+                  <div class="form-group ">
+                    <label class="small mb-1" for="inputUsername">Font Color</label>
+                    <input type="color" class="form-control" id="fontColor" formControlName="fontColor" value="#d1d3e2" [(ngModel)]="selectedFontColor" />
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
                 <div class="form-group col-md-4">
-                  <label class="small mb-1" for="inputFirstName">From Date</label>
+                  <label class="small mb-1" for="inputFirstName">From Date<span style="color:red;">*</span></label>
                   <input type="date" class="form-control" id="fromDate" placeholder="" formControlName="fromDate" required>
                   <div *ngIf="f.fromDate.invalid && (f.fromDate.dirty || f.fromDate.touched)" class="alert alert-danger">
                     <div *ngIf="f.fromDate.errors.required">
@@ -71,7 +87,7 @@
                   </div>
                 </div>
                 <div class="form-group col-md-4">
-                  <label class="small mb-1" for="inputFirstName">To Date</label>
+                  <label class="small mb-1" for="inputFirstName">To Date<span style="color:red;">*</span></label>
                   <input type="date" class="form-control" id="toDate" placeholder="" formControlName="toDate" required>
                   <div *ngIf="f.toDate.invalid && (f.toDate.dirty || f.toDate.touched)" class="alert alert-danger">
                     <div *ngIf="f.toDate.errors.required">
@@ -82,15 +98,14 @@
               </div>
               <div class="form-row">
                 <div class="form-group col-md-4">
-                  <label class="small mb-1" for="inputFirstName">From Time</label>
+                  <label class="small mb-1" for="inputFirstName">From Time<span style="color:red;">*</span></label>
                   <ngb-timepicker [(ngModel)]="fromTime" [ngModelOptions]="{standalone: true}" [meridian]="true"></ngb-timepicker>
                 </div>
                 <div class="form-group col-md-4">
-                  <label class="small mb-1" for="inputFirstName">To Time</label>
+                  <label class="small mb-1" for="inputFirstName">To Time<span style="color:red;">*</span></label>
                   <ngb-timepicker [(ngModel)]="toTime" [ngModelOptions]="{standalone: true}" [meridian]="true"></ngb-timepicker>
                 </div>
               </div>
-
               <div class="form-row">
                 <div class="form-group col-lg-12">
                   <label for="Item Status">Status</label>
@@ -100,12 +115,6 @@
                   </div>
                 </div>
               </div>
-              <!--<div class="form-row">
-                <div class="col-md-8 form-group">
-                  <label for="file">Thumbnail Image</label>
-                  <app-thumbnailimage style="display:inline-block"></app-thumbnailimage>
-                </div>
-              </div>-->
               <div class="form-row">
                 <div class="form-group col-lg-12">
                   <small>Note: Image Size limit is 150 KB</small>

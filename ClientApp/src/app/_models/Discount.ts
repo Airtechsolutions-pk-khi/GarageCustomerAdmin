@@ -14,7 +14,9 @@ export class Discount {
   statusID: number;
   image: string;    
   arabicImage: string;    
-  thumbnailImage: string;    
+  thumbnailImage: string;
+  backgroundColor: string;
+  fontColor: string;
 }
 export class disclocationjunc {
   id: number;

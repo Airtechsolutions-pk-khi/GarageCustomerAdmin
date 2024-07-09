@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "E:\\Projects\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "E:\\Projects\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj",
         "packagesPath": "C:\\Users\\MRC\\.nuget\\packages\\",
         "outputPath": "E:\\Projects\\GarageCustomerAdmin\\obj\\",
+=======
+    "E:\\Projects\\GarageCustomer_Admin\\GarageCustomerAdmin.csproj": {}
+  },
+  "projects": {
+    "E:\\Projects\\GarageCustomer_Admin\\GarageCustomerAdmin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\GarageCustomer_Admin\\GarageCustomerAdmin.csproj",
+        "projectName": "GarageCustomerAdmin",
+        "projectPath": "E:\\Projects\\GarageCustomer_Admin\\GarageCustomerAdmin.csproj",
+        "packagesPath": "C:\\Users\\MRC\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\GarageCustomer_Admin\\obj\\",
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MRC\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -140,13 +140,13 @@ namespace BAL.Repositories
 
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateDiscount_Admin", p);
-                if (data.Locations != "")
+                if(data.DiscountID != 0)
                 {
                     SqlParameter[] p1 = new SqlParameter[3];
                     p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
                     p1[1] = new SqlParameter("@DiscountID", data.DiscountID);
                     p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertDiscLocationJunc_CAdmin", p1);
+                    (new DBHelper().ExecuteNonQueryReturn)("sp_UpdateDiscLocationJunc_CAdmin", p1);
                 }
                 return rtn;
             }

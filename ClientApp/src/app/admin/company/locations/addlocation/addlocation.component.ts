@@ -32,13 +32,13 @@ export class AddlocationComponent implements OnInit {
   ButtonText = "Save";
   timings = [];
   public locationTimings: Array<Object> = [
-    { name: 'Sunday', time: '' },
-    { name: 'Monday', time: '' },
-    { name: 'Tuesday', time: '' },
-    { name: 'Wednesday', time: '' },
-    { name: 'Thursday', time: '' },
-    { name: 'Friday', time: '' },
-    { name: 'Saturday', time: '' }
+    { name: 'Sunday',     time: '',   aName: 'الأحد',    aTime: '' },
+    { name: 'Monday',     time: '',   aName: 'الاثنين',  aTime: '' },
+    { name: 'Tuesday',    time: '',   aName: 'الثلاثاء', aTime: '' },
+    { name: 'Wednesday',  time: '',   aName: 'الأربعاء', aTime: '' },
+    { name: 'Thursday',   time: '',   aName: 'الخميس',  aTime: '' },
+    { name: 'Friday',     time: '',   aName: 'الجمعة',  aTime: '' },
+    { name: 'Saturday',   time: '',   aName: 'السبت',   aTime: '' }
   ];
   time = [];
   public arabicTimings: Array<Object> = [
@@ -76,7 +76,6 @@ export class AddlocationComponent implements OnInit {
 
 
   private createForm() {
-
     this.locationForm = this.formBuilder.group({
       locationID: 0,
       userID: 0,
@@ -110,7 +109,8 @@ export class AddlocationComponent implements OnInit {
       arabicTimings: [],
       cityID: 0,
       countryID: ['', Validators.required],
-      brandThumbnailImage: [''],
+      image: [''],
+      time: [''],
     });
   }
 
@@ -138,7 +138,6 @@ export class AddlocationComponent implements OnInit {
   }
 
   private editForm(obj) {
-    debugger
     this.f.name.setValue(obj.name);
     this.f.arabicName.setValue(obj.arabicName);
     this.f.email.setValue(obj.email);
@@ -158,10 +157,8 @@ export class AddlocationComponent implements OnInit {
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.customerStatusID.setValue(obj.customerStatusID === 1 ? true : false);
     this.f.isFeatured.setValue(obj.isFeatured === 1 ? true : false);
-
-    this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
-    this.imgComp.imageUrl = obj.brandThumbnailImage;
-
+    this.f.image.setValue(obj.image);
+    this.imgComp.imageUrl = obj.image;
     this.loadItemImages(this.f.locationID.value);
     this.f.locationTimings.setValue(obj.locationTimings);
     this.locationTimings = obj.locationTimings;
@@ -179,12 +176,10 @@ export class AddlocationComponent implements OnInit {
       this.selectedServiceID = stringToConvert.split(',').map(Number);
       this.f.service.setValue(obj.service);
     }
-
     this.f.cityID.setValue(obj.cityID);
     if (obj.countryID != "") {
       this.loadCity(obj.countryID, 1);
     }
-
   }
   private loadCountry() {
     this.service.loadCountry().subscribe((res: any) => {
@@ -202,20 +197,11 @@ export class AddlocationComponent implements OnInit {
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
     this.loadCity(value, 1);
-    console.log(index);
-    console.log(value);
   }
   loadCity(obj, type) {
     debugger
     this.service.loadCity(obj).subscribe((res: any) => {
       this.CityList = res;
-      //debugger
-      //if (type == 0)
-      //  this.f.cityID.setValue(res[0].id);
-      //else if (type == 1)
-      //  debugger
-      //  //var cityID = this.f.cityID;
-      //this.f.cityID.setValue(this.f.cityID);
     });
   }
   private loadItemImages(id) {
@@ -272,10 +258,8 @@ export class AddlocationComponent implements OnInit {
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.customerStatusID.setValue(this.f.customerStatusID.value === true ? 1 : 2);
     this.f.isFeatured.setValue(this.f.isFeatured.value === 1 ? true : false);
-    this.f.brandThumbnailImage.setValue(this.imgComp.imageUrl);
+    this.f.image.setValue(this.imgComp.imageUrl);
     if (parseInt(this.f.locationID.value) === 0) {
-      //Insert location
-      console.log(JSON.stringify(this.locationForm.value));
     }
     else {
       //Update location     

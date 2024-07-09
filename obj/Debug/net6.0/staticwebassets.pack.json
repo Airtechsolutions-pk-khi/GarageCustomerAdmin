@@ -1,7 +1,11 @@
 {
   "Files": [
     {
+<<<<<<< HEAD
       "Id": "E:\\Projects\\GarageCustomerAdmin\\wwwroot\\favicon.ico",
+=======
+      "Id": "E:\\Projects\\GarageCustomer_Admin\\wwwroot\\favicon.ico",
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {

@@ -30,21 +30,8 @@ export class Location {
   arabicTiming: ArabicTimings[];
   imageSource:[];
   disabled: any;
-  sunday: string;
-  sundaytime: string;
-  monday: string;
-  mondaytime: string;
-  tuesday: string;
-  tuesdaytime: string;
-  wednesday: string;
-  wednesdaytime: string;
-  thursday: string;
-  thursdaytime: string;
-  friday: string;
-  fridaytime: string;
-  saturday: string;
-  saturdaytime: string;
-  brandThumbnailImage: string;
+  image: string;
+  artime: string;
 }
 export class LocationImages {
   locationID: number;
@@ -55,6 +42,8 @@ export class LocationTimings {
   locationID: number;
   name: string;
   time: string;
+  aName: string;
+  aTime: string;
 }
 export class ArabicTimings {
   locationID: number;

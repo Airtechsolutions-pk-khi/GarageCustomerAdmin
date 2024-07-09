@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "WzzyfAN+KAVoY7yi6ptbA0gRMSXOgFAU0zlZTjmFmcE=",
+=======
+  "Hash": "D6RVh8vJJzJz1EeFZzC8kA7BevrAAlb2QgpZF5sarEw=",
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
   "Source": "GarageCustomerAdmin",
   "BasePath": "_content/GarageCustomerAdmin",
   "Mode": "Default",
@@ -10,17 +14,28 @@
     {
       "Name": "GarageCustomerAdmin\\wwwroot",
       "Source": "GarageCustomerAdmin",
+<<<<<<< HEAD
       "ContentRoot": "E:\\Projects\\GarageCustomerAdmin\\wwwroot\\",
+=======
+      "ContentRoot": "E:\\Projects\\GarageCustomer_Admin\\wwwroot\\",
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
       "BasePath": "_content/GarageCustomerAdmin",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "E:\\Projects\\GarageCustomerAdmin\\wwwroot\\favicon.ico",
       "SourceId": "GarageCustomerAdmin",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Projects\\GarageCustomerAdmin\\wwwroot\\",
+=======
+      "Identity": "E:\\Projects\\GarageCustomer_Admin\\wwwroot\\favicon.ico",
+      "SourceId": "GarageCustomerAdmin",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Projects\\GarageCustomer_Admin\\wwwroot\\",
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
       "BasePath": "_content/GarageCustomerAdmin",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",

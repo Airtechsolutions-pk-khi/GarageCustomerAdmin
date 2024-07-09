@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 F:\Projects\GarageCustomer_Admin\bin\Release\net6.0\appsettings.Development.json
 F:\Projects\GarageCustomer_Admin\bin\Release\net6.0\appsettings.json
 F:\Projects\GarageCustomer_Admin\bin\Release\net6.0\GarageCustomerAdmin.staticwebassets.runtime.json
@@ -66,6 +67,8 @@ F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\refint\GarageCustomerAdmin.d
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\GarageCustomerAdmin.pdb
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\GarageCustomerAdmin.genruntimeconfig.cache
 F:\Projects\GarageCustomer_Admin\obj\Release\net6.0\ref\GarageCustomerAdmin.dll
+=======
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\appsettings.Development.json
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\appsettings.json
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\GarageCustomerAdmin.staticwebassets.runtime.json
@@ -87,16 +90,37 @@ E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.EntityFrameworkCor
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.Identity.Client.dll
+<<<<<<< HEAD
+=======
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Newtonsoft.Json.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\System.CodeDom.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\System.Data.SqlClient.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\System.Drawing.Common.dll
+<<<<<<< HEAD
+=======
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\System.Runtime.Caching.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\System.Security.Permissions.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\System.Windows.Extensions.dll
+<<<<<<< HEAD
+=======
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win-arm64\native\sni.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win-x64\native\sni.dll
@@ -105,6 +129,10 @@ E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\unix\lib\netcoreapp
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+<<<<<<< HEAD
+=======
+E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\GarageCustomerAdmin.csproj.AssemblyReference.cache
@@ -125,12 +153,16 @@ E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\staticwebassets\msbuild.buil
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.GarageCustomerAdmin.props
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\staticwebassets.pack.json
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\scopedcss\bundle\GarageCustomerAdmin.styles.css
+<<<<<<< HEAD
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\GarageCustomerAdmin.csproj.CopyComplete
+=======
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\GarageCustomerAdmin.dll
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\refint\GarageCustomerAdmin.dll
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\GarageCustomerAdmin.pdb
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\GarageCustomerAdmin.genruntimeconfig.cache
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\ref\GarageCustomerAdmin.dll
+<<<<<<< HEAD
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
 E:\Projects\GarageCustomer_Admin\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
@@ -222,3 +254,6 @@ E:\Projects\GarageCustomerAdmin\obj\Release\net6.0\GarageCustomerAdmin.pdb
 E:\Projects\GarageCustomerAdmin\obj\Release\net6.0\GarageCustomerAdmin.genruntimeconfig.cache
 E:\Projects\GarageCustomerAdmin\obj\Release\net6.0\ref\GarageCustomerAdmin.dll
 E:\Projects\GarageCustomerAdmin\obj\Release\net6.0\GarageCu.6154F0C7.Up2Date
+=======
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\GarageCu.6154F0C7.Up2Date
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3

@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "wpmVB4DnBAFAtC92yhJspBBujtIerdwr4Py6se8TgrZFOifrSTJThmiYTRJBd4yCxqZqnbUauWKsEcUHzOGKVw==",
   "success": true,
   "projectFilePath": "E:\\Projects\\GarageCustomerAdmin\\GarageCustomerAdmin.csproj",
+=======
+  "dgSpecHash": "eOBZyijDyO36W781spaG5SFEtakQKotoj9dz7mTvjgGHhss+Z5BTs5hD+W2Wppdoame2ytdn8rADG73kzdbt9Q==",
+  "success": true,
+  "projectFilePath": "E:\\Projects\\GarageCustomer_Admin\\GarageCustomerAdmin.csproj",
+>>>>>>> 1ee9b0ba5f1a178c5276001516ba039076a45ba3
   "expectedPackageFiles": [
     "C:\\Users\\MRC\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\MRC\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\3.1.5\\microsoft.aspnetcore.nodeservices.3.1.5.nupkg.sha512",

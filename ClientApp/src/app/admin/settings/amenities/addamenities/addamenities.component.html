@@ -1,6 +1,9 @@
 <h1 class="h3 mb-2 text-gray-800">Add Amenities</h1>
 <p class="mb-4"></p>
 
+<!-- Loader Component -->
+<app-loader *ngIf="loading"></app-loader>
+
 <form [formGroup]="amenitiesForm" class="form" (ngSubmit)="onSubmit()">
   <div class="row">
 
@@ -11,7 +14,7 @@
           <div class="form-row">
             <div class="form-group col-md-8">
               <div class="form-group">
-                <label class="small mb-1" for="inputUsername">Name</label>
+                <label class="small mb-1" for="inputUsername">Name <span style="color:red">*</span></label>
                 <input type="text" class="form-control" id=name placeholder="" formControlName="name" maxlength="30">
                 <small>Remaining characters: {{ 30 - amenitiesForm.controls['name'].value.length }}</small>
                 <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
