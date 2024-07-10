@@ -18,6 +18,7 @@ import { NgbModule, NgbTimepicker } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryComponent } from './admin/menu/category/category.component';
 import { AddcategoryComponent } from './admin/menu/category/addcategory/addcategory.component';
 import { ImageuploadComponent } from './imageupload/imageupload.component';
+import { thumbnailimageComponent } from './imageupload/thumbnailimage.component';
 import { alternateimageComponent } from './imageupload/alternateimage.component';
 import { ItemsComponent } from './admin/menu/items/items.component';
 import { AdditemsComponent } from './admin/menu/items/additem/additem.component';
@@ -30,7 +31,7 @@ import { AddlocationComponent } from './admin/company/locations/addlocation/addl
 import { NgSelectModule } from '@ng-select/ng-select';
 import { AddbrandComponent } from './admin/company/brands/addbrand/addbrand.component';
 
-import { NgApexchartsModule } from 'ng-apexcharts';
+//import { NgApexchartsModule } from 'ng-apexcharts';
 import { ToastrModule } from 'ngx-toastr';
 import { BrandComponent } from './admin/company/brands/brands.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -50,7 +51,7 @@ import { OrderdetailsComponent } from './admin/sales/orderdetails/orderdetails.c
 import { ItemsettingsComponent } from './admin/menu/items/itemsettings/itemsettings.component';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { DeliveryComponent } from './admin/settings/delivery/delivery.component';
-import { AdddeliveryComponent } from './admin/settings/Delivery/adddelivery/adddelivery.component';
+//import { AdddeliveryComponent } from './admin/settings/Delivery/adddelivery/adddelivery.component';
 import { AppsettingsComponent } from './admin/settings/appsettings/appsettings.component';
 import { AddonsComponent } from './admin/menu/addons/addons.component';
 import { AddaddonsComponent } from './admin/menu/addons/addaddons/addaddons.component';
@@ -72,10 +73,17 @@ import { AddcarsellComponent } from './admin/carsell/carselllist/addcarsell/addc
 import { ReviewsComponent } from './admin/reviews/reviews.component';
 import { DiscountComponent } from './admin/settings/discount/discount.component';
 import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.component';
+import { FeaturelistComponent } from './admin/features/featurelist.component';
+import { AddfeatureComponent } from './admin/features/add/addfeature.component';
 
+import { BodyTypeComponent } from './admin/bodytype/bodytype.component';
+import { AddbodyTypeComponent } from './admin/bodytype/add/addbodyType.component';
 
+import { BloglistComponent } from './admin/blogs/blog.component';
+import { AddBlogComponent } from './admin/blogs/add/addblog.component';
 
-
+import { CarslistComponent } from './admin/cars/carslist.component';
+import { AddcarsComponent } from './admin/cars/addcars/addcars.component';
 
 @NgModule({
   declarations: [
@@ -101,6 +109,7 @@ import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.
     AddlocationComponent,
     ImageuploadComponent,
     alternateimageComponent,
+    thumbnailimageComponent,
     SummaryComponent,
     NgbdDatepickerRangePopup,
     BannerComponent,
@@ -116,7 +125,7 @@ import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.
     OrderdetailsComponent,
     ItemsettingsComponent,
     DeliveryComponent,
-    AdddeliveryComponent,
+    //AdddeliveryComponent,
     AppsettingsComponent,
     AddonsComponent,
     AddaddonsComponent,
@@ -136,7 +145,15 @@ import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.
     ReviewsComponent,
     DiscountComponent,
     AdddiscountComponent,
-    CarSelldetailsComponent
+    CarSelldetailsComponent,
+    FeaturelistComponent,
+    AddfeatureComponent,
+    BodyTypeComponent,
+    AddbodyTypeComponent,
+    BloglistComponent,
+    AddBlogComponent,
+    CarslistComponent,
+    AddcarsComponent
 
   ],
   imports: [
@@ -147,7 +164,7 @@ import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    NgApexchartsModule,
+    //NgApexchartsModule,
 
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
@@ -199,9 +216,9 @@ import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.
           { path: 'report/salescategorywise', component: SalescategorywiseComponent },
           { path: 'report/salesitemwise', component: SalesitemwiseComponent },
 
-          { path: 'delivery', component: DeliveryComponent },
-          { path: 'delivery/add', component: AdddeliveryComponent },
-          { path: 'delivery/edit/:id', component: AdddeliveryComponent },
+          // { path: 'delivery', component: DeliveryComponent },
+          // { path: 'delivery/add', component: AdddeliveryComponent },
+          // { path: 'delivery/edit/:id', component: AdddeliveryComponent },
 
           { path: 'appsettings', component: AppsettingsComponent },
 
@@ -236,6 +253,22 @@ import { AdddiscountComponent } from './admin/settings/discount/add/adddiscount.
           { path: 'discount', component: DiscountComponent },
           { path: 'discount/add', component: AdddiscountComponent },
           { path: 'discount/edit/:id', component: AdddiscountComponent },
+
+          { path: 'features', component: FeaturelistComponent },
+          { path: 'features/add', component: AddfeatureComponent },
+          { path: 'features/edit/:id', component: AddfeatureComponent },
+
+          { path: 'bodytype', component: BodyTypeComponent },
+          { path: 'bodytype/add', component: AddbodyTypeComponent },
+          { path: 'bodytype/edit/:id', component: AddbodyTypeComponent },
+
+          { path: 'blog', component: BloglistComponent },
+          { path: 'blog/add', component: AddBlogComponent },
+          { path: 'blog/edit/:id', component: AddBlogComponent },
+
+          { path: 'cars', component: CarslistComponent },
+          { path: 'cars/add', component: AddcarsComponent },
+          { path: 'cars/edit/:id', component: AddcarsComponent },
         ]
       }
     ]),

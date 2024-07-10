@@ -29,7 +29,7 @@ namespace GarageCustomerAdmin.Controllers
         {
             return _service.GetLocationImages(id);
         }
-        [HttpGet("{id}")]
+		[HttpGet("{id}")]
         public LocationBLL Get(int id)
         {
             return _service.Get(id);
@@ -42,12 +42,10 @@ namespace GarageCustomerAdmin.Controllers
         }
         [HttpPost]
         [Route("update")]
-        public int PostUpdate([FromBody]LocationBLL obj)
+        public int PostUpdate([FromBody] LocationBLL obj)
         {
             return _service.Update(obj, _env);
         }
-
-
         [HttpPost]
         [Route("delete")]
         public int PostDelete([FromBody]LocationBLL obj)

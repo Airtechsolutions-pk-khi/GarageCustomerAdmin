@@ -7,6 +7,8 @@ import { State } from '../_models/State';
 import { CarSellImages, CarSells } from '../_models/CarSell';
 import { Features } from '../_models/Feature';
 import { City } from '../_models/City';
+import { BodyType } from '../_models/BodyType';
+import { Customers, Make, Models } from '../_models/CarSell';
 
 
 interface SearchCarSellResult {
@@ -85,9 +87,11 @@ export class CarSellService {
   printorder(id) {
     return this.http.get<CarSells[]>(`api/orders/print/${id}`);
   }
-  getAllData(fromDate,toDate) {
+  //getAllData(fromDate,toDate) {
+  getAllData() {
 
-    const url = `api/carsell/all/${fromDate}/${toDate}`;
+    //const url = `api/carsell/all/${fromDate}/${toDate}`;
+    const url = `api/carsell/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<CarSells[]>(url).subscribe(res => {
@@ -158,17 +162,22 @@ export class CarSellService {
   loadFeature() {
     return this.http.get<Features[]>( `api/feature/all`);
   }
-  loadMake() {
-    return this.http.get<Features[]>( `api/carsell/allMake`);
+  loadBodyType() {
+    return this.http.get<BodyType[]>(`api/bodytype/all`);
   }
-  loadModel() {
-    return this.http.get<Features[]>( `api/carsell/allModel`);
+  loadMake() {
+    return this.http.get<Make[]>( `api/carsell/allMake`);
+  }
+  loadModel(event) {
+    return this.http.get<Models[]>( `api/carsell/allModel/${event}`);
   }
   loadCountry() {
     return this.http.get<Features[]>( `api/carsell/allCountry`);
   }
+  loadCustomer() {
+    return this.http.get<Customers[]>(`api/customer/all`);
+  }
   loadCity(event) {
-    debugger
     return this.http.get<any[]>( `api/carsell/allCity/${event}`);
   }
   update(updateData) {
@@ -179,7 +188,6 @@ export class CarSellService {
       }));
   }   
   updatestatus(carsell) {
-    debugger
     return this.http.post(`api/carsell/updatestatus`, carsell)
       .pipe(map(res => {
         console.log(res);

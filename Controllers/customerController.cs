@@ -22,6 +22,12 @@ namespace GarageCustomerAdmin.Controllers
             return _service.GetAll(brandid);
         }
 
+        [HttpGet("all")]
+        public List<CustomerBLL> GetCustomer()
+        {
+            return _service.GetCustomer();
+        }
+
 
         [HttpGet("{id}/brand/{brandid}")]
         public CustomerBLL Get(int id, int brandid)

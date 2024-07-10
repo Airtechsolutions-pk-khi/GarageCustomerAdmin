@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { switchMap, tap, map } from 'rxjs/operators';
 import { SortColumn, SortDirection } from '../_directives/sortable.directive';
 import { State } from '../_models/State';
-import { Location, LocationImages } from '../_models/Location';
+import { Location, LocationImages, LocationTimings } from '../_models/Location';
 import { Amenities } from '../_models/Amenities';
 import { Services } from '../_models/Services';
 import { Landmark } from '../_models/Landmark';
@@ -74,8 +74,7 @@ export class LocationsService {
   }
   
 
-  getById(id) {
-    debugger
+  getById(id) {   
     return this.http.get<Location[]>(`api/location/${id}`);
   }
   getAllLocations() {
@@ -140,8 +139,10 @@ export class LocationsService {
     };
   }
   loadLocationImages(id) {
-    debugger
     return this.http.get<LocationImages[]>( `api/location/images/${id}`);
+  }
+  loadTimings(id) {
+    return this.http.get<LocationTimings[]>(`api/location/loadTimings/${id}`);
   }
   loadAmenities() {
     return this.http.get<Amenities[]>( `api/amenities/all`);
@@ -153,7 +154,6 @@ export class LocationsService {
     return this.http.get<Landmark[]>( `api/landmark/all`);
   }
   insert(data) {
-    debugger;
     return this.http.post('api/location/insertlocation', data)
       .pipe(map(res => {        
         console.log(res);
@@ -162,7 +162,6 @@ export class LocationsService {
   }
 
   update(updateData) {
-    debugger;
     return this.http.post(`api/location/update`, updateData)
       .pipe(map(res => {
         console.log(res);
@@ -170,8 +169,7 @@ export class LocationsService {
       }));
   }
  
-  delete(updateData) {
-    
+  delete(updateData) {  
     return this.http.post(`api/location/delete`, updateData);
   }
 

@@ -25,36 +25,57 @@ namespace BAL.Repositories
             _dt = new DataTable();
             _ds = new DataSet();
         }
+		public List<DashboardSummary> GetDashboardSummary()
+		{
+			try
+			{
+				var lst = new List<DashboardSummary>();
+				SqlParameter[] p = new SqlParameter[0];
 
-        public DashboardSummary GetDashboardSummary(int LocationID, DateTime Date)
-        {
-            var obj = new DashboardSummary();
+				_dt = (new DBHelper().GetTableFromSP)("GetDashboard_CAdmin", p);
+				if (_dt != null)
+				{
+					if (_dt.Rows.Count > 0)
+					{
+						lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<DashboardSummary>>();
+					}
+				}
+				return lst;
+			}
+			catch (Exception ex)
+			{
+				return null;
+			}
+		}
+		//public DashboardSummary GetDashboardSummary(int LocationID, DateTime Date)
+		//{
+		//    var obj = new DashboardSummary();
 
-            try
-            {
-                SqlParameter[] p = new SqlParameter[1];
-                
-                p[0] = new SqlParameter("@BusinessDate", Date);
+		//    try
+		//    {
+		//        SqlParameter[] p = new SqlParameter[1];
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_SalesDashboard_admin", p);
+		//        p[0] = new SqlParameter("@BusinessDate", Date);
 
-                obj.TotalOrders = Convert.ToDouble(_dt.Rows[0]["TotalOrders"].ToString());
-                obj.TotalTax = Convert.ToDouble(_dt.Rows[0]["TotalTax"].ToString());
-                obj.NetSales = Convert.ToDouble(_dt.Rows[0]["NetSales"].ToString());
-                obj.Sales = Convert.ToDouble(_dt.Rows[0]["Sales"].ToString());
-                return obj;
-            }
-            catch (Exception ex)
-            {
-                obj.NetSales = 0;
-                obj.TotalOrders = 0;
-                obj.TotalTax = 0;
-                obj.Sales = 0;
-                return obj;
-            }
-        }
+		//        _dt = (new DBHelper().GetTableFromSP)("sp_SalesDashboard_admin", p);
 
-        public DashboardMAEN GetMAENSummary(int LocationID, DateTime Date)
+		//        obj.TotalOrders = Convert.ToDouble(_dt.Rows[0]["TotalOrders"].ToString());
+		//        obj.TotalTax = Convert.ToDouble(_dt.Rows[0]["TotalTax"].ToString());
+		//        obj.NetSales = Convert.ToDouble(_dt.Rows[0]["NetSales"].ToString());
+		//        obj.Sales = Convert.ToDouble(_dt.Rows[0]["Sales"].ToString());
+		//        return obj;
+		//    }
+		//    catch (Exception ex)
+		//    {
+		//        obj.NetSales = 0;
+		//        obj.TotalOrders = 0;
+		//        obj.TotalTax = 0;
+		//        obj.Sales = 0;
+		//        return obj;
+		//    }
+		//}
+
+		public DashboardMAEN GetMAENSummary(int LocationID, DateTime Date)
         {
             var obj = new DashboardMAEN();
 
@@ -117,34 +138,34 @@ namespace BAL.Repositories
 
 
         #region dashboard range
-        public DashboardSummary GetDashboardSummaryRange(int LocationID, DateTime FDate, DateTime TDate)
-        {
-            var obj = new DashboardSummary();
+        //public DashboardSummary GetDashboardSummaryRange(int LocationID, DateTime FDate, DateTime TDate)
+        //{
+        //    var obj = new DashboardSummary();
 
-            try
-            {
-                SqlParameter[] p = new SqlParameter[3];
-                p[0] = new SqlParameter("@LocationID", LocationID);
-                p[1] = new SqlParameter("@FromBusinessDate", FDate);
-                p[2] = new SqlParameter("@ToBusinessDate", TDate);
+        //    try
+        //    {
+        //        SqlParameter[] p = new SqlParameter[3];
+        //        p[0] = new SqlParameter("@LocationID", LocationID);
+        //        p[1] = new SqlParameter("@FromBusinessDate", FDate);
+        //        p[2] = new SqlParameter("@ToBusinessDate", TDate);
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_SalesDashboardRange_admin", p);
+        //        _dt = (new DBHelper().GetTableFromSP)("sp_SalesDashboardRange_admin", p);
 
-                obj.TotalOrders = Convert.ToDouble(_dt.Rows[0]["TotalOrders"].ToString());
-                obj.TotalTax = Convert.ToDouble(_dt.Rows[0]["TotalTax"].ToString());
-                obj.NetSales = Convert.ToDouble(_dt.Rows[0]["NetSales"].ToString());
-                obj.Sales = Convert.ToDouble(_dt.Rows[0]["Sales"].ToString());
-                return obj;
-            }
-            catch (Exception ex)
-            {
-                obj.NetSales = 0;
-                obj.TotalOrders = 0;
-                obj.TotalTax = 0;
-                obj.Sales = 0;
-                return obj;
-            }
-        }
+        //        obj.TotalOrders = Convert.ToDouble(_dt.Rows[0]["TotalOrders"].ToString());
+        //        obj.TotalTax = Convert.ToDouble(_dt.Rows[0]["TotalTax"].ToString());
+        //        obj.NetSales = Convert.ToDouble(_dt.Rows[0]["NetSales"].ToString());
+        //        obj.Sales = Convert.ToDouble(_dt.Rows[0]["Sales"].ToString());
+        //        return obj;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        obj.NetSales = 0;
+        //        obj.TotalOrders = 0;
+        //        obj.TotalTax = 0;
+        //        obj.Sales = 0;
+        //        return obj;
+        //    }
+        //}
 
         public DashboardMAEN GetMAENSummaryRange(int LocationID, DateTime Date)
         {

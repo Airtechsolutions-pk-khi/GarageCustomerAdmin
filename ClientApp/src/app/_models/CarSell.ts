@@ -1,13 +1,16 @@
 export class CarSells {
   carSellID:number;
   customerID:number;
+  customerPhone:string;
   name:string;
   description:string;
-  registrationNo:string;
+  registrationNo: string;
+  bodyTypeID: number;
   bodyType:string;
+  features:string;
   fuelType:string;
   engineType:string;
-  kilometer:string;
+  kilometer:number;
   year:string;
   makeID:number;
   modelID:number;
@@ -17,7 +20,7 @@ export class CarSells {
   price:number;
   isInspected:boolean;
   cityID:number;
-  CountryCode:string;
+  countryID:string;
   address:string;
   carSellAddID:number;
   bodyColor:string;
@@ -48,3 +51,44 @@ export class Customers {
   statusID: number;
 }
 
+export class Make {
+  makeID: number;
+  rowID: number;
+  name: string;
+  aArabicName: string;
+  imagePath: string;
+  lastUpdatedBy: string;
+  lastUpdatedDate: string;
+  statusID: number;
+  createdOn: string;
+  createdBy: string;
+  displayOrder: number;
+}
+export class Models {
+  modelID: number;
+  rowID: number;
+  makeID: number;
+  name: string;
+  arabicName: string;
+  year: string;
+  engineNo: string;
+  recommendedLitres: string;
+  imagePath: string;
+  lastUpdatedBy: string;
+  lastUpdatedDate: string;
+  statusID: number;
+  createdOn: string;
+  createdBy: string;
+}
+export class Country {
+  code: string;
+  name: string;
+}
+export class City {
+  id: number;
+  name: string;
+}
+export class Feature {
+  featureID: number;
+  name: string;
+}

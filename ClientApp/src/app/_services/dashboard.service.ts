@@ -36,4 +36,8 @@ export class DashboadService {
   GetDashboardRange(locationID, fdate,tdate) {
     return this.http.get<any[]>(`api/dashboard/range/get/${locationID}/${fdate}/${tdate}`);
   }
+
+  getAllData() {
+    return this.http.get<any[]>(`api/dashboard/all`);
+  }
 }

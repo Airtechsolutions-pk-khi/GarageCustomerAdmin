@@ -10,15 +10,21 @@
         <div class="card-body">
           <div class="form-row">
             <div class="form-group col-md-8">
-              <label class="small mb-1" for="inputUsername">Name</label>
-              <input type="text" class="form-control" id=name placeholder="" formControlName="name">
-              <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
-                <div *ngIf="f.name.errors.required">
-                  Name is required.
+              <div class="form-group ">
+                <label class="small mb-1" for="inputUsername">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="" formControlName="name" maxlength="50" />
+                <small>Remaining characters: {{ 50 - discountForm.controls['name'].value.length }}</small>
+                <!--<input type="text" class="form-control" id=name placeholder="" formControlName="name" maxlength="50">-->
+                <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
+                  <div *ngIf="f.name.errors.required">
+                    Name is required.
+                  </div>
                 </div>
               </div>
-              <label class="small mb-1" for="inputUsername">Arabic Name</label>
-              <input type="text" class="form-control" id=arabicName placeholder="" formControlName="arabicName">
+              <div class="form-group ">
+                <label class="small mb-1" for="inputUsername">Arabic Name</label>
+                <input type="text" class="form-control" id=arabicName placeholder="" formControlName="arabicName">
+              </div>
               <div class="form-group ">
                 <label class="small mb-1" for="inputUsername">Description</label>
                 <input type="text" class="form-control" id="description" placeholder="" formControlName="description">
@@ -38,6 +44,20 @@
                       </div>
                     </ng-template>
                   </ng-select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-6">
+                  <div class="form-group">
+                    <label for="inputUsername" class="small mb-1">Background Color</label>
+                    <input type="color" id="backgroundColor" formcontrolname="backgroundColor" value="#d1d3e2" class="form-control" name="backgroundColor" [(ngModel)]="backgroundColor">
+                  </div>
+                </div>
+                <div class="form-group col-6">
+                  <div class="form-group">
+                    <label for="inputUsername" class="small mb-1">Font Color</label>
+                    <input type="color" id="fontColor" formcontrolname="fontColor" value="#d1d3e2" class="form-control" name="fontColor" [(ngModel)]="fontColor">
+                  </div>
                 </div>
               </div>
               <div class="form-row">
@@ -71,26 +91,42 @@
                 </div>
               </div>
 
-
+              <div class="form-row">
+                <div class="form-group col-lg-12">
+                  <label for="Item Status">Status</label>
+                  <div class="custom-control custom-switch custom-switch-md">
+                    <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                    <label class="custom-control-label" for="statusID"></label>
+                  </div>
+                </div>
+              </div>
+              <!--<div class="form-row">
+                <div class="col-md-8 form-group">
+                  <label for="file">Thumbnail Image</label>
+                  <app-thumbnailimage style="display:inline-block"></app-thumbnailimage>
+                </div>
+              </div>-->
+              <div class="form-row">
+                <div class="form-group col-lg-12">
+                  <small>Note: Image Size limit is 150 KB</small>
+                </div>
+              </div>
+              <!-- Save changes button-->
+              <button class="btn btn-primary" type="submit">Save changes</button>
             </div>
             <div class="form-group col-md-4 text-center">
+              <label for="Item Status">English Banner</label>
               <app-imageupload></app-imageupload>
-
+              <br />
+              <br />
+              <label for="Item Status">Arabic Banner</label>
               <app-alternateimage></app-alternateimage>
+              <br />
+              <br />
+              <label for="file">Brand Thumbnail Image</label>
+              <app-thumbnailimage></app-thumbnailimage>
             </div>
           </div>
-
-          <div class="form-row">
-            <div class="form-group col-lg-12">
-              <label for="Item Status">Status</label>
-              <div class="custom-control custom-switch custom-switch-md">
-                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
-                <label class="custom-control-label" for="statusID"></label>
-              </div>
-            </div>
-          </div>
-          <!-- Save changes button-->
-          <button class="btn btn-primary" type="submit">Save changes</button>
 
         </div>
       </div>

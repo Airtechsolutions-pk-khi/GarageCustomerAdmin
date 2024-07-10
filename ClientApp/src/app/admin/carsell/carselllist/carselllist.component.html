@@ -1,5 +1,5 @@
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Car Sell Request</h1>
+<h1 class="h3 mb-2 text-gray-800">Car Sell</h1>
 <p class="mb-4"></p>
 
 <!-- DataTales Example -->
@@ -11,7 +11,7 @@
       </div>
       <div class="col-md-6 text-right">
         <button [routerLink]="['add']" class="btn btn-primary ">
-          Add Car Sell
+          Add Car
         </button>
       </div>
     </div>
@@ -21,35 +21,29 @@
   </div>
   <div class="card-body">
     <div class="row">
-      <div class="col-md-5 form-group">
-        <label>Select Date</label>
-        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>
+      <div class="col-md-6 form-group">
+        <!--<label>Select Date</label>
+        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>-->
       </div>
 
-      <div class=" col-lg-4 input-group mb-3" style="padding-top: 25px;">
+      <div class=" col-lg-3 input-group mb-3" style="padding-top: 25px;">
         <div class="input-group-prepend" style="height: 39px;">
           <span class="input-group-text"><i class="fa fa-search"></i></span>
         </div>
         <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
       </div>
 
-
-      <div class="col-md-3 form-group text-right">
-        <!-- <button type="submit" class="btn btn-primary mt-4 mr-1" (click)="exportAsXLSX()">
-            <span translate>Export</span>
-        </button> -->
-        <button class="btn btn-primary mt-4" (click)="Filter()" type="submit">Search</button>
-      </div>
     </div>
 
     <div class="tile-body p-0 table-responsive ">
       <table class="table table-striped">
         <thead>
           <tr class="table-header">
+            <!--<th width="10%">IMAGE</th>-->
             <th width="10%" sortable="name" (sort)="onSort($event)"> Name</th>
-            <th width="10%" sortable="description" (sort)="onSort($event)">Description </th>
+            <!--<th width="10%" sortable="description" (sort)="onSort($event)">Description </th>-->
             <th width="15%" sortable="makeName" (sort)="onSort($event)">Make Name </th>
-            <th width="10%" sortable="bodyType" (sort)="onSort($event)">Body Type </th>
+            <!--<th width="10%" sortable="bodyType" (sort)="onSort($event)">Body Type </th>-->
             <th width="10%" sortable="modelName" (sort)="onSort($event)">Model Name </th>
             <!-- <th width="10%" sortable="createdDate" (sort)="onSort($event)">Date </th> -->
             <th width="10%" sortable="address" (sort)="onSort($event)">Address </th>
@@ -59,11 +53,14 @@
         </thead>
         <tbody>
           <tr *ngFor="let item of data$ | async ">
-
+            <!--<td>
+              <img *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt="" />
+              <div *ngIf="item.image === ''" class="image-replace"></div>
+            </td>-->
             <td> {{item.name}} </td>
-            <td> {{item.description}} </td>
+            <!--<td> {{item.description}} </td>-->
             <td> {{item.makeName}} </td>
-            <td> {{item.bodyType}} </td>
+            <!--<td> {{item.bodyType}} </td>-->
             <td> {{item.modelName}} </td>
 
             <!--     -->
@@ -77,12 +74,13 @@
               </ngb-highlight>
             </td>
             <td class="text-center">
-              <button class="btn btn-sm btn-warning" (click)="View(item.carSellID)">
-                <i class="fas fa-fw fa-eye"></i> Status
-              </button>
-              <button class="btn btn-sm btn-success " (click)="Edit(item.carSellID)">
-                <i class="fas fa-fw fa-edit"></i> Edit
-              </button>
+              <!--<button class="btn btn-sm btn-warning">-->
+              <i class="fas fa-fw fa-eye" (click)="View(item.carSellID)"></i>
+              <!--</button>-->
+              &nbsp;
+              <!--<button class="btn btn-sm btn-success " >-->
+              <i class="fas fa-fw fa-edit" (click)="Edit(item.carSellID)"></i>
+              <!--</button>-->
             </td>
           </tr>
         </tbody>

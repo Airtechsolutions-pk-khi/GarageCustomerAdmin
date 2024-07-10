@@ -22,20 +22,23 @@ namespace GarageCustomerAdmin.Controllers
         }
 
 
-        [HttpGet("all/{fromDate}/{toDate}")]
-        public List<CarSellBLL> GetAll(string fromDate, string toDate)
+        //[HttpGet("all/{fromDate}/{toDate}")]
+        [HttpGet("all")]
+        //public List<CarSellBLL2> GetAll(string fromDate, string toDate)
+        public List<CarSellBLL2> GetAll()
         {
-            return _service.GetAll(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+            //return _service.GetAll(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+            return _service.GetAll();
         }
         [HttpGet("allMake")]
         public List<MakeBLL> GetAllMakes()
         {
             return _service.GetAllMake();
         }
-        [HttpGet("allModel")]
-        public List<ModelBLL> GetAllModels()
+        [HttpGet("allModel/{MakeID}")]
+        public List<ModelBLL> GetAllModels(int MakeID)
         {
-            return _service.GetAllModel();
+            return _service.GetAllModel(MakeID);
         }
         [HttpGet("allCountry")]
         public List<CountryBLL> GetAllCountries()
@@ -67,20 +70,18 @@ namespace GarageCustomerAdmin.Controllers
         [Route("insert")]   
         public int Post([FromBody]CarSellBLL obj)
         {
-
-            return _service.Insert(obj, _env);
-            
+           return _service.Insert(obj, _env);        
         }
 
         [HttpPost]
         [Route("update")]
-        public int PostUpdate([FromBody] CarSellBLL obj)
+        public int PostUpdate([FromBody] CarSellBLL3 obj)
         {
-            return _service.Update(obj, _env);
+           return _service.Update(obj, _env);
         }
         [HttpPost]
         [Route("updatestatus")]
-        public int PostUpdateStatus([FromBody] CarSellBLL obj)
+        public int PostUpdateStatus([FromBody] CarSellBLL2 obj)
         {
             return _service.UpdateStatus(obj, _env);
         }

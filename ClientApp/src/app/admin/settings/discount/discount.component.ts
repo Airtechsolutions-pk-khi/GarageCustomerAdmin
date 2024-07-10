@@ -84,18 +84,18 @@ export class DiscountComponent implements OnInit {
     this.router.navigate(["admin/discount/edit", discount]);
   }
 
-  // Delete(obj) {
-  //   this.service.delete(obj).subscribe((res: any) => {
-  //     if (res != 0) {
-  //       this.ts.showSuccess("Success", "Record deleted successfully.")
-  //       this.getData();
-  //     }
-  //     else
-  //       this.ts.showError("Error", "Failed to delete record.")
+   Delete(obj) {
+     this.service.delete(obj).subscribe((res: any) => {
+       if (res != 0) {
+         this.ts.showSuccess("Success", "Record deleted successfully.")
+         this.getData();
+       }
+       else
+         this.ts.showError("Error", "Failed to delete record.")
 
-  //   }, error => {
-  //     this.ts.showError("Error", "Failed to delete record.")
-  //   });
-  // }
+     }, error => {
+       this.ts.showError("Error", "Failed to delete record.")
+     });
+   }
 
 }

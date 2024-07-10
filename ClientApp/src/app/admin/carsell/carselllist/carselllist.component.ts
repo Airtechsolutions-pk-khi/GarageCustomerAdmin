@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDate, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, of, Subscription } from 'rxjs';
 import { delay, map } from 'rxjs/operators';
 import { NgbdDatepickerRangePopup } from 'src/app/datepicker-range/datepicker-range-popup';
@@ -12,13 +12,14 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { NgbdModalContent } from '../../sales/orders/modal-content/ngbd-OrderDetail-content.component';
-
+const now = new Date();
 @Component({
   selector: 'app-carselllist',
   templateUrl: './carselllist.component.html',
   styleUrls: ['./carselllist.component.css'],
   providers: [ExcelService]
 })
+
 export class CarselllistComponent implements OnInit {
   data$: Observable<CarSells[]>;
   FeatureList =[];
@@ -47,6 +48,8 @@ export class CarselllistComponent implements OnInit {
     //this.loadLocations();
   }
   ngOnInit() {
+    //const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);
+    //this._datepicker.fromDate = date;
     this.getData();
   }
   Edit(CarSellID) {
@@ -86,8 +89,8 @@ export class CarselllistComponent implements OnInit {
   
 
   getData() {
-     
-    this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
+     debugger
+    this.service.getAllData();//(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
     this.loading$ = this.service.loading$;

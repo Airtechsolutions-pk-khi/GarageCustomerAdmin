@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { LocationsService } from 'src/app/_services/locations.service';
 import { ToastService } from 'src/app/_services/toastservice';
+import { LocationTimings, ArabicTimings } from '../../../../_models/Location';
+import { CarSellService } from 'src/app/_services/carsell.service';
+import { ImageuploadComponent } from '../../../../imageupload/imageupload.component';
 
 @Component({
   selector: 'app-addlocation',
@@ -16,28 +19,53 @@ export class AddlocationComponent implements OnInit {
   loading = false;
   loadingLocations = false;
   Images = [];
-  AmenitiesList =[];
-  ServiceList =[];
-  LandmarkList =[];
+  Image = [];
+  AmenitiesList = [];
+  CountryList = [];
+  CityList = [];
+  ServiceList = [];
+  LandmarkList = [];
   Items = [];
-  selectedAmenitiesID=[];
-  selectedServiceID=[];
-  selectedLandmarkID=[];
+  selectedAmenitiesID = [];
+  selectedServiceID = [];
+  selectedLandmarkID = [];
   ButtonText = "Save";
-   
+  timings = [];
+  public locationTimings: Array<Object> = [
+    { name: 'Sunday', time: '' },
+    { name: 'Monday', time: '' },
+    { name: 'Tuesday', time: '' },
+    { name: 'Wednesday', time: '' },
+    { name: 'Thursday', time: '' },
+    { name: 'Friday', time: '' },
+    { name: 'Saturday', time: '' }
+  ];
+  time = [];
+  public arabicTimings: Array<Object> = [
+    { aName: 'الأحد', aTime: '' },
+    { aName: 'الإثنين', aTime: '' },
+    { aName: 'الثلاثاء', aTime: '' },
+    { aName: 'الأربعاء', aTime: '' },
+    { aName: 'الخميس', aTime: '' },
+    { aName: 'الجمعة', aTime: '' },
+    { aName: 'السبت', aTime: '' }
+  ];
+  @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
     private ls: LocalStorageService,
     public ts: ToastService,
-    private locationService: LocationsService
+    private locationService: LocationsService,
+    private service: CarSellService,
 
   ) {
-    this.createForm();    
+    this.createForm();
     this.loadAmenities();
     this.loadService();
     this.loadLandmark();
+    this.loadCountry();
   }
 
   ngOnInit() {
@@ -46,43 +74,48 @@ export class AddlocationComponent implements OnInit {
 
   get f() { return this.locationForm.controls; }
 
+
   private createForm() {
-    
+
     this.locationForm = this.formBuilder.group({
-      locationID: 0,       
+      locationID: 0,
+      userID: 0,
       name: ['', Validators.required],
       descripiton: ['', Validators.required],
       address: ['', Validators.required],
-      arabicAddress: ['', Validators.required],
-      contactNo: ['', Validators.required],  
+      arabicAddress: [''],
+      contactNo: ['', Validators.required],
       arabicName: ['', Validators.required],
-      arabicDescription: ['', Validators.required],    
-      email: ['', Validators.required],                  
-      minOrderAmount: [0],  
+      arabicDescription: ['', Validators.required],
+      email: ['', Validators.required],
+      minOrderAmount: [0],
       latitude: ['', Validators.required],
-      longitude: ['', Validators.required],  
+      longitude: ['', Validators.required],
       statusID: [1],
       customerStatusID: [1],
-      landmarkID:[],      
-      gmaplink: ['', Validators.required],     
-      imageURL: [''],
-      lastUpdatedBy:[''],                 
-      lastUpdatedDate:[''],
-      isFeatured:false,
+      landmarkID: [],
+      businessType: [''],
+      gmaplink: [''],
+      lastUpdatedBy: [''],
+      lastUpdatedDate: [''],
+      isFeatured: false,
       file: [''],
       imagesSource: [''],
       locationImages: [],
-      amenities:[],
-      service:[],
-      //landmark:[],
-      amenitiesID:[null],
-      serviceID:[null]
-      
-      
+      amenities: [],
+      service: [],
+      amenitiesID: [null],
+      serviceID: [null],
+      locationTimings: [],
+      arabicTimings: [],
+      cityID: 0,
+      countryID: ['', Validators.required],
+      brandThumbnailImage: [''],
     });
   }
+
   onFileChange(event) {
-    this.Images=this.Images??[];
+    this.Images = this.Images ?? [];
     if (event.target.files && event.target.files[0]) {
       var filesAmount = event.target.files.length;
       for (let i = 0; i < filesAmount; i++) {
@@ -90,7 +123,7 @@ export class AddlocationComponent implements OnInit {
         var fileSize = event.target.files[i].size / 100000;
         if (fileSize > 5) { alert("Filesize exceed 500 KB"); }
         else {
-         
+
           reader.onload = (event: any) => {
             console.log(event.target.result);
             this.Images.push(event.target.result);
@@ -105,7 +138,7 @@ export class AddlocationComponent implements OnInit {
   }
 
   private editForm(obj) {
-    
+    debugger
     this.f.name.setValue(obj.name);
     this.f.arabicName.setValue(obj.arabicName);
     this.f.email.setValue(obj.email);
@@ -114,18 +147,27 @@ export class AddlocationComponent implements OnInit {
     this.f.descripiton.setValue(obj.descripiton);
     this.f.arabicDescription.setValue(obj.arabicDescription);
     this.f.contactNo.setValue(obj.contactNo);
-    this.f.minOrderAmount.setValue(obj.minOrderAmount);   
+    this.f.minOrderAmount.setValue(obj.minOrderAmount);
     this.f.latitude.setValue(obj.latitude);
-    this.f.longitude.setValue(obj.longitude);        
+    this.f.longitude.setValue(obj.longitude);
     this.f.locationID.setValue(obj.locationID);
+    this.f.userID.setValue(obj.userID);
     this.f.gmaplink.setValue(obj.gmaplink);
-    this.f.landmarkID.setValue(obj.landmarkID);    
-    this.f.imageURL.setValue(obj.imageURL);
+    this.f.landmarkID.setValue(obj.landmarkID);
+    this.f.businessType.setValue(obj.businessType);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.customerStatusID.setValue(obj.customerStatusID === 1 ? true : false);
-    this.f.isFeatured.setValue(obj.isFeatured  === 1 ? true : false);    
+    this.f.isFeatured.setValue(obj.isFeatured === 1 ? true : false);
+
+    this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
+    this.imgComp.imageUrl = obj.brandThumbnailImage;
 
     this.loadItemImages(this.f.locationID.value);
+    this.f.locationTimings.setValue(obj.locationTimings);
+    this.locationTimings = obj.locationTimings;
+    this.f.arabicTimings.setValue(obj.arabicTimings);
+    this.arabicTimings = obj.arabicTimings;
+    this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
 
     if (obj.amenities != "") {
       var stringToConvert = obj.amenities;
@@ -137,23 +179,55 @@ export class AddlocationComponent implements OnInit {
       this.selectedServiceID = stringToConvert.split(',').map(Number);
       this.f.service.setValue(obj.service);
     }
-    // if (obj.landmark != "") {
-    //   var stringToConvert = obj.landmark;
-    //   this.selectedLandmarkID = stringToConvert.split(',').map(Number);
-    //   this.f.landmark.setValue(obj.landmark);
-    // }
+
+    this.f.cityID.setValue(obj.cityID);
+    if (obj.countryID != "") {
+      this.loadCity(obj.countryID, 1);
+    }
+
+  }
+  private loadCountry() {
+    this.service.loadCountry().subscribe((res: any) => {
+      this.CountryList = res;
+      if (!this.CountryList || this.CountryList.length === 0) {
+        this.CountryList = [{ name: 'Saudia Arabia', code: 'SA' }];
+      }
+      this.f.countryID.setValue('SA');
+      this.loadCity(this.f.countryID.value, 0);
+    });
+  }
+
+  onSelect(event) {
+    debugger
+    let selectElementValue = event.target.value;
+    let [index, value] = selectElementValue.split(':').map(item => item.trim());
+    this.loadCity(value, 1);
+    console.log(index);
+    console.log(value);
+  }
+  loadCity(obj, type) {
+    debugger
+    this.service.loadCity(obj).subscribe((res: any) => {
+      this.CityList = res;
+      //debugger
+      //if (type == 0)
+      //  this.f.cityID.setValue(res[0].id);
+      //else if (type == 1)
+      //  debugger
+      //  //var cityID = this.f.cityID;
+      //this.f.cityID.setValue(this.f.cityID);
+    });
   }
   private loadItemImages(id) {
-    
     this.locationService.loadLocationImages(id).subscribe((res: any) => {
       this.Images = res;
       this.f.imagesSource.setValue(this.Images);
     });
   }
+
   removeImage(obj) {
     const index = this.Images.indexOf(obj);
     this.Images.splice(index, 1);
-
     this.f.imagesSource.setValue(this.Images);
   }
   private loadAmenities() {
@@ -161,7 +235,6 @@ export class AddlocationComponent implements OnInit {
       this.AmenitiesList = res;
     });
   }
-
   private loadService() {
     this.locationService.loadService().subscribe((res: any) => {
       this.ServiceList = res;
@@ -186,40 +259,26 @@ export class AddlocationComponent implements OnInit {
       }
     })
   }
-
-  onSubmit() {  
-   
+  onSubmit() {
+    debugger
     this.locationForm.markAllAsTouched();
     this.submitted = true;
-     
     if (this.locationForm.invalid) { return; }
     this.loading = true;
+    this.f.locationTimings.setValue(this.locationTimings);
+    this.f.arabicTimings.setValue(this.arabicTimings);
     this.f.amenities.setValue(this.selectedAmenitiesID == undefined ? "" : this.selectedAmenitiesID.toString());
     this.f.service.setValue(this.selectedServiceID == undefined ? "" : this.selectedServiceID.toString());
-    //this.f.landmark.setValue(this.selectedLandmarkID == undefined ? "" : this.selectedLandmarkID.toString());
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.customerStatusID.setValue(this.f.customerStatusID.value === true ? 1 : 2);
-    // this.f.isFeatured.setValue(this.f.isFeatured.value === true ? 1 : 0);
-
-   
+    this.f.isFeatured.setValue(this.f.isFeatured.value === 1 ? true : false);
+    this.f.brandThumbnailImage.setValue(this.imgComp.imageUrl);
     if (parseInt(this.f.locationID.value) === 0) {
       //Insert location
       console.log(JSON.stringify(this.locationForm.value));
-      //this.locationService.insert(this.locationForm.value).subscribe(data => {
-      //  this.loading = false;
-      //  if (data != 0) {
-      //    this.ts.showSuccess("Success", "Record added successfully.")
-      //    this.router.navigate(['/admin/location']);
-      //  }
-        
-      //}, error => {
-      //  this.ts.showError("Error", "Failed to insert record.")
-      //  this.loading = false;
-      //});
-
-    } else {
-      //Update location
-      
+    }
+    else {
+      //Update location     
       this.locationService.update(this.locationForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {

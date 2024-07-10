@@ -1,6 +1,9 @@
 <h1 class="h3 mb-2 text-gray-800">Add Car Sell</h1>
 <p class="mb-4"></p>
 
+<!-- Loader Component -->
+<app-loader *ngIf="loading"></app-loader>
+
 <form [formGroup]="carSellForm" class="form" (ngSubmit)="onSubmit()">
   <div class="row">
 
@@ -10,9 +13,18 @@
         <div class="card-body">
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputUsername">Name</label>
-              <input type="text" class="form-control" id=Name placeholder="" formControlName="name">
-              <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
+              <label class="small mb-1" for="inputLocation">Customer</label>
+              <input class="form-control" type="number" placeholder="Enter a valid Saudi Arabia phone number" formControlName="customerPhone" maxlength="15">
+              <small>Remaining characters: {{ 15 - carSellForm.controls['customerPhone'].value.length }}</small>
+              <!--<div *ngIf="form.get('customerPhone').hasError('saudiPhoneNumber')">
+      Please enter a valid Saudi Arabia phone number.
+    </div>-->
+            </div>
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputUsername">Name <span style="color:red">*</span></label>
+              <input type="text" class="form-control" id=Name placeholder="" formControlName="name" maxlength="30">
+              <small>Remaining characters: {{ 30 - carSellForm.controls['name'].value.length }}</small>
+              <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="">
                 <div *ngIf="f.name.errors.required">
                   Name is required.
                 </div>
@@ -20,8 +32,9 @@
             </div>
 
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Address</label>
-              <input type="text" class="form-control" id=address placeholder="" formControlName="address">
+              <label class="small mb-1" for="inputFirstName">Address <span style="color:red">*</span></label>
+              <input type="text" class="form-control" id=address placeholder="" formControlName="address" maxlength="100">
+              <small>Remaining characters: {{ 100 - carSellForm.controls['address'].value.length }}</small>
               <div *ngIf="f.address.invalid && (f.address.dirty || f.address.touched)" class="alert alert-danger">
                 <div *ngIf="f.address.errors.required">
                   Address is required.
@@ -29,7 +42,7 @@
               </div>
             </div>
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Description</label>
+              <label class="small mb-1" for="inputFirstName">Description <span style="color:red">*</span></label>
               <input type="text" class="form-control" id=description placeholder="" formControlName="description">
               <div *ngIf="f.description.invalid && (f.description.dirty || f.description.touched)" class="alert alert-danger">
                 <div *ngIf="f.description.errors.required">
@@ -38,8 +51,9 @@
               </div>
             </div>
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Registration No</label>
-              <input type="text" class="form-control" id=registrationNo placeholder="" formControlName="registrationNo">
+              <label class="small mb-1" for="inputFirstName">Registration No <span style="color:red">*</span></label>
+              <input type="text" class="form-control" id=registrationNo placeholder="" formControlName="registrationNo" maxlength="10">
+              <small>Remaining characters: {{ 10 - carSellForm.controls['registrationNo'].value.length }}</small>
               <div *ngIf="f.registrationNo.invalid && (f.registrationNo.dirty || f.registrationNo.touched)" class="alert alert-danger">
                 <div *ngIf="f.registrationNo.errors.required">
                   Registration No. is required.
@@ -47,24 +61,16 @@
               </div>
             </div>
 
-            <!-- <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputLocation">Body Type</label>
-              <input type="text" class="form-control" id=bodyType placeholder="" formControlName="bodyType">
-            </div> -->
-
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Body Type</label>
-              <select type="time" class="form-control" id=bodyType placeholder="" formControlName="bodyType">
-                <option selected disabled> -- Please Select -- </option>
-                <option>HatchBack</option>
-                <option>Sedan</option>
-                <option>SUV</option>
-                <option>MUV</option>
-                <option>Coupe</option>
-                <option>Convertible</option>
-                <option>Jeep 4x4</option>
-                <option>Other</option>
+              <label class="small mb-1" for="inputLocation">Body Type <span style="color:red">*</span></label>
+              <select class="custom-select" id="bodyTypeID" formControlName="bodyTypeID">
+                <option [ngValue]="option.bodyTypeID" selected="option.bodyTypeID == bodyTypeID" *ngFor="let option of BodyTypeList"> {{option.name}} </option>
               </select>
+              <div *ngIf="f.bodyTypeID.invalid && (f.bodyTypeID.dirty || f.bodyTypeID.touched)" class="alert alert-danger">
+                <div *ngIf="f.bodyTypeID.errors.required">
+                  Body Type is required.
+                </div>
+              </div>
             </div>
 
             <div class="form-group col-md-6">
@@ -78,17 +84,8 @@
                 </ng-template>
               </ng-select>
             </div>
-
-
-
-
-            <!-- <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">fuel Type</label>
-              <input type="text" class="form-control" id=fuelType placeholder="" formControlName="fuelType">
-            </div> -->
-
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Fuel Type</label>
+              <label class="small mb-1" for="inputFirstName">Fuel Type <span style="color:red">*</span></label>
               <select type="time" class="form-control" id=fuelType placeholder="" formControlName="fuelType">
                 <option selected disabled> -- Please Select -- </option>
                 <option>Petrol</option>
@@ -96,34 +93,39 @@
                 <option>Electric</option>
                 <option>Other</option>
               </select>
+              <div *ngIf="f.fuelType.invalid && (f.fuelType.dirty || f.fuelType.touched)" class="alert alert-danger">
+                <div *ngIf="f.fuelType.errors.required">
+                  Fuel Type is required.
+                </div>
+              </div>
             </div>
-
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">Country</label>
-              <select class="custom-select" id=countryCode formControlName="inputFirstName" (change)="onSelect($event)">
-                <option [ngValue]="option.code" selected="option.code == code" *ngFor="let option of CountryList"> {{option.code}} </option>
+              <select class="custom-select" id=countryCode formControlName="countryCode" (change)="onSelect($event)" [(ngModel)]="countryCode">
+                <option [ngValue]="option.code" selected="option.code == code" *ngFor="let option of CountryList"> {{option.name}} </option>
               </select>
+              <div *ngIf="f.countryCode.invalid && (f.countryCode.dirty || f.countryCode.touched)" class="alert alert-danger">
+                <div *ngIf="f.countryCode.errors.required">
+                  Country is required.
+                </div>
+              </div>
             </div>
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">City</label>
-              <select class="custom-select" id=cityID formControlName="inputFirstName">
+              <select class="custom-select" id=cityID formControlName="cityID" required>
                 <option [ngValue]="option.id" selected="option.id == id"
                         *ngFor="let option of CityList">
                   {{option.name}}
                 </option>
               </select>
-
+              <div *ngIf="f.cityID.invalid && (f.cityID.dirty || f.cityID.touched)" class="alert alert-danger">
+                <div *ngIf="f.cityID.errors.required">
+                  City is required.
+                </div>
+              </div>
             </div>
-
-
-
-            <!-- <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Engine Type</label>
-              <input type="text" class="form-control" id=engineType placeholder="" formControlName="engineType">
-            </div> -->
-
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Engine Type</label>
+              <label class="small mb-1" for="inputFirstName">Engine Type <span style="color:red">*</span></label>
               <select type="time" class="form-control" id=engineType placeholder="" formControlName="engineType">
                 <option selected disabled> -- Please Select -- </option>
                 <option>Inline Engine Layout</option>
@@ -134,14 +136,24 @@
                 <option>Four Cylinder</option>
                 <option>Five Cylinder</option>
                 <option>Six Cylinder</option>
-                <option>Eight Cylinders and Above</option>
+                <option>Seven Cylinder</option>
+                <option>Eight Cylinders</option>
+                <option>Nine Cylinders</option>
+                <option>Ten Cylinders</option>
+                <option>Eleven Cylinders</option>
+                <option>Twelve Cylinders</option>
                 <option>Other</option>
               </select>
+              <div *ngIf="f.engineType.invalid && (f.fuelType.dirty || f.engineType.touched)" class="alert alert-danger">
+                <div *ngIf="f.engineType.errors.required">
+                  Engine Type Type is required.
+                </div>
+              </div>
             </div>
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Kilometer</label>
-              <input type="text" class="form-control" id=kilometer placeholder="" formControlName="kilometer">
+              <input type="number" class="form-control" id=kilometer placeholder="" formControlName="kilometer">
               <div *ngIf="f.kilometer.invalid && (f.kilometer.dirty || f.kilometer.touched)" class="alert alert-danger">
                 <div *ngIf="f.kilometer.errors.required">
                   Mileage is required.
@@ -149,26 +161,24 @@
               </div>
             </div>
 
-
-
-            <!-- <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Transmition</label>
-              <input type="text" class="form-control" id=transmition placeholder="" formControlName="transmition">
-            </div> -->
-
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Transmition</label>
+              <label class="small mb-1" for="inputFirstName">Transmition <span style="color:red">*</span></label>
               <select type="time" class="form-control" id=transmition placeholder="" formControlName="transmition">
                 <option selected disabled> -- Please Select -- </option>
                 <option>Automatic</option>
                 <option>Manual</option>
                 <option>Other</option>
               </select>
+              <div *ngIf="f.transmition.invalid && (f.transmition.dirty || f.transmition.touched)" class="alert alert-danger">
+                <div *ngIf="f.transmition.errors.required">
+                  Transmition is required.
+                </div>
+              </div>
             </div>
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Price</label>
-              <input type="text" class="form-control" id=price placeholder="" formControlName="price">
+              <input type="number" class="form-control" id=price placeholder="" formControlName="price">
               <div *ngIf="f.price.invalid && (f.price.dirty || f.price.touched)" class="alert alert-danger">
                 <div *ngIf="f.price.errors.required">
                   Price is required.
@@ -176,10 +186,8 @@
               </div>
             </div>
 
-
-
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Body Color</label>
+              <label class="small mb-1" for="inputFirstName">Body Color <span style="color:red">*</span></label>
               <input type="text" class="form-control" id=bodyColor placeholder="" formControlName="bodyColor">
               <div *ngIf="f.bodyColor.invalid && (f.bodyColor.dirty || f.bodyColor.touched)" class="alert alert-danger">
                 <div *ngIf="f.bodyColor.errors.required">
@@ -188,76 +196,62 @@
               </div>
             </div>
 
-            <!-- <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Assembly</label>
-              <input type="text" class="form-control" id=assembly placeholder="" formControlName="assembly">
-            </div>   -->
 
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Assembly</label>
-              <select type="time" class="form-control" id=assembly placeholder="" formControlName="assembly">
-                <option selected disabled> -- Please Select -- </option>
-                <option>Local</option>
-                <option>Imported</option>
-                <option>Other</option>
+              <label class="small mb-1" for="inputLocation">Make <span style="color:red">*</span></label>
+              <select class="custom-select" id=makeID formControlName="makeID" (change)="onChange($event)">
+                <option [ngValue]="option.makeID" selected="option.makeID == makeID" *ngFor="let option of MakeList"> {{option.name}} </option>
               </select>
+              <div *ngIf="f.makeID.invalid && (f.makeID.dirty || f.makeID.touched)" class="alert alert-danger">
+                <div *ngIf="f.makeID.errors.required">
+                  Make is required.
+                </div>
+              </div>
             </div>
 
-
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputLocation">Model</label>
+              <label class="small mb-1" for="inputLocation">Model <span style="color:red">*</span></label>
               <select class="custom-select" formControlName="modelID">
                 <option [ngValue]="option.modelID" selected="option.modelID == modelID"
                         *ngFor="let option of ModelList">
                   {{option.name}}
                 </option>
               </select>
-            </div>
-            <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputLocation">Make</label>
-              <select class="custom-select" formControlName="makeID">
-                <option [ngValue]="option.makeID" selected="option.makeID == makeID"
-                        *ngFor="let option of MakeList">
-                  {{option.name}}
-                </option>
-              </select>
-            </div>
-
-
-            <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">kilometer</label>
-              <input type="text" class="form-control" id=kilometer placeholder="" formControlName="kilometer">
-              <div *ngIf="f.kilometer.invalid && (f.kilometer.dirty || f.kilometer.touched)" class="alert alert-danger">
-                <div *ngIf="f.kilometer.errors.required">
-                  Mileage is required.
+              <div *ngIf="f.modelID.invalid && (f.modelID.dirty || f.modelID.touched)" class="alert alert-danger">
+                <div *ngIf="f.modelID.errors.required">
+                  Model is required.
                 </div>
               </div>
             </div>
 
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Year</label>
-              <input type="text" class="form-control" id=year placeholder="" formControlName="year">
+              <label class="small mb-1" for="inputFirstName">Assembly <span style="color:red">*</span></label>
+              <select type="time" class="form-control" id=assembly placeholder="" formControlName="assembly">
+                <option selected disabled> -- Please Select -- </option>
+                <option>Local</option>
+                <option>Imported</option>
+                <option>Other</option>
+              </select>
+              <div *ngIf="f.assembly.invalid && (f.assembly.dirty || f.assembly.touched)" class="alert alert-danger">
+                <div *ngIf="f.assembly.errors.required">
+                  Assembly is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label class="small mb-1" for="inputLocation">Year</label>
+              <select name="year" id="year" formControlName="year" class="form-control" [ngModelOptions]="{standalone: true}">
+                <option *ngFor="let option of YearList" [value]="option">{{option}}</option>
+              </select>
               <div *ngIf="f.year.invalid && (f.year.dirty || f.year.touched)" class="alert alert-danger">
                 <div *ngIf="f.year.errors.required">
                   Year is required.
                 </div>
               </div>
             </div>
-
-
           </div>
-
-
           <div class="form-row">
-            <!--<div class="form-group col-lg-6">
-              <label for="Item Status">Status</label>
-              <div class="custom-control custom-switch custom-switch-md">
-                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
-                <label class="custom-control-label" for="statusID"></label>
-              </div>
-            </div>-->
-
-
             <div class="form-group col-lg-6">
               <label for="Item Status">Is Inspected</label>
               <div class="custom-control custom-switch custom-switch-md">
@@ -266,13 +260,15 @@
               </div>
             </div>
           </div>
-
+          <div class="form-group col-md-6">
+            <input type="number" class="form-control" id=statusID placeholder="" formControlName="statusID" value="1" hidden>
+          </div>
           <div class="form-row">
             <div class="col-md-12 form-group">
 
-              <small>Recommened Files Size: 500X500 & <br>File Size limit is 500 KB</small>
+              <small>Note: File Size limit is 150 KB</small>
               <br>
-              <label for="file">Select Images </label>
+              <label for="file">Select Images <span style="color:red">*</span></label>
               <input formControlName="file" id="file" type="file" class="form-control" multiple="" (change)="onFileChange($event)">
               <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
                 <div *ngIf="f.file.errors.required">File is required.</div>
