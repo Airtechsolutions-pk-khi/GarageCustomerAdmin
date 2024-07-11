@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "+ISKQnUEsG/9g83n6tsJvVxvIV8/OLTSR0/oEC6G4Q0=",
+  "Source": "GarageCustomerAdmin",
+  "BasePath": "_content/GarageCustomerAdmin",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GarageCustomerAdmin\\wwwroot",
+      "Source": "GarageCustomerAdmin",
+      "ContentRoot": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\wwwroot\\",
+      "BasePath": "_content/GarageCustomerAdmin",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\wwwroot\\favicon.ico",
+      "SourceId": "GarageCustomerAdmin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\wwwroot\\",
+      "BasePath": "_content/GarageCustomerAdmin",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ]
+}
