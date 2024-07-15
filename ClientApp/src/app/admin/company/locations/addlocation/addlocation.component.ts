@@ -32,13 +32,13 @@ export class AddlocationComponent implements OnInit {
   ButtonText = "Save";
   timings = [];
   public locationTimings: Array<Object> = [
-    { name: 'Sunday', time: '' },
-    { name: 'Monday', time: '' },
-    { name: 'Tuesday', time: '' },
-    { name: 'Wednesday', time: '' },
-    { name: 'Thursday', time: '' },
-    { name: 'Friday', time: '' },
-    { name: 'Saturday', time: '' }
+    { name: 'Sunday', time: '', aName: 'الأحد', aTime: '' },
+    { name: 'Monday', time: '', aName: 'الإثنين', aTime: '' },
+    { name: 'Tuesday', time: '', aName: 'الثلاثاء', aTime: '' },
+    { name: 'Wednesday', time: '', aName: 'الأربعاء', aTime: ''},
+    { name: 'Thursday', time: '', aName: 'الخميس', aTime: '' },
+    { name: 'Friday', time: '', aName: 'الجمعة', aTime: ''},
+    { name: 'Saturday', time: '', aName: 'السبت', aTime: '' }
   ];
   time = [];
   public arabicTimings: Array<Object> = [
@@ -107,7 +107,7 @@ export class AddlocationComponent implements OnInit {
       amenitiesID: [null],
       serviceID: [null],
       locationTimings: [],
-      arabicTimings: [],
+      //arabicTimings: [],
       cityID: 0,
       countryID: ['', Validators.required],
       brandThumbnailImage: [''],
@@ -165,8 +165,8 @@ export class AddlocationComponent implements OnInit {
     this.loadItemImages(this.f.locationID.value);
     this.f.locationTimings.setValue(obj.locationTimings);
     this.locationTimings = obj.locationTimings;
-    this.f.arabicTimings.setValue(obj.arabicTimings);
-    this.arabicTimings = obj.arabicTimings;
+    //this.f.arabicTimings.setValue(obj.arabicTimings);
+    //this.arabicTimings = obj.arabicTimings;
     this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
 
     if (obj.amenities != "") {
@@ -266,7 +266,7 @@ export class AddlocationComponent implements OnInit {
     if (this.locationForm.invalid) { return; }
     this.loading = true;
     this.f.locationTimings.setValue(this.locationTimings);
-    this.f.arabicTimings.setValue(this.arabicTimings);
+    //this.f.arabicTimings.setValue(this.arabicTimings);
     this.f.amenities.setValue(this.selectedAmenitiesID == undefined ? "" : this.selectedAmenitiesID.toString());
     this.f.service.setValue(this.selectedServiceID == undefined ? "" : this.selectedServiceID.toString());
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);

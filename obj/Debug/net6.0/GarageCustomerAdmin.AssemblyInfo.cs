@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GarageCustomerAdmin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56d6ff0fe0b0795625a058596d68b38c38c876de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a356c86bfd089ad118fd92f7fa8d783e9230c97")]
 [assembly: System.Reflection.AssemblyProductAttribute("GarageCustomerAdmin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GarageCustomerAdmin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

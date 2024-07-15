@@ -30,5 +30,4 @@ namespace GarageCustomerAdmin._Models
         public DateTime? LastUpdatedDate { get; set; }
         public string Locations { get; set; }
     }
-
 }
