@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\Garage_Customer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|d:\\garage_customer\\bll\\_dbparamfactory\\locationdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_dbparamfactory\\locationdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|d:\\garage_customer\\helpers\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:helpers\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|d:\\garage_customer\\helpers\\dbhelpergarageuat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:helpers\\dbhelpergarageuat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,20 +57,29 @@
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DBHelperGarageUAT.cs",
+              "DocumentMoniker": "D:\\Garage_Customer\\Helpers\\DBHelperGarageUAT.cs",
+              "RelativeDocumentMoniker": "Helpers\\DBHelperGarageUAT.cs",
+              "ToolTip": "D:\\Garage_Customer\\Helpers\\DBHelperGarageUAT.cs",
+              "RelativeToolTip": "Helpers\\DBHelperGarageUAT.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T09:59:25.217Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "locationDB.cs",
-              "DocumentMoniker": "D:\\Garage_Customer\\BLL\\_DBParamFactory\\locationDB.cs",
-              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\locationDB.cs",
-              "ToolTip": "D:\\Garage_Customer\\BLL\\_DBParamFactory\\locationDB.cs",
-              "RelativeToolTip": "BLL\\_DBParamFactory\\locationDB.cs",
-              "ViewState": "AQIAAHcAAAAAAAAAAAAvwHwAAAAtAAAA",
+              "Title": "DBHelper.cs",
+              "DocumentMoniker": "D:\\Garage_Customer\\Helpers\\DBHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\DBHelper.cs",
+              "ToolTip": "D:\\Garage_Customer\\Helpers\\DBHelper.cs",
+              "RelativeToolTip": "Helpers\\DBHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T14:34:00.344Z",
+              "WhenOpened": "2024-07-10T09:59:13.397Z",
               "EditorCaption": ""
             }
           ]
