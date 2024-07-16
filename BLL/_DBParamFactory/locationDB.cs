@@ -132,7 +132,6 @@ namespace BAL.Repositories
                                     Name = item,
                                     Time = "",
                                     LocationID = id
-
                                 });
                             }
                         }
@@ -140,12 +139,11 @@ namespace BAL.Repositories
                         {
                             foreach (var item in arabicdays)
                             {
-                                _obj.ArabicTimings.Add(new LocationTimings
+                                _obj.LocationTimings.Add(new LocationTimings
                                 {
                                     AName = item,
                                     ATime = "",
                                     LocationID = id
-
                                 });
                             }
                         }
@@ -294,7 +292,7 @@ namespace BAL.Repositories
                         }
                     }
                 }
-                catch { }
+                catch (Exception ex) { }
 
                 return rtn;
             }
