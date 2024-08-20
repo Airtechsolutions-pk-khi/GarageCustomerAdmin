@@ -1,8 +1,4 @@
 <h1 class="h3 mb-2 text-gray-800">Add Location</h1>
-
-<!-- Loader Component -->
-<app-loader *ngIf="loading"></app-loader>
-
 <form [formGroup]="locationForm" class="form" (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="col-xl-12">
@@ -14,7 +10,7 @@
         <div class="card-body">
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputUsername">Name <span style="color:red">*</span></label>
+              <label class="small mb-1" for="inputUsername">Name</label>
               <input type="text" class="form-control" id=Name placeholder="" formControlName="name" maxlength="30">
               <small>Remaining characters: {{ 30 - locationForm.controls['name'].value.length }}</small>
               <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
@@ -24,7 +20,7 @@
               </div>
             </div>
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputUsername">Arabic Name <span style="color:red">*</span></label>
+              <label class="small mb-1" for="inputUsername">Arabic Name</label>
               <input type="text" class="form-control" id=arabicName placeholder="" formControlName="arabicName">
               <div *ngIf="f.arabicName.invalid && (f.arabicName.dirty || f.arabicName.touched)" class="alert alert-danger">
                 <div *ngIf="f.arabicName.errors.required">
@@ -33,9 +29,9 @@
               </div>
             </div>
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Address <span style="color:red">*</span></label>
+              <label class="small mb-1" for="inputFirstName">Address</label>
               <input type="text" class="form-control" id=address placeholder="" formControlName="address" maxlength="100" />
-              <!--<small>Remaining characters: {{ 100 - locationForm.controls['address'].value.length }}</small>-->
+              <small>Remaining characters: {{ 100 - locationForm.controls['address'].value.length }}</small>
               <div *ngIf="f.address.invalid && (f.address.dirty || f.address.touched)" class="alert alert-danger">
                 <div *ngIf="f.address.errors.required">
                   Address is required.
@@ -52,9 +48,9 @@
               </div>
             </div>
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Contact No <span style="color:red">*</span></label>
+              <label class="small mb-1" for="inputFirstName">Contact No</label>
               <input type="text" class="form-control" id=contactNo placeholder="" formControlName="contactNo" maxlength="15">
-              <!--<small>Remaining characters: {{ 15 - locationForm.controls['contactNo'].value.length }}</small>-->
+              <small>Remaining characters: {{ 15 - locationForm.controls['contactNo'].value.length }}</small>
               <div *ngIf="f.contactNo.invalid && (f.contactNo.dirty || f.contactNo.touched)" class="alert alert-danger">
                 <div *ngIf="f.contactNo.errors.required">
                   Contact No is required.
@@ -62,7 +58,7 @@
               </div>
             </div>
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Email <span style="color:red">*</span></label>
+              <label class="small mb-1" for="inputFirstName">Email</label>
               <input type="email" class="form-control" id=email placeholder="" formControlName="email">
               <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="alert alert-danger">
                 <div *ngIf="f.email.errors.required">
@@ -72,7 +68,7 @@
             </div>
 
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputLocation">Description <span style="color:red">*</span></label>
+              <label class="small mb-1" for="inputLocation">Description</label>
               <textarea class="form-control" id=descripiton formControlName="descripiton" height="100px"></textarea>
               <div *ngIf="f.descripiton.invalid && (f.descripiton.dirty || f.descripiton.touched)" class="alert alert-danger">
                 <div *ngIf="f.descripiton.errors.required">
@@ -81,7 +77,7 @@
               </div>
             </div>
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputLocation">Arabic Description <span style="color:red">*</span></label>
+              <label class="small mb-1" for="inputLocation">Arabic Description</label>
               <textarea class="form-control" id=descripiton formControlName="arabicDescription" height="100px"></textarea>
               <div *ngIf="f.arabicDescription.invalid && (f.arabicDescription.dirty || f.arabicDescription.touched)" class="alert alert-danger">
                 <div *ngIf="f.arabicDescription.errors.required">
@@ -92,7 +88,7 @@
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Latitude <span style="color:red">*</span></label>
+              <label class="small mb-1" for="inputFirstName">Latitude</label>
               <input type="text" class="form-control" id=latitude placeholder="" formControlName="latitude">
               <div *ngIf="f.latitude.invalid && (f.latitude.dirty || f.latitude.touched)" class="alert alert-danger">
                 <div *ngIf="f.latitude.errors.required">
@@ -101,7 +97,7 @@
               </div>
             </div>
             <div class="form-group col-md-6">
-              <label class="small mb-1" for="inputFirstName">Longitude <span style="color:red">*</span></label>
+              <label class="small mb-1" for="inputFirstName">Longitude</label>
               <input type="text" class="form-control" id=longitude placeholder="" formControlName="longitude">
               <div *ngIf="f.longitude.invalid && (f.longitude.dirty || f.longitude.touched)" class="alert alert-danger">
                 <div *ngIf="f.longitude.errors.required">
@@ -229,45 +225,63 @@
               <h5>Location Timing's</h5>
             </div>
             <div class="form-group col-md-4">
-              <h5>Arabic Location Timing's</h5>
+              <h5>Arabic Timing's</h5>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-4">
               <h5>Brand Thumbnail Image</h5>
-              <!--<h5>Arabic Timing's</h5>-->
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-8 col-md-8">
-              <div class="row" *ngFor="let timings of locationTimings; let i = index">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-md-5 form-group">
-                      <label class="small mb-1" for="inputUsername">{{ timings.name }}</label>
-                    </div>
-                    <div class="col-md-7">
-                      <input type="text" class="form-control" placeholder="" id="timings{{ i }}" [(ngModel)]="timings.time" [formControlName]="'time'" maxlength="25">
-                      <small>Remaining characters: {{ 25 - locationForm.controls['time'].value.length }}</small>
-                    </div>
-                  </div>
+            <div class="col-md-8">
+              <div class="row" *ngFor="let timings of locationTimings">
+                <div class="col-md-3 form-group">
+                  <label class="small mb-1" for="inputUsername">{{ timings.name }}</label>
                 </div>
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-md-5 form-group">
-                      <label class="small mb-1" for="inputUsername">{{ timings.aName }}</label>
-                    </div>
-                    <div class="col-md-7">
-                      <input type="text" class="form-control" placeholder="" id="timings{{ i }}" [(ngModel)]="timings.aTime" [formControlName]="'aTime'" maxlength="25">
-                      <small>Remaining characters: {{ 25 - locationForm.controls['aTime'].value.length }}</small>
-                    </div>
-                  </div>
+                <div class="col-md-3">
+                  <input type="text" class="form-control" placeholder="" id="timings{{ timings }}" [ngModelOptions]="{standalone: true}" [(ngModel)]="timings.time">
+                </div>
+                <div class="col-md-3 form-group">
+                  <label class="small mb-1" for="inputUsername">{{ timings.aName }}</label>
+                </div>
+                <div class="col-md-3">
+                  <input type="text" class="form-control" placeholder="" id="timings{{ timings }}" [ngModelOptions]="{standalone: true}" [(ngModel)]="timings.aTime">
                 </div>
               </div>
             </div>
+            <!--<div class="col-md-4">
+              <div class="row" *ngFor="let time of arabicTimings">
+                <div class="col-md-5 form-group">
+                  <label class="small mb-1" for="inputUsername">{{ time.aName }}</label>
+                </div>
+                <div class="col-md-7">
+                  <input type="text" class="form-control" placeholder="" id="time{{ time }}" [ngModelOptions]="{standalone: true}" [(ngModel)]="time.aTime">
+                </div>
+              </div>
+            </div>-->
             <div class="col-md-4">
               <app-imageupload style="display:inline-block"></app-imageupload>
+              <!--<div class="row" *ngFor="let time of arabicTimings">
+                <div class="col-md-5 form-group">
+                  <label class="small mb-1" for="inputUsername">{{ time.arabicName }}</label>
+                </div>
+                <div class="col-md-7">
+                  <input type="text" class="form-control" placeholder="" id="time{{ arabicTime }}" [ngModelOptions]="{standalone: true}" [(ngModel)]="time.arabicTime">
+                </div>
+              </div>-->
             </div>
           </div>
-
+          <!--<div class="form-row">
+            <div class="form-group col-md-6">
+              <h5>Brand Thumbnail Image</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group col-md-4">
+                <app-imageupload></app-imageupload>
+              </div>
+            </div>
+          </div>-->
         </div>
       </div>
     </div>

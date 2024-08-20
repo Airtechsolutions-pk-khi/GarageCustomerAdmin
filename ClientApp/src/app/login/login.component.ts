@@ -28,20 +28,15 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-debugger
-          if(this.f.username.value == "admin@garage.com" && this.f.password.value == "Admin@123") {
-             
-            this.router.navigate(["/admin/dashboard"]);
-            
-                  
-          }
-          else {
-            this.ts.showError("Error", "Username or password is not correct.");
-          }
+    debugger
+    if (this.f.username.value == "admin@garage.com" && this.f.password.value == "Admin@123") {
 
-        } 
-   
-
+      this.router.navigate(["/admin/dashboard"]);
+    }
+    else {
+      this.ts.showError("Error", "Username or password is not correct.");
+    }
+  }
   get f() { return this.loginForm.controls; }
   private createForm() {
 
@@ -52,7 +47,7 @@ debugger
 
     });
   }
- 
 
- 
+
+
 }

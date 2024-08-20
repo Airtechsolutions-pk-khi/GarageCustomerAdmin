@@ -34,7 +34,6 @@ export class CategoryComponent implements OnInit {
     public ts: ToastService,
     //public tss: ToastrService,
     public router: Router) {
-    this.selectedBrand = this.ls.getSelectedBrand().brandID;
     this.loading$ = service.loading$;
     this.submit = false;
     
