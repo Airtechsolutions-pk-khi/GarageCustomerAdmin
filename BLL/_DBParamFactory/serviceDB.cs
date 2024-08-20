@@ -94,7 +94,7 @@ namespace BAL.Repositories
                 p[6] = new SqlParameter("@ArabicServiceTitle", data.ArabicServiceTitle);
                 p[7] = new SqlParameter("@ArabicServiceDescription", data.ArabicServiceDescription);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertService", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_InsertService", p);
               
                 return rtn;
             }
@@ -121,7 +121,7 @@ namespace BAL.Repositories
                 p[7] = new SqlParameter("@ArabicServiceTitle", data.ArabicServiceTitle);
                 p[8] = new SqlParameter("@ArabicServiceDescription", data.ArabicServiceDescription);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateService_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateService_Admin", p);
                 return rtn;
             }
             catch (Exception ex)
@@ -138,7 +138,6 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@id", data.ServiceID);
                 //p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteService", p);
 
                 return _obj;

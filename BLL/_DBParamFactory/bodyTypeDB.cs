@@ -86,7 +86,7 @@ namespace BAL.Repositories
                 p[5] = new SqlParameter("@StatusID", data.StatusID);
                 p[6] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertBodyType_CAdmin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_InsertBodyType_CAdmin", p);
 
                 return rtn;
             }
@@ -111,7 +111,7 @@ namespace BAL.Repositories
                 p[5] = new SqlParameter("@StatusID", data.StatusID);
                 p[6] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
                 p[7] = new SqlParameter("@BodyTypeID", data.BodyTypeID);
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateBodyType_CAdmin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateBodyType_CAdmin", p);
 
                 return rtn;
             }

@@ -90,7 +90,7 @@ namespace BAL.Repositories
                 p[2] = new SqlParameter("@StatusID", data.StatusID);
                 p[3] = new SqlParameter("@ArabicName", data.ArabicName);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertLandmark", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_InsertLandmark", p);
               
                 return rtn;
             }
@@ -113,7 +113,7 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@LandmarkID", data.LandmarkID);
                 p[4] = new SqlParameter("@ArabicName", data.ArabicName);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateLandmark_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateLandmark_Admin", p);
                 return rtn;
             }
             catch (Exception ex)

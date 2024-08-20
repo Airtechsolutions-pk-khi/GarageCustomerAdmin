@@ -95,7 +95,7 @@ namespace BAL.Repositories
                 p[13] = new SqlParameter("@FontColor", data.FontColor);
 
                 //rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertDiscount", p);
-                rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_InsertDiscount", p).Rows[0]["ID"].ToString());
+                rtn = int.Parse(new DBHelper().GetTableFromSP("sp_InsertDiscount", p).Rows[0]["ID"].ToString());
                 //rtn = DiscountID;
 
                 if (data.Locations != "")
