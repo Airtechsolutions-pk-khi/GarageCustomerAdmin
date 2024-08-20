@@ -74,7 +74,7 @@
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">Year</label>
-              <select name="year" id="year" formControlName="year" class="form-control" [ngModelOptions]="{standalone: true}">
+              <select name="year" id="year" formControlName="year" class="form-control" >
                 <option *ngFor="let option of YearList" [value]="option">{{option}}</option>
               </select>
               <div *ngIf="f.year.invalid && (f.year.dirty || f.year.touched)" class="alert alert-danger">

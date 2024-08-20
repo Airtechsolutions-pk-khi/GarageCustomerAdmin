@@ -71,7 +71,7 @@ section {
 
 @font-face {
   font-family: 'spacegrotesk-regular';
-  src: url('d:\garage_customer\clientapp\src\assets\font\spacegrosek\english primary\spacegrotesk-regular.ttf') format('truetype');
+  src: url('../../assets/font/SpaceGrosek/English Primary/spacegrotesk-regular.ttf') format('truetype');
 }
 body {
   margin: 0;
