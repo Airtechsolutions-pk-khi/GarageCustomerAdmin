@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Projects\\GarageCustomer_Admin\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_dbparamfactory\\discountdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_dbparamfactory\\discountdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,7 +50,20 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "discountDB.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\discountDB.cs",
+              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\discountDB.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\discountDB.cs*",
+              "RelativeToolTip": "BLL\\_DBParamFactory\\discountDB.cs*",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAAAFsAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:41:17.728Z",
+              "EditorCaption": ""
             }
           ]
         }

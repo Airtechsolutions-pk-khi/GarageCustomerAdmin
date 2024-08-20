@@ -1,6 +1,4 @@
-﻿
-
-using GarageCustomerAdmin._Models;
+﻿using GarageCustomerAdmin._Models;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -96,7 +94,7 @@ namespace BAL.Repositories
                 p[8] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
                 p[9] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertSetting", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_InsertSetting", p);
                 if (data.Locations == "")
                 {
                     SqlParameter[] p1 = new SqlParameter[3];

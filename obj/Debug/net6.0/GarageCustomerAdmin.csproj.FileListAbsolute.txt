@@ -70,9 +70,9 @@ E:\Projects\GarageCustomer_Admin\obj\Debug\net6.0\staticwebassets\msbuild.buildM
 E:\Projects\GarageCustomer_Admin\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.GarageCustomerAdmin.props
 E:\Projects\GarageCustomer_Admin\obj\Debug\net6.0\staticwebassets.pack.json
 E:\Projects\GarageCustomer_Admin\obj\Debug\net6.0\scopedcss\bundle\GarageCustomerAdmin.styles.css
-E:\Projects\GarageCustomer_Admin\obj\Debug\net6.0\GarageCustomerAdmin.csproj.CopyComplete
 E:\Projects\GarageCustomer_Admin\obj\Debug\net6.0\GarageCustomerAdmin.dll
 E:\Projects\GarageCustomer_Admin\obj\Debug\net6.0\refint\GarageCustomerAdmin.dll
 E:\Projects\GarageCustomer_Admin\obj\Debug\net6.0\GarageCustomerAdmin.pdb
 E:\Projects\GarageCustomer_Admin\obj\Debug\net6.0\GarageCustomerAdmin.genruntimeconfig.cache
 E:\Projects\GarageCustomer_Admin\obj\Debug\net6.0\ref\GarageCustomerAdmin.dll
+E:\Projects\GarageCustomer_Admin\obj\Debug\net6.0\GarageCu.6154F0C7.Up2Date

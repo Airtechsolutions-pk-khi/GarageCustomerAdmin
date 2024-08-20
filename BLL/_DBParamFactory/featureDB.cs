@@ -85,7 +85,7 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@StatusID", data.StatusID);
                 p[4] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
              
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertFeatures_CAdmin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_InsertFeatures_CAdmin", p);
               
                 return rtn;
             }
@@ -109,7 +109,7 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
                 p[5] = new SqlParameter("@FeatureID", data.FeatureID);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateFeature_CAdmin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateFeature_CAdmin", p);
                 return rtn;
             }
             catch (Exception ex)
@@ -123,8 +123,8 @@ namespace BAL.Repositories
             try
             {
                 int _obj = 0;
-                SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@id", data.FeatureID);
+                SqlParameter[] p = new SqlParameter[2];
+                p[0] = new SqlParameter("@FeaturedID", data.FeatureID);
                 p[1] = new SqlParameter("@StatusID", data.StatusID);
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_deleteFeature_CAdmin", p);
 
