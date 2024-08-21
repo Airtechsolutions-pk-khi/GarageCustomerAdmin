@@ -66,7 +66,7 @@ export class AddlocationComponent implements OnInit {
     this.loadService();
     this.loadLandmark();
     this.loadCountry();
-    
+
     this.setSelectedLocations();
   }
 
@@ -158,7 +158,7 @@ export class AddlocationComponent implements OnInit {
     this.f.businessType.setValue(obj.businessType);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.customerStatusID.setValue(obj.customerStatusID === 1 ? true : false);
-     this.f.isFeatured.setValue(obj.isFeatured);
+    this.f.isFeatured.setValue(obj.isFeatured);
 
     this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
     this.imgComp.imageUrl = obj.brandThumbnailImage;
@@ -275,22 +275,16 @@ export class AddlocationComponent implements OnInit {
     this.f.customerStatusID.setValue(this.f.customerStatusID.value === true ? 1 : 2);
     // this.f.isFeatured.setValue(this.f.isFeatured.value === true ? 1 : 2);
     this.f.brandThumbnailImage.setValue(this.imgComp.imageUrl);
-    if (parseInt(this.f.locationID.value) === 0) {
-      //Insert location
-      console.log(JSON.stringify(this.locationForm.value));
-    }
-    else {
-      //Update location     
-      this.locationService.update(this.locationForm.value).subscribe(data => {
-        this.loading = false;
-        if (data != 0) {
-          this.ts.showSuccess("Success", "Record updated successfully.")
-          this.router.navigate(['/admin/location']);
-        }
-      }, error => {
-        this.ts.showError("Error", "Failed to update record.")
-        this.loading = false;
-      });
-    }
+    //Update location     
+    this.locationService.update(this.locationForm.value).subscribe(data => {
+      this.loading = false;
+      if (data != 0) {
+        this.ts.showSuccess("Success", "Record updated successfully.")
+        this.router.navigate(['/admin/location']);
+      }
+    }, error => {
+      this.ts.showError("Error", "Failed to update record.")
+      this.loading = false;
+    });
   }
 }
