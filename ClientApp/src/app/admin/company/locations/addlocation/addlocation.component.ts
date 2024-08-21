@@ -66,10 +66,11 @@ export class AddlocationComponent implements OnInit {
     this.loadService();
     this.loadLandmark();
     this.loadCountry();
+    
+    this.setSelectedLocations();
   }
 
   ngOnInit() {
-    this.setSelectedLocations();
   }
 
   get f() { return this.locationForm.controls; }
@@ -157,7 +158,7 @@ export class AddlocationComponent implements OnInit {
     this.f.businessType.setValue(obj.businessType);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.customerStatusID.setValue(obj.customerStatusID === 1 ? true : false);
-    this.f.isFeatured.setValue(obj.isFeatured === 1 ? true : false);
+     this.f.isFeatured.setValue(obj.isFeatured);
 
     this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
     this.imgComp.imageUrl = obj.brandThumbnailImage;
@@ -272,7 +273,7 @@ export class AddlocationComponent implements OnInit {
     this.f.service.setValue(this.selectedServiceID == undefined ? "" : this.selectedServiceID.toString());
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.customerStatusID.setValue(this.f.customerStatusID.value === true ? 1 : 2);
-    this.f.isFeatured.setValue(this.f.isFeatured.value === 1 ? true : false);
+    // this.f.isFeatured.setValue(this.f.isFeatured.value === true ? 1 : 2);
     this.f.brandThumbnailImage.setValue(this.imgComp.imageUrl);
     if (parseInt(this.f.locationID.value) === 0) {
       //Insert location

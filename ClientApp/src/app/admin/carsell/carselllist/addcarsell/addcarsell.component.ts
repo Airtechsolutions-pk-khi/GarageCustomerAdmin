@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators,FormsModule, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CarSellService } from 'src/app/_services/carsell.service';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';

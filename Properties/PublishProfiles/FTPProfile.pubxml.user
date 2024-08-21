@@ -6,7 +6,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAv+wGle5DkkKH5S/MV4tTnwAAAAACAAAAAAAQZgAAAAEAACAAAACzZWyfSUZwn7SFLEgyJHWskfDpxhbFVvAiXZImXiWoJwAAAAAOgAAAAAIAACAAAACM81JgaKuY6VBDQiJrbAB1AsUZq60bkuU9qTGiFV4LDIAAAACyZD8xChnM2/k2lVHmGchrCZahtxwuGpoMIal+AiUC67zw1PKlrJFdhPQvU+Iu0fzqWv/aM8z9eibnH4ZTGw2ECQKIBq93MRXN7r/VnUirTyO+F4KfrDadVUO01Cab7Q3mDDt+3tT5IC/sU8A2HifJSHIURWOLtXrzZ7b5l4KfDUAAAAC+Bnxo9FUYwO2TqVMdJ/fE7KqF5+9+vFC6wW1EJeN7RgJt0JNDn4NIHkq0ZIMpLFAPxWyqUKbuwSYX76o2+Pg6</EncryptedPassword>
-    <History>False|2024-07-10T09:18:55.9805182Z;False|2024-07-10T11:36:01.0485565+03:00;</History>
+    <History>False|2024-07-16T08:23:22.0237088Z;False|2024-07-10T12:18:55.9805182+03:00;False|2024-07-10T11:36:01.0485565+03:00;</History>
     <LastFailureDetails />
     <_PublishTargetUrl>ftps://waws-prod-am2-553.ftp.azurewebsites.windows.net/site/wwwroot</_PublishTargetUrl>
   </PropertyGroup>

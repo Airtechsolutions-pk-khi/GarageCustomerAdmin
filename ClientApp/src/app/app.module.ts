@@ -50,8 +50,6 @@ import { OrdersComponent } from './admin/sales/orders/orders.component';
 import { OrderdetailsComponent } from './admin/sales/orderdetails/orderdetails.component';
 import { ItemsettingsComponent } from './admin/menu/items/itemsettings/itemsettings.component';
 import { ExcelService } from 'src/ExportExcel/excel.service';
-import { DeliveryComponent } from './admin/settings/delivery/delivery.component';
-//import { AdddeliveryComponent } from './admin/settings/Delivery/adddelivery/adddelivery.component';
 import { AppsettingsComponent } from './admin/settings/appsettings/appsettings.component';
 import { AddonsComponent } from './admin/menu/addons/addons.component';
 import { AddaddonsComponent } from './admin/menu/addons/addaddons/addaddons.component';
@@ -124,8 +122,6 @@ import { AddcarsComponent } from './admin/cars/addcars/addcars.component';
     OrdersComponent,
     OrderdetailsComponent,
     ItemsettingsComponent,
-    DeliveryComponent,
-    //AdddeliveryComponent,
     AppsettingsComponent,
     AddonsComponent,
     AddaddonsComponent,

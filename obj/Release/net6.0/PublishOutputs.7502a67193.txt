@@ -52,7 +52,6 @@ C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\3rdpartylicenses.txt
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\3rdpartylicenses.zip
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-grid.css
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-grid.css.map
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-reboot.css
@@ -71,6 +70,28 @@ C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\solid.css.map
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\v4-shims.css
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\v4-shims.css.map
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-Black.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-Bold.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-ExtraBlack.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-ExtraBold.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-Light.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-Regular.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-SemiBold.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-Thin.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Primary\SpaceGrotesk-Bold.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Primary\SpaceGrotesk-Light.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Primary\SpaceGrotesk-Medium.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Primary\SpaceGrotesk-Regular.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Primary\SpaceGrotesk-SemiBold.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Black.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Bold.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-ExtraBold.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-ExtraLight.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Light.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Medium.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Regular.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-SemiBold.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Thin.ttf
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\gulpfile.js
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\icons\icon-128x128.png
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\icons\icon-144x144.png
@@ -83,6 +104,8 @@ C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\crossphone.png
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\favicon.png
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\garage.png
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\Group 28.svg
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\Group 30.svg
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\loginImg.png
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\logo-garage.svg
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\js\demo\chart-area-demo.js
@@ -1931,8 +1954,8 @@ C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.min.map
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\crossphone.cb94c6e65f9711aecd39.png
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\index.html
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es2015.9eb10d6e8bc2b1667eee.js
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es5.9eb10d6e8bc2b1667eee.js
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es2015.09e520e183e5b0180902.js
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es5.09e520e183e5b0180902.js
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\manifest.webmanifest
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\ngsw-worker.js
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\ngsw.json
@@ -1941,6 +1964,7 @@ C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\runtime-es2015.409e6590615fb48d139f.js
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\runtime-es5.409e6590615fb48d139f.js
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\safety-worker.js
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\scripts.4b9fe471e7aa2a543372.js
-C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\styles.e055083bc8abb966b008.css
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\scripts.04b5dbafab8c16e494b3.js
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\spacegrotesk-regular.3683ead52440efaeba4d.ttf
+C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\styles.5d3b6a1365c48c05aa32.css
 C:\Office\Projects\MARN Garage\GarageCustomerAdmin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\worker-basic.min.js

@@ -22,6 +22,7 @@ export class AddBlogComponent implements OnInit {
   CityList = [];
   selectedCityID = [];
   ButtonText = "Save";
+  country = "";
   datesstart: Date[];
   datesend: Date[];
 

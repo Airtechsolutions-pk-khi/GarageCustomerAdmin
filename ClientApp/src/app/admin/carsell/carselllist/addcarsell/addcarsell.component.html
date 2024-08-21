@@ -101,7 +101,7 @@
             </div>
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">Country</label>
-              <select class="custom-select" id=countryCode formControlName="countryCode" (change)="onSelect($event)" [(ngModel)]="countryCode">
+              <select class="custom-select" id=countryCode formControlName="countryCode" (change)="onSelect($event)" >
                 <option [ngValue]="option.code" selected="option.code == code" *ngFor="let option of CountryList"> {{option.name}} </option>
               </select>
               <div *ngIf="f.countryCode.invalid && (f.countryCode.dirty || f.countryCode.touched)" class="alert alert-danger">
@@ -241,7 +241,7 @@
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">Year</label>
-              <select name="year" id="year" formControlName="year" class="form-control" [ngModelOptions]="{standalone: true}">
+              <select name="year" id="year" formControlName="year" class="form-control"  >
                 <option *ngFor="let option of YearList" [value]="option">{{option}}</option>
               </select>
               <div *ngIf="f.year.invalid && (f.year.dirty || f.year.touched)" class="alert alert-danger">
