@@ -41,11 +41,10 @@ namespace GarageCustomerAdmin.Controllers
             return _service.Insert(obj);
         }
         [HttpPost]
-        [Route("add")]
-        public int PostUpdate([FromBody] LocationBLL1 obj)
+        [Route("updated")]
+        public int PostUpdate([FromBody] LocationBLL obj)
         {
-            //return _service.Update(obj, _env);
-            return 1;
+            return _service.Update(obj, _env);
         }
         [HttpPost]
         [Route("delete")]

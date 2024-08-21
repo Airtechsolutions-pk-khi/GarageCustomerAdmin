@@ -161,9 +161,9 @@ export class LocationsService {
       }));
   }
 
-  update(updateData) {
+  update(update) {
     debugger
-    return this.http.post('api/landmark/add', updateData)
+    return this.http.post('api/location/updated', update)
       .pipe(map(res => {
         console.log(res);
         return res;

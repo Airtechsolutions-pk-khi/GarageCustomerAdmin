@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "E:\\Projects\\GarageCustomer_Admin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\landmarkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\landmarkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\_models\\locationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:_models\\locationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,24 +11,28 @@
       "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\_services\\locations.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\app\\_models\\location.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\_models\\location.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\_models\\locationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:_models\\locationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\app\\_models\\location.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\_models\\location.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_dbparamfactory\\locationdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_dbparamfactory\\locationdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,33 +82,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "landmarkController.cs",
-              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\landmarkController.cs",
-              "RelativeDocumentMoniker": "Controllers\\landmarkController.cs",
-              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\landmarkController.cs",
-              "RelativeToolTip": "Controllers\\landmarkController.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAAADIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T15:24:23.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "locationViewModel.cs",
               "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\_Models\\locationViewModel.cs",
               "RelativeDocumentMoniker": "_Models\\locationViewModel.cs",
               "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\_Models\\locationViewModel.cs",
               "RelativeToolTip": "_Models\\locationViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwC8AAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwCwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T15:05:45.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Location.ts",
               "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\_models\\Location.ts",
               "RelativeDocumentMoniker": "ClientApp\\src\\app\\_models\\Location.ts",
@@ -125,33 +108,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "locations.service.ts",
               "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\_services\\locations.service.ts",
               "RelativeDocumentMoniker": "ClientApp\\src\\app\\_services\\locations.service.ts",
               "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\_services\\locations.service.ts",
               "RelativeToolTip": "ClientApp\\src\\app\\_services\\locations.service.ts",
-              "ViewState": "AQIAAJYAAAAAAAAAAAAAwKUAAAAnAAAA",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAAwKUAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2024-08-21T14:51:20.363Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "locationController.cs",
               "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\locationController.cs",
               "RelativeDocumentMoniker": "Controllers\\locationController.cs",
               "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\locationController.cs",
               "RelativeToolTip": "Controllers\\locationController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAQwCoAAAAAAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAACsAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T14:51:27.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "locationService.cs",
               "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_Services\\locationService.cs",
               "RelativeDocumentMoniker": "BLL\\_Services\\locationService.cs",
@@ -177,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "addlocation.component.ts",
               "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.ts",
               "RelativeDocumentMoniker": "ClientApp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.ts",
@@ -190,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "addlocation.component.html",
               "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html",
               "RelativeDocumentMoniker": "ClientApp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html",

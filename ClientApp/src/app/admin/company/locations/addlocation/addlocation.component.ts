@@ -276,7 +276,7 @@ export class AddlocationComponent implements OnInit {
     // this.f.isFeatured.setValue(this.f.isFeatured.value === true ? 1 : 2);
     this.f.brandThumbnailImage.setValue(this.imgComp.imageUrl);
     //Update location     
-    this.locationService.update(this.locationForm.value).subscribe(data => {
+    this.locationService.update(null).subscribe(data => {
       this.loading = false;
       if (data != 0) {
         this.ts.showSuccess("Success", "Record updated successfully.")
