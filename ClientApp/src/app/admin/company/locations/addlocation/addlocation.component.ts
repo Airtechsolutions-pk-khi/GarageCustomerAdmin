@@ -35,9 +35,9 @@ export class AddlocationComponent implements OnInit {
     { name: 'Sunday', time: '', aName: 'الأحد', aTime: '' },
     { name: 'Monday', time: '', aName: 'الإثنين', aTime: '' },
     { name: 'Tuesday', time: '', aName: 'الثلاثاء', aTime: '' },
-    { name: 'Wednesday', time: '', aName: 'الأربعاء', aTime: ''},
+    { name: 'Wednesday', time: '', aName: 'الأربعاء', aTime: '' },
     { name: 'Thursday', time: '', aName: 'الخميس', aTime: '' },
-    { name: 'Friday', time: '', aName: 'الجمعة', aTime: ''},
+    { name: 'Friday', time: '', aName: 'الجمعة', aTime: '' },
     { name: 'Saturday', time: '', aName: 'السبت', aTime: '' }
   ];
   time = [];
@@ -201,21 +201,22 @@ export class AddlocationComponent implements OnInit {
     debugger
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
-    this.loadCity(value, 1);
+    this.loadCity(value, 0);
     console.log(index);
     console.log(value);
   }
   loadCity(obj, type) {
     debugger
     this.service.loadCity(obj).subscribe((res: any) => {
+      debugger
       this.CityList = res;
-      //debugger
-      //if (type == 0)
-      //  this.f.cityID.setValue(res[0].id);
-      //else if (type == 1)
-      //  debugger
-      //  //var cityID = this.f.cityID;
-      //this.f.cityID.setValue(this.f.cityID);
+      debugger
+      if (type == 0)
+        this.f.cityID.setValue(res[0].id);
+      else if (type == 1)
+        debugger
+      //var cityID = this.f.cityID;
+      this.f.cityID.setValue(this.f.cityID);
     });
   }
   private loadItemImages(id) {
