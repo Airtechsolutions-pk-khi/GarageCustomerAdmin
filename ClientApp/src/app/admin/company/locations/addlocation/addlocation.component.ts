@@ -35,9 +35,9 @@ export class AddlocationComponent implements OnInit {
     { name: 'Sunday', time: '', aName: 'الأحد', aTime: '' },
     { name: 'Monday', time: '', aName: 'الإثنين', aTime: '' },
     { name: 'Tuesday', time: '', aName: 'الثلاثاء', aTime: '' },
-    { name: 'Wednesday', time: '', aName: 'الأربعاء', aTime: ''},
+    { name: 'Wednesday', time: '', aName: 'الأربعاء', aTime: '' },
     { name: 'Thursday', time: '', aName: 'الخميس', aTime: '' },
-    { name: 'Friday', time: '', aName: 'الجمعة', aTime: ''},
+    { name: 'Friday', time: '', aName: 'الجمعة', aTime: '' },
     { name: 'Saturday', time: '', aName: 'السبت', aTime: '' }
   ];
   time = [];
@@ -66,7 +66,7 @@ export class AddlocationComponent implements OnInit {
     this.loadService();
     this.loadLandmark();
     this.loadCountry();
-    
+
     this.setSelectedLocations();
   }
 
@@ -158,7 +158,7 @@ export class AddlocationComponent implements OnInit {
     this.f.businessType.setValue(obj.businessType);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.f.customerStatusID.setValue(obj.customerStatusID === 1 ? true : false);
-     this.f.isFeatured.setValue(obj.isFeatured);
+    this.f.isFeatured.setValue(obj.isFeatured);
 
     this.f.brandThumbnailImage.setValue(obj.brandThumbnailImage);
     this.imgComp.imageUrl = obj.brandThumbnailImage;
@@ -202,21 +202,22 @@ export class AddlocationComponent implements OnInit {
     debugger
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
-    this.loadCity(value, 1);
+    this.loadCity(value, 0);
     console.log(index);
     console.log(value);
   }
   loadCity(obj, type) {
     debugger
     this.service.loadCity(obj).subscribe((res: any) => {
+      debugger
       this.CityList = res;
-      //debugger
-      //if (type == 0)
-      //  this.f.cityID.setValue(res[0].id);
-      //else if (type == 1)
-      //  debugger
-      //  //var cityID = this.f.cityID;
-      //this.f.cityID.setValue(this.f.cityID);
+      debugger
+      if (type == 0)
+        this.f.cityID.setValue(res[0].id);
+      else if (type == 1)
+        debugger
+      //var cityID = this.f.cityID;
+      this.f.cityID.setValue(this.f.cityID);
     });
   }
   private loadItemImages(id) {
@@ -274,22 +275,16 @@ export class AddlocationComponent implements OnInit {
     this.f.customerStatusID.setValue(this.f.customerStatusID.value === true ? 1 : 2);
     // this.f.isFeatured.setValue(this.f.isFeatured.value === true ? 1 : 2);
     this.f.brandThumbnailImage.setValue(this.imgComp.imageUrl);
-    if (parseInt(this.f.locationID.value) === 0) {
-      //Insert location
-      console.log(JSON.stringify(this.locationForm.value));
-    }
-    else {
-      //Update location     
-      this.locationService.update(this.locationForm.value).subscribe(data => {
-        this.loading = false;
-        if (data != 0) {
-          this.ts.showSuccess("Success", "Record updated successfully.")
-          this.router.navigate(['/admin/location']);
-        }
-      }, error => {
-        this.ts.showError("Error", "Failed to update record.")
-        this.loading = false;
-      });
-    }
+    //Update location     
+    this.locationService.update(null).subscribe(data => {
+      this.loading = false;
+      if (data != 0) {
+        this.ts.showSuccess("Success", "Record updated successfully.")
+        this.router.navigate(['/admin/location']);
+      }
+    }, error => {
+      this.ts.showError("Error", "Failed to update record.")
+      this.loading = false;
+    });
   }
 }

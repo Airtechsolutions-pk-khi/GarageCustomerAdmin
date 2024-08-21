@@ -46,7 +46,6 @@ namespace GarageCustomerAdmin.Controllers
             return _service.Update(obj, _env);
         }
 
-
         [HttpPost]
         [Route("delete")]
         public int PostDelete([FromBody] LandmarkBLL obj)

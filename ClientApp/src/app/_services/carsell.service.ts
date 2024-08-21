@@ -177,8 +177,9 @@ export class CarSellService {
   loadCustomer() {
     return this.http.get<Customers[]>(`api/customer/all`);
   }
-  loadCity(event) {
-    return this.http.get<any[]>( `api/carsell/allCity/${event}`);
+  loadCity(code) {
+    debugger
+    return this.http.get<any[]>(`api/carsell/allCity/${code}`);
   }
   update(updateData) {
     return this.http.post(`api/carsell/update`, updateData)

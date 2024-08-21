@@ -161,8 +161,9 @@ export class LocationsService {
       }));
   }
 
-  update(updateData) {
-    return this.http.post(`api/location/update`, updateData)
+  update(update) {
+    debugger
+    return this.http.post('api/location/updated', update)
       .pipe(map(res => {
         console.log(res);
         return res;
