@@ -12,7 +12,6 @@ using WebAPICode.Helpers;
 
 namespace BAL.Repositories
 {
-
     public class locationDB : baseDB
     {
         public static LocationBLL repo;
@@ -206,7 +205,6 @@ namespace BAL.Repositories
             {
                 int rtn = 0;
                 SqlParameter[] p = new SqlParameter[23];
-
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Descripiton", data.Descripiton);
                 p[2] = new SqlParameter("@Address", data.Address);
