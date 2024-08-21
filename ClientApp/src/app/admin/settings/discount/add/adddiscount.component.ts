@@ -54,7 +54,7 @@ export class AdddiscountComponent implements OnInit {
 
   private createForm() {
     this.discountForm = this.formBuilder.group({
-      discountID: 0,
+      discountMyKarageID: 0,
       name: ['', Validators.required],
       description: [''],
       arabicName: [''],
@@ -79,7 +79,7 @@ export class AdddiscountComponent implements OnInit {
     debugger
     this.f.name.setValue(obj.name);
     this.f.arabicName.setValue(obj.arabicName);
-    this.f.discountID.setValue(obj.discountID);
+    this.f.discountMyKarageID.setValue(obj.discountMyKarageID);
     this.f.image.setValue(obj.image);
     this.f.arabicImage.setValue(obj.arabicImage);
     this.f.description.setValue(obj.description);
@@ -105,11 +105,12 @@ export class AdddiscountComponent implements OnInit {
   }
 
   setSelectedCustomer() {
+    debugger
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
         this.loadingCustomer = true;
-        this.f.discountID.setValue(sid);
+        this.f.discountMyKarageID.setValue(sid);
         this.discountService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
@@ -139,7 +140,7 @@ export class AdddiscountComponent implements OnInit {
     this.f.arabicImage.setValue(this.arbimg.alternateimageUrl);
     this.f.thumbnailImage.setValue(this.thmbimg.thumbnailimageimageUrl);
 
-    if (parseInt(this.f.discountID.value) === 0) {
+    if (parseInt(this.f.discountMyKarageID.value) === 0) {
       //Insert services
       this.discountService.insert(this.discountForm.value).subscribe(data => {
         debugger

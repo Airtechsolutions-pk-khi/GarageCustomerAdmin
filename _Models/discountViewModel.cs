@@ -8,10 +8,9 @@ namespace GarageCustomerAdmin._Models
     public class discountViewModel
     {
     }
-
     public class DiscountBLL
     {
-        public int DiscountID { get; set; }
+        public int DiscountMyKarageID { get; set; }
         public string Name { get; set; }
         public string ArabicName { get; set; }
         public string Description { get; set; }

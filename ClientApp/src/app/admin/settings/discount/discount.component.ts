@@ -81,6 +81,7 @@ export class DiscountComponent implements OnInit {
   }
 
   Edit(discount) {
+    debugger
     this.router.navigate(["admin/discount/edit", discount]);
   }
 

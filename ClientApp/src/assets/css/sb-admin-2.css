@@ -69,9 +69,13 @@ section {
   display: block;
 }
 
-@font-face {
+/*@font-face {
   font-family: 'spacegrotesk-regular';
   src: url('d:\garage_customer\clientapp\src\assets\font\spacegrosek\english primary\spacegrotesk-regular.ttf') format('truetype');
+}*/
+@font-face {
+  font-family: 'spacegrotesk-regular';
+  src: url('e:\projects\garagecustomer_admin\clientapp\src\assets\font\spacegrosek\english primary\spacegrotesk-regular.ttf') format('truetype');
 }
 body {
   margin: 0;

@@ -76,8 +76,9 @@ namespace BAL.Repositories
         {
             try
             {
+                data.LastUpdatedDate = DateTime.Now.AddMinutes(180);
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[14];
+                SqlParameter[] p = new SqlParameter[15];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -93,6 +94,7 @@ namespace BAL.Repositories
                 p[11] = new SqlParameter("@ThumbnailImage", data.ThumbnailImage);
                 p[12] = new SqlParameter("@BackgroundColor", data.BackgroundColor);
                 p[13] = new SqlParameter("@FontColor", data.FontColor);
+                p[14] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
                 //rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_InsertDiscount", p);
                 rtn = int.Parse(new DBHelper().GetTableFromSP("sp_InsertDiscount", p).Rows[0]["ID"].ToString());
@@ -104,7 +106,7 @@ namespace BAL.Repositories
 
                     p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
                     p1[1] = new SqlParameter("@DiscountID", rtn);
-                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
+                    p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now.AddMinutes(180));
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertDiscLocationJunc_CAdmin", p1);
                 }
                 return rtn;
@@ -120,7 +122,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[15];
+                SqlParameter[] p = new SqlParameter[16];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -133,18 +135,18 @@ namespace BAL.Repositories
                 p[8] = new SqlParameter("@FromTime", data.FromTime);
                 p[9] = new SqlParameter("@ToTime", data.ToTime);
                 p[10] = new SqlParameter("@StatusID", data.StatusID);
-                p[11] = new SqlParameter("@DiscountID", data.DiscountID);
+                p[11] = new SqlParameter("@DiscountID", data.DiscountMyKarageID);
                 p[12] = new SqlParameter("@ThumbnailImage", data.ThumbnailImage);
                 p[13] = new SqlParameter("@BackgroundColor", data.BackgroundColor);
                 p[14] = new SqlParameter("@FontColor", data.FontColor);
-
+                p[15] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateDiscount_Admin", p);
                 if (data.Locations != "")
                 {
                     SqlParameter[] p1 = new SqlParameter[3];
                     p1[0] = new SqlParameter("@Locations", data.Locations == "" ? null : data.Locations);
-                    p1[1] = new SqlParameter("@DiscountID", data.DiscountID);
+                    p1[1] = new SqlParameter("@DiscountID", data.DiscountMyKarageID);
                     p1[2] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertDiscLocationJunc_CAdmin", p1);
                 }
@@ -162,7 +164,7 @@ namespace BAL.Repositories
             {
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@DiscountID", data.DiscountID);
+                p[0] = new SqlParameter("@DiscountID", data.DiscountMyKarageID);
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteDiscount_CAdmin", p);
 
                 return _obj;

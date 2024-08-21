@@ -236,7 +236,7 @@ namespace BAL.Repositories
                 a[0] = new SqlParameter("@Mobile", data.CustomerPhone);
 
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomerByPhone_CADMIN", a);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomerByPhone_CP", a);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -329,7 +329,7 @@ namespace BAL.Repositories
                 a[0] = new SqlParameter("@Mobile", data.CustomerPhone);
 
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomerByPhone_CADMIN", a);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomerByPhone_CP", a);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -381,8 +381,8 @@ namespace BAL.Repositories
                     SqlParameter[] p2 = new SqlParameter[4];
                     p2[0] = new SqlParameter("@Images", imgStr);
                     p2[1] = new SqlParameter("@CarsellID", rtn);
-                    p2[2] = new SqlParameter("@CreatedOn", DateTime.UtcNow);
-                    p2[3] = new SqlParameter("@UpdatedOn", DateTime.UtcNow);
+                    p2[2] = new SqlParameter("@CreatedOn", DateTime.UtcNow.AddMinutes(180));
+                    p2[3] = new SqlParameter("@UpdatedOn", DateTime.UtcNow.AddMinutes(180));
                     (new DBHelper().ExecuteNonQueryReturn)("sp_insertCarsellImages_CAdmin", p2);
                 }
                 catch (Exception ex)

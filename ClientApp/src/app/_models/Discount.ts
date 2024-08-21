@@ -1,5 +1,5 @@
 export class Discount {
-  discountID: number;
+  discountMyKarageID: number;
   locationID: number;
   name: string;
   arabicName: string;

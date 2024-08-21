@@ -193,22 +193,23 @@ export class AddcarsellComponent implements OnInit {
         this.CountryList = [{ name: 'Saudia Arabia', code: 'SA' }];
       }
       this.f.countryCode.setValue('SA');
-      this.loadCity(this.f.countryCode.value, 0);
+      this.loadCity(this.f.countryCode.value, 1);
     });
   }
 
   onSelect(event) {
+    debugger
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
     console.log(index);
     console.log(value);
   }
   loadCity(obj, type) {
+    debugger
     this.carsellService.loadCity(obj).subscribe((res: any) => {
       this.CityList = res;
-      if (type == 0)
+      if (type == 1)
         this.f.cityID.setValue(res[0].id);
-
     });
   }
   onChange(event) {
