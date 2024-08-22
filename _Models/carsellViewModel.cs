@@ -236,36 +236,34 @@ namespace GarageCustomerAdmin._Models
     public class CarSell
     {
         public int CarSellID { get; set; } = 0;
-        //public int CustomerID { get; set; } = 0;
+        public int CustomerID { get; set; } = 0;
         public string CustomerPhone { get; set; }
-        //public string Name { get; set; }
-        //public string Description { get; set; }
-        //public string RegistrationNo { get; set; }
-        //public int BodyTypeID { get; set; } = 0;
-        //public string BodyType { get; set; }
-        //public string Features { get; set; }
-        //public string FuelType { get; set; }
-        //public string EngineType { get; set; }
-        //public int Kilometer { get; set; } = 0;
-        //public string Year { get; set; }
-        //public int MakeID { get; set; } = 0;
-        //public int ModelID { get; set; } = 0;
-        //public string MakeName { get; set; }
-        //public string ModelName { get; set; }
-        //public string Transmition { get; set; }
-        //public int Price { get; set; } = 0;
-        //public bool IsInspected { get; set; }
-        //public int CityID { get; set; } = 0;
-        //public string CountryCode { get; set; }
-        //public string Address { get; set; }
-        //public int CarSellAddID { get; set; } = 0;
-        //public string BodyColor { get; set; }
-        //public string Assembly { get; set; }
-        //public string Image { get; set; }
-        //public string Reason { get; set; }
-        //public int StatusID { get; set; } = 0;
-        //public int CreatedBy { get; set; } = 0;
-        //public string CreatedDate { get; set; }
-        //public int UpdatedBy { get; set; } = 0;
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string RegistrationNo { get; set; }
+        public int BodyTypeID { get; set; } = 0;
+        public string BodyType { get; set; }
+        public string Features { get; set; }
+        public string FuelType { get; set; }
+        public string EngineType { get; set; }
+        public int Kilometer { get; set; } = 0;
+        public string Year { get; set; }
+        public int MakeID { get; set; } = 0;
+        public int ModelID { get; set; } = 0;
+        public string Transmition { get; set; }
+        public int Price { get; set; } = 0;
+        public bool IsInspected { get; set; }
+        public int CityID { get; set; } = 0;
+        public string CountryCode { get; set; }
+        public string Address { get; set; }
+        public int CarSellAddID { get; set; } = 0;
+        public string BodyColor { get; set; }
+        public string Assembly { get; set; }
+        public string Image { get; set; }
+        public string Reason { get; set; }
+        public int StatusID { get; set; } = 0;
+        public int CreatedBy { get; set; } = 0;
+        public string CreatedDate { get; set; }
+        public int UpdatedBy { get; set; } = 0;
     }
 }

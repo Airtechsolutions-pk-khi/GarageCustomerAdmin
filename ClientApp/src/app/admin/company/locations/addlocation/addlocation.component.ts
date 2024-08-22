@@ -202,22 +202,21 @@ export class AddlocationComponent implements OnInit {
     debugger
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
-    this.loadCity(value, 0);
+    this.loadCity(value, 1);
     console.log(index);
     console.log(value);
   }
   loadCity(obj, type) {
     debugger
     this.service.loadCity(obj).subscribe((res: any) => {
-      debugger
       this.CityList = res;
-      debugger
-      if (type == 0)
-        this.f.cityID.setValue(res[0].id);
-      else if (type == 1)
-        debugger
-      //var cityID = this.f.cityID;
-      this.f.cityID.setValue(this.f.cityID);
+      //debugger
+      //if (type == 0)
+      //  this.f.cityID.setValue(res[0].id);
+      //else if (type == 1)
+      //  debugger
+      //  //var cityID = this.f.cityID;
+      //this.f.cityID.setValue(this.f.cityID);
     });
   }
   private loadItemImages(id) {
@@ -276,7 +275,7 @@ export class AddlocationComponent implements OnInit {
     // this.f.isFeatured.setValue(this.f.isFeatured.value === true ? 1 : 2);
     this.f.brandThumbnailImage.setValue(this.imgComp.imageUrl);
     //Update location     
-    this.locationService.update(null).subscribe(data => {
+    this.locationService.update(this.locationForm.value).subscribe(data => {
       this.loading = false;
       if (data != 0) {
         this.ts.showSuccess("Success", "Record updated successfully.")

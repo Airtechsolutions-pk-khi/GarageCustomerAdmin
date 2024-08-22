@@ -89,7 +89,6 @@ export class AddcarsellComponent implements OnInit {
       bodyColor: ['', Validators.required],
       assembly: ['', Validators.required],
       file: ['', Validators.required],
-
     });
   }
   onFileChange(event) {
@@ -186,14 +185,13 @@ export class AddcarsellComponent implements OnInit {
     });
   }
   private loadCountry() {
-    debugger
     this.carsellService.loadCountry().subscribe((res: any) => {
       this.CountryList = res;
       if (!this.CountryList || this.CountryList.length === 0) {
         this.CountryList = [{ name: 'Saudia Arabia', code: 'SA' }];
       }
-      this.f.countryCode.setValue('SA');
-      this.loadCity(this.f.countryCode.value, 1);
+      this.f.countryID.setValue('SA');
+      this.loadCity(this.f.countryID.value, 0);
     });
   }
 
@@ -201,17 +199,51 @@ export class AddcarsellComponent implements OnInit {
     debugger
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
+    this.loadCity(value, 0);
     console.log(index);
     console.log(value);
   }
   loadCity(obj, type) {
     debugger
     this.carsellService.loadCity(obj).subscribe((res: any) => {
+      debugger
       this.CityList = res;
-      if (type == 1)
+      debugger
+      if (type == 0)
         this.f.cityID.setValue(res[0].id);
+      else if (type == 1)
+        debugger
+      //var cityID = this.f.cityID;
+      this.f.cityID.setValue(this.f.cityID);
     });
   }
+  //private loadCountry() {
+  //  debugger
+  //  this.carsellService.loadCountry().subscribe((res: any) => {
+  //    this.CountryList = res;
+  //    if (!this.CountryList || this.CountryList.length === 0) {
+  //      this.CountryList = [{ name: 'Saudia Arabia', code: 'SA' }];
+  //    }
+  //    this.f.countryCode.setValue('SA');
+  //    this.loadCity(this.f.countryCode.value, 1);
+  //  });
+  //}
+
+  //onSelect(event) {
+  //  debugger
+  //  let selectElementValue = event.target.value;
+  //  let [index, value] = selectElementValue.split(':').map(item => item.trim());
+  //  console.log(index);
+  //  console.log(value);
+  //}
+  //loadCity(obj, type) {
+  //  debugger
+  //  this.carsellService.loadCity(obj).subscribe((res: any) => {
+  //    this.CityList = res;
+  //    if (type == 1)
+  //      this.f.cityID.setValue(res[0].id);
+  //  });
+  //}
   onChange(event) {
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
@@ -250,7 +282,7 @@ export class AddcarsellComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success", "Record added successfully.")
-          this.router.navigate(['/admin/carsell']);
+          //this.router.navigate(['/admin/carsell']);
         }
 
       }, error => {
@@ -264,7 +296,7 @@ export class AddcarsellComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success", "Record updated successfully.")
-          this.router.navigate(['/admin/carsell']);
+          //this.router.navigate(['/admin/carsell']);
         }
       }, error => {
         this.ts.showError("Error", "Failed to update record.")

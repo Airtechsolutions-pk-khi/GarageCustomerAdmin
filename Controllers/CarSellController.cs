@@ -68,10 +68,10 @@ namespace GarageCustomerAdmin.Controllers
 
         [HttpPost]
         [Route("insert")]   
-        public int Post([FromBody] CarSellBLL3 obj)
+        public int Post([FromBody] CarSellBLL obj)
         {
            //return _service.Insert(obj, _env);        
-           return 1;        
+           return 0;        
         }
 
         [HttpPost]
