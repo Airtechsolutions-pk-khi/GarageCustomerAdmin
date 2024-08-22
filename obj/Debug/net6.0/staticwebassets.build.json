@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VJdmve1a5jKUgLTnr0s7HviZkEEVaDB3SgG1KNKEQUg=",
+  "Hash": "sbK0YzEPxGCmWoCf1nmlfzFZNGqzQff6SiG0M7uMmMQ=",
   "Source": "GarageCustomerAdmin",
   "BasePath": "_content/GarageCustomerAdmin",
   "Mode": "Default",
@@ -10,24 +10,22 @@
     {
       "Name": "GarageCustomerAdmin\\wwwroot",
       "Source": "GarageCustomerAdmin",
-      "ContentRoot": "E:\\Projects\\GarageCustomer_Admin\\wwwroot\\",
+      "ContentRoot": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\wwwroot\\",
       "BasePath": "_content/GarageCustomerAdmin",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\Projects\\GarageCustomer_Admin\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\wwwroot\\favicon.ico",
       "SourceId": "GarageCustomerAdmin",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Projects\\GarageCustomer_Admin\\wwwroot\\",
+      "ContentRoot": "C:\\Office\\Projects\\MARN Garage\\GarageCustomerAdmin\\wwwroot\\",
       "BasePath": "_content/GarageCustomerAdmin",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
