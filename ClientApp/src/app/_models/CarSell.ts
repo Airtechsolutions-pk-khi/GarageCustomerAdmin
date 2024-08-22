@@ -20,11 +20,12 @@ export class CarSells {
   price:number;
   isInspected:boolean;
   cityID:number;
-  countryID:string;
+  countryCode:string;
   address:string;
   carSellAddID:number;
   bodyColor:string;
   assembly:string;
+  image:string;
   reason:string;
   statusID:number;
   createdBy:number;

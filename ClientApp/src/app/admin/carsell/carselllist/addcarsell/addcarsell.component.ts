@@ -73,7 +73,7 @@ export class AddcarsellComponent implements OnInit {
       featureID: [null],
       features: [],
       registrationNo: ['', Validators.required],
-      bodyTypeID: ['', Validators.required],
+      bodyTypeID: [''],
       bodyType: [''],
       fuelType: ['', Validators.required],
       engineType: ['', Validators.required],
