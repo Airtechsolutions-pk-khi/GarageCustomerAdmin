@@ -84,9 +84,9 @@ export class CarSelldetailsComponent implements OnInit {
     this.featureInfo = obj.feature;
     this.images = obj.image;
   }
-  private loadCarSellImages(carsell) {
+  private loadCarSellImages(carSellID) {
     debugger
-    this.service.loadCarSellImages(carsell).subscribe((res: any) => {
+    this.service.loadCarSellImages(carSellID).subscribe((res: any) => {
       this.images = res;
       //this.f.imagesSource.setValue(this.Images);
     });

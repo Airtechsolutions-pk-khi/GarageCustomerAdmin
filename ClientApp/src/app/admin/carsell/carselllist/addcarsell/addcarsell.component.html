@@ -14,7 +14,7 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">Customer</label>
-              <input class="form-control" type="number" placeholder="Enter a valid Saudi Arabia phone number" formControlName="customerPhone" maxlength="15">
+              <input class="form-control" type="tel" placeholder="Enter a valid Saudi Arabia phone number" formControlName="customerPhone" maxlength="15">
               <small>Remaining characters: {{ 15 - carSellForm.controls['customerPhone'].value.length }}</small>
               <!--<div *ngIf="form.get('customerPhone').hasError('saudiPhoneNumber')">
       Please enter a valid Saudi Arabia phone number.
@@ -153,7 +153,7 @@
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputFirstName">Kilometer</label>
-              <input type="number" class="form-control" id=kilometer placeholder="" formControlName="kilometer">
+              <input type="tel" class="form-control" id=kilometer placeholder="" formControlName="kilometer">
               <div *ngIf="f.kilometer.invalid && (f.kilometer.dirty || f.kilometer.touched)" class="alert alert-danger">
                 <div *ngIf="f.kilometer.errors.required">
                   Mileage is required.

@@ -24,7 +24,7 @@ namespace GarageCustomerAdmin.BLL._Services
         }
 
         //public List<CarSellBLL2> GetAll(DateTime FromDate, DateTime ToDate)
-        public List<CarSellBLL2> GetAll()
+        public List<CarSellBLL> GetAll()
         {
             try
             {
@@ -33,7 +33,7 @@ namespace GarageCustomerAdmin.BLL._Services
             }
             catch (Exception ex)
             {
-                return new List<CarSellBLL2>();
+                return new List<CarSellBLL>();
             }
         }
         public List<MakeBLL> GetAllMake()

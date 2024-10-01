@@ -28,11 +28,11 @@ namespace BAL.Repositories
         }
 
         //public List<CarSellBLL2> GetAll(DateTime FromDate, DateTime ToDate)
-        public List<CarSellBLL2> GetAll()
+        public List<CarSellBLL> GetAll()
         {
             try
             {
-                var lst = new List<CarSellBLL2>();
+                var lst = new List<CarSellBLL>();
                 //SqlParameter[] p = new SqlParameter[2];
 
                 //p[0] = new SqlParameter("@fromdate", FromDate.Date);
@@ -43,7 +43,7 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CarSellBLL2>>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CarSellBLL>>();
                     }
                 }
 
@@ -366,7 +366,7 @@ namespace BAL.Repositories
                 p[22] = new SqlParameter("@CreatedBy", 1);
                 p[23] = new SqlParameter("@StatusID", data.StatusID);
 
-                rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_InsertCarSell", p).Rows[0]["CarSellID"].ToString());
+                rtn = int.Parse(new DBHelper().GetTableFromSP("sp_InsertCarSell", p).Rows[0]["CarSellID"].ToString());
 
                 if (data.Features != "" && data.Features != null)
                 {

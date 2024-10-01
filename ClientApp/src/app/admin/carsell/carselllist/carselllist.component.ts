@@ -52,9 +52,9 @@ export class CarselllistComponent implements OnInit {
     //this._datepicker.fromDate = date;
     this.getData();
   }
-  Edit(CarSellID) {
-     
-    this.router.navigate(["admin/carsell/edit", CarSellID]);
+  Edit(carSellID) {
+    debugger
+    this.router.navigate(["admin/carsell/edit", carSellID]);
   }
 
   updateOrder(order, status) {
@@ -107,8 +107,9 @@ export class CarselllistComponent implements OnInit {
     this.service.sortDirection = direction;
   }
 
-  View(carsell) {
-    this.router.navigate(["admin/carselldetails/view", carsell]);
+  View(carSellID) {
+    debugger
+    this.router.navigate(["admin/carselldetails/view", carSellID]);
   }
   Print(sid) {
     this.service.printorder(sid).subscribe((res: any) => {

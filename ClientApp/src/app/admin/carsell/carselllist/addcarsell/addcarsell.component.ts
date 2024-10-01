@@ -77,7 +77,7 @@ export class AddcarsellComponent implements OnInit {
       bodyType: [''],
       fuelType: ['', Validators.required],
       engineType: ['', Validators.required],
-      kilometer: [0, Validators.required],
+      kilometer: ['0', Validators.required],
       year: ['2023', Validators.required],
       makeID: [, Validators.required],
       modelID: [, Validators.required],
@@ -113,12 +113,12 @@ export class AddcarsellComponent implements OnInit {
     }
   }
   private editForm(obj) {
+    debugger
     this.f.name.setValue(obj.name);
     this.f.customerPhone.setValue(obj.customerPhone);
     this.f.address.setValue(obj.address);
     this.f.description.setValue(obj.description);
     this.f.assembly.setValue(obj.assembly);
-
     this.f.bodyColor.setValue(obj.bodyColor);
     this.f.countryCode.setValue(obj.countryCode);
     this.f.price.setValue(obj.price);
@@ -217,33 +217,6 @@ export class AddcarsellComponent implements OnInit {
       this.f.cityID.setValue(this.f.cityID);
     });
   }
-  //private loadCountry() {
-  //  debugger
-  //  this.carsellService.loadCountry().subscribe((res: any) => {
-  //    this.CountryList = res;
-  //    if (!this.CountryList || this.CountryList.length === 0) {
-  //      this.CountryList = [{ name: 'Saudia Arabia', code: 'SA' }];
-  //    }
-  //    this.f.countryCode.setValue('SA');
-  //    this.loadCity(this.f.countryCode.value, 1);
-  //  });
-  //}
-
-  //onSelect(event) {
-  //  debugger
-  //  let selectElementValue = event.target.value;
-  //  let [index, value] = selectElementValue.split(':').map(item => item.trim());
-  //  console.log(index);
-  //  console.log(value);
-  //}
-  //loadCity(obj, type) {
-  //  debugger
-  //  this.carsellService.loadCity(obj).subscribe((res: any) => {
-  //    this.CityList = res;
-  //    if (type == 1)
-  //      this.f.cityID.setValue(res[0].id);
-  //  });
-  //}
   onChange(event) {
     let selectElementValue = event.target.value;
     let [index, value] = selectElementValue.split(':').map(item => item.trim());
@@ -255,6 +228,7 @@ export class AddcarsellComponent implements OnInit {
     });
   }
   setSelectedCarSell() {
+    debugger
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
@@ -282,7 +256,7 @@ export class AddcarsellComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success", "Record added successfully.")
-          //this.router.navigate(['/admin/carsell']);
+          this.router.navigate(['/admin/carsell']);
         }
 
       }, error => {
@@ -296,7 +270,7 @@ export class AddcarsellComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success", "Record updated successfully.")
-          //this.router.navigate(['/admin/carsell']);
+          this.router.navigate(['/admin/carsell']);
         }
       }, error => {
         this.ts.showError("Error", "Failed to update record.")

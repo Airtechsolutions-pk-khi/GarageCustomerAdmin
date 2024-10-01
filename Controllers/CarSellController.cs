@@ -25,7 +25,7 @@ namespace GarageCustomerAdmin.Controllers
         //[HttpGet("all/{fromDate}/{toDate}")]
         [HttpGet("all")]
         //public List<CarSellBLL2> GetAll(string fromDate, string toDate)
-        public List<CarSellBLL2> GetAll()
+        public List<CarSellBLL> GetAll()
         {
             //return _service.GetAll(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
             return _service.GetAll();
@@ -70,8 +70,7 @@ namespace GarageCustomerAdmin.Controllers
         [Route("insert")]   
         public int Post([FromBody] CarSellBLL obj)
         {
-           //return _service.Insert(obj, _env);        
-           return 0;        
+           return _service.Insert(obj, _env);           
         }
 
         [HttpPost]

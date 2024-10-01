@@ -11,6 +11,7 @@ namespace WebAPICode.Helpers
     public class DBHelperGarageUAT
     {
         private static readonly string connectionString = "Server=tcp:garageserver.database.windows.net,1433;Initial Catalog=Garage_Live;Persist Security Info=True;User ID=garageadmin;Password=Tech@963;Encrypt=True;TrustServerCertificate=True;";
+        //private static readonly string connectionString = "data source=karageuatdb.database.windows.net;initial catalog=Garage_UAT;persist security info=True;user id=CloudSA99368a5a;password=Tech@963;";
 
 
         public DataTable GetTableFromSP(string sp, Dictionary<string, object> parametersCollection)
