@@ -82,6 +82,7 @@ export class LocationsService {
   }
   getAllData() {
     
+    debugger
     const url = `api/location/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),

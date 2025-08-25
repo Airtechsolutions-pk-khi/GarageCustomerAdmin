@@ -51,6 +51,7 @@ E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\3rdpartylicenses.txt
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-grid.css
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-grid.css.map
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\bootstrap-reboot.css
@@ -69,6 +70,28 @@ E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\as
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\solid.css.map
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\v4-shims.css
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\css\v4-shims.css.map
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-Black.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-Bold.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-ExtraBlack.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-ExtraBold.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-Light.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-Regular.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-SemiBold.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\Arabic\YekanBakh-Thin.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Primary\SpaceGrotesk-Bold.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Primary\SpaceGrotesk-Light.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Primary\SpaceGrotesk-Medium.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Primary\SpaceGrotesk-Regular.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Primary\SpaceGrotesk-SemiBold.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Black.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Bold.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-ExtraBold.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-ExtraLight.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Light.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Medium.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Regular.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-SemiBold.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\font\SpaceGrosek\English Secondary\Inter-Thin.ttf
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\gulpfile.js
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\icons\icon-128x128.png
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\icons\icon-144x144.png
@@ -81,6 +104,8 @@ E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\as
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\crossphone.png
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\favicon.png
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\garage.png
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\Group 28.svg
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\Group 30.svg
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\loginImg.png
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\logo-garage.svg
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\js\demo\chart-area-demo.js
@@ -1927,27 +1952,19 @@ E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\as
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.js
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.min.js
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\jquery\jquery.slim.min.map
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\ClientApp.zip
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\crossphone.png
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\crossphone.cb94c6e65f9711aecd39.png
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\index.html
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es2015.js
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es2015.js.map
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es5.js
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es5.js.map
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es2015.589782345535cce504e0.js
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\main-es5.589782345535cce504e0.js
 E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\manifest.webmanifest
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\polyfills-es2015.js
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\polyfills-es2015.js.map
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\polyfills-es5.js
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\polyfills-es5.js.map
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\runtime-es2015.js
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\runtime-es2015.js.map
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\runtime-es5.js
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\runtime-es5.js.map
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\scripts.js
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\scripts.js.map
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\styles.css
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\styles.css.map
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\vendor-es2015.js
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\vendor-es2015.js.map
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\vendor-es5.js
-E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\vendor-es5.js.map
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\ngsw-worker.js
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\ngsw.json
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\polyfills-es2015.d1a7eb11f35d03253f9a.js
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\polyfills-es5.55413a61169e13acdb97.js
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\runtime-es2015.409e6590615fb48d139f.js
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\runtime-es5.409e6590615fb48d139f.js
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\safety-worker.js
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\scripts.04b5dbafab8c16e494b3.js
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\spacegrotesk-regular.3683ead52440efaeba4d.ttf
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\styles.57830437a9629537bd08.css
+E:\Projects\GarageCustomer_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\worker-basic.min.js

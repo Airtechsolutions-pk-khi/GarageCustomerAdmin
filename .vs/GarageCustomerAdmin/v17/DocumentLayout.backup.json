@@ -1,0 +1,707 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Projects\\GarageCustomer_Admin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_dbparamfactory\\locationdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_dbparamfactory\\locationdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\helpers\\dbhelpergarageuat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:helpers\\dbhelpergarageuat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\helpers\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:helpers\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\app\\login\\login.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\login\\login.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\_models\\reviewsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:_models\\reviewsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\app\\layout\\layout.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\layout\\layout.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\app\\layout\\layout.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\layout\\layout.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_dbparamfactory\\logindb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_dbparamfactory\\logindb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\carsellcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\carsellcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\app\\admin\\company\\locations\\locations.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\admin\\company\\locations\\locations.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\landmarkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\landmarkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\_models\\locationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:_models\\locationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\app\\_models\\location.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\app\\_models\\location.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\bannercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\bannercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\addonscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\addonscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\clientapp\\src\\assets\\vendor\\fontawesome-free\\css\\all.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:clientapp\\src\\assets\\vendor\\fontawesome-free\\css\\all.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\_models\\aboutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:_models\\aboutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_dbparamfactory\\aboutdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_dbparamfactory\\aboutdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_dbparamfactory\\addonsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_dbparamfactory\\addonsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_dbparamfactory\\deliverydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_dbparamfactory\\deliverydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_dbparamfactory\\dashboarddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_dbparamfactory\\dashboarddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_dbparamfactory\\blogdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_dbparamfactory\\blogdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\discountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\discountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_services\\aboutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_services\\aboutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\helpers\\linqtodatatable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:helpers\\linqtodatatable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\helpers\\datatableentensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:helpers\\datatableentensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|e:\\projects\\garagecustomer_admin\\bll\\_dbparamfactory\\discountdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FAF8679-E55B-46AC-B1E2-DBC56507BEFD}|GarageCustomerAdmin.csproj|solutionrelative:bll\\_dbparamfactory\\discountdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "locationController.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\locationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\locationController.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\locationController.cs",
+              "RelativeToolTip": "Controllers\\locationController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:43:24.243Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "locationDB.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\locationDB.cs",
+              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\locationDB.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\locationDB.cs",
+              "RelativeToolTip": "BLL\\_DBParamFactory\\locationDB.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAUwB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T07:43:05.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DBHelperGarageUAT.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Helpers\\DBHelperGarageUAT.cs",
+              "RelativeDocumentMoniker": "Helpers\\DBHelperGarageUAT.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Helpers\\DBHelperGarageUAT.cs",
+              "RelativeToolTip": "Helpers\\DBHelperGarageUAT.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T09:58:30.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DBHelper.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Helpers\\DBHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\DBHelper.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Helpers\\DBHelper.cs",
+              "RelativeToolTip": "Helpers\\DBHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T08:28:41.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "locationService.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_Services\\locationService.cs",
+              "RelativeDocumentMoniker": "BLL\\_Services\\locationService.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_Services\\locationService.cs",
+              "RelativeToolTip": "BLL\\_Services\\locationService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwBUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T07:43:05.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "loginController.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\loginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\loginController.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\loginController.cs",
+              "RelativeToolTip": "Controllers\\loginController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T07:59:22.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "customerController.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\customerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\customerController.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\customerController.cs",
+              "RelativeToolTip": "Controllers\\customerController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T08:16:52.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "customerService.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_Services\\customerService.cs",
+              "RelativeDocumentMoniker": "BLL\\_Services\\customerService.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_Services\\customerService.cs",
+              "RelativeToolTip": "BLL\\_Services\\customerService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T06:39:57.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "login.component.ts",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\login\\login.component.ts",
+              "RelativeDocumentMoniker": "ClientApp\\src\\app\\login\\login.component.ts",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\login\\login.component.ts",
+              "RelativeToolTip": "ClientApp\\src\\app\\login\\login.component.ts",
+              "ViewState": "AgIAABIAAAAAAAAAAAAgwB8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-07-22T07:05:05.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Location.ts",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\_models\\Location.ts",
+              "RelativeDocumentMoniker": "ClientApp\\src\\app\\_models\\Location.ts",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\_models\\Location.ts",
+              "RelativeToolTip": "ClientApp\\src\\app\\_models\\Location.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-06-27T10:30:21.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "addlocation.component.html",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html",
+              "RelativeDocumentMoniker": "ClientApp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html",
+              "RelativeToolTip": "ClientApp\\src\\app\\admin\\company\\locations\\addlocation\\addlocation.component.html",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAWwLAAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-27T10:39:22.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "reviewsViewModel.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\_Models\\reviewsViewModel.cs",
+              "RelativeDocumentMoniker": "_Models\\reviewsViewModel.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\_Models\\reviewsViewModel.cs",
+              "RelativeToolTip": "_Models\\reviewsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T07:56:04.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "layout.component.ts",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\layout\\layout.component.ts",
+              "RelativeDocumentMoniker": "ClientApp\\src\\app\\layout\\layout.component.ts",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\layout\\layout.component.ts",
+              "RelativeToolTip": "ClientApp\\src\\app\\layout\\layout.component.ts",
+              "ViewState": "AgIAACIAAAAAAAAAAADgvzUAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-08-19T10:58:11.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "layout.component.html",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\layout\\layout.component.html",
+              "RelativeDocumentMoniker": "ClientApp\\src\\app\\layout\\layout.component.html",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\layout\\layout.component.html",
+              "RelativeToolTip": "ClientApp\\src\\app\\layout\\layout.component.html",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAkwJIAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-19T10:58:00.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CarSellController.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\CarSellController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CarSellController.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\CarSellController.cs",
+              "RelativeToolTip": "Controllers\\CarSellController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T08:19:18.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "loginDB.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\loginDB.cs",
+              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\loginDB.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\loginDB.cs",
+              "RelativeToolTip": "BLL\\_DBParamFactory\\loginDB.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA7wCkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T07:59:26.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "locations.component.ts",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\admin\\company\\locations\\locations.component.ts",
+              "RelativeDocumentMoniker": "ClientApp\\src\\app\\admin\\company\\locations\\locations.component.ts",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\app\\admin\\company\\locations\\locations.component.ts",
+              "RelativeToolTip": "ClientApp\\src\\app\\admin\\company\\locations\\locations.component.ts",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-07-22T08:25:13.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "carsController.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\carsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\carsController.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\carsController.cs",
+              "RelativeToolTip": "Controllers\\carsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T08:21:40.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "locationViewModel.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\_Models\\locationViewModel.cs",
+              "RelativeDocumentMoniker": "_Models\\locationViewModel.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\_Models\\locationViewModel.cs",
+              "RelativeToolTip": "_Models\\locationViewModel.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAIA6wCMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T07:12:38.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAtwBkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T09:06:16.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-25T07:59:41.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "landmarkController.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\landmarkController.cs",
+              "RelativeDocumentMoniker": "Controllers\\landmarkController.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\landmarkController.cs",
+              "RelativeToolTip": "Controllers\\landmarkController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T07:51:28.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "blogController.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\blogController.cs",
+              "RelativeDocumentMoniker": "Controllers\\blogController.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\blogController.cs",
+              "RelativeToolTip": "Controllers\\blogController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T08:19:18.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "addonsController.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\addonsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\addonsController.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\addonsController.cs",
+              "RelativeToolTip": "Controllers\\addonsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T08:19:17.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "all.css",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\assets\\vendor\\fontawesome-free\\css\\all.css",
+              "RelativeDocumentMoniker": "ClientApp\\src\\assets\\vendor\\fontawesome-free\\css\\all.css",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\ClientApp\\src\\assets\\vendor\\fontawesome-free\\css\\all.css",
+              "RelativeToolTip": "ClientApp\\src\\assets\\vendor\\fontawesome-free\\css\\all.css",
+              "ViewState": "AgIAAEMRAAAAAAAAAADwv0wRAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-30T08:17:09.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "aboutViewModel.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\_Models\\aboutViewModel.cs",
+              "RelativeDocumentMoniker": "_Models\\aboutViewModel.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\_Models\\aboutViewModel.cs",
+              "RelativeToolTip": "_Models\\aboutViewModel.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAqwB0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T08:17:08.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "addonsDB.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\addonsDB.cs",
+              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\addonsDB.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\addonsDB.cs",
+              "RelativeToolTip": "BLL\\_DBParamFactory\\addonsDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T12:11:13.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "blogDB.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\blogDB.cs",
+              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\blogDB.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\blogDB.cs",
+              "RelativeToolTip": "BLL\\_DBParamFactory\\blogDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T12:08:44.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "aboutService.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_Services\\aboutService.cs",
+              "RelativeDocumentMoniker": "BLL\\_Services\\aboutService.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_Services\\aboutService.cs",
+              "RelativeToolTip": "BLL\\_Services\\aboutService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwCMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:17:36.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "discountController.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\discountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\discountController.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\discountController.cs",
+              "RelativeToolTip": "Controllers\\discountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T09:58:58.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "bannerController.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\bannerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\bannerController.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\bannerController.cs",
+              "RelativeToolTip": "Controllers\\bannerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:15:28.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "discountDB.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\discountDB.cs",
+              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\discountDB.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\discountDB.cs",
+              "RelativeToolTip": "BLL\\_DBParamFactory\\discountDB.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAqwGMAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T09:58:58.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "aboutDB.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\aboutDB.cs",
+              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\aboutDB.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\aboutDB.cs",
+              "RelativeToolTip": "BLL\\_DBParamFactory\\aboutDB.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAApwJkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T08:00:01.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "dashboardDB.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\dashboardDB.cs",
+              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\dashboardDB.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\dashboardDB.cs",
+              "RelativeToolTip": "BLL\\_DBParamFactory\\dashboardDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T12:08:54.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "deliveryDB.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\deliveryDB.cs",
+              "RelativeDocumentMoniker": "BLL\\_DBParamFactory\\deliveryDB.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\BLL\\_DBParamFactory\\deliveryDB.cs",
+              "RelativeToolTip": "BLL\\_DBParamFactory\\deliveryDB.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T09:19:02.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "LINQtoDataTable.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Helpers\\LINQtoDataTable.cs",
+              "RelativeDocumentMoniker": "Helpers\\LINQtoDataTable.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Helpers\\LINQtoDataTable.cs",
+              "RelativeToolTip": "Helpers\\LINQtoDataTable.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T08:22:29.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AboutController.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\AboutController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AboutController.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Controllers\\AboutController.cs",
+              "RelativeToolTip": "Controllers\\AboutController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T08:14:22.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DataTableEntensions.cs",
+              "DocumentMoniker": "E:\\Projects\\GarageCustomer_Admin\\Helpers\\DataTableEntensions.cs",
+              "RelativeDocumentMoniker": "Helpers\\DataTableEntensions.cs",
+              "ToolTip": "E:\\Projects\\GarageCustomer_Admin\\Helpers\\DataTableEntensions.cs",
+              "RelativeToolTip": "Helpers\\DataTableEntensions.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:15:58.963Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

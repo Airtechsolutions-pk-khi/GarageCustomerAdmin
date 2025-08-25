@@ -82,6 +82,7 @@ import { AddBlogComponent } from './admin/blogs/add/addblog.component';
 
 import { CarslistComponent } from './admin/cars/carslist.component';
 import { AddcarsComponent } from './admin/cars/addcars/addcars.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -166,6 +167,7 @@ import { AddcarsComponent } from './admin/cars/addcars/addcars.component';
       { path: '', component: LoginComponent, pathMatch: 'full' },
       {
         path: 'admin', component: LayoutComponent,
+        canActivate: [AuthGuard], 
         children: [
           { path: 'dashboard', component: DashboardComponent },
           { path: 'category', component: CategoryComponent },

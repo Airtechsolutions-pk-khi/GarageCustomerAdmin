@@ -180,7 +180,7 @@ namespace BAL.Repositories
                 //p[13] = new SqlParameter("@DeliveryCharges", data.DeliveryCharges);
                 //p[14] = new SqlParameter("@DeliveryTime", data.DeliveryTime);
                 //p[15] = new SqlParameter("@MinOrderAmount", data.MinOrderAmount);               
-                p[16] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
+                p[16] = new SqlParameter("@LastUpdatedBy", "Admin");
                 p[17] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
                 p[18] = new SqlParameter("@StatusID", data.StatusID);
                 //p[19] = new SqlParameter("@CompanyCode", data.CompanyCode);
@@ -212,7 +212,7 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@Email", data.Email);
                 p[5] = new SqlParameter("@Longitude", data.Longitude);
                 p[6] = new SqlParameter("@Latitude", data.Latitude);
-                p[7] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
+                p[7] = new SqlParameter("@LastUpdatedBy", "Admin");
                 p[8] = new SqlParameter("@LandmarkID", data.LandmarkID);
                 p[9] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
                 p[10] = new SqlParameter("@StatusID", data.StatusID);

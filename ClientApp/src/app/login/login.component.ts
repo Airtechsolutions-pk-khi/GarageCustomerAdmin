@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     }
     debugger
     if (this.f.username.value == "admin@garage.com" && this.f.password.value == "Admin@123") {
-
+    localStorage.setItem("_usrAuthenticated", "true"); // ✅ set authentication
       this.router.navigate(["/admin/dashboard"]);
     }
     else {

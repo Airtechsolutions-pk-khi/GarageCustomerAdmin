@@ -1,0 +1,2 @@
+E:\Projects\GarageCustomer_Admin\obj\Release\netcoreapp3.1\GarageCustomerAdmin.dll
+E:\Projects\GarageCustomer_Admin\obj\Release\netcoreapp3.1\GarageCustomerAdmin.pdb

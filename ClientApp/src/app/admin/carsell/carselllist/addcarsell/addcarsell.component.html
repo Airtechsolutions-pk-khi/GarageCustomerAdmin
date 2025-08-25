@@ -75,7 +75,7 @@
 
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputLocation">Attach Features</label>
-              <ng-select [items]="FeaturesList" bindLabel="name" bindValue="featureID" formControlName="features" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedFeatureID">
+              <ng-select [items]="FeaturesList" bindLabel="name" bindValue="featureID" formControlName="features" [multiple]="true" placeholder=""  [(ngModel)]="selectedFeatureID">
                 <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
                   <div class="ng-value" *ngFor="let item of items">
                     <span class="ng-value-label">{{item.name}}</span>

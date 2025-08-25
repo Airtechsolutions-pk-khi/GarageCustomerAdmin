@@ -43,6 +43,7 @@ export class LayoutComponent implements OnInit {
   Logout() {
 
     sessionStorage.clear();
+    localStorage.removeItem("_usrAuthenticated"); 
     this.router.navigate(['/']);
   }
 
